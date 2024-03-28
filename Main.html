@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="componente_Marius">
+
+        <script>
+            const xhr = new XMLHttpRequest();
+            const container = document.getElementById("componente_Marius");
+
+            xhr.onload = function() {
+                if(this.status === 200){
+                    container.innerHTML = xhr.responseText;
+                }else {
+                    console.warn('what??');
+                }
+            };
+
+            xhr.open('get', 'Marius.html');
+            xhr.send();
+        </script>
+
+    </div>
+    <div id="componente_Rebeca">
+
+        <script>
+            const x = new XMLHttpRequest();
+            const c =  document.getElementById("componente_Rebeca");
+
+            x.onload = function() {
+                if(this.status === 200){
+                    c.innerHTML = x.responseText;
+                }else {
+                    console.warn('what??');
+                }
+            };
+
+            x.open('get', 'Rebeca.html');
+            x.send();
+        </script>
+
+    </div>
+</body>
+</html>
+
