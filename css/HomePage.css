@@ -1,0 +1,25 @@
+body {
+    background-image: url('kids_circle.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+}
+.learn_more_button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none; 
+    font-size: 17px;
+    cursor: pointer;
+    background: transparent;
+    border: 3.3px solit #ff4c68;
+}
+.learn_more_button:hover{
+    background-color: #ff4c68;
+    color: white;
+}
