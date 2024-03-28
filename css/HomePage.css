@@ -1,25 +1,171 @@
-body {
-    background-image: url('kids_circle.jpg');
+@import url('https://fonts.googleapis.com/css?family=poppins&effect=anaglyph');
+@import url('https://www.fontspace.com/soul-note-display-trial-font-f110131');
+@import url('https://www.fontspace.com/gustatory-delight-font-f85359');
+@font-face {
+    font-family: myFirstFont;
+    src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
+}
+@font-face {
+    font-family: mySecondFont;
+    src: url(fonts/GustatoryDelightRegular-rgX3L.ttf);
+}
+
+* {
+    font-family: myFirstFont;
+    margin: 0;
+    padding: 0;
+}
+
+html { 
+    scroll-behavior: smooth;
+}
+
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col{
+    flex-basis: 50%;
+}
+
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.card1{
+    background-image: url('background_images/pexels-elina-sazonova-1914982.jpg');
+}
+.card2{
+    background-image: url('background_images/pexels-willsantt-2026960.jpg');
+}
+.card3{
+    background-image: url('background_images/pexels-andy-kuzma-2801567.jpg');
+}
+.card4{
+    background-image: url('background_images/pexels-dominika-roseclay-1166990.jpg');
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+a {
+    text-decoration: none;
+}
+
+.align_components_screen{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#first_screen {
+    background-image: url('background_images/pexels-tatiana-syrikova-3933989.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-    height: 100%;
+    height: 100vh;
     margin: 0;
 }
-.learn_more_button{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: black;
-    padding: 16px 32px;
+
+#second_screen {
+    background-color: blanchedalmond;
+}
+
+h1 {
+    font-size: 95px;
+    display: flex;
     text-align: center;
-    text-decoration: none; 
-    font-size: 17px;
-    cursor: pointer;
-    background: transparent;
-    border: 3.3px solit #ff4c68;
 }
-.learn_more_button:hover{
-    background-color: #ff4c68;
-    color: white;
+
+.full_screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
 }
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    --c: blanchedalmond;
+    color: var(--c);
+    width: 12em;
+    height: 3em;
+    border: 0.3em solid var(--c);
+    text-align: center;
+    line-height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+nav ul li:hover {
+    color: black;
+}
+
+nav ul li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+nav ul li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+nav ul li span:nth-child(1) {
+    --n: 1;
+}
+
+nav ul li span:nth-child(2) {
+    --n: 2;
+}
+
+nav ul li span:nth-child(3) {
+    --n: 3;
+}
+
+nav ul li span:nth-child(4) {
+    --n: 4;
+}
+
+
+
+
+
+
+
