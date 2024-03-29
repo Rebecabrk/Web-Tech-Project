@@ -30,15 +30,15 @@ html {
 .lm_btn {
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    top: 60%;
+    left: 40%;
 }
 
 .ca_btn {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 60%;
-    left: 50%;
+    left: 60%;
 }
 
 .row{
@@ -340,7 +340,7 @@ li a span {
             position: relative;
     display: flex;
     justify-content: center;
-    top: 10%;
+    top: 40%;
 }
 
 @-webkit-keyframes tracking-in-expand {

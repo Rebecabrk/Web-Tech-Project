@@ -38,7 +38,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
         <a href="#" class="toggleBox">
             <span class="icon"></span>
         </a>
@@ -77,7 +77,7 @@
             toggleClick.classList.toggle('active');
             container.classList.toggle('active');
         });
-    </script>
+    </script> -->
 
     <!-- <button class="learn_more_button">Learn More!</button> -->
         
