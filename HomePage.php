@@ -10,6 +10,12 @@
             include 'components/navbar.html'
         ?>
 
+        <div class="container">
+            <a href="#" class="toggleBox">
+                <span class="icon"></span>
+            </a>       
+        </div>
+
         <button class="learn_more_button">Learn More!</button>
 
     </body>

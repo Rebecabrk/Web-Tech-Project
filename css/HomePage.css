@@ -8,6 +8,7 @@ body {
 }
 .learn_more_button{
     position: absolute;
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     color: black;
@@ -23,3 +24,52 @@ body {
     background-color: #ff4c68;
     color: white;
 }
+
+.container {
+    top: 150px;
+    height:70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    transition: 0.4s ease;
+}
+
+.toggleBox {
+    position: relative;
+    display: bloock;
+    height:70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.icon {
+    position: relative;
+    height: 4px;
+    width: 35px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #161d2c;
+    border-radius: 50%;
+}
+
+.icon::before,.icon::after {
+    content: '';
+    position:  ;
+    height: 4px;
+    width: 35px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #161d2c;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.icon::before {
+    top: 12px;
+}
+.icon::after {
+    bottom: 8px;
+}
+
