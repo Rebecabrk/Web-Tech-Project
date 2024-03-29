@@ -1,0 +1,16 @@
+.background{
+    background-image: url('background_images/pexels-daria-obymaha-1683975.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+.form_box{
+    width: 33.33%; /* This will make the container take up a third of the screen */
+    position: absolute; /* This will allow us to position the container */
+    left: 5%; /* This will position the container on the left side of the screen */
+    top: 15vh;
+    height: 70vh; /* This will make the container take up the full height of the screen */
+    border: 1px solid 0; /* This will create a border around the container */
+    padding: 10px; /* This will create some space inside the container */
+    background-color: blanchedalmond;
+}

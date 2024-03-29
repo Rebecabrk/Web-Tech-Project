@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Page Title</title>
+    <title>Landing Page</title>
     <link href="css/HomePage.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -20,6 +20,16 @@
                     <a href="#second_screen">
                         <li>
                             Learn more
+                            <span></span><span></span><span></span><span></span>
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <a href="CreateAccount.html">
+                        <li>
+                            Create account
                             <span></span><span></span><span></span><span></span>
                         </li>
                     </a>
@@ -55,6 +65,10 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="third_screen" class="full_screen">
+        hihi
     </div>
 </body>
 
