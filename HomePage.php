@@ -11,7 +11,7 @@
     include 'components/navbar.html'
         ?>
     <div id="first_screen" class="full_screen">
-        <h1 class="title">
+        <h1 class="tracking-in-expand">
             Your child's growth
         </h1>
         <div>
@@ -111,7 +111,7 @@
     </div>
 
     <div id="third_screen" class="full_screen">
-        hihi
+       
     </div>
 </body>
 

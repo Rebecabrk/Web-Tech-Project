@@ -72,6 +72,7 @@ html {
 }
 .card2{
     background-image: url('background_images/pexels-willsantt-2026960.jpg');
+    color: white;
 }
 .card3{
     background-image: url('background_images/pexels-andy-kuzma-2801567.jpg');
@@ -332,3 +333,38 @@ li a span {
     transition: 0.2s ease;
     color: white;
 }
+
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            position: relative;
+    display: flex;
+    justify-content: center;
+    top: 10%;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
