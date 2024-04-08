@@ -28,6 +28,13 @@ html {
   align-items: center;
 }
 
+.wrapper2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .buttons-container {
   display: flex;
   justify-content: center;
@@ -296,13 +303,19 @@ li a span {
 
 .third_screen_container {
   display: flex;
-  width: 300px;
+  width: 100%;
 }
 
 .content_paragraph {
-  border: 1px solid #ccc;
-  padding: 20px;
-  flex-grow: 1;
+  font-size: 150%;
+  width: 60%;
+}
+
+.center_element {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 6%;
 }
 
 @media screen and (max-width: 1991px) {
