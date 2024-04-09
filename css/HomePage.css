@@ -99,6 +99,12 @@ h1 + p {
 .card4 {
   background-image: url("background_images/pexels-dominika-roseclay-1166990.jpg");
 }
+.card5 {
+  background-image: url("background_images/pexels-anna-shvets-4586688.jpg");
+}
+.card6 {
+  background-image: url("background_images/pexels-cottonbro-studio-6157225.jpg");
+}
 
 .card:hover {
   transform: translateY(-10px);
@@ -419,7 +425,7 @@ li a span {
   }
 }
 
-//navbar
+
 
 /* .learn_more_button {
   position: absolute;
