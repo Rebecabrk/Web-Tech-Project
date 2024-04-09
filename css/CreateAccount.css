@@ -1,50 +1,72 @@
-@import url('https://www.fontspace.com/soul-note-display-trial-font-f110131');
+@import url("https://www.fontspace.com/soul-note-display-trial-font-f110131");
 @font-face {
-    font-family: myFirstFont;
-    src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
-}
-*{
-    font-family: myFirstFont;
-    font-size: xx-large;
-}
-.background{
-    background-image: url('background_images/pexels-daria-obymaha-1683975.jpg');
-    background-size: cover;
-    height: 100vh;
+  font-family: myFirstFont;
+  src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
 }
 
-.form_box{
-    width: 33.33%; 
-    position: absolute; 
-    left: 5%; 
-    top: 15vh;
-    height: 70vh; 
-    border: 1px solid 0; 
-    padding: 10px; 
-    background-color: blanchedalmond;
-    opacity: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+* {
+  font-family: myFirstFont;
+  font-size: xx-large;
 }
 
-.form_box ul li{
-    margin-bottom: 5vh;
+#background {
+  background-image: url("background_images/pexels-daria-obymaha-1683975.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.form_box {
+  width: 33.33%;
+  position: absolute;
+  top: 15vh;
+  height: 70vh;
+  border: 1px solid 0;
+  padding: 10px;
+  background-color: blanchedalmond;
+  opacity: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form_box ul li {
+  margin-bottom: 5vh;
 }
 
 ul {
-    list-style-type: none;
+  display: flex;
+  list-style-type: none;
 }
 
-#text{
-    width: 15%; 
-    position: absolute; 
-    right: 5%; 
-    top: 5vh;
-    height: 30vh; 
-    border: 1px solid 0; 
-    padding: 10px; 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+li {
+  display: flex;
+  direction-flex: column;
+}
+
+hr {
+  color: #a9a9a9;
+  opacity: 0.3;
+}
+
+form {
+  margin: 0 10%;
+}
+
+#text {
+  width: 15%;
+  position: absolute;
+  right: 5%;
+  top: 5vh;
+  height: 30vh;
+  border: 1px solid 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

@@ -84,7 +84,7 @@ h1 + p {
   background-position: center;
   background-size: cover;
   transition: transform 0.5s;
-  flex-growl: 1;
+  flex-grow: 1;
 }
 .card1 {
   background-image: url("background_images/pexels-elina-sazonova-1914982.jpg");
