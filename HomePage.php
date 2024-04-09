@@ -69,6 +69,10 @@
         </div>
       </div>
     </div>
+
+    <div class="arrow">
+      <span></span>
+    </div>
   </div>
 
   <div id="third_screen" class="full_screen">
