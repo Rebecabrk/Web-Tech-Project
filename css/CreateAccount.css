@@ -20,12 +20,12 @@
 .wrapper {
   width: 450px;
   height: 600px;
-  color: #fff;
+  color: #53a8b6;
   display: flex;
   margin-top: 5%;
   margin-left: 5%;
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(121, 194, 208, 0.8);
   backdrop-filter: blur(20px);
   border-radius: 20px;
 }
@@ -37,7 +37,7 @@
 }
 
 .wrapper hr {
-  border: 1px solid #fff;
+  border: 1px solid #79C2D0;
   padding: 0;
 }
 
@@ -53,18 +53,18 @@
   height: 100%;
   background: transparent;
   outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(121, 194, 208, 0.8);
   border-radius: 20px;
-  color: #fff;
+  color: #79C2D0;
   padding: 20px 20px 20px 20px;
 }
 
 .wrapper .input-box input::placeholder {
-  color: #fff;
+  color: #79C2D0;
 }
 
 .wrapper .input-box input:focus {
-  border: 2px solid #fff;
+  border: 2px solid #79C2D0;
 }
 .wrapper .button {
   display: flex;
@@ -75,9 +75,9 @@
   width: 30%;
   height: 100%;
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(121, 194, 208, 0.8);
   outline: none;
-  color: #fff;
+  color: #79C2D0;
   font-size: 20px;
   cursor: pointer;
   border-radius: 20px;
