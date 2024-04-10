@@ -1,10 +1,21 @@
-/* Google Font Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css?family=poppins&effect=anaglyph");
+@import url("https://www.fontspace.com/soul-note-display-trial-font-f110131");
+@import url("https://www.fontspace.com/gustatory-delight-font-f85359");
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
+}
+@font-face {
+  font-family: mySecondFont;
+  src: url(fonts/GustatoryDelightRegular-rgX3L.ttf);
+}
+
+* {
+  font-family: myFirstFont;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
 }
 .sidebar{
   position: fixed;
@@ -17,6 +28,7 @@
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
+  transform: translateX(-100%);
 }
 .sidebar.open{
   width: 250px;
@@ -173,7 +185,7 @@
 }
 
 #sidebar.hidden {
-  transform: translateX(-100%);
+  transform: translateX(0);
 }
 
 @media (max-width: 420px) {
