@@ -83,11 +83,11 @@
           <p class="content_paragraph">Early childhood, from birth to age 5, is a critical period for brain development.
             Stimulating environments and nurturing interactions during this time can have a significant impact on a
             child's cognitive, social, and emotional development.</p>
-          <div class="card card1"></div>
+          <div class="card card5"></div>
         </div>
 
         <div class="wrapper2">
-          <div class="card card2"></div>
+          <div class="card card6"></div>
           <p class="content_paragraph">Play is essential for children's learning and development. It helps them develop
             important skills such as problem-solving, creativity, communication, and socialization. Through play,
             children explore the world around them and make sense of their experiences.</p>

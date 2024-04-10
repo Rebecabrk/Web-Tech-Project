@@ -1,0 +1,65 @@
+@import url("https://www.fontspace.com/dancing-script-font-f14944");
+
+@font-face {
+  font-family: myThirdFont;
+  src: url(fonts/DancingScript-Bold.ttf);
+}
+
+* {
+  font-family: myThirdFont;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gradient-text {
+  font-size: 70px;
+  font-weight: bold;
+  background: linear-gradient(to right, #158FA7,
+      #54BCA3, #7DC88D, #B9D236, 
+      #EED700, #FCC010, #F3844D, 
+      #FE4D39, #FF6E87, #D698BF,
+      #7269BC, #6E6FC1, #3DA5E2);
+  background-clip: text;
+  color: transparent;
+}
+
+.canvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  background-color: #f5f5f5;
+  border: 2px solid #000;
+  padding: 20px;
+}
+
+.card-container {
+}
+
+.card {
+  width: 45%;
+  height: 200px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+  flex-grow: 1;
+}
+
+.card1 {
+  background-image: url("background_images/pexels-elina-sazonova-1914982.jpg");
+}
+.card2 {
+  background-image: url("background_images/pexels-willsantt-2026960.jpg");
+  color: white;
+}
