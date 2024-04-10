@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta charset="utf-8">
   <title>Create Account Page</title>
   <link href="css/CreateAccount.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
