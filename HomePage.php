@@ -3,14 +3,13 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
   <title>Landing Page</title>
   <link href="css/HomePage.css" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-  <?php include 'components/navbar.html' ?>
   <div id="first_screen" class="full_screen">
     <div class="wrapper">
       <h1 class="tracking-in-expand">
@@ -95,6 +94,66 @@
       </div>
     </div>
   </div>
+
+
+  
+
+  <div class="sidebar" id="sidebar">
+    <div class="logo-details">
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <i class="bx bx-search"></i>
+        <input type="text" placeholder="Search..." />
+        <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-grid-alt"></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-user"></i>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-pie-chart-alt-2"></i>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-folder"></i>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-heart"></i>
+          <span class="links_name">Saved</span>
+        </a>
+        <span class="tooltip">Saved</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-cog"></i>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+    </ul>
+  </div>
+
+  <script src="components\SideNavBar\SideNavBar.js"></script>
 </body>
 
 </html>

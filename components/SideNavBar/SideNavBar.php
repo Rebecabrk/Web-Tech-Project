@@ -3,9 +3,8 @@
 <html>
 
 <head>
-  <meta charset="UTF-8" />
   <title>Landing Page</title>
-  <link rel="stylesheet" href="HomePage.css" />
+  <link rel="stylesheet" href="SideNavBar.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -88,7 +87,7 @@
     </ul>
   </div>
 
-  <script src="HomePage.js"></script>
+  <script src="SideNavBar.js"></script>
 </body>
 
 </html>
