@@ -112,6 +112,13 @@
           <span class="tooltip">Search</span>
         </li>
         <li>
+          <a href="HomePage.php">
+          <i class='bx bx-home'></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
           <a href="Dashboard.php">
             <i class="bx bx-grid-alt"></i>
             <span class="links_name">Dashboard</span>
@@ -119,35 +126,28 @@
           <span class="tooltip">Dashboard</span>
         </li>
         <li>
-          <a href="#">
+          <a href="Profile.php">
             <i class="bx bx-user"></i>
             <span class="links_name">User</span>
           </a>
           <span class="tooltip">User</span>
         </li>
         <li>
-          <a href="#">
-            <i class="bx bx-pie-chart-alt-2"></i>
-            <span class="links_name">Analytics</span>
-          </a>
-          <span class="tooltip">Analytics</span>
-        </li>
-        <li>
-          <a href="#">
+          <a href="FileManager.php">
             <i class="bx bx-folder"></i>
             <span class="links_name">File Manager</span>
           </a>
           <span class="tooltip">Files</span>
         </li>
         <li>
-          <a href="#">
+          <a href="Saved.php">
             <i class="bx bx-heart"></i>
             <span class="links_name">Saved</span>
           </a>
           <span class="tooltip">Saved</span>
         </li>
         <li>
-          <a href="#">
+          <a href="Settings.php">
             <i class="bx bx-cog"></i>
             <span class="links_name">Settings</span>
           </a>
