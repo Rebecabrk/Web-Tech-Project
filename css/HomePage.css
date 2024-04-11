@@ -45,6 +45,8 @@ html {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-left: 8%;
+  margin-right: 8%;
 }
 
 .buttons-container {
@@ -345,7 +347,7 @@ li a span {
 }
 
 .arrow {
-  display: flex;
+  display: flex; 
   justify-content: center;
   align-items: center;
 }
