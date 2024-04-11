@@ -1,11 +1,30 @@
+body, html {
+  height: 100%; /* Set height of the body and HTML element to 100% */
+  margin: 0; /* Remove default margins */
+  display: flex; /* Use flexbox for layout */
+}
+
+.sidebar {
+  width: 200px; /* Set width of the sidebar */
+  background-color: #333; /* Sidebar background color */
+  color: #fff; /* Text color */
+  padding: 20px; /* Add some padding */
+}
+
+.content {
+  flex: 1; /* The content area takes up the remaining space */
+  padding: 20px; /* Add padding to the content area */
+}
+
 .container {
   display: flex;
   flex-wrap: wrap; /* Allow boxes to wrap to the next row */
+  height: 100%; /* Set container height to 100% */
 }
 
 .box {
   flex: 1; /* Each box takes up equal space */
-  background-color: blue; /* Just for visualization */
+  background-color: #ddd; /* Just for visualization */
   margin: 5px; /* Add margin for spacing */
-  height: 100px; /* Set a height for the boxes */
+  height: 30%; /* Set a percentage height for the boxes */
 }

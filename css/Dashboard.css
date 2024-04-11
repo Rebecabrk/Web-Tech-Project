@@ -12,17 +12,15 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   scroll-behavior: smooth;
-}
-
-.overall {
   display: flex;
-
 }
 
 .pages {
   flex: 1;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -37,9 +35,10 @@ html {
   background-color: blanchedalmond;
 }
 
-.dashboard {
-display: flex;
-flex-direction: column;
+.padding {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 5%;
 }
 
 h1 {
@@ -69,10 +68,11 @@ h1 {
 
 .big_card {
   height: 300px;
+  width:90%;
   border-radius: 20px;
   box-sizing: border-box;
   padding: 20px;
-  margin: 10px 15px;
+  margin: 0px 30px;
   background-position: center;
   background-size: cover;
   flex: 1;
@@ -85,10 +85,6 @@ h1 {
   background-image: url("background_images/pexels-willsantt-2026960.jpg");
   color: white;
 }
-
-
-
-
 
 .gradient-text {
   font-size: 70px;
@@ -139,10 +135,6 @@ h1 {
 .ca_btn {
   top: 60%;
 }
-
-
-
-
 
 .sidebar {
   position: fixed;
@@ -313,17 +305,31 @@ h1 {
 }
 
 @media screen and (max-width: 1991px) {
-  
+  .padding {
+    padding: 0 5% 0 5%;
+  }
 }
 
 @media screen and (max-width: 1600px) {
-  
+  .padding {
+    padding: 0 5% 0 7%;
+  }
 }
 
 @media screen and (max-width: 1150px) {
-  
+.padding {
+  padding: 0 5% 0 13%;
+}
 }
 
 @media screen and (max-width: 480px) {
-  
+  .padding {
+    padding: 0 5% 0 17%;
+  }
+}
+
+@media screen and (max-width: 391px) {
+  .padding {
+    padding: 0 0 0 20%; /* Padding: top right bottom left */
+  }
 }

@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>Landing Page</title>
+  <title>Home Page</title>
   <link href="css/HomePage.css" rel="stylesheet">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -128,9 +128,9 @@
         <li>
           <a href="Profile.php">
             <i class="bx bx-user"></i>
-            <span class="links_name">User</span>
+            <span class="links_name">Profile</span>
           </a>
-          <span class="tooltip">User</span>
+          <span class="tooltip">Profile</span>
         </li>
         <li>
           <a href="FileManager.php">

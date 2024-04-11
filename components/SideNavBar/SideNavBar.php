@@ -51,10 +51,10 @@
       </li>
       <li>
         <a href="#">
-          <i class="bx bx-user"></i>
-          <span class="links_name">User</span>
+          <i class="bx bx-profile"></i>
+          <span class="links_name">profile</span>
         </a>
-        <span class="tooltip">User</span>
+        <span class="tooltip">profile</span>
       </li>
       <li>
         <a href="#">

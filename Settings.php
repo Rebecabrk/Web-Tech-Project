@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Profile Page</title>
-    <link href="css/Dashboard.css" rel="stylesheet">
+    <title>Settings Page</title>
+    <link href="css/Settings.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -13,59 +13,7 @@
 <body>
     <div class="pages">
         <div id="first_screen" class="full_screen">
-            <div class="padding">
-                <h1>Schedules</h1>
-                <div class="card-container">
-                    <div class="card card1">
-                        <h1 class="gradient-text">
-                            Mediaction
-                        </h1>
-                    </div>
-                    <div class="card card2">
-                        <h1 class="gradient-text">
-                            Food
-                        </h1>
-                    </div>
-                    <div class="card card1">
-                        <h1 class="gradient-text">
-                            Sleep
-                        </h1>
-                    </div>
-                    <div class="card card2">
-                        <h1 class="gradient-text">
-                            School
-                        </h1>
-                    </div>
-                </div>
-
-                <h1>Medical records</h1>
-                <div class="card-container">
-                    <div class="card card1">
-                        <h1 class="gradient-text">
-                            Accidents
-                        </h1>
-                    </div>
-                    <div class="card card2">
-                        <h1 class="gradient-text">
-                            Alergies
-                        </h1>
-                    </div>
-                    <div class="card card1">
-                        <h1 class="gradient-text">
-                            Diseares
-                        </h1>
-                    </div>
-                </div>
-
-                <h1>Activities/Memories</h1>
-                <div class="card-container">
-                    <div class="big_card card2">
-                        <h1 class="gradient-text">
-                            Everything
-                        </h1>
-                    </div>
-                </div>
-            </div>
+           <h1 class="padding">Settings</h1>
         </div>
     </div>
 

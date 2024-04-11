@@ -8,10 +8,16 @@
 </head>
 <body>
 
-<div class="container">
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
+<div class="sidebar">
+  <!-- Sidebar content goes here -->
+</div>
+
+<div class="content">
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
 </div>
 
 </body>
