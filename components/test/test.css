@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allow boxes to wrap to the next row */
+}
+
+.box {
+  flex: 1; /* Each box takes up equal space */
+  background-color: blue; /* Just for visualization */
+  margin: 5px; /* Add margin for spacing */
+  height: 100px; /* Set a height for the boxes */
+}
