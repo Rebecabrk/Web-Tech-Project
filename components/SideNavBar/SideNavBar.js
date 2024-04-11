@@ -4,6 +4,7 @@
 
   closeBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("open");
+    // document.querySelector('.full_screen').classList.toggle('blur');
     menuBtnChange();//calling the function(optional)
   });
 

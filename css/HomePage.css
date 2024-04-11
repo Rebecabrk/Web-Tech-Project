@@ -22,6 +22,18 @@ html {
   scroll-behavior: smooth;
 }
 
+.overall{
+  display: flex;
+  flex-direction: row;
+}
+
+.pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -54,14 +66,20 @@ html {
   flex-wrap: wrap;
 }
 
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 h1 {
   display: flex;
-  margin-top: 40%;
-  margin-left: 5%;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 + p {
-  margin-left: 8%;
   text-align: center;
 }
 
@@ -138,7 +156,9 @@ a {
 
 #second_screen {
   background-color: blanchedalmond;
+
 }
+
 #third_screen {
   background-color: blanchedalmond;
 }
@@ -389,15 +409,7 @@ li a span {
   opacity: 0;
   transition: all 0.5s ease;
 }
-.sidebar .logo-details .logo_name{
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-.sidebar.open .logo-details .icon,
-.sidebar.open .logo-details .logo_name{
+.sidebar.open .logo-details .icon{
   opacity: 1;
 }
 .sidebar .logo-details #btn{
@@ -535,7 +547,9 @@ li a span {
   transform: translateX(0);
 }
 
-
+.blur {
+  filter: blur(20px); /* Adjust the blur level as needed */
+}
 
 
 
