@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>File Manager Page</title>
+    <title>Journal Page</title>
     <link href="css/Journal.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,6 +52,7 @@
         </div>
     </div>
 
+
     <div class="sidebar" id="sidebar">
         <div class="logo-details">
             <i class="bx bx-menu" id="btn"></i>
@@ -84,18 +85,18 @@
                 <span class="tooltip">Profile</span>
             </li>
             <li>
-                <a href="FileManager.php">
-                    <i class="bx bx-folder"></i>
-                    <span class="links_name">File Manager</span>
+                <a href="Journal.php">
+                    <i class='bx bx-book-bookmark'></i>
+                    <span class="links_name">Journal</span>
                 </a>
-                <span class="tooltip">Files</span>
+                <span class="tooltip">Journal</span>
             </li>
             <li>
-                <a href="Saved.php">
+                <a href="Journey.php">
                     <i class="bx bx-heart"></i>
-                    <span class="links_name">Saved</span>
+                    <span class="links_name">The Journey</span>
                 </a>
-                <span class="tooltip">Saved</span>
+                <span class="tooltip">The Journey</span>
             </li>
             <li>
                 <a href="Settings.php">

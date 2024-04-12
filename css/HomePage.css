@@ -585,7 +585,7 @@ li a span {
     margin-top: 8%;
   }
 
-  .buttons-container {
+  .row{
     display: flex;
     flex-direction: column;
   }
@@ -611,6 +611,11 @@ li a span {
     flex-wrap: wrap;
     flex-basis: 60%;
     margin-top: 8%;
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
   }
 
   .content-box {

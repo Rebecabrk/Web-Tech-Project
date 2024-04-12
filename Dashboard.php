@@ -101,18 +101,18 @@
                 <span class="tooltip">Profile</span>
             </li>
             <li>
-                <a href="FileManager.php">
-                    <i class="bx bx-folder"></i>
-                    <span class="links_name">File Manager</span>
+                <a href="Journal.php">
+                    <i class='bx bx-book-bookmark'></i>
+                    <span class="links_name">Journal</span>
                 </a>
-                <span class="tooltip">Files</span>
+                <span class="tooltip">Journal</span>
             </li>
             <li>
-                <a href="Saved.php">
+                <a href="Journey.php">
                     <i class="bx bx-heart"></i>
-                    <span class="links_name">Saved</span>
+                    <span class="links_name">The Journey</span>
                 </a>
-                <span class="tooltip">Saved</span>
+                <span class="tooltip">The Journey</span>
             </li>
             <li>
                 <a href="Settings.php">
