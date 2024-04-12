@@ -69,6 +69,12 @@
                 </form>
             </div>
         </div>
+
+        <div id="first_screen" class="full_screen padding">
+            <div class="pie-chart-container">
+                something is here
+            </div>
+        </div>
     </div>
 
 
@@ -128,10 +134,6 @@
     </div>
 
     <script src="components\SideNavBar\SideNavBar.js"></script>
-
-    <div class="pie-chart-container">
-        something is here
-    </div>
 </body>
 
 </html>

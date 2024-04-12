@@ -47,17 +47,24 @@ body {
 }
 
 .wrapper {
-  width: 450px;
-  height: 600px;
-  color: black;
   display: flex;
+  max-height: 600px;
+  height: 100%;
+  max-width: 800px;
+  width: 100%;
+  color: black;
+  flex-direction: column;
+  position: relative;
   justify-content: center;
-  align-items: center;
   background: transparent;
   border: 2px solid black;
   backdrop-filter: blur(20px);
-  border-radius: 20px;
-  padding: 20px;
+  
+  z-index: 2;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,0.07);
 }
 
 .wrapper h1 {
