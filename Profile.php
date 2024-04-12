@@ -13,7 +13,7 @@
 <body>
     <div class="pages">
         <div id="first_screen" class="full_screen">
-           <h1 class="padding">Profile</h1>
+            <h1 class="padding">Profile</h1>
         </div>
     </div>
 
@@ -49,7 +49,7 @@
                 <span class="tooltip">Profile</span>
             </li>
             <li>
-                <a href="FileManager.php">
+                <a href="Journal.php">
                     <i class="bx bx-folder"></i>
                     <span class="links_name">File Manager</span>
                 </a>

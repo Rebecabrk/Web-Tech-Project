@@ -49,7 +49,7 @@
                 <span class="tooltip">Profile</span>
             </li>
             <li>
-                <a href="FileManager.php">
+                <a href="Journal.php">
                     <i class="bx bx-folder"></i>
                     <span class="links_name">File Manager</span>
                 </a>

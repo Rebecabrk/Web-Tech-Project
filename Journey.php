@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>File Manager Page</title>
-    <link href="css/FileManager.css" rel="stylesheet">
+    <title>The Journey Page</title>
+    <link href="css/Journey.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -13,7 +13,7 @@
 <body>
     <div class="pages">
         <div id="first_screen" class="full_screen">
-           <h1 class="padding">File Manager</h1>
+           <h1 class="padding">The Journey</h1>
         </div>
     </div>
 
@@ -49,7 +49,7 @@
                 <span class="tooltip">Profile</span>
             </li>
             <li>
-                <a href="FileManager.php">
+                <a href="Journal.php">
                     <i class="bx bx-folder"></i>
                     <span class="links_name">File Manager</span>
                 </a>
