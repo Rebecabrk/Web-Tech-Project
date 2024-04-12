@@ -136,6 +136,7 @@ body {
 .wrapper .input-box input:focus {
   border: 2px solid black;
 }
+
 .wrapper .button {
   display: flex;
   justify-content: center;
