@@ -1,11 +1,15 @@
 @import url("https://www.fontspace.com/soul-note-display-trial-font-f110131");
+
 @font-face {
   font-family: myFirstFont;
   src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
 }
+
 * {
   font-family: myFirstFont;
   font-size: xx-large;
+  margin: 0;
+  padding: 0;
 }
 
 .background {

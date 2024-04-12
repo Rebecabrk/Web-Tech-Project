@@ -12,8 +12,62 @@
 
 <body>
     <div class="pages">
-        <div id="first_screen" class="full_screen">
-            <h1 class="padding">Profile</h1>
+        <div id="first_screen" class="full_screen padding">
+            <div class="wrapper">
+                <form action="process.php" method="get">
+                    <h1>Your Data</h1>
+                    <hr>
+                    <div class="input-box">
+                        <i class='bx bx-user-circle'></i>
+                        <input type="text" id="first_name" name="user_first_name" placeholder="First Name" required />
+                    </div>
+                    <div class="input-box">
+                        <i class='bx bx-user-circle'></i>
+                        <input type="text" id="last_name" name="user_last_name" placeholder="Last Name" required />
+                    </div>
+                    <div class="input-box">
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" id="mail" name="user_mail" placeholder="Email" required />
+                    </div>
+                    <div class="input-box">
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" id="password" name="user_password" placeholder="Password" required />
+                    </div>
+                    <hr>
+                    <div class="button">
+                        <button type="submit">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="second_screen" class="full_screen padding">
+            <div class="wrapper">
+                <form action="process.php" method="get">
+                    <h1>First Child Data</h1>
+                    <hr>
+                    <div class="input-box">
+                        <i class='bx bx-user-circle'></i>
+                        <input type="text" id="first_name" name="user_first_name" placeholder="First Name" required />
+                    </div>
+                    <div class="input-box">
+                        <i class='bx bx-user-circle'></i>
+                        <input type="text" id="last_name" name="user_last_name" placeholder="Last Name" required />
+                    </div>
+                    <div class="input-box">
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" id="mail" name="user_mail" placeholder="Email" required />
+                    </div>
+                    <div class="input-box">
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" id="password" name="user_password" placeholder="Password" required />
+                    </div>
+                    <hr>
+                    <div class="button">
+                        <button type="submit">Update</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 

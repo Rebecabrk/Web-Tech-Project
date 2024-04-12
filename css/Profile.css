@@ -10,13 +10,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: xx-large;
 }
 
 html,
 body {
   scroll-behavior: smooth;
-  display: flex;
 }
+
 
 .pages {
   flex: 1;
@@ -34,6 +35,85 @@ body {
 #first_screen {
   background-color: blanchedalmond;
 }
+
+#second_screen {
+  background-image: url("background_images/pexels-josh-willink-1157399.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  width: 450px;
+  height: 600px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 2px solid black;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.wrapper h1 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: rgb(85, 78, 67);
+}
+
+.wrapper hr {
+  border: 1px solid black;
+  padding: 0;
+}
+
+.wrapper .input-box {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 20px;
+  color: blanchedalmond;
+  padding: 20px 20px 20px 20px;
+}
+
+.wrapper .input-box input::placeholder {
+  color: rgb(255,235,205);
+}
+
+.wrapper .input-box input:focus {
+  border: 2px solid black;
+}
+.wrapper .button {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.wrapper button {
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid black;
+  outline: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
 
 .sidebar {
   position: fixed;
@@ -203,6 +283,7 @@ body {
   filter: blur(20px); /* Adjust the blur level as needed */
 }
 
+
 @media screen and (max-width: 1991px) {
   .padding {
     padding: 0 5% 0 5%;
@@ -216,9 +297,9 @@ body {
 }
 
 @media screen and (max-width: 1150px) {
-  .padding {
-    padding: 0 5% 0 13%;
-  }
+.padding {
+  padding: 0 5% 0 13%;
+}
 }
 
 @media screen and (max-width: 480px) {
