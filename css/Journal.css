@@ -5,6 +5,7 @@
   src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
 }
 
+
 * {
   font-family: myFirstFont;
   margin: 0;
@@ -38,6 +39,10 @@ body {
   height: 300px;
   min-width: 500px;
   margin-right: 20px;
+  cursor: pointer;
+  border: 2px solid whitesmoke; /* Your border properties */
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .item1{

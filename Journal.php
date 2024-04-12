@@ -30,19 +30,45 @@
                 <div class="center_wrapper">
                     <h1> Choose Template for Today's Thoughts: </h1>
                     <div class="wrapper">
-                        <div class="item item1"></div>
-                        <div class="item item2"></div>
-                        <div class="item item3"></div>
-                        <div class="item item4"></div>
-                        <div class="item item5"></div>
-                        <div class="item item6"></div>
-                        <div class="item item7"></div>
-                        <div class="item item8"></div>
-                        <div class="item item9"></div>
-                        <div class="item item10"></div>
-                        <div class="item item11"></div>
-                        <div class="item item12"></div>
-                        <div class="item item13"></div>
+                        <a href="TextEditor.php?pattern=pattern1">
+                            <div class="item item1"></div>
+                        </a>
+                        <a href="TextEditor.php?pattern=pattern2">
+                            <div class="item item2"></div>
+                        </a>
+                        <a href="TextEditor.php?pattern=pattern3">
+                            <div class="item item3"></div>
+                        </a>
+                        <a href="TextEditor.php?pattern=pattern4">
+                            <div class="item item4"></div>
+                        </a>
+                        <a href="TextEditor.php?pattern=pattern5">
+                            <div class="item item5"></div>
+                        </a>
+                        <a href="TextEditor.php?pattern=pattern6">
+                            <div class="item item6"></div>
+                        </a>
+                        <a href="TextEditor.php?pattern=pattern7">
+                            <div class="item item7"></div>
+                        </a>
+                        <a href="TextEditor.php?pattern=pattern8">
+                            <div class="item item8"></div>
+                        </a>
+                        <a href="TextEditor.php?pattern=pattern9">
+                            <div class="item item9"></div>
+                        </a>
+                        <a href="TextEditor.php?pattern=pattern10">
+                            <div class="item item10"></div>
+                        </a>
+                        <a href="TextEditor.php?pattern=pattern11">
+                            <div class="item item11"></div>
+                        </a>
+                        <a href="TextEditor.php?pattern=pattern12">
+                            <div class="item item12"></div>
+                        </a>
+                        <a href="TextEditor.php?pattern=pattern13">
+                            <div class="item item13"></div>
+                        </a>
                     </div>
                 </div>
                 <div>
