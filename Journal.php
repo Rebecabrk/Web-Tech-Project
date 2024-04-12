@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <title>File Manager Page</title>
-    <link href="css/FileManager.css" rel="stylesheet">
+    <link href="css/Journal.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -13,7 +13,42 @@
 <body>
     <div class="pages">
         <div id="first_screen" class="full_screen">
-           <h1 class="padding">File Manager</h1>
+            <div class="padding">
+                <h1>Journal</h1>
+                <div class="buttons-container">
+                    <nav>
+                        <ul>
+                            <a href="CreateAccount.php" class="ne_btn">
+                                <li>
+                                    + New Entry
+                                    <span></span><span></span><span></span><span></span>
+                                </li>
+                            </a>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="center_wrapper">
+                    <h1> Choose Template for Today's Thoughts: </h1>
+                    <div class="wrapper">
+                        <div class="item item1"></div>
+                        <div class="item item2"></div>
+                        <div class="item item3"></div>
+                        <div class="item item4"></div>
+                        <div class="item item5"></div>
+                        <div class="item item6"></div>
+                        <div class="item item7"></div>
+                        <div class="item item8"></div>
+                        <div class="item item9"></div>
+                        <div class="item item10"></div>
+                        <div class="item item11"></div>
+                        <div class="item item12"></div>
+                        <div class="item item13"></div>
+                    </div>
+                </div>
+                <div>
+                    <h2>Your Entries:</h2>
+                </div>
+            </div>
         </div>
     </div>
 

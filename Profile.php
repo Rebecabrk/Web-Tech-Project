@@ -73,6 +73,10 @@
     </div>
 
     <script src="components\SideNavBar\SideNavBar.js"></script>
+
+    <div class="pie-chart-container">
+        something is here
+    </div>
 </body>
 
 </html>

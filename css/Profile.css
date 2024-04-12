@@ -1,12 +1,12 @@
-@import url("https://www.fontspace.com/dancing-script-font-f14944");
+@import url("https://www.fontspace.com/soul-note-display-trial-font-f110131");
 
 @font-face {
-  font-family: myThirdFont;
-  src: url(fonts/DancingScript-Bold.ttf);
+  font-family: myFirstFont;
+  src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
 }
 
 * {
-  font-family: myThirdFont;
+  font-family: myFirstFont;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -203,6 +203,18 @@ body {
     filter: blur(20px); /* Adjust the blur level as needed */
   }
   
+  .pie-chart-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: conic-gradient(
+        #f00 0% 25%, /* Red, 0-25% */
+        #0f0 25% 50%, /* Green, 25-50% */
+        #00f 50% 75%, /* Blue, 50-75% */
+        #ff0 75% 100% /* Yellow, 75-100% */
+    );
+}
+
 
 @media screen and (max-width: 1991px) {
     .padding {
