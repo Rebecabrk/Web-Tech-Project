@@ -14,6 +14,7 @@
     <div class="pages">
         <div id="first_screen" class="full_screen padding">
             <div class="wrapper">
+                <div class="image image1"></div>
                 <form action="process.php" method="get">
                     <h1>Your Data</h1>
                     <hr>
@@ -44,6 +45,7 @@
         <div id="second_screen" class="full_screen padding">
             <div class="wrapper">
                 <form action="process.php" method="get">
+                <div class="image image2"></div>
                     <h1>First Child Data</h1>
                     <hr>
                     <div class="input-box">
@@ -70,7 +72,7 @@
             </div>
         </div>
 
-        <div id="first_screen" class="full_screen padding">
+        <div id="third_screen" class="full_screen padding">
             <div class="pie-chart-container">
                 something is here
             </div>
