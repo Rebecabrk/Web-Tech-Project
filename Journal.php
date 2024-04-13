@@ -14,22 +14,6 @@
     <div class="pages">
         <div id="first_screen" class="full_screen">
             <div class="padding">
-<<<<<<< HEAD
-                <h1>Journal</h1>
-                <div class="buttons-container">
-                    <nav>
-                        <ul>
-                            <a href="TextEditor.php" class="ne_btn">
-                                <li>
-                                    + New Entry
-                                    <span></span><span></span><span></span><span></span>
-                                </li>
-                            </a>
-                        </ul>
-                    </nav>
-                </div>
-=======
->>>>>>> b9ada123db50b99c96e495dca495f644a8f56247
                 <div class="center_wrapper">
                     <h1> Choose Template for Today's Thoughts: </h1>
                     <div class="wrapper">

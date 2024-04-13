@@ -15,11 +15,11 @@
         <div id="first_screen" class="full_screen padding">
             <div class="card-container">
                 <div class="left-side">
-                    <div class="card card1"></div>
+                    <div class="card card1" ></div>
                     <div class="card card1"></div>
                 </div>
                 <div class="right-side">
-                    <div class="card card2"></div>
+                    <div class="card card2" href="Profile.php"></div>
                     <div class="card card2"></div>
                 </div>
             </div>
