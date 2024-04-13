@@ -73,6 +73,14 @@
         </ul>
     </div>
 
+    <div class="container">
+        <h1> Your Core Memories </h1>
+        <div class="throwbacks_container">
+            <a href="">
+                <div class="item item1"></div>
+            </a>
+        </div>
+    </div>
     <script src="components\SideNavBar\SideNavBar.js"></script>
 </body>
 

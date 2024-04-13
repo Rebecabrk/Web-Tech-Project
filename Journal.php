@@ -18,7 +18,7 @@
                 <div class="buttons-container">
                     <nav>
                         <ul>
-                            <a href="CreateAccount.php" class="ne_btn">
+                            <a href="TextEditor.php" class="ne_btn">
                                 <li>
                                     + New Entry
                                     <span></span><span></span><span></span><span></span>
