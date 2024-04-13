@@ -175,10 +175,10 @@ $backgroundStyle = $patterns[$patternName] ?? $patterns['default'];
 
 <head>
     <style>
-        html {
-            <?php echo $backgroundStyle; ?>
-            ;
-        }
+    html {
+        <?php echo $backgroundStyle;
+        ?>;
+    }
     </style>
     <meta charset="utf-8">
     <title>Journal Page</title>
@@ -191,7 +191,7 @@ $backgroundStyle = $patterns[$patternName] ?? $patterns['default'];
     <div class="journal_container">
         <form>
             <div class="journal_title">
-                <input type="text" id="title" name="title" placeholder="Your Title"  />
+                <input type="text" id="title" name="title" placeholder="Your Title" />
             </div>
             <div class="journal_text">
                 <textarea type="text" id="text" name="text" rows="5" cols="40" placeholder="Your Thoughts"></textarea>

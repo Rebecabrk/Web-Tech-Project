@@ -35,6 +35,53 @@ body {
   background-color: blanchedalmond;
 }
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  height: 100px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card1 {
+  background-image: url("background_images/pexels-elina-sazonova-1914982.jpg");
+}
+.card2 {
+  background-image: url("background_images/pexels-willsantt-2026960.jpg");
+}
+
+.left-side{
+  display: flex;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.right-side{
+  display: flex;
+  justify-content: flex-end;
+  height: 100vh;
+  width: 100%;
+  transition: 0.5s;
+}
+
 .sidebar {
     position: fixed;
     flex: 0 0 auto;

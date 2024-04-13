@@ -45,7 +45,7 @@
         <div id="second_screen" class="full_screen padding">
             <div class="wrapper">
                 <form action="process.php" method="get">
-                <div class="image image2"></div>
+                    <div class="image image2"></div>
                     <h1>First Child Data</h1>
                     <hr>
                     <div class="input-box">
@@ -131,6 +131,13 @@
                     <span class="links_name">Settings</span>
                 </a>
                 <span class="tooltip">Settings</span>
+            </li>
+            <li>
+                <a href="About.php">
+                    <i class='bx bx-smile'></i>
+                    <span class="links_name">About Us</span>
+                </a>
+                <span class="tooltip">About Us</span>
             </li>
         </ul>
     </div>

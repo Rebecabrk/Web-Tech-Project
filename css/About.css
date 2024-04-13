@@ -10,12 +10,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: xx-large;
 }
 
 html,
 body {
   scroll-behavior: smooth;
+  display: flex;
 }
 
 .pages {
@@ -29,130 +29,79 @@ body {
 .full_screen {
   height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #first_screen {
   background-color: blanchedalmond;
 }
 
-#second_screen {
-  background-image: url("background_images/pexels-josh-willink-1157399.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  margin: 0;
-}
-
-#third_screen {
-  background-color: blanchedalmond;
-}
-
-.wrapper {
+.padding {
   display: flex;
-  max-height: 500px;
-  height: 100%;
-  max-width: 800px;
-  width: 100%;
-  color: black;
-  flex-direction: column;
-  justify-content: center;
-  background: transparent;
-  border: 2px solid black;
-  backdrop-filter: blur(20px);
-  z-index: 2;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  padding: 0 0 0 5%;
 }
 
-.wrapper .image {
-  width: 5rem;
-  height: 5rem;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%, -70%);
-  background-size: cover;
-  border-radius: 50%;
-  box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,0.07);
-  background-color: rgba(255, 255, 255, 0.8);
-  mask-image: linear-gradient(to bottom, black 70%, transparent 80%);
-}
-
-.wrapper .image1{
-  background: #8f6ed5 url("avatars/portrait-man-with-beard-mustache-white-shirt-black-glasses-3d-rendering.jpg") center center no-repeat;
-  background-size: cover;
-}
-
-.wrapper .image2{
-  background: #8f6ed5 url("avatars/3d-illustration-cute-cartoon-girl-blue-jacket-glasses.jpg") center center no-repeat;
-  background-size: cover;
-}
-
-.wrapper .image3{
-  background: #8f6ed5 url("avatars/portrait-man-with-beard-mustache-white-shirt-black-glasses-3d-rendering.jpg") center center no-repeat;
-  background-size: cover;
-}
-
-.wrapper h1 {
+h1 {
   display: flex;
   justify-content: center;
-  padding: 10px;
-  color: rgb(85, 78, 67);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
-.wrapper hr {
-  border: 1px solid black;
-  padding: 0;
-}
-
-.wrapper .input-box {
+.container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
-}
-
-.input-box input {
-  width: 100%;
+  flex-direction: column;
+  max-width: 100%;
   height: 100%;
-  background-color: black;
-  outline: none;
-  border: 2px solid black;
-  border-radius: 20px;
-  color: blanchedalmond;
-  padding: 20px 20px 20px 20px;
+  max-width: 100vw;
+  width: 100%;
 }
 
-.wrapper .input-box input::placeholder {
-  color: rgb(255, 235, 205);
-}
-
-.wrapper .input-box input:focus {
-  border: 2px solid black;
-}
-
-.wrapper .button {
+.gallery {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  align-items: center;
 }
 
-.wrapper button {
-  width: 50%;
-  height: 100%;
-  background: transparent;
-  border: 2px solid black;
-  outline: none;
-  color: black;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 20px;
+.img-box {
+  width: 100px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 50px;
+  background: url("us/Marius_Olaru.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: width 0.5s;
+}
+
+.img-box:nth-child(2) {
+  background: url("us/Rebeca_Costache.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box:hover {
+  width: 300px;
+  cusor: pointer;
+}
+
+.img-box h3 {
+  color: blanchedalmond;
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s;
+}
+
+.img-box:hover h3 {
+  opacity: 1;
+  bottom: 20px;
 }
 
 .sidebar {
@@ -323,19 +272,15 @@ body {
   filter: blur(20px); /* Adjust the blur level as needed */
 }
 
-.padding {
-  padding: 4% 5% 0 5%;
-}
-
 @media screen and (max-width: 1991px) {
   .padding {
-    padding: 4% 5% 0 5%;
+    padding: 0 5% 0 5%;
   }
 }
 
 @media screen and (max-width: 1600px) {
   .padding {
-    padding: 4% 5% 0 7%;
+    padding: 0 5% 0 7%;
   }
 }
 

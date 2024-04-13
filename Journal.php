@@ -14,6 +14,7 @@
     <div class="pages">
         <div id="first_screen" class="full_screen">
             <div class="padding">
+<<<<<<< HEAD
                 <h1>Journal</h1>
                 <div class="buttons-container">
                     <nav>
@@ -27,6 +28,8 @@
                         </ul>
                     </nav>
                 </div>
+=======
+>>>>>>> b9ada123db50b99c96e495dca495f644a8f56247
                 <div class="center_wrapper">
                     <h1> Choose Template for Today's Thoughts: </h1>
                     <div class="wrapper">
@@ -74,6 +77,19 @@
                 <div>
                     <h2>Your Entries:</h2>
                 </div>
+            </div>
+
+            <div class="buttons-container">
+                <nav>
+                    <ul>
+                        <a href="CreateAccount.php" class="ne_btn">
+                            <li>
+                                + New Entry
+                                <span></span><span></span><span></span><span></span>
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
@@ -131,9 +147,16 @@
                 </a>
                 <span class="tooltip">Settings</span>
             </li>
+            <li>
+                <a href="About.php">
+                    <i class='bx bx-smile'></i>
+                    <span class="links_name">About Us</span>
+                </a>
+                <span class="tooltip">About Us</span>
+            </li>
         </ul>
     </div>
-
+    
     <script src="components\SideNavBar\SideNavBar.js"></script>
 </body>
 

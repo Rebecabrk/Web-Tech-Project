@@ -22,8 +22,11 @@
 }
 
 .wrapper {
-  width: 450px;
-  height: 600px;
+  display: flex;
+  max-height: 600px;
+  height: 100%;
+  max-width: 450px;
+  width: 100%;
   color: blanchedalmond;
   display: flex;
   margin-top: 5%;
@@ -32,6 +35,7 @@
   border: 2px solid blanchedalmond;
   backdrop-filter: blur(20px);
   border-radius: 20px;
+
 }
 
 .wrapper h1 {
@@ -70,22 +74,23 @@
 .wrapper .input-box input:focus {
   border: 2px solid blanchedalmond;
 }
+
 .wrapper .button {
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 
 .wrapper button {
-  width: 30%;
+  width: 50%;
   height: 100%;
   background: transparent;
-  border: 2px solid blanchedalmond;
+  border: 2px solid black;
   outline: none;
-  color: blanchedalmond;
+  color: black;
   font-size: 20px;
   cursor: pointer;
   border-radius: 20px;
-  padding: 10px;
 }
 
 #text {

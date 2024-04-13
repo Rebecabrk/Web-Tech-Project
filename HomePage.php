@@ -161,6 +161,13 @@
                 </a>
                 <span class="tooltip">Settings</span>
             </li>
+            <li>
+                <a href="About.php">
+                    <i class='bx bx-smile'></i>
+                    <span class="links_name">About Us</span>
+                </a>
+                <span class="tooltip">About Us</span>
+            </li>
         </ul>
     </div>
 
