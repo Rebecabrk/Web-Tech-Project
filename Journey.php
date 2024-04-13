@@ -102,11 +102,21 @@
                     <div class="timeline-item">
                         <div class="timeline-img"></div>
                         <div class="timeline-content">
+                        <h2>Family Reunion</h2>
                             <div class="date">13 APRIL 2024</div>
-                            <h2>Family Reunion</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis
-                                alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor,
-                                nostrum excepturi amet in dolores. Alias, ullam.</p>
+                            <p>The sun was just beginning to dip below the horizon, casting a warm golden glow over
+                                 the beach as our family gathered for their annual reunion. I watched as 
+                                 my cousins constructed a lopsided sandcastle.</p>
+                            <a>More</a>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-img"></div>
+                        <div class="timeline-content">
+                            <h2>Walk in the park</h2>
+                            <div class="date">13 APRIL 2024</div>
+                            <p>We had a great time!</p>
                             <a>More</a>
                         </div>
                     </div>
