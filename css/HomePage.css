@@ -22,7 +22,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.overall{
+.overall {
   display: flex;
 }
 
@@ -74,16 +74,6 @@ html {
   flex-direction: column;
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 + p {
-  text-align: center;
-}
-
 .card-container {
   display: flex;
   justify-content: center;
@@ -96,7 +86,6 @@ h1 + p {
   width: 200px;
   height: 250px;
   border-radius: 20px;
-  box-sizing: border-box;
   cursor: pointer;
   padding: 10px 15px;
   margin: 10px 15px;
@@ -113,10 +102,12 @@ h1 + p {
   color: white;
 }
 .card3 {
-  background-image: url("background_images/pexels-andy-kuzma-2801567.jpg");
+  background-image: url("background_images/pexels-delcho-dichev-1129615.jpg");
+  color: white;
 }
 .card4 {
   background-image: url("background_images/pexels-dominika-roseclay-1166990.jpg");
+  color: black;
 }
 .card5 {
   background-image: url("background_images/pexels-anna-shvets-4586688.jpg");
@@ -157,7 +148,6 @@ a {
 
 #second_screen {
   background-color: blanchedalmond;
-
 }
 
 #third_screen {
@@ -168,15 +158,18 @@ h1 {
   font-size: 95px;
   display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 + p {
+  text-align: center;
 }
 
 .full_screen {
   height: 100vh;
   width: 100vw;
 }
-
-
-
 
 .buttons-container nav ul {
   list-style-type: none;
@@ -298,9 +291,6 @@ li a span {
   color: white;
 }
 
-
-
-
 .tracking-in-expand {
   position: relative;
   display: flex;
@@ -348,11 +338,11 @@ li a span {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 6%;
+  align-items: center;
 }
 
 .arrow {
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -390,37 +380,37 @@ li a span {
   }
 }
 
-.sidebar{
+.sidebar {
   position: fixed;
   flex: 0 0 auto;
   left: 0;
   top: 0;
   height: 100%;
   width: 78px;
-  background: #11101D;
+  background: #11101d;
   backdrop-filter: blur(20px);
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
   transform: translateX(-100%);
 }
-.sidebar.open{
+.sidebar.open {
   width: 20%;
 }
-.sidebar .logo-details{
+.sidebar .logo-details {
   height: 60px;
   display: flex;
   align-items: center;
   position: relative;
 }
-.sidebar .logo-details .icon{
+.sidebar .logo-details .icon {
   opacity: 0;
   transition: all 0.5s ease;
 }
-.sidebar.open .logo-details .icon{
+.sidebar.open .logo-details .icon {
   opacity: 1;
 }
-.sidebar .logo-details #btn{
+.sidebar .logo-details #btn {
   position: absolute;
   top: 50%;
   right: 0;
@@ -432,10 +422,10 @@ li a span {
   cursor: pointer;
   transition: all 0.5s ease;
 }
-.sidebar.open .logo-details #btn{
+.sidebar.open .logo-details #btn {
   text-align: right;
 }
-.sidebar i{
+.sidebar i {
   color: #fff;
   height: 60px;
   min-width: 50px;
@@ -443,16 +433,16 @@ li a span {
   text-align: center;
   line-height: 60px;
 }
-.sidebar .nav-list{
+.sidebar .nav-list {
   margin-top: 20px;
   height: 100%;
 }
-.sidebar li{
+.sidebar li {
   position: relative;
   margin: 8px 0;
   list-style: none;
 }
-.sidebar li .tooltip{
+.sidebar li .tooltip {
   position: absolute;
   top: -20px;
   left: calc(100% + 15px);
@@ -468,19 +458,19 @@ li a span {
   pointer-events: none;
   transition: 0s;
 }
-.sidebar li:hover .tooltip{
+.sidebar li:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
   transition: all 0.4s ease;
   top: 50%;
   transform: translateY(-50%);
 }
-.sidebar.open li .tooltip{
+.sidebar.open li .tooltip {
   display: none;
 }
-.sidebar input{
+.sidebar input {
   font-size: 15px;
-  color: #FFF;
+  color: #fff;
   font-weight: 400;
   outline: none;
   height: 50px;
@@ -491,28 +481,28 @@ li a span {
   transition: all 0.5s ease;
   background: #1d1b31;
 }
-.sidebar.open input{
+.sidebar.open input {
   padding: 0 20px 0 50px;
   width: 100%;
 }
-.sidebar .bx-search{
+.sidebar .bx-search {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
   font-size: 22px;
   background: #1d1b31;
-  color: #FFF;
+  color: #fff;
 }
-.sidebar.open .bx-search:hover{
+.sidebar.open .bx-search:hover {
   background: #1d1b31;
-  color: #FFF;
+  color: #fff;
 }
-.sidebar .bx-search:hover{
-  background: #FFF;
+.sidebar .bx-search:hover {
+  background: #fff;
   color: #11101d;
 }
-.sidebar li a{
+.sidebar li a {
   display: flex;
   height: 100%;
   width: 100%;
@@ -520,12 +510,12 @@ li a span {
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
-  background: #11101D;
+  background: #11101d;
 }
-.sidebar li a:hover{
-  background: #FFF;
+.sidebar li a:hover {
+  background: #fff;
 }
-.sidebar li a .links_name{
+.sidebar li a .links_name {
   color: #fff;
   font-size: 15px;
   font-weight: 400;
@@ -534,17 +524,17 @@ li a span {
   pointer-events: none;
   transition: 0.4s;
 }
-.sidebar.open li a .links_name{
+.sidebar.open li a .links_name {
   opacity: 1;
   pointer-events: auto;
   left: 20%;
 }
 .sidebar li a:hover .links_name,
-.sidebar li a:hover i{
+.sidebar li a:hover i {
   transition: all 0.5s ease;
-  color: #11101D;
+  color: #11101d;
 }
-.sidebar li i{
+.sidebar li i {
   height: 50px;
   line-height: 50px;
   font-size: 18px;
@@ -560,10 +550,16 @@ li a span {
 }
 
 .padding {
-  padding: 0 5% 0 5%;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0.5% 2% 5%;
 }
 
 @media screen and (max-width: 1991px) {
+  .padding {
+    padding: 2% 0.5% 2% 4.5%;
+  }
+
   .card-container {
     display: flex;
     justify-content: center;
@@ -571,43 +567,37 @@ li a span {
     flex-basis: 30%;
     margin-top: 8%;
   }
-  
-  .padding {
-    padding: 0 1% 0 5%;
-  }
 }
 
 @media screen and (max-width: 1600px) {
-  .card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-basis: 40%;
-    margin-top: 8%;
-  }
-  
   .padding {
-    padding: 0 1% 0 5%;
+    padding: 2% 0.5% 2% 5.4%;
+  }
+
+  .card-container {
+    flex-basis: 40%;
   }
 }
-
 
 @media screen and (max-width: 1350px) {
-}
-
-
-@media screen and (max-width: 1150px) {
-  .card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-basis: 40%;
-    margin-top: 8%;
+  .padding {
+    padding: 2% 0.5% 2% 6%;
   }
 
-  .row{
+  .row {
     display: flex;
     flex-direction: column;
+    transition: all 0.4s ease;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .padding {
+    padding: 2% 0.5% 2% 8.4%;
+  }
+
+  .card-container {
+    flex-basis: 40%;
   }
 
   .tracking-in-expand {
@@ -622,33 +612,81 @@ li a span {
   .content-box {
     max-width: calc(50% - 20px);
   }
-  
-  .padding {
-    padding: 0 1% 0 5%;
-  }
 }
 
 @media screen and (max-width: 1024px) {
   .padding {
-    padding: 0 1% 0 5%;
+    padding: 2% 0.4% 2% 8.5%;
   }
+
+  .left-side {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .right-side {
+    justify-content: center;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.4s ease;
+  }
+
+  i {
+    font-size: 3.3rem;
+    transition: all 0.4s ease;
+  }
+
+  .content_paragraph {
+    font-size: 100%;
+    width: auto;
+  }  
 }
 
 @media screen and (max-width: 770px) {
   .padding {
-    padding: 0 1% 0 5%;
+    padding: 2% 0.7% 2% 13%;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.4s ease;
+  }
+
+  i {
+    font-size: 2.6rem;
+    transition: all 0.4s ease;
+  }
+
+  .card {
+    height: 170px;
+    transition: all 0.4s ease;
+    margin: 5px 10px;
+  }
+
+
+
+  .card-container {
+    flex-basis: 20%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .padding {
+    padding: 2% 0.7% 2% 15%;
+  }
+
+  .card {
+    height: 120px;
+    transition: all 0.4s ease;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-basis: 60%;
-    margin-top: 8%;
-  }
-  
   .buttons-container {
     display: flex;
     flex-direction: column;
@@ -658,17 +696,35 @@ li a span {
     max-width: calc(100% - 20px);
   }
 
-  .sidebar li .tooltip{
+  .sidebar li .tooltip {
     display: none;
   }
 
   .padding {
-    padding: 0 1% 0 5%;
+    padding: 2% 0.4% 2% 17%;
+  }
+
+  i {
+    font-size: 2rem;
+    transition: all 0.4s ease;
+  }
+
+  .card {
+    height: 100px;
+    transition: all 0.4s ease;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: 60%;
+    margin-top: 8%;
   }
 }
 
 @media screen and (max-width: 380px) {
   .padding {
-    padding: 0 1% 0 5%; /* Padding: top right bottom left */
+    padding: 2% 1% 2% 21%; /* Padding: top right bottom left */
   }
 }

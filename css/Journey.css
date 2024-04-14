@@ -403,6 +403,12 @@ blockquote {
   filter: blur(20px); /* Adjust the blur level as needed */
 }
 
+.padding {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0.5% 2% 5%;
+}
+
 @media screen and (max-width: 1991px) {
   .padding {
     padding: 0 1% 0 5%;

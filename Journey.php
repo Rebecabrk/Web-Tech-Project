@@ -12,8 +12,8 @@
 
 <body>
     <div class="pages">
-        <div class="container">
-            <section class="timeline padding">
+        <div class="container padding">
+            <section class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-img"></div>
                     <div class="timeline-content">

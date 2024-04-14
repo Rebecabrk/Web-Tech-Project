@@ -77,7 +77,7 @@
 
         <div id="third_screen" class="full_screen padding">
             <div class="pie-chart-container">
-                something is here
+                Do you have another child?
             </div>
         </div>
     </div>
