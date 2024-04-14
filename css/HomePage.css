@@ -563,8 +563,6 @@ li a span {
   padding: 0 5% 0 5%;
 }
 
-
-
 @media screen and (max-width: 1991px) {
   .card-container {
     display: flex;
@@ -575,7 +573,7 @@ li a span {
   }
   
   .padding {
-    padding: 0 5% 0 5%;
+    padding: 0 1% 0 5%;
   }
 }
 
@@ -589,7 +587,7 @@ li a span {
   }
   
   .padding {
-    padding: 0 5% 0 5%;
+    padding: 0 1% 0 5%;
   }
 }
 
@@ -598,7 +596,7 @@ li a span {
 }
 
 
-// my screen size: 1286px
+// Marius's screen size: 1286px
 
 @media screen and (max-width: 1150px) {
   .card-container {
@@ -628,19 +626,19 @@ li a span {
   }
   
   .padding {
-    padding: 0 5% 0 5%;
+    padding: 0 1% 0 5%;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .padding {
-    padding: 0 5% 0 5%;
+    padding: 0 1% 0 5%;
   }
 }
 
 @media screen and (max-width: 770px) {
   .padding {
-    padding: 0 5% 0 5%;
+    padding: 0 1% 0 5%;
   }
 }
 
@@ -667,12 +665,12 @@ li a span {
   }
 
   .padding {
-    padding: 0 5% 0 5%;
+    padding: 0 1% 0 5%;
   }
 }
 
 @media screen and (max-width: 380px) {
   .padding {
-    padding: 0 5% 0 5%;
+    padding: 0 1% 0 5%; /* Padding: top right bottom left */
   }
 }

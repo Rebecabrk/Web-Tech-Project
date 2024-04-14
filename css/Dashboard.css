@@ -16,29 +16,22 @@ html,
 body {
   scroll-behavior: smooth;
   display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .pages {
-  flex: 1;
   height: 100%;
+  width: 100%;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.full_screen {
-  height: 100vh;
-  width: 100vw;
-}
-
 #first_screen {
   background-color: blanchedalmond;
-}
-
-.padding {
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 0 5%;
 }
 
 h1 {
@@ -50,15 +43,14 @@ h1 {
 }
 
 .card-container {
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  margin: auto 0;
 }
 
 .card {
   height: 100px;
   border-radius: 20px;
-  box-sizing: border-box;
   padding: 20px;
   margin: 10px 15px;
   background-position: center;
@@ -67,14 +59,15 @@ h1 {
 }
 
 .big_card {
-  height: 300px;
-  width:90%;
+  height: 250px;
+  width:100%;
   border-radius: 20px;
-  box-sizing: border-box;
   padding: 20px;
-  margin: 0px 30px;
+  margin: 0px 20px;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  diisplay: flex;
   flex: 1;
 }
 
@@ -82,7 +75,16 @@ h1 {
   background-image: url("statistics/01.jpg");
 }
 .card2 {
-  background-image: url("css/statistics/02.jpg");
+  background-image: url("statistics/02.jpg");
+}
+.card3 {
+  background-image: url("statistics/03.jpg");
+}
+.card4 {
+  background-image: url("statistics/04.jpg");
+}
+.card5 {
+  background-image: url("statistics/05.jpg");
 }
 
 .gradient-text {
@@ -106,33 +108,6 @@ h1 {
   );
   background-clip: text;
   color: transparent;
-}
-
-.canvas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  width: 800px;
-  height: 500px;
-  background-color: #f5f5f5;
-  border: 2px solid #000;
-  padding: 20px;
-}
-
-.lm_btn,
-.ca_btn {
-  position: relative;
-  margin: 20px;
-  display: inline-block;
-  top: 60%;
-}
-.lm_btn,
-.ca_btn {
-  top: 60%;
 }
 
 .sidebar {
@@ -303,32 +278,69 @@ h1 {
   filter: blur(20px); /* Adjust the blur level as needed */
 }
 
-@media screen and (max-width: 1991px) {
-  .padding {
-    padding: 0 5% 0 5%;
-  }
+.padding {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0.5% 2% 5%;
 }
+
+@media screen and (max-width: 1991px) {  
+  .padding {
+    padding: 2% 0.5% 2% 4.5%;
+  }
+}// Rebeca's screen size: 1990px
 
 @media screen and (max-width: 1600px) {
   .padding {
-    padding: 0 5% 0 7%;
+    padding: 2% 0.5% 2% 5.4%;
   }
 }
 
+@media screen and (max-width: 1350px) {
+  .padding {
+    padding: 2% 0.5% 2% 6%;
+  }
+}// Marius's screen size: 1286px
+
 @media screen and (max-width: 1150px) {
-.padding {
-  padding: 0 5% 0 13%;
+  .padding {
+    padding: 2% 0.5% 2% 8%;
+  }
 }
+
+@media screen and (max-width: 1024px) {
+  .padding {
+    padding: 2% 0.5% 2% 7.5%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .padding {
+    padding: 2% 0% 2% 10%;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-box {
+    max-width: calc(100% - 20px);
+  }
+
+  .sidebar li .tooltip{
+    display: none;
+  }
+
   .padding {
-    padding: 0 5% 0 17%;
+    padding: 2% 0% 2% 15%;
   }
 }
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 380px) {
   .padding {
-    padding: 0 0 0 20%; /* Padding: top right bottom left */
+    padding: 2% 0% 2% 15%; /* Padding: top right bottom left */
   }
 }

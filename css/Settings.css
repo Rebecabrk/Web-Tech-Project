@@ -24,6 +24,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: auto;
 }
 
 .full_screen {
@@ -101,9 +102,9 @@ h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
   color: blanchedalmond;
-  align-self: center;
+  display: flex;
+  justify-content: center;
 }
-
 
 .sidebar {
   position: fixed;
@@ -273,32 +274,122 @@ h1 {
   filter: blur(20px); /* Adjust the blur level as needed */
 }
 
+.padding {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0.5% 2% 5%;
+}
+
 @media screen and (max-width: 1991px) {
   .padding {
-    padding: 0 5% 0 5%;
+    padding: 2% 0.5% 2% 4.5%;
   }
-}
+} // Rebeca's screen size: 1990px
 
 @media screen and (max-width: 1600px) {
   .padding {
-    padding: 0 5% 0 7%;
+    padding: 2% 0.5% 2% 5.4%;
   }
 }
 
+@media screen and (max-width: 1350px) {
+  .padding {
+    padding: 2% 0.5% 2% 6%;
+  }
+} // Marius's screen size: 1286px
+
 @media screen and (max-width: 1150px) {
   .padding {
-    padding: 0 5% 0 13%;
+    padding: 2% 0.5% 2% 8.4%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .padding {
+    padding: 2% 0.4% 2% 8.5%;
+  }
+
+  .left-side {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .right-side {
+    justify-content: center;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.4s ease;
+  }
+
+  i {
+    font-size: 3.3rem;
+    transition: all 0.4s ease;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .padding {
+    padding: 2% 0.7% 2% 13%;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.4s ease;
+  }
+
+  i {
+    font-size: 2.6rem;
+    transition: all 0.4s ease;
+  }
+
+  .card {
+    height: 250px;
+    transition: all 0.4s ease;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-box {
+    max-width: calc(100% - 20px);
+  }
+
+  .sidebar li .tooltip {
+    display: none;
+  }
+
   .padding {
-    padding: 0 5% 0 17%;
+    padding: 2% 0.4% 2% 16%;
+  }
+
+  h1 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.4s ease;
+  }
+
+  i {
+    font-size: 2rem;
+    transition: all 0.4s ease;
+  }
+
+  .card {
+    height: 150px;
+    transition: all 0.4s ease;
   }
 }
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 380px) {
   .padding {
-    padding: 0 0 0 20%; /* Padding: top right bottom left */
+    padding: 2% 1% 2% 19%; /* Padding: top right bottom left */
   }
 }

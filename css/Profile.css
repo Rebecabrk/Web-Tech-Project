@@ -324,35 +324,68 @@ body {
 }
 
 .padding {
-  padding: 4% 5% 0 5%;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0.5% 2% 5%;
 }
 
-@media screen and (max-width: 1991px) {
+@media screen and (max-width: 1991px) {  
   .padding {
-    padding: 4% 5% 0 5%;
+    padding: 2% 0.5% 2% 4.5%;
   }
-}
+}// Rebeca's screen size: 1990px
 
 @media screen and (max-width: 1600px) {
   .padding {
-    padding: 4% 5% 0 7%;
+    padding: 2% 0.5% 2% 5.4%;
   }
 }
 
+@media screen and (max-width: 1350px) {
+  .padding {
+    padding: 2% 0.5% 2% 6%;
+  }
+}// Marius's screen size: 1286px
+
 @media screen and (max-width: 1150px) {
   .padding {
-    padding: 0 5% 0 13%;
+    padding: 2% 0.5% 2% 8%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .padding {
+    padding: 2% 0.5% 2% 7.5%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .padding {
+    padding: 2% 0% 2% 10%;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-box {
+    max-width: calc(100% - 20px);
+  }
+
+  .sidebar li .tooltip{
+    display: none;
+  }
+
   .padding {
-    padding: 0 5% 0 17%;
+    padding: 2% 0% 2% 15%;
   }
 }
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 380px) {
   .padding {
-    padding: 0 0 0 20%; /* Padding: top right bottom left */
+    padding: 2% 0% 2% 15%; /* Padding: top right bottom left */
   }
 }

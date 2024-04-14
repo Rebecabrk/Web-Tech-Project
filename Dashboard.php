@@ -12,7 +12,7 @@
 
 <body>
     <div class="pages">
-        <div id="first_screen" class="full_screen padding">
+        <div id="first_screen" class="padding">
             <h1>Schedules</h1>
             <div class="card-container">
                 <div class="card card1">
@@ -25,12 +25,12 @@
                         Food
                     </h1>
                 </div>
-                <div class="card card1">
+                <div class="card card3">
                     <h1 class="gradient-text">
                         Sleep
                     </h1>
                 </div>
-                <div class="card card2">
+                <div class="card card5">
                     <h1 class="gradient-text">
                         School
                     </h1>
@@ -58,7 +58,7 @@
 
             <h1>Activities/Memories</h1>
             <div class="card-container">
-                <div class="big_card card2">
+                <div class="big_card card4">
                     <h1 class="gradient-text">
                         Everything
                     </h1>
