@@ -30,6 +30,18 @@ body {
   justify-content: center;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  margin: 20px 0;
+}
+
 #first_screen {
   background-color: blanchedalmond;
 }
@@ -46,6 +58,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   margin: auto 0;
+  transition: all 0.4s ease;
 }
 
 .card {
@@ -60,10 +73,10 @@ h1 {
 
 .big_card {
   height: 250px;
-  width:100%;
+  width: 100%;
   border-radius: 20px;
   padding: 20px;
-  margin: 0px 20px;
+  margin: 20px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -284,11 +297,11 @@ h1 {
   padding: 2% 0.5% 2% 5%;
 }
 
-@media screen and (max-width: 1991px) {  
+@media screen and (max-width: 1991px) {
   .padding {
     padding: 2% 0.5% 2% 4.5%;
   }
-}// Rebeca's screen size: 1990px
+} // Rebeca's screen size: 1990px
 
 @media screen and (max-width: 1600px) {
   .padding {
@@ -300,7 +313,7 @@ h1 {
   .padding {
     padding: 2% 0.5% 2% 6%;
   }
-}// Marius's screen size: 1286px
+} // Marius's screen size: 1286px
 
 @media screen and (max-width: 1150px) {
   .padding {
@@ -310,13 +323,13 @@ h1 {
 
 @media screen and (max-width: 1024px) {
   .padding {
-    padding: 2% 0.5% 2% 7.5%;
+    padding: 2% 0.9% 2% 9%;
   }
 }
 
 @media screen and (max-width: 770px) {
   .padding {
-    padding: 2% 0% 2% 10%;
+    padding: 2% 0% 2% 16%;
   }
 }
 
@@ -330,17 +343,28 @@ h1 {
     max-width: calc(100% - 20px);
   }
 
-  .sidebar li .tooltip{
+  .sidebar li .tooltip {
     display: none;
   }
 
   .padding {
-    padding: 2% 0% 2% 15%;
+    padding: 2% 0% 2% 19%;
+    transition: all 0.4s ease;
+  }
+
+  .gradient-text {
+    font-size: 50px;
+    transition: all 0.4s ease;
   }
 }
 
 @media screen and (max-width: 380px) {
+  .gradient-text {
+    font-size: 30px;
+    transition: all 0.4s ease;
+  }
+
   .padding {
-    padding: 2% 0% 2% 15%; /* Padding: top right bottom left */
+    padding: 2% 0% 2% 22%; /* Padding: top right bottom left */
   }
 }

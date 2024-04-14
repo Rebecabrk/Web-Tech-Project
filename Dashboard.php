@@ -37,6 +37,8 @@
                 </div>
             </div>
 
+            <hr>
+
             <h1>Medical records</h1>
             <div class="card-container">
                 <div class="card card1">
@@ -56,6 +58,8 @@
                 </div>
             </div>
 
+            <hr>
+            
             <h1>Activities/Memories</h1>
             <div class="card-container">
                 <div class="big_card card4">
