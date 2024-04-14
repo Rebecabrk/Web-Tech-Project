@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div id="second_screen" class="full_screen">
+        <div id="second_screen" class="full_screen padding">
             <div class="row">
                 <div class="title-container">
                     <h1>The manager</h1>
@@ -81,7 +81,7 @@
             </div>
         </div>
 
-        <div id="third_screen" class="full_screen">
+        <div id="third_screen" class="full_screen padding">
             <div class="third_screen_container">
                 <div class="center_element">
                     <div class="wrapper2">
@@ -168,6 +168,13 @@
                 </a>
                 <span class="tooltip">About Us</span>
             </li>
+            <li>
+                <a href="Documentation.php">
+                    <i class='bx bxs-file-doc'></i>
+                    <span class="links_name">Documentation</span>
+                </a>
+                <span class="tooltip">Documentation</span>
+            </li>
         </ul>
     </div>
 
@@ -175,47 +182,3 @@
 </body>
 
 </html>
-
-<!--navbar -->
-<!-- <div class="container">
-        <a href="#" class="toggleBox">
-            <span class="icon"></span>
-        </a>
-        <ul class="navItems">
-            <li>
-                <a href="#">
-                    <i class="fa fa-home" style="--i:1"></i>
-                    <span style="--g:1">Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-about" style="--i:2"></i>
-                    <span style="--g:2">About</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-something" style="--i:3"></i>
-                    <span style="--g:3">Something</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-contact" style="--i:4"></i>
-                    <span style="--g:4">Contact</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <script>
-        var toggleClick = document.querySelector('.toggleBox');
-        var container = document.querySelector('.container');
-        toggleClick.addEventListener('click', () => {
-            toggleClick.classList.toggle('active');
-            container.classList.toggle('active');
-        });
-    </script> -->
-
-<!-- <button class="learn_more_button">Learn More!</button> -->

@@ -14,7 +14,7 @@
     <div class="pages">
         <div id="first_screen" class="full_screen padding">
             <div class="container">
-            <h1>Our team</h1>
+                <h1>Our team</h1>
                 <div class="gallery">
                     <div class="img-box">
                         <h3>Marius</h3>
@@ -85,6 +85,13 @@
                     <span class="links_name">About Us</span>
                 </a>
                 <span class="tooltip">About Us</span>
+            </li>
+            <li>
+                <a href="Documentation.php">
+                    <i class='bx bxs-file-doc'></i>
+                    <span class="links_name">Documentation</span>
+                </a>
+                <span class="tooltip">Documentation</span>
             </li>
         </ul>
     </div>

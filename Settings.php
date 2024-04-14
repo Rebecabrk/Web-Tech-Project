@@ -98,6 +98,13 @@
                 </a>
                 <span class="tooltip">About Us</span>
             </li>
+            <li>
+                <a href="Documentation.php">
+                    <i class='bx bxs-file-doc'></i>
+                    <span class="links_name">Documentation</span>
+                </a>
+                <span class="tooltip">Documentation</span>
+            </li>
         </ul>
     </div>
 
