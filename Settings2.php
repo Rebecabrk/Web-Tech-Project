@@ -23,15 +23,22 @@ $settings_checkbox = [
 ];
 
 $settingsName = $_GET['setting'] ?? 'default';
+
 switch ($settingsName) {
     case 'basic':
         $title = 'Basic Settings';
+        $formBox = '<input type="text" id="first_name" name="user_first_name" placeholder="Change your first name here" required />
+        <input type="text" id="last_name" name="user_last_name" placeholder="Change your last name here" required />
+        <input type="text" id="child_name" name="child_name" placeholder="Change your child\'s name here" required />
+        ';
         break;
     case 'email':
         $title = 'Email Settings';
+        $formBox = '<input type="email" id="mail" name="user_mail" placeholder="Enter new email" required />';
         break;
     case 'feedback':
         $title = 'Feedback';
+        $formBox = '<textarea type="text" id="text" name="text" rows="10" cols="50" placeholder="Please enter your thoughts about our site..."></textarea>';
         break;
     default:
         $title = 'Default text';
@@ -58,6 +65,9 @@ $containers = $settings_checkbox[$settingsName] ?? $settings_checkbox['default']
 <body>
     <div class="container">
         <h1><?php echo $title; ?></h1>
+        <form action="SettingsConfirmation.php" method="get">
+            <?php echo $formBox; ?>
+        </form>
     </div>
 </body>
 
