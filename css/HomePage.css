@@ -178,6 +178,125 @@ h1 {
 
 
 
+.buttons-container nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.buttons-container nav ul li {
+  --c: blanchedalmond;
+  color: var(--c);
+  width: 12em;
+  height: 3em;
+  border: 0.3em solid var(--c);
+  text-align: center;
+  line-height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.buttons-container nav ul li:hover {
+  color: black;
+}
+
+.buttons-container nav ul li span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.buttons-container nav ul li:hover span {
+  transform: translateY(0) scale(2);
+}
+
+.buttons-container nav ul li span:nth-child(1) {
+  --n: 1;
+}
+
+.buttons-container nav ul li span:nth-child(2) {
+  --n: 2;
+}
+
+.buttons-container nav ul li span:nth-child(3) {
+  --n: 3;
+}
+
+.buttons-container nav ul li span:nth-child(4) {
+  --n: 4;
+}
+
+.navItems {
+  width: 100%;
+  visibility: hidden;
+}
+
+.container.active .navItems {
+  visibility: visible;
+}
+/*
+
+li {
+  list-style: none;
+}
+li a {
+  text-decoration: uppercase;
+  color: black;
+}
+
+li a i {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  padding: 35px 0;
+  width: 100%;
+  text-align: center;
+  transform: scale(0);
+}
+
+.container.active .navItems li a i {
+  transform: scale(1);
+  transition: 0.4s ease;
+  transition-delay: calc(0.08s * var(--i));
+}
+
+.container.active .navItems li:hover a i {
+  transition: 0.2s ease;
+  color: white;
+} */
+
+li a span {
+  position: absolute;
+  color: white;
+  margin: 22px 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.container.active .navItems li a span {
+  transform: translateX(15px);
+  transition: 0.4s ease;
+  transition-delay: calc(0.08s * var(--g));
+}
+
+.container.active .navItems li:hover a span {
+  transform: translateX(30px);
+  transition: 0.2s ease;
+  color: white;
+}
 
 
 
