@@ -40,6 +40,9 @@
                     </div>
                 </form>
             </div>
+            <div class="arrow">
+                <span></span>
+            </div>
         </div>
 
         <div id="second_screen" class="full_screen padding">
