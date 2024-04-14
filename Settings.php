@@ -15,7 +15,7 @@
         <div id="first_screen" class="full_screen padding">
             <div class="card-container">
                 <div class="left-side">
-                    <a href="#" class="card content">
+                    <a href="Settings2.php?setting=basic" class="card content">
                         <i class='bx bx-cog'></i>
                         <h1>Basic Settings</h1>
                     </a>
@@ -25,11 +25,11 @@
                     </a>
                 </div>
                 <div class="right-side">
-                    <a href="#" class="card content">
+                    <a href="Settings2.php?setting=email" class="card content">
                         <i class='bx bx-envelope'></i>
                         <h1>Email Notifications</h1>
                     </a>
-                    <a href="#" class="card content">
+                    <a href="Settings2.php?setting=feedback" class="card content">
                         <i class='bx bx-message-add'></i>
                         <h1>Feedback</h1>
                     </a>

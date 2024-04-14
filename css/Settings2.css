@@ -1,0 +1,40 @@
+@import url("https://www.fontspace.com/soul-note-display-trial-font-f110131");
+@font-face {
+    font-family: myFirstFont;
+    src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
+}
+
+* {
+    font-family: myFirstFont;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html{
+    display: flex;
+    justify-content: center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height: 700px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 10px 15px;
+    background-color: white;
+    transition: transform 0.5s;
+    flex-grow: 1;
+    opacity: 75%;
+}
+
+h1 {
+    font-size: 100px;
+}

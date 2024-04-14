@@ -596,8 +596,6 @@ li a span {
 }
 
 
-// Marius's screen size: 1286px
-
 @media screen and (max-width: 1150px) {
   .card-container {
     display: flex;
