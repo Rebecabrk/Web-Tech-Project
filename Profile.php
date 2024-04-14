@@ -40,6 +40,9 @@
                     </div>
                 </form>
             </div>
+            <div class="arrow">
+                <span></span>
+            </div>
         </div>
 
         <div id="second_screen" class="full_screen padding">
@@ -138,6 +141,13 @@
                     <span class="links_name">About Us</span>
                 </a>
                 <span class="tooltip">About Us</span>
+            </li>
+            <li>
+                <a href="Documentation.php">
+                    <i class='bx bxs-file-doc'></i>
+                    <span class="links_name">Documentation</span>
+                </a>
+                <span class="tooltip">Documentation</span>
             </li>
         </ul>
     </div>

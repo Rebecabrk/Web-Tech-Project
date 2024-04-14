@@ -14,7 +14,6 @@
     <div class="pages">
         <div id="first_screen" class="full_screen">
             <div class="padding">
-                <h1>Journal</h1>
                 <div class="center_wrapper">
                     <h1> Choose Template for Today's Thoughts: </h1>
                     <div class="wrapper">
@@ -138,6 +137,13 @@
                     <span class="links_name">About Us</span>
                 </a>
                 <span class="tooltip">About Us</span>
+            </li>
+            <li>
+                <a href="Documentation.php">
+                    <i class='bx bxs-file-doc'></i>
+                    <span class="links_name">Documentation</span>
+                </a>
+                <span class="tooltip">Documentation</span>
             </li>
         </ul>
     </div>

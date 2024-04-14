@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Profile Page</title>
+    <title>Dashboard Page</title>
     <link href="css/Dashboard.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,58 +12,56 @@
 
 <body>
     <div class="pages">
-        <div id="first_screen" class="full_screen">
-            <div class="padding">
-                <h1>Schedules</h1>
-                <div class="card-container">
-                    <div class="card card1">
-                        <h1 class="gradient-text">
-                            Mediaction
-                        </h1>
-                    </div>
-                    <div class="card card2">
-                        <h1 class="gradient-text">
-                            Food
-                        </h1>
-                    </div>
-                    <div class="card card1">
-                        <h1 class="gradient-text">
-                            Sleep
-                        </h1>
-                    </div>
-                    <div class="card card2">
-                        <h1 class="gradient-text">
-                            School
-                        </h1>
-                    </div>
+        <div id="first_screen" class="padding">
+            <h1>Schedules</h1>
+            <div class="card-container">
+                <div class="card card1">
+                    <h1 class="gradient-text">
+                        Mediaction
+                    </h1>
                 </div>
-
-                <h1>Medical records</h1>
-                <div class="card-container">
-                    <div class="card card1">
-                        <h1 class="gradient-text">
-                            Accidents
-                        </h1>
-                    </div>
-                    <div class="card card2">
-                        <h1 class="gradient-text">
-                            Alergies
-                        </h1>
-                    </div>
-                    <div class="card card1">
-                        <h1 class="gradient-text">
-                            Diseares
-                        </h1>
-                    </div>
+                <div class="card card2">
+                    <h1 class="gradient-text">
+                        Food
+                    </h1>
                 </div>
+                <div class="card card3">
+                    <h1 class="gradient-text">
+                        Sleep
+                    </h1>
+                </div>
+                <div class="card card5">
+                    <h1 class="gradient-text">
+                        School
+                    </h1>
+                </div>
+            </div>
 
-                <h1>Activities/Memories</h1>
-                <div class="card-container">
-                    <div class="big_card card2">
-                        <h1 class="gradient-text">
-                            Everything
-                        </h1>
-                    </div>
+            <h1>Medical records</h1>
+            <div class="card-container">
+                <div class="card card1">
+                    <h1 class="gradient-text">
+                        Accidents
+                    </h1>
+                </div>
+                <div class="card card2">
+                    <h1 class="gradient-text">
+                        Alergies
+                    </h1>
+                </div>
+                <div class="card card1">
+                    <h1 class="gradient-text">
+                        Diseares
+                    </h1>
+                </div>
+            </div>
+
+            <h1>Activities/Memories</h1>
+            <div class="card-container">
+                <div class="big_card card4">
+                    <h1 class="gradient-text">
+                        Everything
+                    </h1>
                 </div>
             </div>
         </div>
@@ -127,6 +125,13 @@
                     <span class="links_name">About Us</span>
                 </a>
                 <span class="tooltip">About Us</span>
+            </li>
+            <li>
+                <a href="Documentation.php">
+                    <i class='bx bxs-file-doc'></i>
+                    <span class="links_name">Documentation</span>
+                </a>
+                <span class="tooltip">Documentation</span>
             </li>
         </ul>
     </div>

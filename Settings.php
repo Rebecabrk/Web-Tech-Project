@@ -15,12 +15,24 @@
         <div id="first_screen" class="full_screen padding">
             <div class="card-container">
                 <div class="left-side">
-                    <div class="card card1"></div>
-                    <div class="card card1"></div>
+                    <a href="#" class="card content">
+                        <i class='bx bx-cog'></i>
+                        <h1>Basic Settings</h1>
+                    </a>
+                    <a href="Profile.php" class="card content">
+                        <i class="bx bx-user"></i>
+                        <h1>Profile Settings</h1>
+                    </a>
                 </div>
                 <div class="right-side">
-                    <div class="card card2"></div>
-                    <div class="card card2"></div>
+                    <a href="#" class="card content">
+                        <i class='bx bx-envelope'></i>
+                        <h1>Email Notifications</h1>
+                    </a>
+                    <a href="#" class="card content">
+                        <i class='bx bx-message-add'></i>
+                        <h1>Feedback</h1>
+                    </a>
                 </div>
             </div>
         </div>
@@ -85,6 +97,13 @@
                     <span class="links_name">About Us</span>
                 </a>
                 <span class="tooltip">About Us</span>
+            </li>
+            <li>
+                <a href="Documentation.php">
+                    <i class='bx bxs-file-doc'></i>
+                    <span class="links_name">Documentation</span>
+                </a>
+                <span class="tooltip">Documentation</span>
             </li>
         </ul>
     </div>
