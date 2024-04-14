@@ -269,35 +269,90 @@ h1 {
 }
 
 .blur {
-  filter: blur(20px); /* Adjust the blur level as needed */
+  filter: blur(20px);
+}
+
+.padding {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0.5% 2% 5%;
 }
 
 @media screen and (max-width: 1991px) {
   .padding {
-    padding: 0 1% 0 5%;
+    padding: 2% 0.5% 2% 4.5%;
   }
-}
+} // Rebeca's screen size: 1990px
 
 @media screen and (max-width: 1600px) {
   .padding {
-    padding: 0 5% 0 7%;
+    padding: 2% 0.5% 2% 5.4%;
   }
 }
+
+@media screen and (max-width: 1350px) {
+  .padding {
+    padding: 2% 0.5% 2% 6%;
+  }
+} // Marius's screen size: 1286px
 
 @media screen and (max-width: 1150px) {
   .padding {
-    padding: 0 5% 0 13%;
+    padding: 2% 0.5% 2% 8%;
   }
+}
+
+@media screen and (max-width: 1024px) {
+  .padding {
+    padding: 2% 0.9% 2% 9%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .padding {
+    padding: 2% 0% 2% 16%;
+  }
+
+  .img-box {
+    height: 400px;
+    transition: all 0.4s ease;
+  }
+
+.img-box:hover {
+  width: 200px;
+}
 }
 
 @media screen and (max-width: 480px) {
-  .padding {
-    padding: 0 5% 0 17%;
+  .sidebar li .tooltip {
+    display: none;
   }
+
+  .padding {
+    padding: 2% 0% 2% 19%;
+    transition: all 0.4s ease;
+  }
+
+  .img-box {
+    height: 300px;
+    transition: all 0.4s ease;
+  }
+  
+.img-box:hover {
+  width: 150px;
+}
 }
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 380px) {
   .padding {
-    padding: 0 0 0 20%; /* Padding: top right bottom left */
+    padding: 2% 0% 2% 22%; /* Padding: top right bottom left */
   }
+  
+  .img-box:hover {
+    width: 120px;
+  }
+  .img-box h3 {
+    left: 15px;
+  }
+  
 }
