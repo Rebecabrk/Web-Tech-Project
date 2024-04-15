@@ -32,12 +32,56 @@ body {
 }
 
 #first_screen {
-  background-color: blanchedalmond;
+  background-image: url("background_images/pexels-jess-bailey-designs-796656.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
-.padding {
-  display: flex;
-  padding: 0 0 0 5%;
+section {
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  background: none;
+  backdrop-filter: blur(20px);
+  border: 2px solid blanchedalmond;
+}
+
+img {
+  width: 50%;
+  height: auto;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2,
+h3,
+p {
+  color: white;
+}
+
+h3 {
+  margin-top: 15px;
+}
+
+a {
+  color: white;
+  decoration: none;
+}
+
+#overall-description ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: white;
 }
 
 .sidebar {
@@ -208,32 +252,66 @@ body {
   filter: blur(20px); /* Adjust the blur level as needed */
 }
 
+.padding {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0.5% 2% 5%;
+}
+
 @media screen and (max-width: 1991px) {
   .padding {
-    padding: 0 1% 0 5%;
+    padding: 2% 0.5% 2% 4.5%;
   }
-}
+} // Rebeca's screen size: 1990px
 
 @media screen and (max-width: 1600px) {
   .padding {
-    padding: 0 5% 0 7%;
+    padding: 2% 0.5% 2% 5.4%;
   }
 }
 
+@media screen and (max-width: 1350px) {
+  .padding {
+    padding: 2% 0.5% 2% 7%;
+  }
+} // Marius's screen size: 1286px
+
 @media screen and (max-width: 1150px) {
   .padding {
-    padding: 0 5% 0 13%;
+    padding: 2% 0.5% 2% 8%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .padding {
+    padding: 2% 1% 2% 8%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .padding {
+    padding: 2% 1% 2% 13%;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .padding {
+    padding: 2% 1% 2% 15.3%;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .sidebar li .tooltip {
+    display: none;
+  }
+
   .padding {
-    padding: 0 5% 0 17%;
+    padding: 2% 1% 2% 16.4%;
   }
 }
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 400px) {
   .padding {
-    padding: 0 0 0 20%; /* Padding: top right bottom left */
+    padding: 2% 0.7% 2% 19%; /* Padding: top right bottom left */
   }
 }
