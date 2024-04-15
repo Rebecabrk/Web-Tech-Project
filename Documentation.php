@@ -110,7 +110,8 @@
                 <a href="https://www.pexels.com/">link 5.1</a>
 
                 <h3>5.2) Code development</h3>
-                <a href="https://profs.info.uaic.ro/andrei.panu/courses/web/lab/">link 5.2</a>
+                <a href="https://profs.info.uaic.ro/andrei.panu/courses/web/lab/">link 5.2.1</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web">link 5.2.2</a>
                 
                 <h3>5.2) Documentation</h3>
                 <a href="https://github.com/rick4470/IEEE-SRS-Tempate#readme">link 5.3</a>

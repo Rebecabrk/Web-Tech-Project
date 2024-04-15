@@ -10,6 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: large;
 }
 
 html,
@@ -64,6 +65,11 @@ h1 {
 }
 
 h2,
+h3 {
+  font-size: 1.4em;
+}
+
+h2,
 h3,
 p {
   color: white;
@@ -75,7 +81,6 @@ h3 {
 
 a {
   color: white;
-  decoration: none;
 }
 
 #overall-description ul {
