@@ -113,7 +113,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 10px;
-  color: rgb(85, 78, 67);
+  color: rgb(193, 141, 59);
 }
 
 .wrapper hr {
@@ -202,6 +202,7 @@ body {
     transform: rotate(45deg) translate(20px, 20px);
   }
 }
+
 
 .sidebar {
   position: fixed;
