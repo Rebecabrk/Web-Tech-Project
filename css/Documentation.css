@@ -50,6 +50,7 @@ section {
   background: none;
   backdrop-filter: blur(20px);
   border: 2px solid blanchedalmond;
+  color: white;
 }
 
 img {
@@ -69,10 +70,17 @@ h3 {
   font-size: 1.4em;
 }
 
-h2,
-h3,
-p {
-  color: white;
+h3{
+  margin-left: 20px;
+}
+
+p,
+img{
+  margin-left: 40px;
+}
+
+#resources a{
+  margin-left: 60px;
 }
 
 h3 {
@@ -85,7 +93,7 @@ a {
 
 #overall-description ul {
   list-style-type: disc;
-  margin-left: 20px;
+  margin-left: 60px;
   color: white;
 }
 

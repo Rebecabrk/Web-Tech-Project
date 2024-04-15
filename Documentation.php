@@ -76,6 +76,7 @@
                 <p>On the profile page, the user edits and updates data regarding the account – email, password,
                     name, etc. – and data about childcare – schedules, medical records, etc.</p>
                 <img src="css/screenshots/profile.png" alt="Profile">
+                <img src="css/screenshots/profile2.png" alt="Profile2">
 
                 <h3>4.2) Interactive Dashboard</h3>
                 <p>The platform will provide the user a visual representation of all the current schedules, medical
@@ -93,6 +94,7 @@
                     creativity of the ways of storing memories. Not to mention that here, the user will be able to
                     upload photos and video clips.</p>
                 <img src="css/screenshots/journal.png" alt="Journal">
+                <img src="css/screenshots/journal2.png" alt="Journal2">
 
                 <h3>4.4) Timeline</h3>
                 <p>The best way to relive all the stages of the development of your child is by pinpointing the most
@@ -111,6 +113,7 @@
 
                 <h3>5.2) Code development</h3>
                 <a href="https://profs.info.uaic.ro/andrei.panu/courses/web/lab/">link 5.2.1</a>
+                <br>
                 <a href="https://developer.mozilla.org/en-US/docs/Web">link 5.2.2</a>
                 
                 <h3>5.2) Documentation</h3>
