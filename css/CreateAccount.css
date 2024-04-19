@@ -49,7 +49,13 @@
   padding: 0;
 }
 
-.wrapper .input-box {
+.wrapper .column-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .column-container .input-box {
   display: flex;
   align-items: center;
   padding: 10px;
@@ -63,14 +69,14 @@
   border: 2px solid blanchedalmond;
   border-radius: 20px;
   color: black;
-  padding: 20px 20px 20px 20px;
+  margin: 10px;
 }
 
-.wrapper .input-box input::placeholder {
+.wrapper .column-container .input-box input::placeholder {
   color: rgb(62, 57, 49);
 }
 
-.wrapper .input-box input:focus {
+.wrapper .column-container .input-box input:focus {
   border: 2px solid blanchedalmond;
 }
 

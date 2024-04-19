@@ -15,21 +15,19 @@
             <form action="process.php" method="get">
                 <h1>Create Account</h1>
                 <hr>
-                <div class="input-box">
+                <div class="column-container input-box">
                     <i class='bx bx-user-circle'></i>
                     <input type="text" id="first_name" name="user_first_name" placeholder="First Name" required />
-                </div>
-                <div class="input-box">
-                    <i class='bx bx-user-circle'></i>
                     <input type="text" id="last_name" name="user_last_name" placeholder="Last Name" required />
                 </div>
                 <div class="input-box">
                     <i class='bx bx-envelope'></i>
                     <input type="email" id="mail" name="user_mail" placeholder="Email" required />
                 </div>
-                <div class="input-box">
+                <div class="column-container input-box">
                     <i class='bx bx-lock-alt'></i>
                     <input type="password" id="password" name="user_password" placeholder="Password" required />
+                    <input type="password" id="password_repeat" name="user_password_repeat" placeholder="Repeat P." required />
                 </div>
                 <hr>
                 <div class="button">
