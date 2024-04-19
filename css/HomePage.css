@@ -549,6 +549,26 @@ li a span {
   filter: blur(20px); /* Adjust the blur level as needed */
 }
 
+.go_up_btn_container {
+  position: fixed;
+  bottom: 5%;
+  right: 1%;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #11101d;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 99;
+  transition: all 0.5s ease;
+  transform: translateX(150%);
+}
+
+#go_up_btn.hidden_btn {
+  transform: translateX(-50%);
+}
+
 .padding {
   display: flex;
   flex-direction: column;
@@ -643,7 +663,7 @@ li a span {
   .content_paragraph {
     font-size: 100%;
     width: auto;
-  }  
+  }
 }
 
 @media screen and (max-width: 770px) {
@@ -667,8 +687,6 @@ li a span {
     transition: all 0.4s ease;
     margin: 5px 10px;
   }
-
-
 
   .card-container {
     flex-basis: 20%;

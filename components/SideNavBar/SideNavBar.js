@@ -26,9 +26,6 @@
     var sidebar = document.getElementById('sidebar');
     var second_screen = document.getElementById('second_screen');
     
-    sidebar.classList.add('hidden');
-    
-    // If the user has scrolled back to the first full_screen, hide the sidebar
     if (window.scrollY < second_screen.offsetTop) {
       sidebar.classList.remove('hidden');
     } else {

@@ -177,8 +177,12 @@
             </li>
         </ul>
     </div>
-
     <script src="components\SideNavBar\SideNavBar.js"></script>
+
+    <a href="#" class="go_up_btn_container" id="go_up_btn">
+        <i class='bx bxs-up-arrow'></i>
+    </a>
+    <script src="components\GoUpButton\GoUpButton.js"></script>
 </body>
 
 </html>
