@@ -21,7 +21,13 @@
   justify-content: space-between;
 }
 
-.overlay{
+.invalid_msg {
+  color: red;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.overlay {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,21 +36,9 @@
   margin-left: 5%;
 }
 
-.overlay h3 {
-  color: blanchedalmond;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.overlay a{
-  color: blanchedalmond;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
 .overlay .wrapper {
   display: flex;
-  max-height: 370px;
+  max-height: 300px;
   height: 75%;
   max-width: 450px;
   width: 100%;
@@ -118,7 +112,7 @@
   border-radius: 20px;
 }
 
-.wrapper a{
+.wrapper a {
   text-decoration: none;
 }
 

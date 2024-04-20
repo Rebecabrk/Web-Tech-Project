@@ -1,3 +1,21 @@
+<?php
+
+require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if the user is connected
+
+//session_start();
+
+if(isset($_SESSION["user_id"])){
+    $mysqli = require __DIR__ . "/user_acces/database.php";
+
+    $sql = sprintf("SELECT * FROM user WHERE id = {$_SESSION["user_id"]}");
+
+    $result = $mysqli->query($sql);
+
+    $user = $result->fetch_assoc();
+}
+?>
+
+
 <!DOCTYPE html>
 
 <html>
@@ -13,6 +31,17 @@
     <div class="pages">
         <div id="first_screen" class="full_screen">
             <div class="wrapper">
+                <div class="hello_msg">
+                    <?php 
+                        if ($connected_user)
+                            echo "You are connected with " . $user["email"] . " email!";
+                            else
+                            echo "You are not connected!";
+                    ?>
+                    <?php if(isset($user)): ?>
+                    <p>Hello <?= htmlspecialchars($user["last_name"]) ?></p>
+                    <?php endif;?>
+                </div>
                 <h1 class="tracking-in-expand">
                     Your child's growth
                 </h1>

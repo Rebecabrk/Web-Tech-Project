@@ -1,3 +1,7 @@
+<?php
+require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if the user is connected
+?>
+
 <!DOCTYPE html>
 
 <html>

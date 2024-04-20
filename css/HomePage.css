@@ -33,6 +33,13 @@ html {
   justify-content: center;
 }
 
+.hello_msg{
+  font-size: 50px;
+  color: black;
+  text-align: center;
+  margin-top: 20%;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -296,7 +303,6 @@ li a span {
   display: flex;
   justify-content: center;
   animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  margin-top: 20%;
 }
 
 @-webkit-keyframes tracking-in-expand {

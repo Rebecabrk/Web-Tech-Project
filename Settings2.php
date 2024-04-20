@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if the user is connected
+
 $settings_checkbox = [
     'basic' => "
         html{
@@ -31,6 +33,10 @@ switch ($settingsName) {
         <input type="text" id="last_name" name="user_last_name" placeholder="Change your last name here" required />
         <input type="text" id="child_name" name="child_name" placeholder="Change your child\'s name here" required />
         ';
+        $logoutbtn = '<a href="Logout.php" class="card content">
+                        <i class="bx bx-log-out"></i>
+                        <h1>Logout</h1>
+                    </a>';
         break;
     case 'email':
         $title = 'Email Settings';
@@ -56,9 +62,8 @@ $containers = $settings_checkbox[$settingsName] ?? $settings_checkbox['default']
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings2</title>
     <style>
-        <?php echo $containers;
-        ?>
-        ;
+    <?php echo $containers;
+    ?>;
     </style>
 </head>
 
@@ -68,6 +73,9 @@ $containers = $settings_checkbox[$settingsName] ?? $settings_checkbox['default']
         <form action="SettingsConfirmation.php" method="get">
             <?php echo $formBox; ?>
         </form>
+        <a>
+            <?php echo $logoutbtn; ?>
+        </a>
     </div>
 </body>
 
