@@ -37,7 +37,7 @@ require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if 
                     </div>
                     <hr>
                     <a class="button" href="process-signup.php">
-                        <button type="submit">Submit</button>
+                        <button type="submit">Login</button>
                     </a>
                 </form>
             </div>
