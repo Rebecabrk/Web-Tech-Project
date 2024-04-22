@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if the user is connected
+$connected = require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if the user is connected
 ?>
 
 <!DOCTYPE html>
@@ -36,8 +36,8 @@ require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if 
                             required />
                     </div>
                     <hr>
-                    <a class="button" href="process-signup.php">
-                        <button type="submit">Login</button>
+                    <a class="button" href="process-signup.php" name="signup_btn">
+                        <button type="submit">Submit</button>
                     </a>
                 </form>
             </div>

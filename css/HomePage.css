@@ -575,10 +575,35 @@ li a span {
   transform: translateX(-50%);
 }
 
+.theme_btn_container {
+  position: fixed;
+  top: 5%;
+  right: 1%;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #11101d;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 99;
+  transition: all 0.5s ease;
+  transform: translateX(150%);
+}
+
+#theme_btn.hidden_btn {
+  transform: translateX(-50%);
+}
+
 .padding {
   display: flex;
   flex-direction: column;
   padding: 2% 0.5% 2% 5%;
+}
+
+.dark-mode {
+  background-color: gray;
+  color: #fff;
 }
 
 @media screen and (max-width: 1991px) {
