@@ -58,15 +58,15 @@
                 <h3>3.1) User Interfaces</h3>
                 <p>The user will first interact with the HomePage which includes general information about the
                     platform and about the importance of the well development of children (babies to teens).</p>
-                <img src="css/screenshots/home.png" alt="HomePage">
-                <img src="css/screenshots/theManager.png" alt="TheManager">
-                <img src="css/screenshots/info.png" alt="Info">
+                <img src="../view/css/screenshots/home.png" alt="HomePage">
+                <img src="../view/css/screenshots/theManager.png" alt="TheManager">
+                <img src="../view/css/screenshots/info.png" alt="Info">
                 <p>The user will then be able to create an account to start their journey with the management of the
                     childcare resources.</p>
-                <img src="css/screenshots/createAcc.png" alt="CreateAccount">
+                <img src="../view/css/screenshots/createAcc.png" alt="CreateAccount">
                 <p>After LogIn/SignUp, the navbar offers the possibility to get to all the pages of the platform:
                     dashboard, profile, journal, journey, settings.</p>
-                <img src="css/screenshots/settings.png" alt="Settings">
+                <img src="../view/css/screenshots/settings.png" alt="Settings">
             </section>
 
             <section id="system-features">
@@ -75,8 +75,8 @@
                 <h3>4.1) Setting Up Your Profile</h3>
                 <p>On the profile page, the user edits and updates data regarding the account – email, password,
                     name, etc. – and data about childcare – schedules, medical records, etc.</p>
-                <img src="css/screenshots/profile.png" alt="Profile">
-                <img src="css/screenshots/profile2.png" alt="Profile2">
+                <img src="../view/css/screenshots/profile.png" alt="Profile">
+                <img src="../view/css/screenshots/profile2.png" alt="Profile2">
 
                 <h3>4.2) Interactive Dashboard</h3>
                 <p>The platform will provide the user a visual representation of all the current schedules, medical
@@ -84,7 +84,7 @@
                     currently working on making this page interactive, such that the user will be able to edit and
                     update data also from this page (not only in the profile), as it is easier to do it having the
                     visual representation.</p>
-                    <img src="css/screenshots/dashboard.png" alt="Dashboard">
+                    <img src="../view/css/screenshots/dashboard.png" alt="Dashboard">
 
                 <h3>4.3) Journaling</h3>
                 <p>A great way of remembering all the beautiful memories that the journey of raising a child
@@ -93,8 +93,8 @@
                     font, color, size (and all other settings a normal document has) can be changed, to increase the
                     creativity of the ways of storing memories. Not to mention that here, the user will be able to
                     upload photos and video clips.</p>
-                <img src="css/screenshots/journal.png" alt="Journal">
-                <img src="css/screenshots/journal2.png" alt="Journal2">
+                <img src="../view/css/screenshots/journal.png" alt="Journal">
+                <img src="../view/css/screenshots/journal2.png" alt="Journal2">
 
                 <h3>4.4) Timeline</h3>
                 <p>The best way to relive all the stages of the development of your child is by pinpointing the most
@@ -102,7 +102,7 @@
                     will include information from the journal and some of the medical interventions. Each memory can
                     have a title, a description, and a photo/video based on what the user introduced in the journal.
                 </p>
-                <img src="css/screenshots/journey.png" alt="Journey">
+                <img src="../view/css/screenshots/journey.png" alt="Journey">
             </section>
 
             <section id="resources">

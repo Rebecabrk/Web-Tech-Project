@@ -1,10 +1,17 @@
 <?php
-
-require ("../model/user_acces/connected-user.php"); // here we are verifying if the user is connected
-
 session_start();
 
-$mysqli = require ("../model/user_acces/database.php");
+$host="localhost";
+$dbname="login_db";
+$username="root";
+$password="";
+
+$mysqli = new mysqli($host, $username, $password, $dbname);
+
+if($mysqli->connect_error){
+    die("Connection failed: " . $mysqli->connect_error);
+}
+
 $sql = "UPDATE user SET session_id = NULL WHERE session_id = '" . session_id() . "'";
 $result = $mysqli->query($sql);
 

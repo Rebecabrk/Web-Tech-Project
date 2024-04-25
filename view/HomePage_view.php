@@ -192,7 +192,7 @@
     <a href="#" class="go_up_btn_container" id="go_up_btn">
         <i class='bx bxs-up-arrow'></i>
     </a>
-    <script src="components/GoUpButton/GoUpButton.js"></script>
+    <script src="../view/components/GoUpButton/GoUpButton.js"></script>
 
     <a class="theme_btn_container" id="theme_btn">
         LightMode
