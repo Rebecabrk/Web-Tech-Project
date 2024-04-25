@@ -1,28 +1,9 @@
-<?php
-
-require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if the user is connected
-
-//session_start();
-
-if(isset($_SESSION["user_id"])){
-    $mysqli = require __DIR__ . "/user_acces/database.php";
-
-    $sql = sprintf("SELECT * FROM user WHERE id = {$_SESSION["user_id"]}");
-
-    $result = $mysqli->query($sql);
-
-    $user = $result->fetch_assoc();
-}
-?>
-
-
 <!DOCTYPE html>
-
 <html>
 
 <head>
     <title>Home Page</title>
-    <link href="css/HomePage.css" rel="stylesheet">
+    <link href="../view/css/HomePage.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -32,15 +13,15 @@ if(isset($_SESSION["user_id"])){
         <div id="first_screen" class="full_screen">
             <div class="wrapper">
                 <div class="hello_msg">
-                    <?php 
-                        if ($connected_user)
-                            echo "You are connected with " . $user["email"] . " email!";
-                            else
-                            echo "You are not connected!";
+                    <?php
+                    if ($connected_user)
+                        echo "You are connected with " . $user["email"] . " email!";
+                    else
+                        echo "You are not connected!";
                     ?>
-                    <?php if(isset($user)): ?>
-                    <p>Hello <?= htmlspecialchars($user["last_name"]) ?></p>
-                    <?php endif;?>
+                    <?php if (isset($user)): ?>
+                        <p>Hello <?= htmlspecialchars($user["last_name"]) ?></p>
+                    <?php endif; ?>
                 </div>
                 <h1 class="tracking-in-expand">
                     Your child's growth
@@ -206,7 +187,7 @@ if(isset($_SESSION["user_id"])){
             </li>
         </ul>
     </div>
-    <script src="components\SideNavBar\SideNavBar.js"></script>
+    <script src="..\view\components\SideNavBar\SideNavBar.js"></script>
 
     <a href="#" class="go_up_btn_container" id="go_up_btn">
         <i class='bx bxs-up-arrow'></i>
@@ -217,7 +198,7 @@ if(isset($_SESSION["user_id"])){
         LightMode
         <!-- <i class='bx bx-moon'></i> -->
     </a>
-    <script src="components/ThemeButton/ThemeButton.js"></script>
+    <script src="../view/components/ThemeButton/ThemeButton.js"></script>
 
 </body>
 

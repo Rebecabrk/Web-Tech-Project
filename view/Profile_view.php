@@ -1,7 +1,3 @@
-<?php
-require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if the user is connected
-?>
-
 <!DOCTYPE html>
 
 <html>
@@ -9,7 +5,7 @@ require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if 
 <head>
     <meta charset="utf-8">
     <title>Profile Page</title>
-    <link href="css/Profile.css" rel="stylesheet">
+    <link href="../view/css/Profile.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>

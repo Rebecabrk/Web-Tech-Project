@@ -1,14 +1,10 @@
-<?php
-$connected = require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if the user is connected
-?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <title>Create Account Page</title>
-    <link href="css/CreateAccount.css" rel="stylesheet">
+    <link href="../view/css/CreateAccount.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>

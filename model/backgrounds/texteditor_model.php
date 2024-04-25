@@ -1,6 +1,5 @@
 <?php
 
-require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if the user is connected
 
 $patterns = [
     'pattern1' => "   
@@ -170,36 +169,5 @@ $patterns = [
 $patternName = $_GET['pattern'] ?? 'default';
 
 $backgroundStyle = $patterns[$patternName] ?? $patterns['default'];
-?>
+ return $backgroundStyle;
 
-<!DOCTYPE html>
-<html>
-
-<head>
-    <style>
-    html {
-        <?php echo $backgroundStyle;
-        ?>;
-    }
-    </style>
-    <meta charset="utf-8">
-    <title>Journal Page</title>
-    <link href="css/TextEditor.css" rel="stylesheet">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-    <div class="journal_container">
-        <form>
-            <div class="journal_title">
-                <input type="text" id="title" name="title" placeholder="Your Title" />
-            </div>
-            <div class="journal_text">
-                <textarea type="text" id="text" name="text" rows="5" cols="40" placeholder="Your Thoughts"></textarea>
-            </div>
-        </form>
-    </div>
-</body>
-
-</html>

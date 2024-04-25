@@ -1,6 +1,4 @@
-<?php
-require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if the user is connected
-?>
+
 
 <!DOCTYPE html>
 
@@ -8,40 +6,72 @@ require __DIR__ . "/user_acces/connected-user.php"; // here we are verifying if 
 
 <head>
     <meta charset="utf-8">
-    <title>Settings Page</title>
-    <link href="css/Settings.css" rel="stylesheet">
+    <title>Dashboard Page</title>
+    <link href="../view/css/Dashboard.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <div class="pages">
-        <div id="first_screen" class="full_screen padding">
+        <div id="first_screen" class="padding">
+            <h1>Schedules</h1>
             <div class="card-container">
-                <div class="left-side">
-                    <a href="Settings2.php?setting=basic" class="card content">
-                        <i class='bx bx-cog'></i>
-                        <h1>Basic Settings</h1>
-                    </a>
-                    <a href="Profile.php" class="card content">
-                        <i class="bx bx-user"></i>
-                        <h1>Profile Settings</h1>
-                    </a>
+                <div class="card card1">
+                    <h1 class="gradient-text">
+                        Mediaction
+                    </h1>
                 </div>
-                <div class="right-side">
-                    <a href="Settings2.php?setting=email" class="card content">
-                        <i class='bx bx-envelope'></i>
-                        <h1>Email Notifications</h1>
-                    </a>
-                    <a href="Settings2.php?setting=feedback" class="card content">
-                        <i class='bx bx-message-add'></i>
-                        <h1>Feedback</h1>
-                    </a>
+                <div class="card card2">
+                    <h1 class="gradient-text">
+                        Food
+                    </h1>
+                </div>
+                <div class="card card3">
+                    <h1 class="gradient-text">
+                        Sleep
+                    </h1>
+                </div>
+                <div class="card card5">
+                    <h1 class="gradient-text">
+                        School
+                    </h1>
+                </div>
+            </div>
+
+            <hr>
+
+            <h1>Medical records</h1>
+            <div class="card-container">
+                <div class="card card1">
+                    <h1 class="gradient-text">
+                        Accidents
+                    </h1>
+                </div>
+                <div class="card card2">
+                    <h1 class="gradient-text">
+                        Alergies
+                    </h1>
+                </div>
+                <div class="card card1">
+                    <h1 class="gradient-text">
+                        Diseares
+                    </h1>
+                </div>
+            </div>
+
+            <hr>
+            
+            <h1>Activities/Memories</h1>
+            <div class="card-container">
+                <div class="big_card card4">
+                    <h1 class="gradient-text">
+                        Everything
+                    </h1>
                 </div>
             </div>
         </div>
     </div>
-
 
     <div class="sidebar" id="sidebar">
         <div class="logo-details">
