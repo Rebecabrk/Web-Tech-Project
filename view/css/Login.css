@@ -36,6 +36,18 @@
   margin-left: 5%;
 }
 
+.overlay h3 {
+  color: blanchedalmond;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.overlay a{
+  color: blanchedalmond;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
 .overlay .wrapper {
   display: flex;
   max-height: 300px;

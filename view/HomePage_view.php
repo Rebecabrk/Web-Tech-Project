@@ -20,7 +20,7 @@
                         echo "You are not connected!";
                     ?>
                     <?php if (isset($user)): ?>
-                        <p>Hello <?= htmlspecialchars($user["last_name"]) ?></p>
+                    <p>Hello <?= htmlspecialchars($user["last_name"]) ?></p>
                     <?php endif; ?>
                 </div>
                 <h1 class="tracking-in-expand">
@@ -130,56 +130,91 @@
                 <span class="tooltip">Search</span>
             </li>
             <li>
-                <a href="HomePage.php">
+                <?php
+                    if ($connected_user)
+                        $URL = "HomePage.php";
+                    else
+                        $URL = "Login.php";
+                ?>
+                <a href="<?php echo $URL; ?>">
                     <i class='bx bx-home'></i>
                     <span class="links_name">Home</span>
                 </a>
                 <span class="tooltip">Home</span>
             </li>
             <li>
-                <a href="Dashboard.php">
+                <?php
+                    if ($connected_user)
+                        $URL = "Dashboard.php";
+                    else
+                        $URL = "Login.php";
+                ?>
+                <a href="<?php echo $URL; ?>">
                     <i class="bx bx-grid-alt"></i>
                     <span class="links_name">Dashboard</span>
                 </a>
                 <span class="tooltip">Dashboard</span>
             </li>
             <li>
-                <a href="Profile.php">
-                    <i class="bx bx-user"></i>
-                    <span class="links_name">Profile</span>
-                </a>
-                <span class="tooltip">Profile</span>
-            </li>
-            <li>
-                <a href="Journal.php">
+                <?php
+                    if ($connected_user)
+                        $URL = "Journal.php";
+                    else
+                        $URL = "Login.php";
+                ?>
+                <a href="<?php echo $URL; ?>">
                     <i class='bx bx-book-bookmark'></i>
                     <span class="links_name">Journal</span>
                 </a>
                 <span class="tooltip">Journal</span>
             </li>
             <li>
-                <a href="Journey.php">
+                <?php
+                    if ($connected_user)
+                        $URL = "Journey.php";
+                    else
+                        $URL = "Login.php";
+                ?>
+                <a href="<?php echo $URL; ?>">
                     <i class="bx bx-heart"></i>
                     <span class="links_name">The Journey</span>
                 </a>
                 <span class="tooltip">The Journey</span>
             </li>
             <li>
-                <a href="Settings.php">
+                <?php
+                    if ($connected_user)
+                        $URL = "Settings.php";
+                    else
+                        $URL = "Login.php";
+                ?>
+                <a href="<?php echo $URL; ?>">
                     <i class="bx bx-cog"></i>
                     <span class="links_name">Settings</span>
                 </a>
                 <span class="tooltip">Settings</span>
             </li>
             <li>
-                <a href="About.php">
+                <?php
+                    if ($connected_user)
+                        $URL = "About.php";
+                    else
+                        $URL = "Login.php";
+                ?>
+                <a href="<?php echo $URL; ?>">
                     <i class='bx bx-smile'></i>
                     <span class="links_name">About Us</span>
                 </a>
                 <span class="tooltip">About Us</span>
             </li>
             <li>
-                <a href="Documentation.php">
+                <?php
+                    if ($connected_user)
+                        $URL = "Documentation.php";
+                    else
+                        $URL = "Login.php";
+                ?>
+                <a href="<?php echo $URL; ?>">
                     <i class='bx bxs-file-doc'></i>
                     <span class="links_name">Documentation</span>
                 </a>

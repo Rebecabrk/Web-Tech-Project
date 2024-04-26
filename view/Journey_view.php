@@ -148,13 +148,6 @@
                 <span class="tooltip">Dashboard</span>
             </li>
             <li>
-                <a href="Profile.php">
-                    <i class="bx bx-user"></i>
-                    <span class="links_name">Profile</span>
-                </a>
-                <span class="tooltip">Profile</span>
-            </li>
-            <li>
                 <a href="Journal.php">
                     <i class='bx bx-book-bookmark'></i>
                     <span class="links_name">Journal</span>
