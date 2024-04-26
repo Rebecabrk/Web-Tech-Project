@@ -36,6 +36,10 @@
                 <em class="invalid_msg">Invalid login</em>
                 <?php endif; ?>
             </div>
+            <h3>
+                Don't have an account?
+                <a href="CreateAccount.php">Signup</a>
+            </h3>
         </div>
         <div id="text">
             One step closer to building your child's bright future!
