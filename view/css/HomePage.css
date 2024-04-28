@@ -114,7 +114,6 @@ html {
 }
 .card4 {
   background-image: url("background_images/pexels-dominika-roseclay-1166990.jpg");
-  color: black;
 }
 .card5 {
   background-image: url("background_images/pexels-anna-shvets-4586688.jpg");
@@ -151,14 +150,6 @@ a {
   background-position: center;
   background-size: cover;
   margin: 0;
-}
-
-#second_screen {
-  background-color: blanchedalmond;
-}
-
-#third_screen {
-  background-color: blanchedalmond;
 }
 
 h1 {
@@ -603,7 +594,12 @@ li a span {
 
 .dark-mode {
   background-color: gray;
-  color: #fff;
+  color: blanchedalmond;
+}
+
+.light-mode {
+  background-color: blanchedalmond;
+  color: black;
 }
 
 @media screen and (max-width: 1991px) {

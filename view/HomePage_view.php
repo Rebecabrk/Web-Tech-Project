@@ -8,25 +8,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body class="light-mode">
     <div class="pages">
         <div id="first_screen" class="full_screen">
             <div class="wrapper">
                 <div class="hello_msg">
-                    <?php
+                    <!-- <?php
                     if ($connected_user)
                         echo "You are connected with " . $user["email"] . " email!";
                     else
                         echo "You are not connected!";
-                    ?>
+                    ?> -->
                     <?php if (isset($user)): ?>
-                    <p>Hello <?= htmlspecialchars($user["last_name"]) ?></p>
+                    <p class="tracking-in-expand">Hello <?= htmlspecialchars($user["last_name"]) ?></p>
                     <?php endif; ?>
                 </div>
                 <h1 class="tracking-in-expand">
                     Your child's growth
                 </h1>
                 <div class="buttons-container">
+                    <?php if (isset($user)): ?>
+                    <nav>
+                        <ul>
+                            <a href="#second_screen" class="lm_btn">
+                                <li>
+                                    Let's explore!
+                                    <span></span><span></span><span></span><span></span>
+                                </li>
+                            </a>
+                        </ul>
+                    </nav>
+                    <?php else: ?>
                     <nav>
                         <ul>
                             <a href="#second_screen" class="lm_btn">
@@ -47,6 +59,7 @@
                             </a>
                         </ul>
                     </nav>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

@@ -19,7 +19,7 @@
                     <div class="column-container input-box">
                         <i class='bx bx-envelope'></i>
                         <input type="email" id="mail" name="user_mail" placeholder="Email" required
-                            value="<?= htmlspecialchars($_POST["email"] ?? "") ?>" /> <!--  TODO: SOMETHING WRONG -->
+                            value="<?= htmlspecialchars($_POST["email"] ?? "") ?>" />
                     </div>
                     <div class="column-container input-box">
                         <i class='bx bx-lock-alt'></i>

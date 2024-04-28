@@ -16,10 +16,12 @@
   
     if(dmb.innerHTML === 'LightMode'){
       dmb.innerHTML = 'DarkMode';
+      body.classList.remove('light-mode');
       body.classList.add('dark-mode');
     } else {
       dmb.innerHTML = 'LightMode';
       body.classList.remove('dark-mode');
+      body.classList.add('light-mode');
     }
   });
   
