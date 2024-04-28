@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 <html>
@@ -15,27 +13,39 @@
 <body>
     <div class="pages">
         <div id="first_screen" class="padding">
-            <h1>Schedules</h1>
+            <h1>Schedules/Calendar</h1>
             <div class="card-container">
-                <div class="card card1">
-                    <h1 class="gradient-text">
-                        Mediaction
-                    </h1>
+                <div class="card">
+                    <div class="card-content">
+                        <h1>
+                            Mediaction
+                        </h1>
+                        <div class="list"> </div>
+                        <a class="add-btn" href="process-signup.php">
+                            <i class='bx bx-add-to-queue'></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="card card2">
-                    <h1 class="gradient-text">
-                        Food
-                    </h1>
+                <div class="card">
+                    <div class="card-content">
+                        <h1>
+                            Food
+                        </h1>
+                    </div>
                 </div>
-                <div class="card card3">
-                    <h1 class="gradient-text">
-                        Sleep
-                    </h1>
+                <div class="card">
+                    <div class="card-content">
+                        <h1>
+                            Sleep
+                        </h1>
+                    </div>
                 </div>
-                <div class="card card5">
-                    <h1 class="gradient-text">
-                        School
-                    </h1>
+                <div class="card">
+                    <div class="card-content">
+                        <h1>
+                            School
+                        </h1>
+                    </div>
                 </div>
             </div>
 
@@ -43,29 +53,87 @@
 
             <h1>Medical records</h1>
             <div class="card-container">
-                <div class="card card1">
-                    <h1 class="gradient-text">
-                        Accidents
+                <div class="card">
+                    <div class="card-content">
+                        <h1>
+                            Accidents
+                        </h1>
+
+                        <div class="info-card">Car accident</div>
+                        <div class="info-card">Fall from tree</div>
+                        <div class="info-card">9/11</div>
+
+                        <a type="submit" class="add-btn" onclick="openPopup()">
+                            <i class='bx bx-add-to-queue'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h1>
+                            Alergies
+                        </h1>
+
+                        <div class="info-card">Car accident</div>
+                        <div class="info-card">Fall from tree</div>
+                        <div class="info-card">9/11</div>
+
+                        <a class="add-btn" href="process-signup.php">
+                            <i class='bx bx-add-to-queue'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h1>
+                            Diseares
+                        </h1>
+
+                        <div class="info-card">Car accident</div>
+                        <div class="info-card">Fall from tree</div>
+                        <div class="info-card">9/11</div>
+
+                        <a class="add-btn" href="process-signup.php">
+                            <i class='bx bx-add-to-queue'></i>
+                        </a>
+                    </div>
+                </div>
+                <section class="card popup">
+                    <div>
+                        <h1>Add Accident</h1>
+                        <form>
+                            <input class="info-card" type="text" placeholder="Type of accident" />
+                            <input class="info-card" type="text" placeholder="Date of accident" />
+                            <input class="info-card" type="text" placeholder="Location of accident" />
+                            <input class="info-card" type="text" placeholder="Severity of accident" />
+                            <a type="submit" href="process-signup.php" class="add-btn" onclick="closePopup()">Add</a>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <hr>
+
+            <h1>Activities/Memories</h1>
+            <div class="card-container">
+                <div class="card">
+                    <h1>
+                        Add Photos
                     </h1>
                 </div>
-                <div class="card card2">
-                    <h1 class="gradient-text">
-                        Alergies
-                    </h1>
-                </div>
-                <div class="card card1">
-                    <h1 class="gradient-text">
-                        Diseares
+                <div class="card">
+                    <h1>
+                        Add Videos
                     </h1>
                 </div>
             </div>
 
             <hr>
-            
-            <h1>Activities/Memories</h1>
+
+            <h1>Psychosomatic Development</h1>
             <div class="card-container">
-                <div class="big_card card4">
-                    <h1 class="gradient-text">
+                <div class="big-card">
+                    <h1>
                         Everything
                     </h1>
                 </div>
@@ -136,6 +204,7 @@
     </div>
 
     <script src="components\SideNavBar\SideNavBar.js"></script>
+    <script src="components\Popup\Popup.js"></script>
 </body>
 
 </html>
