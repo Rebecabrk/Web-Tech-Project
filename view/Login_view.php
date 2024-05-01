@@ -38,7 +38,7 @@
             </div>
             <h3>
                 Don't have an account?
-                <a href="CreateAccount.php">Signup</a>
+                <a href="SignUp.php">Signup</a>
             </h3>
         </div>
         <div id="text">

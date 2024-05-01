@@ -8,6 +8,8 @@
     <link href="../view/css/Dashboard.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="components\SideNavBar\SideNavBar.js"></script>
+    <script src="components\Popup\Popup.js"></script>
 </head>
 
 <body>
@@ -20,10 +22,6 @@
                         <h1>
                             Mediaction
                         </h1>
-                        <div class="list"> </div>
-                        <a class="add-btn" href="process-signup.php">
-                            <i class='bx bx-add-to-queue'></i>
-                        </a>
                     </div>
                 </div>
                 <div class="card">
@@ -55,58 +53,56 @@
             <div class="card-container">
                 <div class="card">
                     <div class="card-content">
-                        <h1>
-                            Accidents
-                        </h1>
-
-                        <div class="info-card">Car accident</div>
-                        <div class="info-card">Fall from tree</div>
-                        <div class="info-card">9/11</div>
-
-                        <a type="submit" class="add-btn" onclick="openPopup()">
+                        <h1> Accidents </h1>
+                        <div class="input-card">Car accident</div>
+                        <div class="input-card">Fall from tree</div>
+                        <div class="input-card">9/11</div>
+                        <button class="add-btn" id="add-btn">
                             <i class='bx bx-add-to-queue'></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-content">
-                        <h1>
-                            Alergies
-                        </h1>
-
-                        <div class="info-card">Car accident</div>
-                        <div class="info-card">Fall from tree</div>
-                        <div class="info-card">9/11</div>
-
-                        <a class="add-btn" href="process-signup.php">
+                        <h1> Alergies </h1>
+                        <div class="input-card">Car accident</div>
+                        <div class="input-card">Fall from tree</div>
+                        <div class="input-card">9/11</div>
+                        <button class="add-btn" id="add-btn">
                             <i class='bx bx-add-to-queue'></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-content">
-                        <h1>
-                            Diseares
-                        </h1>
-
-                        <div class="info-card">Car accident</div>
-                        <div class="info-card">Fall from tree</div>
-                        <div class="info-card">9/11</div>
-
-                        <a class="add-btn" href="process-signup.php">
+                        <h1> Diseares </h1>
+                        <div class="input-card">Car accident</div>
+                        <div class="input-card">Fall from tree</div>
+                        <div class="input-card">9/11</div>
+                        <button class="add-btn" id="add-btn">
                             <i class='bx bx-add-to-queue'></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
-                <section class="card popup">
+
+                <section class="card popup" id="popup">
                     <div>
-                        <h1>Add Accident</h1>
+                        <h1>Add <br> Data</h1>
                         <form>
-                            <input class="info-card" type="text" placeholder="Type of accident" />
-                            <input class="info-card" type="text" placeholder="Date of accident" />
-                            <input class="info-card" type="text" placeholder="Location of accident" />
-                            <input class="info-card" type="text" placeholder="Severity of accident" />
-                            <a type="submit" href="process-signup.php" class="add-btn" onclick="closePopup()">Add</a>
+                            <input class="input-card" type="text" placeholder="Type of accident" />
+                            <input class="input-card" type="text" placeholder="Date of accident" />
+                            <input class="input-card" type="text" placeholder="Location of accident" />
+                            <input class="input-card" type="text" placeholder="Severity of accident" />
+                            <div class="buttons-container">
+                                <button class="submit-btn" id="submit-btn" href="process.php">
+                                    Add
+                                </button>
+                                <button class="close-btn" id="close-btn">
+                                    Close
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </section>
@@ -202,9 +198,6 @@
             </li>
         </ul>
     </div>
-
-    <script src="components\SideNavBar\SideNavBar.js"></script>
-    <script src="components\Popup\Popup.js"></script>
 </body>
 
 </html>

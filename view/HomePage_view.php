@@ -51,7 +51,7 @@
                     </nav>
                     <nav>
                         <ul>
-                            <a href="CreateAccount.php" class="ca_btn">
+                            <a href="SignUp.php" class="ca_btn">
                                 <li>
                                     Create account
                                     <span></span><span></span><span></span><span></span>
@@ -131,17 +131,7 @@
         </div>
     </div>
 
-
-
-    <a href="#" class="go_up_btn_container" id="go_up_btn">
-        <i class='bx bxs-up-arrow'></i>
-    </a>
-    <script src="../view/components/GoUpButton/GoUpButton.js"></script>
-
-    <a class="theme_btn_container" id="theme_btn">
-        LightMode
-        <!-- <i class='bx bx-moon'></i> -->
-    </a>
+    <a class="theme_btn_container" id="theme_btn"> LightMode </a>
     <script src="../view/components/ThemeButton/ThemeButton.js"></script>
 
 </body>

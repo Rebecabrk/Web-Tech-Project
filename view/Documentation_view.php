@@ -63,7 +63,7 @@
                 <img src="../view/css/screenshots/info.png" alt="Info">
                 <p>The user will then be able to create an account to start their journey with the management of the
                     childcare resources.</p>
-                <img src="../view/css/screenshots/createAcc.png" alt="CreateAccount">
+                <img src="../view/css/screenshots/createAcc.png" alt="SignUp">
                 <p>After LogIn/SignUp, the navbar offers the possibility to get to all the pages of the platform:
                     dashboard, profile, journal, journey, settings.</p>
                 <img src="../view/css/screenshots/settings.png" alt="Settings">

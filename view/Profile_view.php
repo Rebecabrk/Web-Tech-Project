@@ -15,7 +15,7 @@
         <div id="first_screen" class="full_screen padding">
             <div class="wrapper">
                 <div class="image image1"></div>
-                <form action="process.php" method="get">
+                <form action="process.php" method="post">
                     <h1>Your Data</h1>
                     <hr>
                     <div class="input-box">
@@ -47,7 +47,7 @@
 
         <div id="second_screen" class="full_screen padding">
             <div class="wrapper">
-                <form action="process.php" method="get">
+                <form action="process.php" method="post">
                     <div class="image image2"></div>
                     <h1>First Child Data</h1>
                     <hr>
