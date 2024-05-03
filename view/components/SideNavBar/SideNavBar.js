@@ -1,18 +1,18 @@
 let sidebar = document.querySelector(".sidebar");
-let closeBtn = document.querySelector("#btn");
+let closeBtn = document.getElementById("btn");
 let searchBtn = document.querySelector(".bx-search");
 
-closeBtn.addEventListener("click", () => {
+function slideNavBar() {
   sidebar.classList.toggle("open");
   // document.querySelector('.full_screen').classList.toggle('blur');
   menuBtnChange(); //calling the function(optional)
-});
+}
 
-searchBtn.addEventListener("click", () => {
+function slideSearch() {
   // Sidebar open when you click on the search iocn
   sidebar.classList.toggle("open");
   menuBtnChange(); //calling the function(optional)
-});
+}
 
 // following are the code to change sidebar button(optional)
 function menuBtnChange() {
