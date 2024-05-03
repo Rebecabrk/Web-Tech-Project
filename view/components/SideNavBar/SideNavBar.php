@@ -22,7 +22,7 @@
             </li>
             <li>
                 <?php
-                    if ($connected_user)
+                    if (isset($_COOKIE['In_God_We_Trust']))
                         $URL = "HomePage.php";
                     else
                         $URL = "Login.php";
@@ -35,7 +35,7 @@
             </li>
             <li>
                 <?php
-                    if ($connected_user)
+                    if (isset($_COOKIE['In_God_We_Trust']))
                         $URL = "Dashboard.php";
                     else
                         $URL = "Login.php";
@@ -48,7 +48,7 @@
             </li>
             <li>
                 <?php
-                    if ($connected_user)
+                    if (isset($_COOKIE['In_God_We_Trust']))
                         $URL = "Journal.php";
                     else
                         $URL = "Login.php";
@@ -61,7 +61,7 @@
             </li>
             <li>
                 <?php
-                    if ($connected_user)
+                    if (isset($_COOKIE['In_God_We_Trust']))
                         $URL = "Journey.php";
                     else
                         $URL = "Login.php";
@@ -74,7 +74,7 @@
             </li>
             <li>
                 <?php
-                    if ($connected_user)
+                    if (isset($_COOKIE['In_God_We_Trust']))
                         $URL = "Settings.php";
                     else
                         $URL = "Login.php";
@@ -87,7 +87,7 @@
             </li>
             <li>
                 <?php
-                    if ($connected_user)
+                    if (isset($_COOKIE['In_God_We_Trust']))
                         $URL = "About.php";
                     else
                         $URL = "Login.php";
@@ -100,7 +100,7 @@
             </li>
             <li>
                 <?php
-                    if ($connected_user)
+                    if (isset($_COOKIE['In_God_We_Trust']))
                         $URL = "Documentation.php";
                     else
                         $URL = "Login.php";
