@@ -7,3 +7,4 @@ include ("../view/HomePage_view.php");
 include ("../view/components/GoUpButton/GoUpButton.php");
 // include ("../view/components/ThemeButton/ThemeButton.php");
 
+// include ("../view/components/Cookie/Cookie.php");

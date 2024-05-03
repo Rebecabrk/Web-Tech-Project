@@ -1,7 +1,8 @@
 <?php
 
-if(!isset($_COOKIE['In_God_We_Trust']))
+if(isset($_COOKIE["In_God_We_Trust"])) {
     header("Location: HomePage.php");
+}
 
 $mysqli = require ("../model/user_acces/connected-user.php"); // here we are verifying if the user is connected
 
