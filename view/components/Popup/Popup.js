@@ -1,6 +1,9 @@
-var btn = document.getElementById("add-btn");
-var popup = document.getElementById("popup");
-
-btn.addEventListener("click", () => {
+function openPopup() {
+    var popup = document.getElementById("popup");
     popup.classList.add("open");
-});
+}
+
+function closePopup() {
+    var popup = document.getElementById("popup");
+    popup.classList.remove("open");
+}

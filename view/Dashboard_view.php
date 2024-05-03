@@ -8,8 +8,8 @@
     <link href="../view/css/Dashboard.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="components\SideNavBar\SideNavBar.js"></script>
-    <script src="components\Popup\Popup.js"></script>
+    <script src="../view/components/SideNavBar/SideNavBar.js"></script>
+    <script src="../view/components/Popup/Popup.js"></script>
 </head>
 
 <body>
@@ -57,7 +57,7 @@
                         <div class="input-card">Car accident</div>
                         <div class="input-card">Fall from tree</div>
                         <div class="input-card">9/11</div>
-                        <button class="add-btn" id="add-btn">
+                        <button class="add-btn" onClick="openPopup();">
                             <i class='bx bx-add-to-queue'></i>
                         </button>
                     </div>
@@ -69,7 +69,7 @@
                         <div class="input-card">Car accident</div>
                         <div class="input-card">Fall from tree</div>
                         <div class="input-card">9/11</div>
-                        <button class="add-btn" id="add-btn">
+                        <button class="add-btn" onClick="openPopup();">
                             <i class='bx bx-add-to-queue'></i>
                         </button>
                     </div>
@@ -81,7 +81,7 @@
                         <div class="input-card">Car accident</div>
                         <div class="input-card">Fall from tree</div>
                         <div class="input-card">9/11</div>
-                        <button class="add-btn" id="add-btn">
+                        <button class="add-btn" onClick="openPopup();">
                             <i class='bx bx-add-to-queue'></i>
                         </button>
                     </div>
@@ -90,18 +90,18 @@
                 <section class="card popup" id="popup">
                     <div>
                         <h1>Add <br> Data</h1>
-                        <form>
+                        <form method="POST">
                             <input class="input-card" type="text" placeholder="Type of accident" />
                             <input class="input-card" type="text" placeholder="Date of accident" />
                             <input class="input-card" type="text" placeholder="Location of accident" />
                             <input class="input-card" type="text" placeholder="Severity of accident" />
                             <div class="buttons-container">
-                                <button class="submit-btn" id="submit-btn" href="process.php">
+                                <a class="submit-btn" href="process.php">
                                     Add
-                                </button>
-                                <button class="close-btn" id="close-btn">
+                                </a>
+                                <a class="close-btn" onClick="closePopup();">
                                     Close
-                                </button>
+                                </a>
                             </div>
                         </form>
                     </div>
