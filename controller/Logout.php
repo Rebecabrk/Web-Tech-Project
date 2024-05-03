@@ -1,21 +1,21 @@
 <?php
+
+if(!isset($_COOKIE['In_God_We_Trust']))
+    header("Location: HomePage.php");
+
 session_start();
 
-$host="localhost";
-$dbname="login_db";
-$username="root";
-$password="";
-
-$mysqli = new mysqli($host, $username, $password, $dbname);
+// DB connection!
+$mysqli = require ("..\model\database\database.php");
 
 if($mysqli->connect_error){
     die("Connection failed: " . $mysqli->connect_error);
 }
 
-$sql = "UPDATE user SET session_id = NULL WHERE session_id = '" . session_id() . "'";
-$result = $mysqli->query($sql);
+setcookie("In_God_We_Trust", "", time() - 3600, '/');
 
-session_destroy(); //NOT WORKNING
+session_unset();
+session_destroy();
 
 header("Location: HomePage.php");
 exit;
