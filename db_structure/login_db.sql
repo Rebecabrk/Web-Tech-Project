@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2024 at 03:49 PM
+-- Generation Time: May 03, 2024 at 01:55 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,42 +18,50 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `login_db`
+-- Database: `chim`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `user` (
-  `email` varchar(225) NOT NULL,
-  `first_name` varchar(225) NOT NULL,
+CREATE TABLE `users` (
+  `uid` int(11) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
   `last_name` varchar(225) NOT NULL,
-  `password_hash` varchar(225) NOT NULL,
-  `session_id` varchar(225) DEFAULT NULL
+  `email` varchar(255) NOT NULL,
+  `password_hash` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `user` (`email`, `first_name`, `last_name`, `password_hash`, `session_id`) VALUES
-('mamaia@gmail.com', 'eeee', 'mamaia', '$2y$10$N4YrWHZLoysbXxTRoZkHAOjBlTL.ouE8rz/RC.XaMF.PIVL7FBuEC', NULL),
-('mariuselu@gmail.com', 'wqwqwq', 'mariuselu', '$2y$10$yUFWmCss7H4iPmCz9qORHe.p71ZgawUFgAAXuvV1Q4IjnEijiLiB2', NULL),
-('tataia@gmail.com', 'eeee', 'tataia', '$2y$10$YHxnLAALCRcEFfbBAUyOD.n2qeC/SmRF6/I0B6SrPkeNwZOk6CFRe', 't2o3n8s6a9c09gdmq23pok3d05'),
-('test@gmail.com', 'asdf', 'dxfcgv', '$2y$10$dHSRv0mhEBVZLgmY/wpREu6.jKHtlp1GOkBvXcPO2siqSTabSub8q', NULL);
+INSERT INTO `users` (`uid`, `first_name`, `last_name`, `email`, `password_hash`) VALUES
+(1, 'Marius', 'Olaru', 'MJ@arena.com', '$2y$10$ol99TnrSi359yKq/FXcHhe/H6kQ7MmhBkyx/X/BSN7cnDnPHwSHUm');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `user`
+-- Indexes for table `users`
 --
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`email`);
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`uid`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
