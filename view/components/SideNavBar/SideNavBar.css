@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=poppins&effect=anaglyph");
 @import url("https://www.fontspace.com/soul-note-display-trial-font-f110131");
 @import url("https://www.fontspace.com/gustatory-delight-font-f85359");
 
@@ -180,7 +179,7 @@
 }
 
 #sidebar.hidden_sidenavbar {
-  transform: translateX(0%);
+  transform: translateX(0);
 }
 
 @media (max-width: 420px) {

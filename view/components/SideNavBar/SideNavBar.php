@@ -12,11 +12,11 @@
 <body>
     <div class="sidebar" id="sidebar">
         <div class="logo-details">
-            <i class="bx bx-menu" id="btn"></i>
+            <i class="bx bx-menu" onClick="slideNavBar();"></i>
         </div>
         <ul class="nav-list">
             <li>
-                <i class="bx bx-search"></i>
+                <i class="bx bx-search" onClick="slideSearch();"></i>
                 <input type="text" placeholder="Search..." />
                 <span class="tooltip">Search</span>
             </li>
