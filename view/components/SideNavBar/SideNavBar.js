@@ -27,8 +27,8 @@
     var second_screen = document.getElementById('second_screen');
     
     if (window.scrollY < second_screen.offsetTop) {
-      sidebar.classList.remove('hidden');
+      sidebar.classList.remove('hidden_sidenavbar');
     } else {
-      sidebar.classList.add('hidden');
+      sidebar.classList.add('hidden_sidenavbar');
     }
   });
