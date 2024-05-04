@@ -64,7 +64,7 @@
                         <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
                             echo $name;
                         else
-                            echo 'NULL'; ?></div>
+                            echo 'nothing here...'; ?></div>
                         <?php } ?>
                         <button class="add-btn" id="accident-btn"
                             onClick="document.getElementById('popup_title').innerHTML='Add Accident'; document.getElementById('popup_type').value='Accident'; openPopup();">
@@ -85,7 +85,7 @@
                         <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
                             echo $name;
                         else
-                            echo 'NULL'; ?></div>
+                            echo 'nothing here...'; ?></div>
                         <?php } ?>
                         <button class="add-btn" id="alergy-btn"
                             onClick="document.getElementById('popup_title').innerHTML='Add Alergy'; document.getElementById('popup_type').value='Alergy'; openPopup();">
@@ -106,7 +106,7 @@
                         <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
                             echo $name;
                         else
-                            echo 'NULL'; ?></div>
+                            echo 'nothing here...'; ?></div>
                         <?php } ?>
                         <button class="add-btn" id="disare-btn"
                             onClick="document.getElementById('popup_title').innerHTML='Add Disare'; document.getElementById('popup_type').value='Desire'; openPopup();">

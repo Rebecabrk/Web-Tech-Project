@@ -132,6 +132,11 @@ h1 {
   border: 2px solid blanchedalmond;
 }
 
+.input-card:hover {
+  height: 50%;
+  transition: all 0.3s ease;
+}
+
 .add-btn, .close-btn, .submit-btn {
   display: flex;
   height: 45px;
