@@ -13,7 +13,7 @@
     <div class="background">
         <div class="overlay">
             <div class="wrapper">
-                <form action="process-signup.php" method="post">
+                <form action="process-signup.php" method="POST">
                     <h1>Create Account</h1>
                     <hr>
                     <div class="column-container input-box">

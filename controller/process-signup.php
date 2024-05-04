@@ -1,5 +1,7 @@
 <?php
 
+echo $_POST['user_password'] . '<br>' .  $_POST["user_mail"];
+
 if (strlen($_POST["user_password"]) < 8) {
     die("Password must be at least 8 characters long");
 }

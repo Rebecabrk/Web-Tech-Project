@@ -11,8 +11,8 @@
 
 <body>
     <div class="sidebar" id="sidebar">
-        <div class="logo-details">
-            <i class="bx bx-menu" onClick="slideNavBar();"></i>
+        <div class="logo-details" id="button" onClick="slideNavBar();">
+            <i class="bx bx-menu"></i>
         </div>
         <ul class="nav-list">
             <li>

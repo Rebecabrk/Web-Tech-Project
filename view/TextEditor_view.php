@@ -18,7 +18,7 @@
 
 <body>
     <!-- <div class="journal_container">
-        <form action="../model/TextEditor_proccess.php" method="post">
+        <form action="../model/TextEditor_proccess.php" method="POST">
             <div class="journal_title">
                 <input type="text" id="title" name="title" placeholder="Your Title" />
             </div>

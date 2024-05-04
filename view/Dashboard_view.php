@@ -50,13 +50,14 @@
 
             <h1>Medical records</h1>
             <div class="card-container">
+
                 <div class="card">
                     <div class="card-content">
                         <h1> Accidents </h1>
                         <div class="input-card">Car accident</div>
                         <div class="input-card">Fall from tree</div>
                         <div class="input-card">9/11</div>
-                        <button class="add-btn" onClick="openPopup();">
+                        <button class="add-btn" id="accident-btn" onClick="openPopup(); $DATA='Accident'">
                             <i class='bx bx-add-to-queue'></i>
                         </button>
                     </div>
@@ -68,7 +69,7 @@
                         <div class="input-card">Car accident</div>
                         <div class="input-card">Fall from tree</div>
                         <div class="input-card">9/11</div>
-                        <button class="add-btn" onClick="openPopup();">
+                        <button class="add-btn" id="alergy-btn" onClick="openPopup(); $DATA='Alergy'">
                             <i class='bx bx-add-to-queue'></i>
                         </button>
                     </div>
@@ -80,7 +81,7 @@
                         <div class="input-card">Car accident</div>
                         <div class="input-card">Fall from tree</div>
                         <div class="input-card">9/11</div>
-                        <button class="add-btn" onClick="openPopup();">
+                        <button class="add-btn" id="disare-btn" onClick="document.getElementById('popup_title').innerHTML='Add Disare'; openPopup();">
                             <i class='bx bx-add-to-queue'></i>
                         </button>
                     </div>
@@ -88,14 +89,19 @@
 
                 <section class="card popup" id="popup">
                     <div>
-                        <h1>Add <br> Data</h1>
-                        <form method="POST">
-                            <input class="input-card" type="text" placeholder="Type of accident" />
-                            <input class="input-card" type="text" placeholder="Date of accident" />
-                            <input class="input-card" type="text" placeholder="Location of accident" />
-                            <input class="input-card" type="text" placeholder="Severity of accident" />
+                        <h1 id="popup_title"></h1>
+                        <form method="POST" class="input-container">
+                            <input class="input-card" name="name" type="text" placeholder="Name of incident"/>
+                            <input class="input-card" name="date" type="text" placeholder="Date of incident"/>
+                            <input class="input-card" name="location" type="text" placeholder="Location of incident"/>
+                            <input class="input-card" name="type" type="text"/>
+                            <!-- <select  class="input-card">
+                                <option>Accident</option>
+                                <option>Alergy</option>
+                                <option>Diseare</option>
+                            </select> -->
                             <div class="buttons-container">
-                                <a class="submit-btn" href="process.php">
+                                <a class="submit-btn" href="">
                                     Add
                                 </a>
                                 <a class="close-btn" onClick="closePopup();">

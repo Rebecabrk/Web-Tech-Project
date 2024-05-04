@@ -1,11 +1,20 @@
 let sidebar = document.querySelector(".sidebar");
-let closeBtn = document.getElementById("btn");
+let closeBtn = document.getElementById("button");
 let searchBtn = document.querySelector(".bx-search");
+var BTN_Global = true;
 
 function slideNavBar() {
-  sidebar.classList.toggle("open");
+  closeBtn = document.getElementById("button");
+  // sidebar.classList.add("open");
   // document.querySelector('.full_screen').classList.toggle('blur');
-  menuBtnChange(); //calling the function(optional)
+  // menuBtnChange(); //calling the function(optional)
+  if(BTN_Global) {
+    closeBtn.style.width='20%';
+    BTN_Global=false;
+  } else {
+    sidebar.style.width='78px';
+    BTN_Global=true;
+  }
 }
 
 function slideSearch() {
