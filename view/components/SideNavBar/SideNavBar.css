@@ -39,6 +39,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 .sidebar .logo-details .icon {
   opacity: 0;

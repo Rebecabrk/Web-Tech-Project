@@ -13,7 +13,7 @@
     <div class="background">
         <div class="overlay">
             <div class="wrapper">
-                <form method="post">
+                <form method="POST">
                     <h1>Connect</h1>
                     <hr>
                     <div class="column-container input-box">
@@ -26,7 +26,7 @@
                         <input type="password" id="password" name="user_password" placeholder="Password" required />
                     </div>
                     <hr>
-                    <a class="button" href="process-signup.php">
+                    <a class="button">
                         <button type="submit">Login</button>
                     </a>
                 </form>
