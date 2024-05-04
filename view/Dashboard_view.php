@@ -57,7 +57,8 @@
                         <div class="input-card">Car accident</div>
                         <div class="input-card">Fall from tree</div>
                         <div class="input-card">9/11</div>
-                        <button class="add-btn" id="accident-btn" onClick="openPopup(); $DATA='Accident'">
+                        <button class="add-btn" id="accident-btn"
+                            onClick="document.getElementById('popup_title').innerHTML='Add Accident'; document.getElementById('popup_type').value='Accident'; openPopup();">
                             <i class='bx bx-add-to-queue'></i>
                         </button>
                     </div>
@@ -69,7 +70,8 @@
                         <div class="input-card">Car accident</div>
                         <div class="input-card">Fall from tree</div>
                         <div class="input-card">9/11</div>
-                        <button class="add-btn" id="alergy-btn" onClick="openPopup(); $DATA='Alergy'">
+                        <button class="add-btn" id="alergy-btn"
+                            onClick="document.getElementById('popup_title').innerHTML='Add Alergy'; document.getElementById('popup_type').value='Alergy'; openPopup();">
                             <i class='bx bx-add-to-queue'></i>
                         </button>
                     </div>
@@ -81,7 +83,8 @@
                         <div class="input-card">Car accident</div>
                         <div class="input-card">Fall from tree</div>
                         <div class="input-card">9/11</div>
-                        <button class="add-btn" id="disare-btn" onClick="document.getElementById('popup_title').innerHTML='Add Disare'; openPopup();">
+                        <button class="add-btn" id="disare-btn"
+                            onClick="document.getElementById('popup_title').innerHTML='Add Disare'; document.getElementById('popup_type').value='Desire'; openPopup();">
                             <i class='bx bx-add-to-queue'></i>
                         </button>
                     </div>
@@ -90,23 +93,22 @@
                 <section class="card popup" id="popup">
                     <div>
                         <h1 id="popup_title"></h1>
-                        <form method="POST" class="input-container">
-                            <input class="input-card" name="name" type="text" placeholder="Name of incident"/>
-                            <input class="input-card" name="date" type="text" placeholder="Date of incident"/>
-                            <input class="input-card" name="location" type="text" placeholder="Location of incident"/>
-                            <input class="input-card" name="type" type="text"/>
+                        <form method="POST" class="input-container" action="process-med-rec.php">
+                            <input class="input-card" name="name_input" id="name_input" type="text"
+                                placeholder="Name of incident" />
+                            <input class="input-card" name="date_input" id="date_input" type="text"
+                                placeholder="Date (YYYY-MM-DD)" />
+                            <input class="input-card" name="location_input" id="location_input" type="text"
+                                placeholder="Location of incident" />
+                            <input class="input-card" type="hidden" name="type_input" type="text" id="popup_type" />
                             <!-- <select  class="input-card">
                                 <option>Accident</option>
                                 <option>Alergy</option>
                                 <option>Diseare</option>
                             </select> -->
                             <div class="buttons-container">
-                                <a class="submit-btn" href="">
-                                    Add
-                                </a>
-                                <a class="close-btn" onClick="closePopup();">
-                                    Close
-                                </a>
+                                <input type="submit" class="submit-btn" value="Add">
+                                <a class="close-btn" onClick="closePopup();"> Close </a>
                             </div>
                         </form>
                     </div>
