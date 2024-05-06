@@ -29,6 +29,10 @@
 
     <div class="journal_container_2">
         <div class="toolbar">
+            <div class="entries_buttons">
+                <button><i class='bx bx-check'></i></button>
+                <button><i class='bx bx-trash' ></i></button>
+            </div>
             <div class="head">
                 <input type="text" placeholder="Filename" value="untitled" id="filename">
                 <select onchange="fileHandle(this.value); this.selectedIndex=0;">
