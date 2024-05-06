@@ -20,6 +20,14 @@ body{
     min-height: 100vh;
 }
 
+li {
+    margin-left: 16px;
+}
+
+a{
+    cursor: pointer;
+}
+
 .journal_container_2{
     max-width: 991px;
     width: 100%;
@@ -111,6 +119,9 @@ body{
     outline: none;
 }
 
+#show-code[data-active="true"]{
+    background: #eee;
+}
 
 /* .journal_container {
     background-color: whitesmoke;
