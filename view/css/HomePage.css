@@ -93,7 +93,6 @@ html {
   width: 200px;
   height: 250px;
   border-radius: 20px;
-  cursor: pointer;
   padding: 10px 15px;
   margin: 10px 15px;
   background-position: center;
@@ -377,6 +376,88 @@ li a span {
   }
 }
 
+
+
+.blur {
+  filter: blur(20px); /* Adjust the blur level as needed */
+}
+
+.go_up_btn_container {
+  position: fixed;
+  bottom: 5%;
+  right: 1%;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #11101d;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 99;
+  transition: all 0.5s ease;
+  transform: translateX(150%);
+}
+
+#go_up_btn.hidden_btn {
+  transform: translateX(-50%);
+}
+
+.theme_btn_container {
+  position: fixed;
+  top: 5%;
+  right: 1%;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #11101d;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 99;
+  transition: all 0.5s ease;
+  transform: translateX(150%);
+}
+
+#theme_btn.hidden_btn {
+  transform: translateX(-50%);
+}
+
+.padding {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0.5% 2% 5%;
+}
+
+.dark-mode {
+  background-color: gray;
+  color: blanchedalmond;
+}
+
+.light-mode {
+  background-color: blanchedalmond;
+  color: black;
+}
+
+@import url("https://fonts.googleapis.com/css?family=poppins&effect=anaglyph");
+@import url("https://www.fontspace.com/soul-note-display-trial-font-f110131");
+@import url("https://www.fontspace.com/gustatory-delight-font-f85359");
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
+}
+@font-face {
+  font-family: mySecondFont;
+  src: url(fonts/GustatoryDelightRegular-rgX3L.ttf);
+}
+
+* {
+  font-family: myFirstFont;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .sidebar {
   position: fixed;
   flex: 0 0 auto;
@@ -538,69 +619,16 @@ li a span {
   border-radius: 12px;
 }
 
-#sidebar.hidden {
-  transform: translateX(0);
+#sidebar.hidden_sidenavbar {
+  transform: translateX(0%);
 }
 
-.blur {
-  filter: blur(20px); /* Adjust the blur level as needed */
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
 }
 
-.go_up_btn_container {
-  position: fixed;
-  bottom: 5%;
-  right: 1%;
-  border-radius: 50%;
-  padding: 10px;
-  background-color: #11101d;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  z-index: 99;
-  transition: all 0.5s ease;
-  transform: translateX(150%);
-}
-
-#go_up_btn.hidden_btn {
-  transform: translateX(-50%);
-}
-
-.theme_btn_container {
-  position: fixed;
-  top: 5%;
-  right: 1%;
-  border-radius: 50%;
-  padding: 10px;
-  background-color: #11101d;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  z-index: 99;
-  transition: all 0.5s ease;
-  transform: translateX(150%);
-}
-
-#theme_btn.hidden_btn {
-  transform: translateX(-50%);
-}
-
-.padding {
-  display: flex;
-  flex-direction: column;
-  padding: 2% 0.5% 2% 5%;
-}
-
-.dark-mode {
-  background-color: gray;
-  color: blanchedalmond;
-}
-
-.light-mode {
-  background-color: blanchedalmond;
-  color: black;
-}
 
 @media screen and (max-width: 1991px) {
   .padding {

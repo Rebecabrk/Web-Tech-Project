@@ -1,0 +1,75 @@
+@import url("https://www.fontspace.com/soul-note-display-trial-font-f110131");
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
+}
+
+* {
+  font-family: myFirstFont;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  display: flex;
+}
+
+/* Cookie Container */
+.cookie-container {
+    position: fixed;
+    bottom: 20px;
+    left: 100px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 100%;
+    z-index: 9999;
+    overflow: hidden;
+    transform: translateX(-200%);
+    transition: all 0.5s ease;
+}
+
+.cookie-container i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.cookie-container p {
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.cookie-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.cookie-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.cookie-btn:hover {
+    background-color: #0056b3;
+}
+
+#cookie-container.show-cookie {
+    transform: translateX(0);
+}

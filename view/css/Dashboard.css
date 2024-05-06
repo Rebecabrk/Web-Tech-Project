@@ -63,7 +63,7 @@ h1 {
 
 .card {
   display: flex;
-  height: 300px;
+  height: 350px;
   border-radius: 20px;
   padding: 20px;
   margin: 10px 15px;
@@ -86,8 +86,9 @@ h1 {
 
 .popup {
   position: absolute;
-  top: 85%;
-  left: 51.5%;
+  position: fixed;
+  top: 27%;
+  left: 39%;
   transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
@@ -95,14 +96,33 @@ h1 {
   border-radius: 10px;
   border: 2px solid blanchedalmond;
   z-index: 1;
-  display: none;
+  transform: scale(2);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+#popup.open {
+  visibility: visible;
+  opacity: 1;
+  scale: 1;
+  transform: scale(1.5);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
-.info-card {
+.input-card {
   display: flex;
   height: 25%;
   border-radius: 20px;
@@ -112,19 +132,31 @@ h1 {
   border: 2px solid blanchedalmond;
 }
 
-.add-btn {
+.input-card:hover {
+  height: 50%;
+  transition: all 0.3s ease;
+}
+
+.add-btn, .close-btn, .submit-btn {
   display: flex;
   height: 45px;
   border-radius: 20px;
   background-color: blanchedalmond;
   color: gray;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.4s ease;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  padding: 0 20px;
+  margin: 5px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
 }
 
 .big-card {
@@ -356,17 +388,32 @@ h1 {
   .padding {
     padding: 2% 0.5% 2% 4.5%;
   }
+
+  .popup {
+    left: 45%;
+    transition: all 0.4s ease;
+  }
 } // Rebeca's screen size: 1990px
 
 @media screen and (max-width: 1600px) {
   .padding {
     padding: 2% 0.5% 2% 5.4%;
   }
+  
+  .popup {
+    left: 30%;
+    transition: all 0.4s ease;
+  }
 }
 
 @media screen and (max-width: 1350px) {
   .padding {
     padding: 2% 0.5% 2% 6%;
+  }
+    
+  .popup {
+    left: 39%;
+    transition: all 0.4s ease;
   }
 } // Marius's screen size: 1286px
 
@@ -385,6 +432,12 @@ h1 {
 @media screen and (max-width: 770px) {
   .padding {
     padding: 2% 0% 2% 16%;
+  }
+      
+  .popup {
+    left: 28%;
+    transition: all 0.4s ease;
+    width: 50%;
   }
 }
 

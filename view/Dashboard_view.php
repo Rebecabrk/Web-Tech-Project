@@ -8,10 +8,11 @@
     <link href="../view/css/Dashboard.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../view/components/Popup/Popup.js"></script>
 </head>
 
-<body>
-    <div class="pages">
+<body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
+    <div class="pages" id="second_screen">
         <div id="first_screen" class="padding">
             <h1>Schedules/Calendar</h1>
             <div class="card-container">
@@ -20,10 +21,6 @@
                         <h1>
                             Mediaction
                         </h1>
-                        <div class="list"> </div>
-                        <a class="add-btn" href="process-signup.php">
-                            <i class='bx bx-add-to-queue'></i>
-                        </a>
                     </div>
                 </div>
                 <div class="card">
@@ -53,60 +50,91 @@
 
             <h1>Medical records</h1>
             <div class="card-container">
+
+                <?php 
+                error_reporting(0); // ATENTIE!
+            $mysqli = require ("..\model\database\database.php");
+            $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Accident' ORDER BY insertion_date DESC";
+            $result = $mysqli->query($sql);
+            ?>
                 <div class="card">
                     <div class="card-content">
-                        <h1>
-                            Accidents
-                        </h1>
-
-                        <div class="info-card">Car accident</div>
-                        <div class="info-card">Fall from tree</div>
-                        <div class="info-card">9/11</div>
-
-                        <a type="submit" class="add-btn" onclick="openPopup()">
+                        <h1> Accidents </h1>
+                        <?php for($k=1; $k<=3; $k++) {?>
+                        <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
+                            echo $name;
+                        else
+                            echo 'nothing here...'; ?></div>
+                        <?php } ?>
+                        <button class="add-btn" id="accident-btn"
+                            onClick="document.getElementById('popup_title').innerHTML='Add Accident'; document.getElementById('popup_type').value='Accident'; openPopup();">
                             <i class='bx bx-add-to-queue'></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
+
+                <?php
+            $mysqli = require ("..\model\database\database.php");
+            $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Alergy' ORDER BY insertion_date DESC";
+            $result = $mysqli->query($sql);
+            ?>
                 <div class="card">
                     <div class="card-content">
-                        <h1>
-                            Alergies
-                        </h1>
-
-                        <div class="info-card">Car accident</div>
-                        <div class="info-card">Fall from tree</div>
-                        <div class="info-card">9/11</div>
-
-                        <a class="add-btn" href="process-signup.php">
+                        <h1> Alergies </h1>
+                        <?php for($k=1; $k<=3; $k++) {?>
+                        <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
+                            echo $name;
+                        else
+                            echo 'nothing here...'; ?></div>
+                        <?php } ?>
+                        <button class="add-btn" id="alergy-btn"
+                            onClick="document.getElementById('popup_title').innerHTML='Add Alergy'; document.getElementById('popup_type').value='Alergy'; openPopup();">
                             <i class='bx bx-add-to-queue'></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
+
+                <?php
+            $mysqli = require ("..\model\database\database.php");
+            $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Desire' ORDER BY insertion_date DESC";
+            $result = $mysqli->query($sql);
+            ?>
                 <div class="card">
                     <div class="card-content">
-                        <h1>
-                            Diseares
-                        </h1>
-
-                        <div class="info-card">Car accident</div>
-                        <div class="info-card">Fall from tree</div>
-                        <div class="info-card">9/11</div>
-
-                        <a class="add-btn" href="process-signup.php">
+                        <h1> Diseares </h1>
+                        <?php for($k=1; $k<=3; $k++) {?>
+                        <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
+                            echo $name;
+                        else
+                            echo 'nothing here...'; ?></div>
+                        <?php } ?>
+                        <button class="add-btn" id="disare-btn"
+                            onClick="document.getElementById('popup_title').innerHTML='Add Disare'; document.getElementById('popup_type').value='Desire'; openPopup();">
                             <i class='bx bx-add-to-queue'></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
-                <section class="card popup">
+
+                <section class="card popup" id="popup">
                     <div>
-                        <h1>Add Accident</h1>
-                        <form>
-                            <input class="info-card" type="text" placeholder="Type of accident" />
-                            <input class="info-card" type="text" placeholder="Date of accident" />
-                            <input class="info-card" type="text" placeholder="Location of accident" />
-                            <input class="info-card" type="text" placeholder="Severity of accident" />
-                            <a type="submit" href="process-signup.php" class="add-btn" onclick="closePopup()">Add</a>
+                        <h1 id="popup_title"></h1>
+                        <form method="POST" class="input-container" action="process-med-rec.php">
+                            <input class="input-card" name="name_input" id="name_input" type="text"
+                                placeholder="Name of incident" required />
+                            <input class="input-card" name="date_input" id="date_input" type="text"
+                                placeholder="Date (YYYY-MM-DD)" required />
+                            <input class="input-card" name="location_input" id="location_input" type="text"
+                                placeholder="Location of incident" />
+                            <input class="input-card" type="hidden" name="type_input" type="text" id="popup_type" />
+                            <!-- <select  class="input-card">
+                                <option>Accident</option>
+                                <option>Alergy</option>
+                                <option>Diseare</option>
+                            </select> -->
+                            <div class="buttons-container">
+                                <input type="submit" class="submit-btn" value="Add">
+                                <a class="close-btn" onClick="closePopup();"> Close </a>
+                            </div>
                         </form>
                     </div>
                 </section>
@@ -140,71 +168,6 @@
             </div>
         </div>
     </div>
-
-    <div class="sidebar" id="sidebar">
-        <div class="logo-details">
-            <i class="bx bx-menu" id="btn"></i>
-        </div>
-        <ul class="nav-list">
-            <li>
-                <i class="bx bx-search"></i>
-                <input type="text" placeholder="Search..." />
-                <span class="tooltip">Search</span>
-            </li>
-            <li>
-                <a href="HomePage.php">
-                    <i class='bx bx-home'></i>
-                    <span class="links_name">Home</span>
-                </a>
-                <span class="tooltip">Home</span>
-            </li>
-            <li>
-                <a href="Dashboard.php">
-                    <i class="bx bx-grid-alt"></i>
-                    <span class="links_name">Dashboard</span>
-                </a>
-                <span class="tooltip">Dashboard</span>
-            </li>
-            <li>
-                <a href="Journal.php">
-                    <i class='bx bx-book-bookmark'></i>
-                    <span class="links_name">Journal</span>
-                </a>
-                <span class="tooltip">Journal</span>
-            </li>
-            <li>
-                <a href="Journey.php">
-                    <i class="bx bx-heart"></i>
-                    <span class="links_name">The Journey</span>
-                </a>
-                <span class="tooltip">The Journey</span>
-            </li>
-            <li>
-                <a href="Settings.php">
-                    <i class="bx bx-cog"></i>
-                    <span class="links_name">Settings</span>
-                </a>
-                <span class="tooltip">Settings</span>
-            </li>
-            <li>
-                <a href="About.php">
-                    <i class='bx bx-smile'></i>
-                    <span class="links_name">About Us</span>
-                </a>
-                <span class="tooltip">About Us</span>
-            </li>
-            <li>
-                <a href="Documentation.php">
-                    <i class='bx bxs-file-doc'></i>
-                    <span class="links_name">Documentation</span>
-                </a>
-                <span class="tooltip">Documentation</span>
-            </li>
-        </ul>
-    </div>
-
-    <script src="components\SideNavBar\SideNavBar.js"></script>
-    <script src="components\Popup\Popup.js"></script>
 </body>
 
 </html>

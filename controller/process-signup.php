@@ -16,20 +16,15 @@ if ( ! preg_match("/[0-9]/", $_POST["user_password"]) ) {
 $password_hash = password_hash($_POST["user_password"], PASSWORD_DEFAULT);
 
 // DB connection!
-$host="localhost";
-$dbname="login_db";
-$username="root";
-$password="";
-
-$mysqli = new mysqli($host, $username, $password, $dbname);
+$mysqli = require ("..\model\database\database.php");
 
 if($mysqli->connect_error){
     die("Connection failed: " . $mysqli->connect_error);
 }
 
-$sql = "INSERT INTO user (email, first_name, last_name, password_hash) VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO users (first_name, last_name, email, password_hash) VALUES (?, ?, ?, ?)";
 $stmt = $mysqli->prepare($sql);
-$stmt->bind_param("ssss", $_POST["user_mail"], $_POST["user_first_name"], $_POST["user_last_name"], $password_hash);
+$stmt->bind_param("ssss", $_POST["user_first_name"], $_POST["user_last_name"], $_POST["user_mail"], $password_hash);
 
 try {
     $stmt->execute();

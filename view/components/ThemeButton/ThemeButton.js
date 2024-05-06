@@ -9,8 +9,8 @@
     }
   });
 
-  const toggle = document.getElementById('theme_btn');
-  toggle.addEventListener('click', function(){
+  const btn = document.getElementById('theme_btn');
+  btn.addEventListener('click', function(){
     const dmb = document.getElementById('theme_btn');
     const body = document.querySelector('body');
   
