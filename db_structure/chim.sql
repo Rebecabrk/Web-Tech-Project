@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2024 at 07:54 PM
+-- Generation Time: May 07, 2024 at 12:22 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,6 +24,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `children`
+--
+
+CREATE TABLE `children` (
+  `cid` int(11) NOT NULL,
+  `first_name` varchar(225) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `birth_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `medical_records`
 --
 
@@ -33,24 +47,9 @@ CREATE TABLE `medical_records` (
   `name` varchar(225) NOT NULL,
   `date` date NOT NULL,
   `location` varchar(255) DEFAULT NULL,
-  `insertion_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `insertion_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `cid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `medical_records`
---
-
-INSERT INTO `medical_records` (`id`, `type`, `name`, `date`, `location`, `insertion_date`) VALUES
-(11, 'Alergy', 'peanuts', '2003-02-25', 'hospital (birth)', '2024-05-04 15:40:50'),
-(12, 'Alergy', 'life', '2003-02-25', 'Brasov', '2024-05-04 15:41:18'),
-(13, 'Alergy', 'snow', '2012-12-01', 'Home', '2024-05-04 15:41:32'),
-(14, 'Desire', 'Cancer', '2023-12-12', 'Piatra Neamt', '2024-05-04 15:42:01'),
-(15, 'Desire', 'Diabeties', '2024-04-12', 'here', '2024-05-04 15:42:21'),
-(16, 'Alergy', 'car accident', '2008-08-13', 'Brasov', '2024-05-04 15:42:59'),
-(17, 'Accident', 'snowboard party', '2012-12-01', 'Brasov', '2024-05-04 15:43:09'),
-(18, 'Accident', 'Door smash', '2024-04-12', 'home', '2024-05-04 15:43:47'),
-(19, 'Accident', 'Bike crash', '2012-12-01', 'woods', '2024-05-04 15:50:39'),
-(20, 'Alergy', 'something bad', '2022-02-02', 'nowhere', '2024-05-06 16:44:51');
 
 -- --------------------------------------------------------
 
@@ -72,17 +71,26 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`uid`, `first_name`, `last_name`, `email`, `password_hash`) VALUES
 (1, 'Marius', 'Olaru', 'MJ@arena.com', '$2y$10$ol99TnrSi359yKq/FXcHhe/H6kQ7MmhBkyx/X/BSN7cnDnPHwSHUm'),
-(2, 'Bors', 'Zeama', 'bors.cu.zeama@acasa.com', '$2y$10$Vt/HoLB7VfDuZW8P601EnOvns.20wFY6NvbzCtFQXlF4kVrAOlcbC');
+(2, 'Bors', 'Zeama', 'bors.cu.zeama@acasa.com', '$2y$10$Vt/HoLB7VfDuZW8P601EnOvns.20wFY6NvbzCtFQXlF4kVrAOlcbC'),
+(3, 'Mamaia', 'Tataia', 'tataia@gmail.com', '$2y$10$AmTBAEg/u1fRTqKLFnUc6u0o3GuppGBDdylNDAvy5FEO0kd1fPip6');
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `children`
+--
+ALTER TABLE `children`
+  ADD PRIMARY KEY (`cid`),
+  ADD KEY `uid` (`uid`);
+
+--
 -- Indexes for table `medical_records`
 --
 ALTER TABLE `medical_records`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cid` (`cid`);
 
 --
 -- Indexes for table `users`
@@ -96,16 +104,38 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `children`
+--
+ALTER TABLE `children`
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `medical_records`
 --
 ALTER TABLE `medical_records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `children`
+--
+ALTER TABLE `children`
+  ADD CONSTRAINT `children_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `medical_records`
+--
+ALTER TABLE `medical_records`
+  ADD CONSTRAINT `medical_records_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `children` (`cid`) ON DELETE CASCADE ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
