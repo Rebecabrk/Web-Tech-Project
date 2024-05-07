@@ -60,6 +60,7 @@
                 </div>
                 <div>
                     <h2>Your Entries:</h2>
+                    <div id="recentEntries"></div>
                 </div>
             </div>
 
@@ -77,6 +78,7 @@
             </div>
         </div>
     </div>
+    <script src="../view/js/Journal.js"
 </body>
 
 </html>

@@ -4,7 +4,8 @@
 <head>
     <style>
     html {
-        <?php echo $backgroundStyle;
+        <?php 
+            echo $backgroundStyle;
         ?>;
     }
     </style>
@@ -26,15 +27,14 @@
             </div>
         </form>
     </div> -->
-
     <div class="journal_container_2">
         <div class="toolbar">
             <div class="entries_buttons">
-                <button><i class='bx bx-check'></i></button>
+                <button type="submit" id="doneButton"><i class='bx bx-check'></i></button>
                 <button><i class='bx bx-trash' ></i></button>
             </div>
             <div class="head">
-                <input type="text" placeholder="Filename" value="untitled" id="filename">
+                <input type="text" placeholder="Filename" value="Your title" id="filename">
                 <select onchange="fileHandle(this.value); this.selectedIndex=0;">
                     <option value="" selected="" hidden="" disabled="">File</option>
                     <option value="new">New File</option>
@@ -92,6 +92,7 @@
             Your thoughts...
         </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../view/js/TextEditor.js"></script>
 </body>

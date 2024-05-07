@@ -61,3 +61,11 @@ function fileHandle(value){
         html2pdf(content).save(filename.value);
     }
 }
+
+
+document.getElementById('doneButton').addEventListener('click', function(){
+    const name = 'usrtxt' + filename.value;
+    localStorage.setItem(name, content.innerHTML.replace(/\n/g, '<br>'));
+
+    window.location.href = 'Journal.php';
+});
