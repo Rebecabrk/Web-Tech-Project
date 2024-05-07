@@ -74,14 +74,14 @@ html {
   flex-wrap: wrap;
 }
 
-.title-container {
+.row .title-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.card-container {
+.row .card-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -89,7 +89,7 @@ html {
   margin-top: 8%;
 }
 
-.card {
+.card-container .card, .center_element .card {
   width: 200px;
   height: 250px;
   border-radius: 20px;
@@ -458,11 +458,10 @@ li a span {
   box-sizing: border-box;
 }
 
-.add-btn, .close-btn, .submit-btn {
+.add-btn {
   display: flex;
   height: 45px;
   border-radius: 20px;
-  background-color: blanchedalmond;
   color: gray;
   font-size: 1.5rem;
   font-weight: 700;
@@ -475,12 +474,17 @@ li a span {
   margin: 5px;
 }
 
+.transparent {
+  background-color: transparent;
+  color: blanchedalmond;
+}
+
 @media screen and (max-width: 1600px) {
   .padding {
     padding: 2% 0.5% 2% 5.4%;
   }
 
-  .card-container {
+  .row .card-container {
     flex-basis: 40%;
   }
 }
@@ -502,7 +506,7 @@ li a span {
     padding: 2% 0.5% 2% 8.4%;
   }
 
-  .card-container {
+  .row .card-container {
     flex-basis: 40%;
   }
 
@@ -568,13 +572,13 @@ li a span {
     transition: all 0.4s ease;
   }
 
-  .card {
+  .card-container .card, .center_element .card  {
     height: 170px;
     transition: all 0.4s ease;
     margin: 5px 10px;
   }
 
-  .card-container {
+  .row .card-container {
     flex-basis: 20%;
   }
 }
@@ -584,7 +588,7 @@ li a span {
     padding: 2% 0.7% 2% 15%;
   }
 
-  .card {
+  .card-container .card, .center_element .card  {
     height: 120px;
     transition: all 0.4s ease;
   }
@@ -613,12 +617,12 @@ li a span {
     transition: all 0.4s ease;
   }
 
-  .card {
+  .card-container .card, .center_element .card  {
     height: 100px;
     transition: all 0.4s ease;
   }
 
-  .card-container {
+  .row .card-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

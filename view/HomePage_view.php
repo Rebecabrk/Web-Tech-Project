@@ -21,11 +21,12 @@
                         echo "You are not connected!";
                     ?> -->
                     <?php if ($connected_user) {?>
-                        <h3 class="tracking-in-expand">Hello <?= htmlspecialchars($user["last_name"]) ?></h3>
-                        <?php if ($_COOKIE["Child_Picker"]==="nothing") {?>
-                            <p class="tracking-in-expand"> <br> Add your children <br> <button class="add-btn"
-                            onClick="openPopup();">here</button></p>
-                        <?php }?>
+                    <h3 class="tracking-in-expand">Hello <?= htmlspecialchars($user["last_name"]) ?></h3>
+                    <?php if ($_COOKIE["Child_Picker"]==="nothing") {?>
+                    <p class="tracking-in-expand"> Add Your Children
+                        <button class="add-btn transparent" onClick="openPopup();">here</button>
+                    </p>
+                    <?php }?>
                     <?php }?>
                 </div>
                 <h1 class="tracking-in-expand">

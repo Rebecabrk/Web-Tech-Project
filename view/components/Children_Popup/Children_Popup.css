@@ -21,56 +21,6 @@ body {
   position: relative;
 }
 
-
-.add-btn, .close-btn, .submit-btn {
-  display: flex;
-  height: 45px;
-  border-radius: 20px;
-  background-color: blanchedalmond;
-  color: gray;
-  font-size: 1.5rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 20px;
-  margin: 5px;
-}
-
-
-.card-content h1 {
-  justify-content: start;
-}
-
-.input-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-.input-card {
-  display: flex;
-  height: 25%;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 10px 15px;
-  flex: 1;
-  border: 2px solid blanchedalmond;
-}
-
-.input-card:hover {
-  height: 50%;
-  transition: all 0.3s ease;
-}
-
 .popup {
   position: absolute;
   position: fixed;
@@ -96,6 +46,56 @@ body {
   transform: scale(1.5);
 }
 
+.add-btn, .close-btn, .submit-btn {
+  display: flex;
+  height: 45px;
+  border-radius: 20px;
+  background-color: blanchedalmond;
+  color: gray;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 20px;
+  margin: 5px;
+}
+
+.popup .card {
+  display: flex;
+  height: 350px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px 15px;
+  flex: 1;
+  background-color: grey;
+  color: blanchedalmond;
+}
+
+.card .input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.input-container .input-card {
+  display: flex;
+  height: 25%;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 10px 15px;
+  flex: 1;
+  border: 2px solid blanchedalmond;
+}
+
 @media screen and (max-width: 1991px) {
   .popup {
     left: 45%;
@@ -117,9 +117,17 @@ body {
   }
 } // Marius's screen size: 1286px
 
+@media screen and (max-width: 970px) {
+  .popup {
+    left: 20%;
+    transition: all 0.4s ease;
+    width: 50%;
+  }
+}
+
 @media screen and (max-width: 770px) {
   .popup {
-    left: 28%;
+    left: 18%;
     transition: all 0.4s ease;
     width: 50%;
   }
