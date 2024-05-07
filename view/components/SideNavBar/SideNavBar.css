@@ -100,7 +100,11 @@
   pointer-events: auto;
   transition: all 0.4s ease;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-10%, -50%);
+}
+.sidebar li:hover .tooltip:hover {
+  background: #1d1b31;
+  color: blanchedalmond;
 }
 .sidebar.open li .tooltip {
   display: none;
@@ -160,6 +164,9 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.4s;
+}
+.sidebar li a .no_click {
+  cursor: none;
 }
 .sidebar.open li a .links_name {
   opacity: 1;

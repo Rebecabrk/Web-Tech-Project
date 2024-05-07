@@ -114,15 +114,41 @@
             <li>
                 <?php
                     if (isset($_COOKIE['In_God_We_Trust']))
-                        $URL = "#";
+                        $URL = null;
                     else
                         $URL = "Login.php";
                 ?>
                 <a href="<?php echo $URL; ?>">
                     <i class='bx bx-child'></i>
-                    <span class="links_name">Child</span>
+                    <span class="links_name no_click">Child</span>
                 </a>
-                <span class="tooltip">Child</span>
+                <?php 
+                    $mysqli = require ("..\model\database\database.php");
+                    $sql="SELECT * FROM children WHERE uid='" . $_COOKIE["In_God_We_Trust"] . "'";
+                    $result = $mysqli->query($sql);
+
+                    function OnSelectionChange() {
+                        if (document.querySelector("select").value === "add") {
+                            // window.location.href = "HomePage.php";
+
+                        } else {
+                            setcookie("Child_Picker", document.querySelector("select").value, time() + (30 * 24 * 60 * 60), '/');
+                            // window.location.href = "HomePage.php";
+                        }
+                    }
+                ?>
+                <span class="tooltip">
+                    <label>Choose the child</label>
+                    <select onchange="OnSelectionChange()">
+                        <?php 
+                            for ($i=0; $i<$result->num_rows; $i++) {
+                                $child = $result->fetch_assoc();
+                                echo "<option value='" . $child['cid'] . "'>" . $child['first_name'] . "</option>";
+                            }
+                        ?>
+                        <option value="add">Add a new one</option>
+                    </select>
+                </span>
             </li>
         </ul>
     </div>
