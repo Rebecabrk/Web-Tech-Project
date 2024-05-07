@@ -113,30 +113,34 @@
             </li>
             <li>
                 <?php
-                    if (isset($_COOKIE['In_God_We_Trust']))
+                    if (isset($_COOKIE['In_God_We_Trust'])) {
                         $URL = null;
-                    else
+
+                        $mysqli = require ("..\model\database\database.php");
+                        $sql="SELECT * FROM children WHERE uid='" . $_COOKIE["In_God_We_Trust"] . "'";
+                        $result = $mysqli->query($sql);
+
+                        function OnSelectionChange() {
+                            if (document.querySelector("select").value == "add") {
+                                // document.querySelector("select").href = "HomePage.php";
+                                header("Location: HomePage.php");
+    
+                            } else {
+                                setcookie("Child_Picker", document.querySelector("select").value, time() + (30 * 24 * 60 * 60), '/');
+                                // document.querySelector("select").href = "HomePage.php";
+                                header("Location: HomePage.php");
+                            }
+                        }
+                    }
+                    else {
                         $URL = "Login.php";
+
+                    }
                 ?>
                 <a href="<?php echo $URL; ?>">
                     <i class='bx bx-child'></i>
                     <span class="links_name no_click">Child</span>
                 </a>
-                <?php 
-                    $mysqli = require ("..\model\database\database.php");
-                    $sql="SELECT * FROM children WHERE uid='" . $_COOKIE["In_God_We_Trust"] . "'";
-                    $result = $mysqli->query($sql);
-
-                    function OnSelectionChange() {
-                        if (document.querySelector("select").value === "add") {
-                            // window.location.href = "HomePage.php";
-
-                        } else {
-                            setcookie("Child_Picker", document.querySelector("select").value, time() + (30 * 24 * 60 * 60), '/');
-                            // window.location.href = "HomePage.php";
-                        }
-                    }
-                ?>
                 <span class="tooltip">
                     <label>Choose the child</label>
                     <select onchange="OnSelectionChange()">
@@ -146,7 +150,7 @@
                                 echo "<option value='" . $child['cid'] . "'>" . $child['first_name'] . "</option>";
                             }
                         ?>
-                        <option value="add">Add a new one</option>
+                        <option value="add">Add a new one: </option>
                     </select>
                 </span>
             </li>
