@@ -113,46 +113,6 @@
                         </button>
                     </div>
                 </div>
-
-                <section class="card popup" id="popup">
-                    <div>
-                        <h1 id="popup_title"></h1>
-                        <form method="POST" class="input-container" action="process-med-rec.php">
-                            <input class="input-card" name="name_input" id="name_input" type="text"
-                                placeholder="Name of incident" required />
-                            <input class="input-card" name="date_input" id="date_input" type="text"
-                                placeholder="Date (YYYY-MM-DD)" required />
-                            <input class="input-card" name="location_input" id="location_input" type="text"
-                                placeholder="Location of incident" />
-                            <input class="input-card" type="hidden" name="type_input" type="text" id="popup_type" />
-                            <!-- <select  class="input-card">
-                                <option>Accident</option>
-                                <option>Alergy</option>
-                                <option>Diseare</option>
-                            </select> -->
-                            <div class="buttons-container">
-                                <input type="submit" class="submit-btn" value="Add">
-                                <a class="close-btn" onClick="closePopup();"> Close </a>
-                            </div>
-                        </form>
-                    </div>
-                </section>
-            </div>
-
-            <hr>
-
-            <h1>Activities/Memories</h1>
-            <div class="card-container">
-                <div class="card">
-                    <h1>
-                        Add Photos
-                    </h1>
-                </div>
-                <div class="card">
-                    <h1>
-                        Add Videos
-                    </h1>
-                </div>
             </div>
 
             <hr>
@@ -160,9 +120,6 @@
             <h1>Psychosomatic Development</h1>
             <div class="card-container">
                 <div class="big-card">
-                    <h1>
-                        Everything
-                    </h1>
                 </div>
             </div>
         </div>

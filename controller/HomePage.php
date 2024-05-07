@@ -8,3 +8,4 @@ include ("../view/components/GoUpButton/GoUpButton.php");
 // include ("../view/components/ThemeButton/ThemeButton.php");
 
 // include ("../view/components/Cookie/Cookie.php");
+include ("../view\components\Children_Popup\Children_Popup.php");
