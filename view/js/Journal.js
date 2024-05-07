@@ -8,4 +8,5 @@ window.onload = function() {
             recentEntries.innerHTML += `${new_key}: ${value}<br>`;
         }
     }
+    document.getElementById('sidebar').classList.add('hidden_sidenavbar');
 }
