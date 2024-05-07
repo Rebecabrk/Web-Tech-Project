@@ -78,7 +78,7 @@
             </div>
         </div>
     </div>
-    <script src="../view/js/Journal.js"
+    <script src="../view/js/Journal.js"></script>
 </body>
 
 </html>
