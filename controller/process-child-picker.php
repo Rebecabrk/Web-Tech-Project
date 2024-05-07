@@ -15,7 +15,7 @@ try {
     $stmt2->execute();
     $result = $stmt2->get_result();
     $row = $result->fetch_assoc();
-    $_COOKIE["Child_Picker"] = $row["cid"];
+    setcookie("Child_Picker", $row["cid"], time() + (30 * 24 * 60 * 60), '/');
 
     header("Location: HomePage.php");
 } catch (Exception $e) {
