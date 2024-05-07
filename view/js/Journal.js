@@ -9,5 +9,3 @@ window.onload = function() {
         }
     }
 }
-
-    

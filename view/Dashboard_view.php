@@ -19,7 +19,7 @@
                 <div class="card">
                     <div class="card-content">
                         <h1>
-                            Mediaction
+                            Medication
                         </h1>
                     </div>
                 </div>
