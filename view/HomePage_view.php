@@ -20,9 +20,16 @@
                     else
                         echo "You are not connected!";
                     ?> -->
-                    <?php if ($connected_user): ?>
-                    <p class="tracking-in-expand">Hello <?= htmlspecialchars($user["last_name"]) ?></p>
-                    <?php endif; ?>
+                    <?php if ($connected_user) {?>
+                    <h3 class="tracking-in-expand">Hello <?= htmlspecialchars($user["last_name"]) ?></h3>
+                    <?php if ($_COOKIE["Child_Picker"]==="nothing") {?>
+                    <p class="tracking-in-expand"> Add Your Children
+                        <button class="add-btn transparent" onClick="openPopup();">here</button>
+                    </p>
+                    <?php } else {?>
+                    <p class="tracking-in-expand">  </p>
+                    <?php }?>
+                    <?php }?>
                 </div>
                 <h1 class="tracking-in-expand">
                     Your child's growth

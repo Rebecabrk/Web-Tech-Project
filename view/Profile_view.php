@@ -15,24 +15,20 @@
         <div id="first_screen" class="full_screen padding">
             <div class="wrapper">
                 <div class="image image1"></div>
-                <form action="process.php" method="POST">
+                <form method="POST" action="process-profile-edit.php">
                     <h1>Your Data</h1>
                     <hr>
                     <div class="input-box">
                         <i class='bx bx-user-circle'></i>
-                        <input type="text" id="first_name" name="user_first_name" placeholder="First Name" required />
+                        <input type="text" id="first_name" name="user_first_name" placeholder="First Name" />
                     </div>
                     <div class="input-box">
                         <i class='bx bx-user-circle'></i>
-                        <input type="text" id="last_name" name="user_last_name" placeholder="Last Name" required />
+                        <input type="text" id="last_name" name="user_last_name" placeholder="Last Name" />
                     </div>
                     <div class="input-box">
                         <i class='bx bx-envelope'></i>
-                        <input type="email" id="mail" name="user_mail" placeholder="Email" required />
-                    </div>
-                    <div class="input-box">
-                        <i class='bx bx-lock-alt'></i>
-                        <input type="password" id="password" name="user_password" placeholder="Password" required />
+                        <input type="email" id="mail" name="user_mail" placeholder="Email" />
                     </div>
                     <hr>
                     <div class="button">
@@ -53,16 +49,11 @@
                     <hr>
                     <div class="input-box">
                         <i class='bx bx-user-circle'></i>
-                        <input type="text" id="last_name" name="user_last_name" placeholder="Last Name" required />
+                        <input type="text" id="first_name" name="child_first_name" placeholder="First Name" />
                     </div>
                     <div class="input-box">
-                        <i class='bx bx-timer'></i>
-                        <input type="text" id="schedules" name="user_schedules" placeholder="Schedules" required />
-                    </div>
-                    <div class="input-box">
-                        <i class='bx bx-plus-medical'></i>
-                        <input type="text" id="medical-record" name="user_mr" placeholder="New Medical Record"
-                            required />
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" id="mail" name="child_mail" placeholder="Email" />
                     </div>
                     <hr>
                     <div class="button">
