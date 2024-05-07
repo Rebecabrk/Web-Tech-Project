@@ -111,6 +111,19 @@
                 </a>
                 <span class="tooltip">Documentation</span>
             </li>
+            <li>
+                <?php
+                    if (isset($_COOKIE['In_God_We_Trust']))
+                        $URL = "#";
+                    else
+                        $URL = "Login.php";
+                ?>
+                <a href="<?php echo $URL; ?>">
+                    <i class='bx bx-child'></i>
+                    <span class="links_name">Child</span>
+                </a>
+                <span class="tooltip">Child</span>
+            </li>
         </ul>
     </div>
 </body>

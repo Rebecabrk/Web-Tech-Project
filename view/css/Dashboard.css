@@ -84,31 +84,6 @@ h1 {
   justify-content: start;
 }
 
-.popup {
-  position: absolute;
-  position: fixed;
-  top: 27%;
-  left: 39%;
-  transform: translate(-50%, -50%);
-  justify-content: center;
-  align-items: center;
-  background-color: grey;
-  border-radius: 10px;
-  border: 2px solid blanchedalmond;
-  z-index: 1;
-  transform: scale(2);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.4s ease;
-}
-
-#popup.open {
-  visibility: visible;
-  opacity: 1;
-  scale: 1;
-  transform: scale(1.5);
-}
-
 .input-container {
   display: flex;
   flex-direction: column;
@@ -388,32 +363,17 @@ h1 {
   .padding {
     padding: 2% 0.5% 2% 4.5%;
   }
-
-  .popup {
-    left: 45%;
-    transition: all 0.4s ease;
-  }
 } // Rebeca's screen size: 1990px
 
 @media screen and (max-width: 1600px) {
   .padding {
     padding: 2% 0.5% 2% 5.4%;
   }
-  
-  .popup {
-    left: 30%;
-    transition: all 0.4s ease;
-  }
 }
 
 @media screen and (max-width: 1350px) {
   .padding {
     padding: 2% 0.5% 2% 6%;
-  }
-    
-  .popup {
-    left: 39%;
-    transition: all 0.4s ease;
   }
 } // Marius's screen size: 1286px
 
@@ -432,12 +392,6 @@ h1 {
 @media screen and (max-width: 770px) {
   .padding {
     padding: 2% 0% 2% 16%;
-  }
-      
-  .popup {
-    left: 28%;
-    transition: all 0.4s ease;
-    width: 50%;
   }
 }
 

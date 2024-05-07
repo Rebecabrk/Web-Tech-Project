@@ -1,0 +1,93 @@
+@import url("https://www.fontspace.com/soul-note-display-trial-font-f110131");
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
+}
+
+* {
+  font-family: myFirstFont;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.popup {
+  position: absolute;
+  position: fixed;
+  top: 27%;
+  left: 39%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  border-radius: 10px;
+  border: 2px solid blanchedalmond;
+  z-index: 1;
+  transform: scale(2);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+#popup.open {
+  visibility: visible;
+  opacity: 1;
+  scale: 1;
+  transform: scale(1.5);
+}
+
+.add-btn, .close-btn, .submit-btn {
+  display: flex;
+  height: 45px;
+  border-radius: 20px;
+  background-color: blanchedalmond;
+  color: gray;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 20px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 1991px) {
+  .popup {
+    left: 45%;
+    transition: all 0.4s ease;
+  }
+} // Rebeca's screen size: 1990px
+
+@media screen and (max-width: 1600px) {
+  .popup {
+    left: 30%;
+    transition: all 0.4s ease;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .popup {
+    left: 39%;
+    transition: all 0.4s ease;
+  }
+} // Marius's screen size: 1286px
+
+@media screen and (max-width: 770px) {
+  .popup {
+    left: 28%;
+    transition: all 0.4s ease;
+    width: 50%;
+  }
+}

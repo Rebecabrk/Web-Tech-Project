@@ -10,9 +10,13 @@ $is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    $sql = sprintf("SELECT * FROM users WHERE email = '%s'", $mysqli->real_escape_string($_POST["user_mail"]));
-    $result = $mysqli->query($sql);
-    $user = $result->fetch_assoc();
+    $users_sql = sprintf("SELECT * FROM users WHERE email = '%s'", $mysqli->real_escape_string($_POST["user_mail"]));
+    $user_result = $mysqli->query($users_sql);
+    $user = $user_result->fetch_assoc();
+
+    $children_sql = sprintf("SELECT * FROM children WHERE uid = '%s'", $mysqli->real_escape_string($user["uid"]));
+    $children_result = $mysqli->query($children_sql);
+    $children = $children_result->fetch_assoc();
 
     function validate($data){
         $data = trim($data);
@@ -27,6 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             session_start();
 
             setcookie("In_God_We_Trust", $user["uid"], time() + (30 * 24 * 60 * 60), '/');
+            
+            if($children)
+                setcookie("Child_Picker", $children["cid"], time() + (30 * 24 * 60 * 60), '/');
+            else
+                setcookie("Child_Picker", "nothing", time() + (30 * 24 * 60 * 60), '/');
 
             header("Location: HomePage.php");
             exit;
