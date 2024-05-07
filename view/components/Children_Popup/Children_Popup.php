@@ -10,15 +10,15 @@
 </head>
 
 <body>
-    <section class="card popup" id="popup">
-        <div>
-            <h1>Add your child's data</h1>
+    <section class="popup" id="popup">
+        <div class="card">
+            <h2>Add your child's data</h2>
             <form method="POST" class="input-container" action="process-child-picker.php">
                 <input class="input-card" name="name_input" id="name_input" type="text" placeholder="Name of your child"
                     required />
                 <input class="input-card" name="birth_date_input" id="birth_date_input" type="text"
                     placeholder="Birth D. (YYYY-MM-DD)" required />
-                <input class="input-card" name="email_input" id="location_input" type="text"
+                <input class="input-card" name="email_input" id="email_input" type="text"
                     placeholder="Your child'd email" />
                 <input class="input-card" type="hidden" name="uid" type="text" id="uid" />
                 <div class="buttons-container">

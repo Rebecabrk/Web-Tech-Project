@@ -8,6 +8,6 @@ function closePopup() {
     popup.classList.remove("open");
 
     document.getElementById('name_input').value='';
-    document.getElementById('date_input').value='';
-    document.getElementById('location_input').value='';
+    document.getElementById('birth_date_input').value='';
+    document.getElementById('email_input').value='';
 }
