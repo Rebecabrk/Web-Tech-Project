@@ -26,6 +26,8 @@
                     <p class="tracking-in-expand"> Add Your Children
                         <button class="add-btn transparent" onClick="openPopup();">here</button>
                     </p>
+                    <?php } else {?>
+                    <p class="tracking-in-expand">  </p>
                     <?php }?>
                     <?php }?>
                 </div>
