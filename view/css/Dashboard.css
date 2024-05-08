@@ -1,17 +1,3 @@
-@import url("https://www.fontspace.com/soul-note-display-trial-font-f110131");
-
-@font-face {
-  font-family: myFirstFont;
-  src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
-}
-
-* {
-  font-family: myFirstFont;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html,
 body {
   scroll-behavior: smooth;
@@ -190,7 +176,7 @@ h1 {
   .padding {
     padding: 2% 0.5% 2% 4.5%;
   }
-} // Rebeca's screen size: 1990px
+} /* Rebeca's screen size: 1990px */
 
 @media screen and (max-width: 1600px) {
   .padding {
@@ -202,7 +188,7 @@ h1 {
   .padding {
     padding: 2% 0.5% 2% 6%;
   }
-} // Marius's screen size: 1286px
+} /* Marius's screen size: 1286px */
 
 @media screen and (max-width: 1150px) {
   .padding {

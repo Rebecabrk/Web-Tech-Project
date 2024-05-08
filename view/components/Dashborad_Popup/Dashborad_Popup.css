@@ -51,7 +51,7 @@ body {
     left: 45%;
     transition: all 0.4s ease;
   }
-} // Rebeca's screen size: 1990px
+} /* Rebeca's screen size: 1990px */
 
 @media screen and (max-width: 1600px) {
   .popup {
@@ -65,7 +65,7 @@ body {
     left: 39%;
     transition: all 0.4s ease;
   }
-} // Marius's screen size: 1286px
+} /* Marius's screen size: 1286px */
 
 @media screen and (max-width: 770px) {
   .popup {

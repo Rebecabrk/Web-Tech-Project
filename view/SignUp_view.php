@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Create Account Page</title>
+    <link href="../view/css/GeneralLayout.css" rel="stylesheet">
     <link href="../view/css/SignUp.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -12,9 +13,9 @@
 <body>
     <div class="background">
         <div class="overlay">
-            <div class="wrapper">
+            <div class="wrapper_form" id="max_height_signup">
                 <form action="process-signup.php" method="POST">
-                    <h1>Create Account</h1>
+                    <h2>Create Account</h2>
                     <hr>
                     <div class="column-container input-box">
                         <i class='bx bx-user-circle'></i>
