@@ -1,3 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=poppins&effect=anaglyph");
+@import url("https://www.fontspace.com/soul-note-display-trial-font-f110131");
+@import url("https://www.fontspace.com/gustatory-delight-font-f85359");
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
+}
+@font-face {
+  font-family: mySecondFont;
+  src: url(fonts/GustatoryDelightRegular-rgX3L.ttf);
+}
+
+* {
+  font-family: myFirstFont;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 95px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 + p {
+  text-align: center;
+}
 .overall {
   display: flex;
 }
