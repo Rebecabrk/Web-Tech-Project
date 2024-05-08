@@ -57,19 +57,12 @@ function createCookie(name,value,days) {
 }
 
 function OnSelectionChange() {
-  if (document.querySelector("option").value == "add") {
-    location.reload();
-    // document.querySelector("option").href = "HomePage.php";
-    // header("Location: HomePage.php");
+  if (document.querySelector("select").value == "add") {
+    createCookie("Child_Picker", "nothing", 30);
+    window.location.href = "HomePage.php";
   } else {
     // setcookie("Child_Picker", document.querySelector("select").value, time() + (30 * 24 * 60 * 60), '/');
     createCookie("Child_Picker", document.querySelector("select").value, 30);
-    location.reload();
-    // document.querySelector("option").href = "HomePage.php";
-    // header("Location: HomePage.php");
+    window.location.reload();
   }
-}
-
-function eraseCookie(name) {
-  createCookie(name,"",-1);
 }

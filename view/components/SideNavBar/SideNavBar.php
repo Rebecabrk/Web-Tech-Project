@@ -130,8 +130,8 @@
                     <span class="links_name no_click">Child</span>
                 </a>
                 <span class="tooltip">
-                    <label>Choose the child</label>
-                    <select onchange="OnSelectionChange()">
+                    <label>Choose the child: </label>
+                    <select onchange="OnSelectionChange();">
                         <?php 
                             for ($i=0; $i<$result->num_rows; $i++) {
                                 $child = $result->fetch_assoc();
@@ -141,7 +141,7 @@
                                     echo "<option value='" . $child['cid'] . "'>" . $child['first_name'] . "</option>";
                             }
                         ?>
-                        <option value="add">Add a new one: </option>
+                        <option value="add">Add a new one</option>
                     </select>
                 </span>
             </li>
