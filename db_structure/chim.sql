@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2024 at 12:22 PM
+-- Generation Time: May 08, 2024 at 07:39 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -35,6 +35,16 @@ CREATE TABLE `children` (
   `birth_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `children`
+--
+
+INSERT INTO `children` (`cid`, `first_name`, `email`, `uid`, `birth_date`) VALUES
+(3, 'Gigel', 'Gigel@gmail.com', 1, '2004-04-01'),
+(6, 'Andro', 'Andro@gmail.com', 1, '2005-04-15'),
+(11, 'Dorel', 'dorel@gmail.com', 3, '2004-04-01'),
+(12, 'Bob', 'bob@arena.com', 1, '2025-01-01');
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +60,14 @@ CREATE TABLE `medical_records` (
   `insertion_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `cid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `medical_records`
+--
+
+INSERT INTO `medical_records` (`id`, `type`, `name`, `date`, `location`, `insertion_date`, `cid`) VALUES
+(27, 'Alergy', 'peanuts', '2012-12-01', '', '2024-05-07 13:13:10', 11),
+(28, 'Accident', 'car accident', '2003-02-25', 'there', '2024-05-07 19:03:29', 3);
 
 -- --------------------------------------------------------
 
@@ -72,7 +90,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`uid`, `first_name`, `last_name`, `email`, `password_hash`) VALUES
 (1, 'Marius', 'Olaru', 'MJ@arena.com', '$2y$10$ol99TnrSi359yKq/FXcHhe/H6kQ7MmhBkyx/X/BSN7cnDnPHwSHUm'),
 (2, 'Bors', 'Zeama', 'bors.cu.zeama@acasa.com', '$2y$10$Vt/HoLB7VfDuZW8P601EnOvns.20wFY6NvbzCtFQXlF4kVrAOlcbC'),
-(3, 'Mamaia', 'Tataia', 'tataia@gmail.com', '$2y$10$AmTBAEg/u1fRTqKLFnUc6u0o3GuppGBDdylNDAvy5FEO0kd1fPip6');
+(3, 'Mamaia', 'Tataia', 'tataia@gmail.com', '$2y$10$AmTBAEg/u1fRTqKLFnUc6u0o3GuppGBDdylNDAvy5FEO0kd1fPip6'),
+(4, 'test', 'test', 'test@gmail.com', '$2y$10$NJJf89W/GIju/CVJ0ZlBgeiK2FsVHrNrEaEQdtSn1yZt1QBom.9F.');
 
 --
 -- Indexes for dumped tables
@@ -107,19 +126,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `children`
 --
 ALTER TABLE `children`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `medical_records`
 --
 ALTER TABLE `medical_records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
