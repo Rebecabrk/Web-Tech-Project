@@ -54,7 +54,7 @@
                 <?php 
                 error_reporting(0); // ATENTIE!
             $mysqli = require ("..\model\database\database.php");
-            $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Accident' ORDER BY insertion_date DESC";
+            $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Accident' AND cid = '" . $_COOKIE['Child_Picker'] . "' ORDER BY insertion_date DESC";
             $result = $mysqli->query($sql);
             ?>
                 <div class="card">
@@ -75,7 +75,7 @@
 
                 <?php
             $mysqli = require ("..\model\database\database.php");
-            $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Alergy' ORDER BY insertion_date DESC";
+            $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Alergy' AND cid = '" . $_COOKIE['Child_Picker'] . "' ORDER BY insertion_date DESC";
             $result = $mysqli->query($sql);
             ?>
                 <div class="card">
@@ -96,7 +96,7 @@
 
                 <?php
             $mysqli = require ("..\model\database\database.php");
-            $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Desire' ORDER BY insertion_date DESC";
+            $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Desire' AND cid = '" . $_COOKIE['Child_Picker'] . "' ORDER BY insertion_date DESC";
             $result = $mysqli->query($sql);
             ?>
                 <div class="card">

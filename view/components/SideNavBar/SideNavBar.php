@@ -114,23 +114,11 @@
             <li>
                 <?php
                     if (isset($_COOKIE['In_God_We_Trust'])) {
-                        $URL = null;
+                        $URL = "HomePage.php";
 
                         $mysqli = require ("..\model\database\database.php");
                         $sql="SELECT * FROM children WHERE uid='" . $_COOKIE["In_God_We_Trust"] . "'";
                         $result = $mysqli->query($sql);
-
-                        function OnSelectionChange() {
-                            if (document.querySelector("select").value == "add") {
-                                // document.querySelector("select").href = "HomePage.php";
-                                header("Location: HomePage.php");
-    
-                            } else {
-                                setcookie("Child_Picker", document.querySelector("select").value, time() + (30 * 24 * 60 * 60), '/');
-                                // document.querySelector("select").href = "HomePage.php";
-                                header("Location: HomePage.php");
-                            }
-                        }
                     }
                     else {
                         $URL = "Login.php";
@@ -147,7 +135,10 @@
                         <?php 
                             for ($i=0; $i<$result->num_rows; $i++) {
                                 $child = $result->fetch_assoc();
-                                echo "<option value='" . $child['cid'] . "'>" . $child['first_name'] . "</option>";
+                                if ( $child['cid'] == $_COOKIE['Child_Picker'] )
+                                    echo "<option value='" . $child['cid'] . "' selected>" . $child['first_name'] . "</option>";
+                                else
+                                    echo "<option value='" . $child['cid'] . "'>" . $child['first_name'] . "</option>";
                             }
                         ?>
                         <option value="add">Add a new one: </option>
