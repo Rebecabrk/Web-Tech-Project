@@ -166,7 +166,9 @@ $patterns = [
     'pattern14' => 'background: linear-gradient(60deg, #abecd6 25%, #fbed96 25%, #fbed96 50%, #abecd6 50%, #abecd6 75%, #fbed96 75%, #fbed96)'
 ];
 
-$patternName = $_GET['pattern'] ?? 'pattern14';
+$randomPattern = 'pattern' . rand(1,14);
+
+$patternName = $_GET['pattern'] ?? $randomPattern;
 $memoryTitle = $_GET['text'] ?? 'none';
 
 $backgroundStyle = $patterns[$patternName] ?? $patterns['pattern14'];

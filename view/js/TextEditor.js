@@ -1,8 +1,8 @@
 /* function resposible with the majority of buttons from toolbar */
-function formatDoc(cmd, value=null){
-    if(value){
-        document.execCommand(cmd,false,value);
-    }else{
+function formatDoc(cmd, value = null) {
+    if (value) {
+        document.execCommand(cmd, false, value);
+    } else {
         document.execCommand(cmd);
     }
 }
@@ -15,7 +15,7 @@ function addLink() {
 
 /* function responsible with actually using the link */
 const content = document.getElementById('content');
-content.addEventListener('mouseenter', function() {
+content.addEventListener('mouseenter', function () {
     const a = content.querySelectorAll('a');
     a.forEach(item => {
         item.addEventListener('mouseenter', function () {
@@ -35,10 +35,10 @@ showCode.addEventListener('click', function () {
     showCode.dataset.active = !active;
     active = !active;
 
-    if(active){
+    if (active) {
         content.textContent = content.innerHTML;
         content.setAttribute('contenteditable', false);
-    }else{
+    } else {
         content.innerHTML = content.textContent;
         content.setAttribute('contenteditable', true);
     }
@@ -46,43 +46,45 @@ showCode.addEventListener('click', function () {
 
 /* function responsible with saving the text (txt/pdf) */
 const filename = document.getElementById('filename');
-function fileHandle(value){
-    if(value === 'new'){
+function fileHandle(value) {
+    if (value === 'new') {
         content.innerHTML = '';
-        filename.value = 'untitled';
-    } else if (value === 'txt'){ 
+    } else if (value === 'txt') {
         const blob = new Blob([content.innerText]);
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
         link.download = `${filename.value}.txt`;
         link.click();
-    } else if (value === 'pdf'){
+    } else if (value === 'pdf') {
         html2pdf(content).save(filename.value);
     }
 }
 
 
-document.getElementById('doneButton').addEventListener('click', function(){
-    if(filename.value){
+document.getElementById('doneButton').addEventListener('click', function () {
+    if (filename.value) {
         const key = backgroundPattern + filename.value;
         localStorage.setItem(key, content.innerHTML);
         window.location.href = 'Journal.php';
-    }else{
+    } else {
         alert("Please give a title to your thoughts. The title cannot be changed later!");
     }
 });
 
-document.getElementById('deleteButton').addEventListener('click', function(){
-    const key = backgroundPattern + filename.value;
-    if(localStorage.getItem(key) !== null){
-        localStorage.removeItem(key);
+document.getElementById('deleteButton').addEventListener('click', function () {
+    var answer = confirm("Are you sure you want to delete this memory? This action cannot be undone.");
+    if (answer == true) {
+        const key = backgroundPattern + filename.value;
+        if (localStorage.getItem(key) !== null) {
+            localStorage.removeItem(key);
+        }
+        window.location.href = 'Journal.php';
     }
-    window.location.href = 'Journal.php';
 });
 
-function isMemory(){
-    if(memoryTitle !== 'none'){
+function isMemory() {
+    if (memoryTitle !== 'none') {
         const title = memoryTitle.replace(/pattern\d{1,2}/, '');
         const text = localStorage.getItem(memoryTitle);
 

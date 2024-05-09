@@ -13,10 +13,14 @@ window.onload = function() {
             let entryTitleDiv = document.createElement('div');
             entryTitleDiv.classList.add('entry_title');
             entryTitleDiv.innerHTML = new_key;
+            entryTitleDiv.style.color = 'black';
+            entryTitleDiv.style.padding = '2% 0% 1.5% 0%';
 
             let entryContentDiv = document.createElement('div');
             entryContentDiv.classList.add('entry_content');
-            entryContentDiv.innerHTML = value;
+            entryContentDiv.innerHTML = value.substring(0, 70) + '...';
+            entryContentDiv.style.color = 'black';
+            entryContentDiv.style.padding = "0.5% 0% 2% 0%"
 
             let newAnchor = document.createElement('a');
             newAnchor.href = 'TextEditor.php?pattern=' + pattern + '&text=' + key; 
