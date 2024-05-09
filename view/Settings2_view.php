@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings2</title>
     <style>
-    <?php 
-    $background = $info[0];
+    <?php $background=$info[0];
     echo $background;
     ?>;
     </style>
@@ -27,12 +26,6 @@
             echo $formBox; 
             ?>
         </form>
-        <a>
-            <?php 
-            $logoutbtn = $info[3];
-            echo  $logoutbtn;
-            ?>
-        </a>
     </div>
 </body>
 

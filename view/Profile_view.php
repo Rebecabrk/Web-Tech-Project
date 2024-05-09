@@ -64,8 +64,12 @@
         </div>
 
         <div id="third_screen" class="full_screen padding">
-            <div class="pie-chart-container">
-                Do you have another child?
+            <div> You wanna logout? </div>
+            <div class="card-msg">
+                <p>Click </p>
+                <a href="Logout.php" class="card content">
+                    <h1> here</h1>
+                </a>
             </div>
         </div>
     </div>
