@@ -64,8 +64,30 @@ function fileHandle(value){
 
 
 document.getElementById('doneButton').addEventListener('click', function(){
-    const name = 'usrtxt' + filename.value;
-    localStorage.setItem(name, content.innerHTML.replace(/\n/g, '<br>'));
+    if(filename.value){
+        const key = backgroundPattern + filename.value;
+        localStorage.setItem(key, content.innerHTML);
+        window.location.href = 'Journal.php';
+    }else{
+        alert("Please give a title to your thoughts. The title cannot be changed later!");
+    }
+});
 
+document.getElementById('deleteButton').addEventListener('click', function(){
+    const key = backgroundPattern + filename.value;
+    if(localStorage.getItem(key) !== null){
+        localStorage.removeItem(key);
+    }
     window.location.href = 'Journal.php';
 });
+
+function isMemory(){
+    if(memoryTitle !== 'none'){
+        const title = memoryTitle.replace(/pattern\d{1,2}/, '');
+        const text = localStorage.getItem(memoryTitle);
+
+        content.innerHTML = text;
+        filename.value = title;
+        filename.disabled = true;
+    }
+}

@@ -163,11 +163,12 @@ $patterns = [
       radial-gradient(100% 100% at 0 100%,#0000, #0008 4%,var(--_g),var(--c1) 96%)
       var(--c1);
     background-size: var(--s) var(--s);",
-    'default' => 'background: linear-gradient(60deg, #abecd6 25%, #fbed96 25%, #fbed96 50%, #abecd6 50%, #abecd6 75%, #fbed96 75%, #fbed96)'
+    'pattern14' => 'background: linear-gradient(60deg, #abecd6 25%, #fbed96 25%, #fbed96 50%, #abecd6 50%, #abecd6 75%, #fbed96 75%, #fbed96)'
 ];
 
-$patternName = $_GET['pattern'] ?? 'default';
+$patternName = $_GET['pattern'] ?? 'pattern14';
+$memoryTitle = $_GET['text'] ?? 'none';
 
-$backgroundStyle = $patterns[$patternName] ?? $patterns['default'];
- return $backgroundStyle;
+$backgroundStyle = $patterns[$patternName] ?? $patterns['pattern14'];
+//  return $backgroundStyle;
 

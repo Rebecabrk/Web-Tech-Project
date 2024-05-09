@@ -59,8 +59,11 @@
                         </a>
                     </div>
                 </div>
-                <div>
-                    <h2>Your Entries:</h2>
+
+                <hr>
+
+                <div >
+                    <h1>Your Entries:</h1>
                     <div id="recentEntries"></div>
                 </div>
             </div>
