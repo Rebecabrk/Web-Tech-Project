@@ -3,7 +3,6 @@
 
 <head>
     <title>Home Page</title>
-    <link href="../view/css/GerenalLayout.css" rel="stylesheet">
     <link href="../view/css/HomePage.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +21,7 @@
                         echo "You are not connected!";
                     ?> -->
                     <?php if ($connected_user) {?>
-                    <h3 class="tracking-in-expand">Hello <?= htmlspecialchars($user["last_name"]) ?></h3>
+                    <h2 class="tracking-in-expand">Hello <?= htmlspecialchars($user["last_name"]) ?></h2>
                     <?php if ($_COOKIE["Child_Picker"]==="nothing") {?>
                     <p class="tracking-in-expand"> Add Your Children
                         <button class="add-btn transparent" onClick="openPopup();">here</button>
