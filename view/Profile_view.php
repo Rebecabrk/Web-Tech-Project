@@ -43,9 +43,9 @@
 
         <div id="second_screen" class="full_screen padding">
             <div class="wrapper">
-                <form action="process.php" method="POST">
+                <form action="process-child-profile-edit.php" method="POST">
                     <div class="image image2"></div>
-                    <h1>First Child Data</h1>
+                    <h1>Your Child Data</h1>
                     <hr>
                     <div class="input-box">
                         <i class='bx bx-user-circle'></i>
@@ -64,8 +64,12 @@
         </div>
 
         <div id="third_screen" class="full_screen padding">
-            <div class="pie-chart-container">
-                Do you have another child?
+            <div> You wanna logout? </div>
+            <div class="card-msg">
+                <p>Click </p>
+                <a href="Logout.php" class="card content">
+                    <h1> here</h1>
+                </a>
             </div>
         </div>
     </div>
