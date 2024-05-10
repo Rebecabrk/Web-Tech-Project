@@ -50,7 +50,7 @@ h1 {
 }
 
 .entry{
-  border: 2px solid rgb(187, 164, 131);
+  border: 2px solid grey;
   border-radius: 10px;
   min-width: 700px ;
   margin: 1.5% 0% 2% 0%;
@@ -100,10 +100,9 @@ h1 {
   min-width: 500px;
   margin-right: 20px;
   cursor: pointer;
-  border: 2px solid rgb(187, 164, 131); /* Your border properties */
+  border: 2px solid grey; /* Your border properties */
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  
 }
 
 
@@ -386,7 +385,7 @@ a {
 }
 
 nav ul li {
-  --c: rgb(187, 164, 131);
+  --c: grey;
   color: var(--c);
   width: 12em;
   height: 3em;
