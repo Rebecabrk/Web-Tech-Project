@@ -30,17 +30,14 @@
                         <a href="TextEditor.php?pattern=pattern7">
                             <div class="item item7"></div>
                         </a>
-                        <a href="TextEditor.php?pattern=pattern13">
-                            <div class="item item13"></div>
-                        </a>
-                        <a href="TextEditor.php?pattern=pattern1">
-                            <div class="item item1"></div>
-                        </a>
-                        <a href="TextEditor.php?pattern=pattern2">
-                            <div class="item item2"></div>
+                        <a href="TextEditor.php?pattern=pattern6">
+                            <div class="item item6"></div>
                         </a>
                         <a href="TextEditor.php?pattern=pattern8">
                             <div class="item item8"></div>
+                        </a>
+                        <a href="TextEditor.php?pattern=pattern13">
+                            <div class="item item13"></div>
                         </a>
                         <a href="TextEditor.php?pattern=pattern9">
                             <div class="item item9"></div>
@@ -48,14 +45,17 @@
                         <a href="TextEditor.php?pattern=pattern10">
                             <div class="item item10"></div>
                         </a>
+                        <a href="TextEditor.php?pattern=pattern2">
+                            <div class="item item2"></div>
+                        </a>
                         <a href="TextEditor.php?pattern=pattern11">
                             <div class="item item11"></div>
                         </a>
                         <a href="TextEditor.php?pattern=pattern12">
                             <div class="item item12"></div>
                         </a>
-                        <a href="TextEditor.php?pattern=pattern6">
-                            <div class="item item6"></div>
+                        <a href="TextEditor.php?pattern=pattern1">
+                            <div class="item item1"></div>
                         </a>
                     </div>
                 </div>
