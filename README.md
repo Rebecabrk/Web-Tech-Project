@@ -18,14 +18,14 @@
 2. Run the Apache localhost and MySQL data base via XAMPP control panel. </br>
  (download it from here: https://www.apachefriends.org/download.html)
 3. Open the admin page of the MySQL and import tha database structure located here: ./Web-Tech-Project/db_structure/chim.sql .</br>
-4. Open the localhost in any browser.</br>
+4. Open the localhost in any browser and navigate to the controller directory.</br>
 5. Have fun!
 
 
 # How does it work?
 
-- ...
-- ...
+- Create your profile and, after that, insert your children data (first name, email, etc) to help Childcare Manager to do his job.
+- After finishing this setup, you can store all of the children data like time schedules and medical records. The Chim project offers users the option to keep their memories and thoughts accesing the Journey respectively the Journal page.
   
 ---
 
