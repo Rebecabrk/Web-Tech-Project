@@ -14,11 +14,11 @@
 <h3 align="left">Installation:</h3>
 
 1. Clone the current repositoy! Now you have all the projects avalable!</br>
- Type command: ```git clone git@github.com:AndromedaOMA/Rust-Language---Projects.git```
-2. Change the current directory to the selected project folder.</br>
- Type command: ```cd .\PROJECT_NAME```
-4. Run the current project.</br>
- Type command: ```cargo r```
+ Type command: ```git clone git@github.com:AndromedaOMA/Web-Tech-Project.git```
+2. Change the current directory to the project directory.</br>
+ Type command: ```cd .\Web-Tech-Project```
+4. Open the admin page of the MySQL and import tha database structure located here: .</br>
+6. Open the localhost in any browser.</br>
 
 
 # How does it work?
