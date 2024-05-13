@@ -72,18 +72,17 @@ $patterns = [
       #E8DDCB;
     background-size: 6em 6em;
     /* 35% = 100%/(2*sqrt(2)) */",
-    'pattern6' => "--s: 120px; /* control the size */
-    --c1: #F77825;
-    --c2: #60B99A;
-    --c3: #F1EFA5;
-    --c4: #554236;
+    'pattern6' => "    --s: 200px; /* control the size */
+    --c: #fff; /* first color */
     
-    background:
-      conic-gradient(from 150deg,var(--c1)    60deg,#0000 0 180deg,
-                                 var(--c2) 0 240deg,#0000 0) var(--s) 0,
-      conic-gradient(from -30deg,var(--c1)    60deg,var(--c3) 0 120deg,var(--c4) 0 180deg,
-                                 var(--c2) 0 240deg,var(--c3) 0 300deg,var(--c4) 0);
-    background-size: calc(2*var(--s)) var(--s);",
+    --_g: #0000 8%,var(--c) 0 17%,#0000 0 58%;
+    background: 
+      linear-gradient(135deg,#0000 20.5%,var(--c) 0 29.5%,#0000 0) 0 calc(var(--s)/4),
+      linear-gradient( 45deg,var(--_g)) calc(var(--s)/2) 0,
+      linear-gradient(135deg,var(--_g),var(--c) 0 67%,#0000 0),        
+      linear-gradient( 45deg,var(--_g),var(--c) 0 67%,#0000 0 83%,var(--c) 0 92%,#0000 0),
+      #1095c1; /* second color */
+    background-size: var(--s) var(--s);",
     'pattern7' => "--s: 120px; /* control the size */
   
     --_g: #0000 90deg,#046D8B 0;
@@ -102,32 +101,33 @@ $patterns = [
       radial-gradient(29% 27% at bottom,var(--_g)) 0 calc(var(--s)/-2)
       #476074;
     background-size: calc(2*var(--s)) calc(2*var(--s));",
-    'pattern9' => "--s: 120px; /* control the size */
-    --c1: #EAFDE6;
-    --c2: #519548;
-    
-    background:
-      conic-gradient(from  30deg at 87.5% 75%,var(--c1)  60deg,var(--c2) 0 120deg,#0000 0) 0 calc(.2165*var(--s)),
-      conic-gradient(from -90deg at 50%   25%,var(--c2)  60deg,var(--c1) 0 180deg,#0000 0),
-      conic-gradient(from  90deg at 50%   75%,var(--c2) 120deg,var(--c1) 0 180deg,#0000 0),
-      conic-gradient(from -30deg at 87.5% 50%,var(--c2) 120deg,var(--c1) 0 240deg,#0000 0),
-      conic-gradient(from  90deg at 37.5% 50%,var(--c2) 120deg,var(--c1) 0 180deg,var(--c2) 0 240deg,var(--c1) 0);
-    background-size: var(--s) calc(.866*var(--s));",
-    'pattern10' => "--u:  2vmin;	
-	--c1: #009688;
-  --c2: #d8db24;
-	--pz: calc(var(--u) * 0.65), #fff0 calc(calc(var(--u) * 0.65) + 1px);
-  --gp: 50%/ calc(var(--u) * 10) calc(var(--u) * 10);
-	background:
-		radial-gradient(circle at 55% 25%, var(--c2) var(--pz)) var(--gp), 
-		radial-gradient(circle at 75% 45%, var(--c2) var(--pz)) var(--gp),
-		radial-gradient(circle at 5% 75%, var(--c2) var(--pz)) var(--gp), 
-		radial-gradient(circle at 25% 55%, var(--c2) var(--pz)) var(--gp),
-		radial-gradient(circle at 55% 75%, var(--c1) var(--pz)) var(--gp), 
-		radial-gradient(circle at 75% 95%, var(--c1) var(--pz)) var(--gp),
-		radial-gradient(circle at 5% 25%, var(--c1) var(--pz)) var(--gp), 
-		radial-gradient(circle at 25% 5%, var(--c1) var(--pz)) var(--gp),
-		conic-gradient(from 0deg at 50% 50%, var(--c1) 0 25%, var(--c2) 0 50%, var(--c1) 0 75%, var(--c2) 0 100%) var(--gp);",
+    'pattern9' => "    --u:  2vmin;	
+    --c1: #83b0e3;
+    --c2: #6c91bb;
+    --c3: #4d6887;
+    --gp: 50%/calc(var(--u) * 5) calc(var(--u) * 10);
+    --bp: calc(var(--u) * -2.5) calc(var(--u) * -5);
+    --bg: 
+      radial-gradient(circle at 50% 25%, var(--c2)  15%, #fff0 30% 100%) var(--gp),
+      conic-gradient(from 270deg at 34% 46%, var(--c2) 0 12.5%, #fff0 0 100%) var(--gp),
+      conic-gradient(from 45deg at 66% 46%, var(--c2) 0 12.5%, #fff0 0 100%) var(--gp),
+      conic-gradient(from 180deg at 50% 80%, var(--c2) 0 12.5%, #fff0 0 100%) var(--gp),
+      conic-gradient(from 135deg at 50% 80%, var(--c2) 0 12.5%, #fff0 0 100%) var(--gp),
+      conic-gradient(from 0deg at 0% 20%, var(--c2) 0 12.5%, #fff0 0 100%) var(--gp),
+      conic-gradient(from -45deg at 100% 20%, var(--c2) 0 12.5%, #fff0 0 100%) var(--gp),
+      linear-gradient(180deg, var(--c2) 0 4.5%, #fff0 0 45.25%, var(--c2) 0 50%, #fff0 0% 100%) var(--gp),
+      radial-gradient(circle at 50% 25%, #fff0 0 25%, var(--c2) 26% 32%, #fff0 0 100%) var(--gp),
+      linear-gradient(165deg, var(--c3) 15%, var(--c1) 44%, #fff0 0 100%) var(--gp),
+      linear-gradient(180deg, var(--c1) 50%, #fff0 0 100%) var(--gp);
+    background: 
+      var(--bg), 
+      var(--bg);
+    background-position: 
+      var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), 
+      0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;",
+    'pattern10' => "background-color: #d3d3e4;
+    opacity: 1;
+    background: repeating-linear-gradient( 45deg, #783ca9, #783ca9 10px, #d3d3e4 10px, #d3d3e4 50px );",
     'pattern11' => "--u: 2vmin; /* change size */
 	--c1: #673ab7;
   --c2: #5c379f;
@@ -166,7 +166,9 @@ $patterns = [
     'pattern14' => 'background: linear-gradient(60deg, #abecd6 25%, #fbed96 25%, #fbed96 50%, #abecd6 50%, #abecd6 75%, #fbed96 75%, #fbed96)'
 ];
 
-$patternName = $_GET['pattern'] ?? 'pattern14';
+$randomPattern = 'pattern' . rand(1,14);
+
+$patternName = $_GET['pattern'] ?? $randomPattern;
 $memoryTitle = $_GET['text'] ?? 'none';
 
 $backgroundStyle = $patterns[$patternName] ?? $patterns['pattern14'];
