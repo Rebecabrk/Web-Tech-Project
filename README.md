@@ -34,7 +34,8 @@
  More about it in the project documentation located here: ./Web-Tech-Project/controller/Documentation.php .
 
 <h3 align="left">The logic behind the code:</h3>
- ...
+ ... </br>
+ 
 ---
 
 - ⚡ Fun fact **This is my first project made using HTML, CSS and JavaScript language**
