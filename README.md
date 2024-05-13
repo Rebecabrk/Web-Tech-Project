@@ -13,13 +13,13 @@
 
 <h3 align="left">Installation:</h3>
 
-1. Clone the current repositoy! Now you have all the projects avalable!</br>
+1. Clone the current repositoy! Now you have the project avalable on your local server!</br>
  Type command: ```git clone git@github.com:AndromedaOMA/Web-Tech-Project.git```
-2. Change the current directory to the project directory.</br>
- Type command: ```cd .\Web-Tech-Project```
-4. Open the admin page of the MySQL and import tha database structure located here: ./Web-Tech-Project/db_structure/chim.sql .</br>
-6. Open the localhost in any browser.</br>
-7. Have fun!
+2. Run the Apache localhost and MySQL data base via XAMPP control panel. </br>
+ (download it from here: https://www.apachefriends.org/download.html)
+3. Open the admin page of the MySQL and import tha database structure located here: ./Web-Tech-Project/db_structure/chim.sql .</br>
+4. Open the localhost in any browser.</br>
+5. Have fun!
 
 
 # How does it work?
@@ -34,8 +34,10 @@
  More about it in the project documentation located here: ./Web-Tech-Project/controller/Documentation.php .
 
 <h3 align="left">The logic behind the code:</h3>
- ... </br>
+
+ - The front end was made using HTML, CSS and JavaScript language resulting a responsive and user friendly design.
+ - The back end was made using PHP language storing all the user information (Import/Store data about their children) and responding to all user supported commands (Login/Signup).
  
 ---
 
-- ⚡ Fun fact **This is my first project made using HTML, CSS and JavaScript language**
+- ⚡ Fun fact **This is my first web project made using HTML, CSS and JavaScript language for front end and the PHP language for back end!**
