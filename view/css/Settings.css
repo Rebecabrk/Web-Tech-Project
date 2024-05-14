@@ -33,7 +33,8 @@ body {
 }
 
 #first_screen {
-  background-image: url("background_images/pexels-jess-bailey-designs-965119.jpg");
+  /* background-image: url("background_images/pexels-jess-bailey-designs-965119.jpg"); */
+  background-color: blanchedalmond;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -52,7 +53,7 @@ body {
 
 .card {
   height: 300px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-sizing: border-box;
   padding: 20px;
   margin: 10px 15px;
@@ -63,7 +64,8 @@ body {
   cursor: pointer;
   background: none;
   backdrop-filter: blur(20px);
-  border: 2px solid blanchedalmond;
+  border: 2px solid grey;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
@@ -95,15 +97,16 @@ body {
 i {
   font-size: 5rem;
   cursor: pointer;
-  color: blanchedalmond;
+  color: grey;
 }
 
 h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
-  color: blanchedalmond;
+  color: black;
   display: flex;
   justify-content: center;
+  font-weight: 700;
 }
 
 .padding {

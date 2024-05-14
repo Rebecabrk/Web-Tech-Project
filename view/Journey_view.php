@@ -12,8 +12,8 @@
 <body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
     <div class="pages" id="second_screen">
         <div class="container padding">
+            <h1>Your family's timeline</h1>
             <section class="timeline">
-                
                 <div class="timeline-item">
                     <div class="timeline-img"></div>
                     <div class="timeline-content">
