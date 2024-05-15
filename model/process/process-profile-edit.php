@@ -1,5 +1,5 @@
 <?php
-$mysqli = require ("../model/database/database.php");
+$mysqli = require ("../database/database.php");
 
 $sql="UPDATE users SET first_name=?, last_name=?, email=? WHERE uid=?";
 $stmt = $mysqli->prepare($sql);
@@ -7,7 +7,7 @@ $stmt->bind_param("ssss", $_POST['user_first_name'], $_POST['user_last_name'], $
 
 try {
     $stmt->execute();
-    header("Location: HomePage.php");
+    header("Location: ..\..\controller\HomePage.php");
 } catch (Exception $e) {
     die($e->getMessage(). " " . $e->getCode());
 }
