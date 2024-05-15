@@ -3,7 +3,7 @@
 // echo $_POST['type_input'];
 
 // DB connection!
-$mysqli = require ("..\model\database\database.php");
+$mysqli = require ("..\database\database.php");
 
 $sql = "INSERT INTO medical_records (type, name, date, location, insertion_date, cid) VALUES (?,?,?,?, SYSDATE(), ?)";
 $stmt = $mysqli->prepare($sql);
@@ -11,7 +11,7 @@ $stmt->bind_param("sssss", $_POST['type_input'], $_POST["name_input"], $_POST["d
 
 try {
     $stmt->execute();
-    header("Location: Dashboard.php");
+    header("Location: ..\..\controller\Dashboard.php");
 } catch (Exception $e) {
     die($e->getMessage(). " " . $e->getCode());
 }
