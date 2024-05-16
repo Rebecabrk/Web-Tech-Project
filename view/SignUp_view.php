@@ -10,7 +10,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
+<body onLoad="document.getElementById('go_back_btn').classList.add('hidden_btn');">
     <div class="background">
         <div class="overlay">
             <div class="wrapper_form" id="max_height_signup">
