@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../view/components/SideNavBar/SideNavBar.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="../view/components/SideNavBar/SideNavBar.js"></script>
+    <script src="../view/components/SideNavBar/SideNavBar.js" defer></script>
 </head>
 
 <body>
@@ -15,11 +15,6 @@
             <i class="bx bx-menu"></i>
         </div>
         <ul class="nav-list">
-            <li>
-                <i class="bx bx-search" onClick="slideSearch();"></i>
-                <input type="text" placeholder="Search..." />
-                <span class="tooltip">Search</span>
-            </li>
             <li>
                 <?php
                     if (isset($_COOKIE['In_God_We_Trust']))
