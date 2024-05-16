@@ -15,7 +15,7 @@
         <div id="first_screen" class="full_screen padding">
             <div class="wrapper">
                 <div class="image image1"></div>
-                <form method="POST" action="process-profile-edit.php">
+                <form method="POST" action="..\model\process\process-profile-edit.php">
                     <h1>Your Data</h1>
                     <hr>
                     <div class="input-box">
@@ -43,7 +43,7 @@
 
         <div id="second_screen" class="full_screen padding">
             <div class="wrapper">
-                <form action="process-child-profile-edit.php" method="POST">
+                <form action="..\model\process\process-child-profile-edit.php" method="POST">
                     <div class="image image2"></div>
                     <h1>Your Child Data</h1>
                     <hr>

@@ -6,12 +6,12 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="..\view\components\Children_Popup\Children_Popup.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="..\view\components\Children_Popup\Children_Popup.js"></script>
+    <script src="..\view\components\Children_Popup\Children_Popup.js" defer></script>
 </head>
 
 <body>
     <section class="popup card" id="popup">
-        <form method="POST" class="input-container" action="process-child-picker.php">
+        <form method="POST" class="input-container" action="..\model\process\process-child-picker.php">
             <h2>Add your <br> child's data</h2>
             <input class="input-card" name="name_input" id="name_input" type="text" placeholder="Name of your child"
                 required />

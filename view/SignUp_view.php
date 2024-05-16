@@ -10,11 +10,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body>
+<body onLoad="document.getElementById('go_back_btn').classList.add('hidden_btn');">
     <div class="background">
         <div class="overlay">
             <div class="wrapper_form" id="max_height_signup">
-                <form action="process-signup.php" method="POST">
+                <form action="..\model\process\process-signup.php" method="POST">
                     <h2>Create Account</h2>
                     <hr>
                     <div class="column-container input-box">
@@ -33,11 +33,9 @@
                             required>
                     </div>
                     <hr>
-                    <div  class="button">
-                    <button type="submit">Submit</button>
+                    <div class="button">
+                        <button type="submit">Submit</button>
                     </div>
-                    
-
                 </form>
             </div>
             <h3>
