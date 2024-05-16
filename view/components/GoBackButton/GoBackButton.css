@@ -1,0 +1,33 @@
+@import url("https://www.fontspace.com/soul-note-display-trial-font-f110131");
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
+}
+
+* {
+  font-family: myFirstFont;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.go_back_btn_container {
+    position: fixed;
+    bottom: 5%;
+    right: 1%;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #11101d;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 99;
+    transition: all 0.5s ease;
+    transform: translateX(150%);
+  }
+  
+  #go_back_btn.hidden_btn {
+    transform: translateX(-50%);
+  }
