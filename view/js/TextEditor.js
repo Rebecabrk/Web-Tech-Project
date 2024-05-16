@@ -38,37 +38,59 @@ showCode.addEventListener('click', function () {
     if (active) {
         content.textContent = content.innerHTML;
         content.setAttribute('contenteditable', false);
+        console.log(content.textContent);
     } else {
         content.innerHTML = content.textContent;
         content.setAttribute('contenteditable', true);
     }
 })
 
-/* function responsible with saving the text (txt/pdf) */
+/* function responsible with downloading the text (txt/pdf) */
 const filename = document.getElementById('filename');
 function fileHandle(value) {
     if (value === 'new') {
         content.innerHTML = '';
     } else if (value === 'txt') {
-        const blob = new Blob([content.innerText]);
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `${filename.value}.txt`;
-        link.click();
+        if (filename.value) {
+            const blob = new Blob([content.innerText]);
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `${filename.value}.txt`;
+            link.click();
+        } else {
+            alert("Please give a title for this file!");
+        }
+
     } else if (value === 'pdf') {
         html2pdf(content).save(filename.value);
     }
 }
 
-
+/* function responsible with saving the text (in database) */
 document.getElementById('doneButton').addEventListener('click', function () {
     if (filename.value) {
-        const key = backgroundPattern + filename.value;
-        localStorage.setItem(key, content.innerHTML);
-        window.location.href = 'Journal.php';
+            var form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '../model/TextEditor_model.php';
+        
+            var input_text = document.createElement('input');
+            input_text.type = 'hidden';
+            input_text.name = 'text';
+            input_text.value = content.innerHTML;
+
+            var input_title = document.createElement('input');
+            input_title.type = 'hidden';
+            input_title.name = 'title';
+            input_title.value = filename.value;
+        
+            form.appendChild(input_title);
+            form.appendChild(input_text);
+            document.body.appendChild(form);
+
+            form.submit();
     } else {
-        alert("Please give a title to your thoughts. The title cannot be changed later!");
+        alert("Please give a title to your thoughts.");
     }
 });
 

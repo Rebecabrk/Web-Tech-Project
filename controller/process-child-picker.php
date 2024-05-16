@@ -17,7 +17,7 @@ try {
     $row = $result->fetch_assoc();
     setcookie("Child_Picker", $row["cid"], time() + (30 * 24 * 60 * 60), '/');
 
-    header("Location: HomePage.php");
+    header("Location: HomePage.php"); 
 } catch (Exception $e) {
     die($e->getMessage(). " " . $e->getCode());
 }

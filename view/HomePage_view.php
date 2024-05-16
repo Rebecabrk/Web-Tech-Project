@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
     <title>Home Page</title>
     <link href="../view/css/HomePage.css" rel="stylesheet">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -77,7 +77,7 @@
                 <div class="title-container">
                     <h1>The manager</h1>
                     <p>
-                        Empowering Parents. Nurturing Children. </br> Collecting Memories. Building Futures.
+                        Empowering Parents. Nurturing Children. <br> Collecting Memories. Building Futures.
                     </p>
                 </div>
                 <div class="card-container">

@@ -36,8 +36,8 @@
     <div class="journal_container_2">
         <div class="toolbar">
             <div class="entries_buttons">
-                <button type="submit" id="doneButton"><i class='bx bx-check'></i></button>
-                <button  id="deleteButton"><i class='bx bx-trash' ></i></button>
+                <button id="doneButton"><i class='bx bx-check'></i></button>
+                <button id="deleteButton"><i class='bx bx-trash' ></i></button>
             </div>
             <div class="head">
                 <input type="text" placeholder="Filename" id="filename">
@@ -98,6 +98,7 @@
             Your thoughts...
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
 </html>
