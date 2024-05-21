@@ -15,13 +15,13 @@
             <div class="wrapper">
                 <div class="hello_msg">
                     <?php if ($connected_user) {?>
-                    <h2 class="tracking-in-expand">Hello <?= htmlspecialchars($user["last_name"]) ?></h2>
+                    <h3 class="tracking-in-expand">Hello <?= htmlspecialchars($user["last_name"]) ?></h3>
                     <?php if ($_COOKIE["Child_Picker"]==="nothing") {?>
                     <p class="tracking-in-expand"> Add Your Children
                         <button class="add-btn transparent" onClick="openPopup();">here</button>
                     </p>
                     <?php } else {?>
-                    <p class="tracking-in-expand">  </p>
+                    <p class="tracking-in-expand"> </p>
                     <?php }?>
                     <?php }?>
                 </div>
@@ -63,15 +63,95 @@
                     </nav>
                     <?php endif; ?>
                 </div>
+                <div class="arrow">
+                    <span></span>
+                </div>
             </div>
         </div>
 
         <div id="second_screen" class="full_screen padding">
-           
+            <h1>Some relevant news</h1>
+            <div class="rss-container">
+                <div class="rss-card">
+                    <h2>Mental Health Topic</h2>
+                    <?php
+                    define ('FEED1', 'https://pregnantchicken.com/mental-health/rss/'); 
+                    define ('XPATH', '/rss/channel/item');  
+
+                    try {
+                    $dom = new DomDocument();
+                    $dom->load (FEED1); // încărcăm documentul XML
+                    $xpath = new DOMXpath($dom);
+                    // baleiăm însemnările (aici, elementele <item>) 
+                    $items = $xpath->query (XPATH);
+                    foreach ($items as $news) {
+                        // preluăm titlul fiecărei știri
+                        echo '<br> <p><a href=' . $news->getElementsByTagname('link')->item(0)->nodeValue . '>' .
+                        $news->getElementsByTagname('title')->item(0)->nodeValue . 
+                        '</a></p> <br>';
+                    } 
+                    }
+                    catch (RuntimeException $e) { 
+                    echo $e->getMessage (); 
+                    }
+                    ?>
+                </div>
+                <br>
+                <br>
+                <div class="rss-card">
+                    <h2>Sleep Topic</h2>
+                    <?php
+                    define ('FEED2', 'https://pregnantchicken.com/sleep/rss/'); 
+                    define ('XPAT2', '/rss/channel/item');  
+
+                    try {
+                    $dom = new DomDocument();
+                    $dom->load (FEED2); // încărcăm documentul XML
+                    $xpath = new DOMXpath($dom);
+                    // baleiăm însemnările (aici, elementele <item>) 
+                    $items = $xpath->query (XPAT2);
+                    foreach ($items as $news) {
+                        // preluăm titlul fiecărei știri
+                        echo '<br> <p><a href=' . $news->getElementsByTagname('link')->item(0)->nodeValue . '>' .
+                        $news->getElementsByTagname('title')->item(0)->nodeValue . 
+                        '</a></p> <br>';
+                    }
+                    }
+                    catch (RuntimeException $e) { 
+                    echo $e->getMessage (); 
+                    }
+                    ?>
+                </div>
+                <br>
+                <br>
+                <div class="rss-card">
+                    <h2>Symptoms And Aliments</h2>
+                    <?php
+                    define ('FEED3', 'https://pregnantchicken.com/symptoms-and-ailments/rss/'); 
+                    define ('XPAT3', '/rss/channel/item');  
+
+                    try {
+                    $dom = new DomDocument();
+                    $dom->load (FEED3); // încărcăm documentul XML
+                    $xpath = new DOMXpath($dom);
+                    // baleiăm însemnările (aici, elementele <item>) 
+                    $items = $xpath->query (XPAT3);
+                    foreach ($items as $news) {
+                        // preluăm titlul fiecărei știri
+                        echo '<br> <p><a href=' . $news->getElementsByTagname('link')->item(0)->nodeValue . '>' .
+                        $news->getElementsByTagname('title')->item(0)->nodeValue . '</a></p> <br>';
+                    }
+                    }
+                    catch (RuntimeException $e) { 
+                    echo $e->getMessage (); 
+                    }
+                    ?>
+                </div>
+            </div>
         </div>
 
         <div id="third_screen" class="full_screen padding">
-           
+
         </div>
     </div>
 
