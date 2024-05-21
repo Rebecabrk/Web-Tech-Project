@@ -11,7 +11,7 @@
 
 <body>
     <section class="popup card" id="popup">
-        <form method="POST" class="input-container" action="process-child-picker.php">
+        <form method="POST" class="input-container" action="../model/process/process-child-picker.php">
             <h2>Add your <br> child's data</h2>
             <input class="input-card" name="name_input" id="name_input" type="text" placeholder="Name of your child"
                 required />

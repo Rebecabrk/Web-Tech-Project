@@ -13,7 +13,7 @@
     <section class="card popup" id="popup">
         <div>
             <h1 id="popup_title"></h1>
-            <form method="POST" class="input-container" action="process-med-rec.php">
+            <form method="POST" class="input-container" action="../model/process/process-med-rec.php">
                 <input class="input-card" name="name_input" id="name_input" type="text" placeholder="Name of incident"
                     required />
                 <input class="input-card" name="date_input" id="date_input" type="text" placeholder="Date (YYYY-MM-DD)"

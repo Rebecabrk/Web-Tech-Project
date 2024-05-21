@@ -16,7 +16,7 @@ if ( ! preg_match("/[0-9]/", $_POST["user_password"]) ) {
 $password_hash = password_hash($_POST["user_password"], PASSWORD_DEFAULT);
 
 // DB connection!
-$mysqli = require ("..\model\database\database.php");
+$mysqli = require ("..\database\database.php");
 
 if($mysqli->connect_error){
     die("Connection failed: " . $mysqli->connect_error);
@@ -28,7 +28,7 @@ $stmt->bind_param("ssss", $_POST["user_first_name"], $_POST["user_last_name"], $
 
 try {
     $stmt->execute();
-    header("Location: Login.php");
+    header("Location: ../../controller/Login.php");
 } catch (Exception $e) {
     if( $e->getCode() === 1062) {
         die("Email already in use");
