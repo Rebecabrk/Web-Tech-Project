@@ -105,13 +105,52 @@ document.getElementById('deleteButton').addEventListener('click', function () {
     }
 });
 
-function isMemory() {
-    if (memoryTitle !== 'none') {
-        const title = memoryTitle.replace(/pattern\d{1,2}/, '');
-        const text = localStorage.getItem(memoryTitle);
+// need to rewrite this code for database version
+// function isMemory() {
+//     if (memoryTitle !== 'none') {
+//         const title = memoryTitle.replace(/pattern\d{1,2}/, '');
+//         const text = localStorage.getItem(memoryTitle);
 
-        content.innerHTML = text;
-        filename.value = title;
-        filename.disabled = true;
-    }
+//         content.innerHTML = text;
+//         filename.value = title;
+//         filename.disabled = true;
+//     }
+// }
+
+const inputMultimedia = document.getElementById("input-file");
+inputMultimedia.onchange = function (){
+    // var picture = document.createElement('img');
+    // picture.src = URL.createObjectURL(inputMultimedia.files[0]);
+    // content.appendChild(picture);
+    let file = inputMultimedia.files[0];
+    let img = new Image();
+    img.onload = function() {
+        let canvas = document.createElement('canvas');
+        let ctx = canvas.getContext('2d');
+
+        // Set the desired width and calculate the height to maintain aspect ratio
+        let width = 500;
+        let scaleFactor = width / img.width;
+        let height = img.height * scaleFactor;
+
+        // Set canvas dimensions
+        canvas.width = width;
+        canvas.height = height;
+
+        // Draw the scaled image on the canvas
+        ctx.drawImage(img, 0, 0, width, height);
+
+        // Create a new image element
+        let picture = document.createElement('img');
+
+        // Set the source of the image element to the data URL of the canvas
+        picture.src = canvas.toDataURL();
+
+        // Append the new image element to the content
+        content.appendChild(picture);
+    };
+
+    // Start loading the image
+    img.src = URL.createObjectURL(file);
 }
+

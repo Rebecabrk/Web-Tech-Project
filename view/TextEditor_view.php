@@ -18,7 +18,6 @@
         var backgroundPattern = "<?php echo $patternName; ?>";
         var memoryTitle = "<?php echo $memoryTitle; ?>";
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../view/js/TextEditor.js" defer></script>
 </head>
 
@@ -37,10 +36,10 @@
         <div class="toolbar">
             <div class="entries_buttons">
                 <button id="doneButton"><i class='bx bx-check'></i></button>
+                <input type="text" placeholder="Title" id="filename">
                 <button id="deleteButton"><i class='bx bx-trash' ></i></button>
             </div>
             <div class="head">
-                <input type="text" placeholder="Filename" id="filename">
                 <select onchange="fileHandle(this.value); this.selectedIndex=0;">
                     <option value="" selected="" hidden="" disabled="">File</option>
                     <option value="new">New File</option>
@@ -73,8 +72,13 @@
                 </div>
                 <div class="color">
                     <span>Background</span>
-                    <input type="color" oninput="formatDoc('hiliteColor', this.value);">
+                 <input type="color" oninput="formatDoc('hiliteColor', this.value);">
                 </div>
+                <label class="checkbox-container">
+                    Is this a core memory?
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
             </div>
             <div class="btn-toolbar">
                 <button onclick="formatDoc('undo')"><i class='bx bx-undo' ></i></button>
@@ -92,13 +96,16 @@
                 <button onclick="addLink()"><i class='bx bx-link' ></i></button>
                 <button onclick="formatDoc('unlink')"><i class='bx bx-unlink' ></i></button>
                 <button id="show-code" data-active="false">&lt;/&gt;</button>
+                <label for="input-file">
+                 <i class='bx bx-upload'></i>
+                </label>   
+                <input type="file" accept="image/* video/*" id="input-file">
             </div>
         </div>
         <div id="content" contenteditable="true" spellcheck="false">
             Your thoughts...
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
 </html>

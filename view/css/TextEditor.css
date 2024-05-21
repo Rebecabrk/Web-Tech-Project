@@ -67,6 +67,18 @@ a{
     background: #f3f3f3;
 }
 
+.toolbar .entries_buttons > input{
+    max-width: 100px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+    outline: none;
+}
+
+.toolbar .entries_buttons > input::placeholder{
+    text-align: center;
+}
+
 .toolbar .head {
     display: flex;
     grid-gap: 10px;
@@ -82,13 +94,16 @@ a{
     outline: none;
 }
 
-.toolbar .head select{
+.toolbar .head select, .toolbar .head label{
     background: #fff;;
     border-radius: 6px;
     border: 2px solid #ddd;
     outline: none;
     cursor: pointer;
 }
+.toolbar .head label{
+    padding: 4px;
+} 
 
 .toolbar .head .color{
     background: #fff;
@@ -123,7 +138,7 @@ a{
     grid-gap: 10px;
 }
 
-.toolbar .btn-toolbar button{
+.toolbar .btn-toolbar button, .toolbar .btn-toolbar label{
     background: #fff;
     border-radius: 6px;
     border: 2px solid #ddd;
@@ -134,6 +149,10 @@ a{
     align-items: center;
     justify-content: center;
     font-size: 18px;
+}
+
+.toolbar .btn-toolbar input{
+    display: none;
 }
 
 .toolbar .btn-toolbar button:hover{
