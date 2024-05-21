@@ -1,7 +1,7 @@
 <?php
 
 if(!isset($_COOKIE['In_God_We_Trust']))
-    header("Location: HomePage.php");
+    header("Location: LandingPage.php");
 
 include ("../view/Dashboard_view.php");
 
