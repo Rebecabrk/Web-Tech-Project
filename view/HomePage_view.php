@@ -70,7 +70,11 @@
         </div>
 
         <div id="second_screen" class="full_screen padding">
-            <h1>Some relevant news</h1>
+            
+        </div>
+
+        <div id="third_screen" class="full_screen padding">
+        <h1>Some relevant news</h1>
             <div class="rss-container">
                 <div class="rss-card">
                     <h2>Mental Health Topic</h2>
@@ -148,10 +152,6 @@
                     ?>
                 </div>
             </div>
-        </div>
-
-        <div id="third_screen" class="full_screen padding">
-
         </div>
     </div>
 
