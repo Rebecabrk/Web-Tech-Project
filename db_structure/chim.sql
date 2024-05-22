@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2024 at 07:39 PM
+-- Generation Time: May 22, 2024 at 02:03 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -48,6 +48,19 @@ INSERT INTO `children` (`cid`, `first_name`, `email`, `uid`, `birth_date`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `images_paths`
+--
+
+CREATE TABLE `images_paths` (
+  `id` int(11) NOT NULL,
+  `memory_id` int(11) NOT NULL,
+  `path` varchar(256) NOT NULL,
+  `sequence_number` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `medical_records`
 --
 
@@ -68,6 +81,22 @@ CREATE TABLE `medical_records` (
 INSERT INTO `medical_records` (`id`, `type`, `name`, `date`, `location`, `insertion_date`, `cid`) VALUES
 (27, 'Alergy', 'peanuts', '2012-12-01', '', '2024-05-07 13:13:10', 11),
 (28, 'Accident', 'car accident', '2003-02-25', 'there', '2024-05-07 19:03:29', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `memories`
+--
+
+CREATE TABLE `memories` (
+  `id` int(11) NOT NULL,
+  `creation_date` datetime NOT NULL,
+  `last_modification` datetime DEFAULT NULL,
+  `title` varchar(256) NOT NULL,
+  `text` mediumtext DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  `pattern` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -105,11 +134,25 @@ ALTER TABLE `children`
   ADD KEY `uid` (`uid`);
 
 --
+-- Indexes for table `images_paths`
+--
+ALTER TABLE `images_paths`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FK` (`memory_id`);
+
+--
 -- Indexes for table `medical_records`
 --
 ALTER TABLE `medical_records`
   ADD PRIMARY KEY (`id`),
   ADD KEY `cid` (`cid`);
+
+--
+-- Indexes for table `memories`
+--
+ALTER TABLE `memories`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `PK` (`user_id`);
 
 --
 -- Indexes for table `users`
@@ -129,10 +172,22 @@ ALTER TABLE `children`
   MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT for table `images_paths`
+--
+ALTER TABLE `images_paths`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `medical_records`
 --
 ALTER TABLE `medical_records`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT for table `memories`
+--
+ALTER TABLE `memories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -155,6 +210,12 @@ ALTER TABLE `children`
 --
 ALTER TABLE `medical_records`
   ADD CONSTRAINT `medical_records_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `children` (`cid`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `memories`
+--
+ALTER TABLE `memories`
+  ADD CONSTRAINT `memories_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`uid`) ON DELETE CASCADE ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
