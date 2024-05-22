@@ -8,7 +8,7 @@
             echo $backgroundStyle;
         ?>;
     }
-    </style>
+    </style
     <meta charset="utf-8">
     <title>Journal Page</title>
     <link href="../view/css/TextEditor.css" rel="stylesheet">

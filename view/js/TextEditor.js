@@ -70,25 +70,31 @@ function fileHandle(value) {
 /* function responsible with saving the text (in database) */
 document.getElementById('doneButton').addEventListener('click', function () {
     if (filename.value) {
-            var form = document.createElement('form');
-            form.method = 'POST';
-            form.action = '../model/TextEditor_model.php';
-        
-            var input_text = document.createElement('input');
-            input_text.type = 'hidden';
-            input_text.name = 'text';
-            input_text.value = content.innerHTML;
+        var form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '../model/TextEditor_model.php?function=insertMemory';
 
-            var input_title = document.createElement('input');
-            input_title.type = 'hidden';
-            input_title.name = 'title';
-            input_title.value = filename.value;
-        
-            form.appendChild(input_title);
-            form.appendChild(input_text);
-            document.body.appendChild(form);
+        var input_text = document.createElement('input');
+        input_text.type = 'hidden';
+        input_text.name = 'text';
+        input_text.value = content.innerHTML;
 
-            form.submit();
+        var input_title = document.createElement('input');
+        input_title.type = 'hidden';
+        input_title.name = 'title';
+        input_title.value = filename.value;
+
+        var input_pattern = document.createElement('input');
+        input_pattern.type = 'hidden';
+        input_pattern.name = 'pattern';
+        input_pattern.value = backgroundPattern;
+
+        form.appendChild(input_title);
+        form.appendChild(input_text);
+        form.appendChild(input_pattern);
+        document.body.appendChild(form);
+
+        form.submit();
     } else {
         alert("Please give a title to your thoughts.");
     }
@@ -97,11 +103,24 @@ document.getElementById('doneButton').addEventListener('click', function () {
 document.getElementById('deleteButton').addEventListener('click', function () {
     var answer = confirm("Are you sure you want to delete this memory? This action cannot be undone.");
     if (answer == true) {
-        const key = backgroundPattern + filename.value;
-        if (localStorage.getItem(key) !== null) {
-            localStorage.removeItem(key);
-        }
-        window.location.href = 'Journal.php';
+        var urlParams = new URLSearchParams(window.location.search);
+        var param = urlParams.get('memoryId');
+
+        let params = new URLSearchParams();
+        params.append('function', 'deleteMemory');
+        params.append('param1', param);
+        console.log(param);
+        fetch('../model/TextEditor_model.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: params
+        })
+            .then(response => response.json())
+            .then(data => { /* handle the data */ })
+            .catch(error => console.error('Error:', error));
+          window.location.href = 'Journal.php';
     }
 });
 
@@ -118,13 +137,13 @@ document.getElementById('deleteButton').addEventListener('click', function () {
 // }
 
 const inputMultimedia = document.getElementById("input-file");
-inputMultimedia.onchange = function (){
+inputMultimedia.onchange = function () {
     // var picture = document.createElement('img');
     // picture.src = URL.createObjectURL(inputMultimedia.files[0]);
     // content.appendChild(picture);
     let file = inputMultimedia.files[0];
     let img = new Image();
-    img.onload = function() {
+    img.onload = function () {
         let canvas = document.createElement('canvas');
         let ctx = canvas.getContext('2d');
 
