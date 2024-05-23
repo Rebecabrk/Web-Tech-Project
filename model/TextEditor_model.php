@@ -48,13 +48,15 @@ function deleteMemory($id){
     global $mysqli;
     $sql = "DELETE FROM memories WHERE id = " . $id;
     $mysqli->query($sql);
+
+    header("Location: ../controller/Journal.php");
 }
 
-if (isset($_POST['function'])) {
-    $functionToCall = $_POST['function'];
+if (isset($_GET['function'])) {
+    $functionToCall = $_GET['function'];
     if (function_exists($functionToCall)) {
-        if(isset($_POST['param1'])){
-            $param = $_POST['param1'];
+        if(isset($_POST['memoryId'])){
+            $param = $_POST['memoryId'];
             echo $functionToCall($param);
         }else{
             echo $functionToCall();

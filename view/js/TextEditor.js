@@ -103,24 +103,23 @@ document.getElementById('doneButton').addEventListener('click', function () {
 document.getElementById('deleteButton').addEventListener('click', function () {
     var answer = confirm("Are you sure you want to delete this memory? This action cannot be undone.");
     if (answer == true) {
-        var urlParams = new URLSearchParams(window.location.search);
-        var param = urlParams.get('memoryId');
 
-        let params = new URLSearchParams();
-        params.append('function', 'deleteMemory');
-        params.append('param1', param);
-        console.log(param);
-        fetch('../model/TextEditor_model.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: params
-        })
-            .then(response => response.json())
-            .then(data => { /* handle the data */ })
-            .catch(error => console.error('Error:', error));
-          window.location.href = 'Journal.php';
+        var urlParams = new URLSearchParams(window.location.search);
+        var id_memory = urlParams.get('memoryId');
+
+        var form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '../model/TextEditor_model.php?function=deleteMemory';
+
+        var input_memoryId = document.createElement('input');
+        input_memoryId.type = 'hidden';
+        input_memoryId.name = 'memoryId';
+        input_memoryId.value = id_memory;
+
+        form.appendChild(input_memoryId);
+        document.body.appendChild(form);
+        form.submit();
+        // window.location.href = 'Journal.php';
     }
 });
 
