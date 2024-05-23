@@ -472,7 +472,7 @@ a {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: blanchedalmond;
 }
 
 .rss-container {
@@ -486,8 +486,8 @@ a {
   padding: 10px 15px;
   margin: 10px 15px;
   transition: transform 0.5s;
-  background-color: black;
-  color: white;
+  background-color: gray;
+  color: blanchedalmond;
   overflow: auto;
 }
 
