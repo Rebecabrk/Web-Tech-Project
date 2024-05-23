@@ -15,51 +15,22 @@
     <div class="pages" id="second_screen">
         <div id="first_screen" class="padding">
             <h1>Schedules/Calendar</h1>
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-content">
-                        <h1>
-                            Medication
-                        </h1>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h1>
-                            Food
-                        </h1>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h1>
-                            Sleep
-                        </h1>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h1>
-                            School
-                        </h1>
-                    </div>
-                </div>
-            </div>
+            <p>Feel free to populate the calendar with precise data/tasks like medication/food/sleep/school schedules!</p>
+            <?php include("../view/components/Dynamic_Event_Calendar/Dynamic_Event_Calendar.php"); ?>
 
             <hr>
 
             <h1>Medical records</h1>
             <div class="card-container">
-
                 <?php 
                 error_reporting(0); // ATENTIE!
-            $mysqli = require ("..\model\database\database.php");
-            $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Accident' AND cid = '" . $_COOKIE['Child_Picker'] . "' ORDER BY insertion_date DESC";
-            $result = $mysqli->query($sql);
-            ?>
-                <div class="card">
+                $mysqli = require ("..\model\database\database.php");
+                $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Accident' AND cid = '" . $_COOKIE['Child_Picker'] . "' ORDER BY insertion_date DESC";
+                $result = $mysqli->query($sql);
+                ?>
+                <div class="big-card">
                     <div class="card-content">
-                        <h1> Accidents </h1>
+                        <h3> Accidents </h3>
                         <?php for($k=1; $k<=3; $k++) {?>
                         <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
                             echo $name;
@@ -74,13 +45,13 @@
                 </div>
 
                 <?php
-            $mysqli = require ("..\model\database\database.php");
-            $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Alergy' AND cid = '" . $_COOKIE['Child_Picker'] . "' ORDER BY insertion_date DESC";
-            $result = $mysqli->query($sql);
-            ?>
-                <div class="card">
+                $mysqli = require ("..\model\database\database.php");
+                $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Alergy' AND cid = '" . $_COOKIE['Child_Picker'] . "' ORDER BY insertion_date DESC";
+                $result = $mysqli->query($sql);
+                ?>
+                <div class="big-card">
                     <div class="card-content">
-                        <h1> Alergies </h1>
+                        <h3> Alergies </h3>
                         <?php for($k=1; $k<=3; $k++) {?>
                         <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
                             echo $name;
@@ -95,13 +66,13 @@
                 </div>
 
                 <?php
-            $mysqli = require ("..\model\database\database.php");
-            $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Desire' AND cid = '" . $_COOKIE['Child_Picker'] . "' ORDER BY insertion_date DESC";
-            $result = $mysqli->query($sql);
-            ?>
-                <div class="card">
+                $mysqli = require ("..\model\database\database.php");
+                $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Desire' AND cid = '" . $_COOKIE['Child_Picker'] . "' ORDER BY insertion_date DESC";
+                $result = $mysqli->query($sql);
+                ?>
+                <div class="big-card">
                     <div class="card-content">
-                        <h1> Diseares </h1>
+                        <h3> Diseares </h3>
                         <?php for($k=1; $k<=3; $k++) {?>
                         <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
                             echo $name;

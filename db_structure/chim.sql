@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2024 at 02:03 PM
+-- Generation Time: May 23, 2024 at 03:49 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `chim`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `calendar_event_master`
+--
+
+CREATE TABLE `calendar_event_master` (
+  `event_id` int(11) NOT NULL,
+  `event_name` varchar(255) DEFAULT NULL,
+  `event_start_date` date DEFAULT NULL,
+  `event_end_date` date DEFAULT NULL,
+  `cid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `calendar_event_master`
+--
+
+INSERT INTO `calendar_event_master` (`event_id`, `event_name`, `event_start_date`, `event_end_date`, `cid`) VALUES
+(4, 'test1', '2024-05-24', '2024-05-26', 3),
+(5, 'test2', '2024-05-28', '2024-06-01', 6);
 
 -- --------------------------------------------------------
 
@@ -127,6 +149,13 @@ INSERT INTO `users` (`uid`, `first_name`, `last_name`, `email`, `password_hash`)
 --
 
 --
+-- Indexes for table `calendar_event_master`
+--
+ALTER TABLE `calendar_event_master`
+  ADD PRIMARY KEY (`event_id`),
+  ADD KEY `cid` (`cid`);
+
+--
 -- Indexes for table `children`
 --
 ALTER TABLE `children`
@@ -166,6 +195,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `calendar_event_master`
+--
+ALTER TABLE `calendar_event_master`
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `children`
 --
 ALTER TABLE `children`
@@ -198,6 +233,12 @@ ALTER TABLE `users`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `calendar_event_master`
+--
+ALTER TABLE `calendar_event_master`
+  ADD CONSTRAINT `calendar_event_master_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `children` (`cid`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `children`
