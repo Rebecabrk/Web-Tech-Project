@@ -46,3 +46,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 include ("../view/Login_view.php");
+
+include ("../view\components\GoBackButton\GoBackButton.php");
