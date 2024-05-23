@@ -70,11 +70,33 @@
         </div>
 
         <div id="second_screen" class="full_screen padding">
-            
+            <div class="todo-container">
+                <div class="header">
+                    <h1>What can you do here?</h1>
+                </div>
+                <div class="todo-card">
+                    <h2>Dashboard</h2>
+                    <p>Go insert all the data of your child selected from the navbar to help us make your job much
+                        easier!</p>
+                </div>
+                <div class="todo-card">
+                    <h2>Journal</h2>
+                    <p>Write your latest thoughts about your family.</p>
+                </div>
+                <div class="todo-card">
+                    <h2>The Journey</h2>
+                    <p>After you insert some data of each child, we're going to make you a really nice timeline of your
+                        family.</p>
+                </div>
+                <div class="todo-card">
+                    <h2>Settings</h2>
+                    <p>Don't need any descrptions ;)</p>
+                </div>
+            </div>
         </div>
 
         <div id="third_screen" class="full_screen padding">
-        <h1>Some relevant news</h1>
+            <h1>Some relevant news</h1>
             <div class="rss-container">
                 <div class="rss-card">
                     <h2>Mental Health Topic</h2>

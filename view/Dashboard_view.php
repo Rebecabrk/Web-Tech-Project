@@ -14,12 +14,6 @@
 <body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
     <div class="pages" id="second_screen">
         <div id="first_screen" class="padding">
-            <h1>Schedules/Calendar</h1>
-            <p>Feel free to populate the calendar with precise data/tasks like medication/food/sleep/school schedules!</p>
-            <?php include("../view/components/Dynamic_Event_Calendar/Dynamic_Event_Calendar.php"); ?>
-
-            <hr>
-
             <h1>Medical records</h1>
             <div class="card-container">
                 <?php 
@@ -86,6 +80,12 @@
                     </div>
                 </div>
             </div>
+            
+            <hr>
+            
+            <h1>Schedules/Calendar</h1>
+            <p>Feel free to populate the calendar with precise data/tasks like medication/food/sleep/school schedules!</p>
+            <?php include("../view/components/Dynamic_Event_Calendar/Dynamic_Event_Calendar.php"); ?>
 
             <hr>
 

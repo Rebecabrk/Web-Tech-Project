@@ -1,82 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Card with Popup</title>
-<style>
-  .card {
-    width: 300px;
-    height: 200px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 20px;
-    position: relative;
-  }
-  
-  .card-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .popup {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide to Interaction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .todo-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .header h1 {
+            font-size: 3em;
+            color: #333;
+        }
+        .todo-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+        .todo-card:hover {
+            transform: scale(1.05);
+        }
+        .todo-card h2 {
+            font-size: 2em;
+            color: #007bff;
+        }
+        .todo-card p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-
-<div class="card">
-  <h2>This is a card</h2>
-  <button class="card-button">Open Popup</button>
-  <div class="popup">
-    <h3>Popup Content</h3>
-    <p>This is some popup content.</p>
-    <button class="close-button">Close</button>
-  </div>
-</div>
-
-<div class="overlay"></div>
-
-<script>
-  const cardButton = document.querySelector('.card-button');
-  const popup = document.querySelector('.popup');
-  const overlay = document.querySelector('.overlay');
-  const closeButton = document.querySelector('.close-button');
-  
-  cardButton.addEventListener('click', () => {
-    popup.style.display = 'block';
-    overlay.style.display = 'block';
-  });
-  
-  closeButton.addEventListener('click', () => {
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
-  });
-</script>
-
+    <div class="todo-container">
+        <div class="header">
+            <h1>What can you do here?</h1>
+        </div>
+        <div class="todo-card">
+            <h2>Dashboard</h2>
+            <p>Go insert all the data of your child selected from the navbar to help us make your job much easier!</p>
+        </div>
+        <div class="todo-card">
+            <h2>Journal</h2>
+            <p>Write your latest thoughts about your family.</p>
+        </div>
+        <div class="todo-card">
+            <h2>The Journey</h2>
+            <p>After you insert some data of each child, we're going to make you a really nice timeline of your family.</p>
+        </div>
+    </div>
 </body>
 </html>
