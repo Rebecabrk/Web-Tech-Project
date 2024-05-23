@@ -32,12 +32,12 @@
             </div>
         </form>
     </div> -->
-    <div class="journal_container_2">
+    <div clasjournal_container_2">
         <div class="toolbar">
             <div class="entries_buttons">
                 <button id="doneButton"><i class='bx bx-check'></i></button>
                 <input type="text" placeholder="Title" id="filename">
-                <button id="deleteButton"><i class='bx bx-trash' ></i></button>
+                <button id="deleteButton" <?php echo is_null($isMemorySet) ? 'disabled' : ''; ?>><i class='bx bx-trash' ></i></button>
             </div>
             <div class="head">
                 <select onchange="fileHandle(this.value); this.selectedIndex=0;">
@@ -99,7 +99,7 @@
                 <label for="input-file">
                  <i class='bx bx-upload'></i>
                 </label>   
-                <input type="file" accept="image/* video/*" id="input-file">
+                <input type="file" accept="image\* video\*" id="input-file">
             </div>
         </div>
         <div id="content" contenteditable="true" spellcheck="false">

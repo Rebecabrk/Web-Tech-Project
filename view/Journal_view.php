@@ -8,10 +8,10 @@
     <link href="../view/css/Journal.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../view/js/Journal.js" defer></script>
+    <!-- <script src="../view/js/Journal.js" defer></script> -->
 </head>
 
-<body >
+<body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
     <div class="pages" id="second_screen">
         <div id="first_screen" class="full_screen">
             <div class="padding">
@@ -64,7 +64,18 @@
 
                 <div class="entry-div">
                     <h1>Your Entries:</h1>
-                    <div id="recentEntries"></div>
+                    <div id="recentEntries">
+                        <?php foreach ($allMemories as $item): ?>
+                            <div class="entry">
+                                <a
+                                    href="TextEditor.php?pattern=<?= htmlspecialchars($item['pattern']) ?>&memoryId=<?= htmlspecialchars($item['id']) ?>">
+                                    <div class="entry_title"><?= htmlspecialchars($item['title']) ?></div>
+                                    <div class="entry_content"><?= htmlspecialchars(substr($item['text'], 0, 70)) ?>...
+                                    </div>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
 

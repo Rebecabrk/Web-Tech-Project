@@ -10,10 +10,11 @@ function getMemories()
     while ($row = $result->fetch_assoc()) {
         $data[] = $row;
     }
-
-    return json_encode($data);
+    // header('Content-Type: application/json');
+    // return json_encode($data);
+    return $data;
 }
 
-header('Content-Type: application/json');
-echo getMemories();
+
+// echo getMemories();
 
