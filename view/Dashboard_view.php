@@ -14,7 +14,7 @@
 <body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
     <div class="pages" id="second_screen">
         <div id="first_screen" class="padding">
-            <h1>Medical records</h1>
+            <h3>Medical records</h3>
             <div class="card-container">
                 <?php 
                 error_reporting(0); // ATENTIE!
@@ -83,13 +83,13 @@
             
             <hr>
             
-            <h1>Schedules/Calendar</h1>
+            <h3>Schedules/Calendar</h3>
             <p>Feel free to populate the calendar with precise data/tasks like medication/food/sleep/school schedules!</p>
             <?php include("../view/components/Dynamic_Event_Calendar/Dynamic_Event_Calendar.php"); ?>
 
             <hr>
 
-            <h1>Psychosomatic Development</h1>
+            <h3>Psychosomatic Development</h3>
             <div class="card-container">
                 <div class="big-card">
                 </div>

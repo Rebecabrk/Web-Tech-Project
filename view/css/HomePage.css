@@ -27,7 +27,8 @@ a {
 }
 
 h1 {
-  font-size: 95px;
+  font-size: 4em;
+  color: #333;
   scroll-behavior: smooth;
   display: flex;
   text-align: center;
@@ -526,7 +527,7 @@ a {
   padding: 50px 0;
 }
 .header h1 {
-  font-size: 3em;
+  font-size: 4em;
   color: #333;
 }
 .todo-card {

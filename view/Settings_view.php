@@ -15,13 +15,13 @@
         <div id="first_screen" class="full_screen padding">
             <div class="card-container">
                 <div class="left-side">
-                    <a href="Settings2.php?setting=basic" class="card content">
-                        <i class='bx bx-cog'></i>
-                        <h1>Basic Settings</h1>
-                    </a>
                     <a href="Profile.php" class="card content">
                         <i class="bx bx-user"></i>
                         <h1>Profile Settings</h1>
+                    </a>
+                    <a href="Settings2.php?setting=feedback" class="card content">
+                        <i class='bx bx-message-add'></i>
+                        <h1>Feedback</h1>
                     </a>
                 </div>
                 <div class="right-side">

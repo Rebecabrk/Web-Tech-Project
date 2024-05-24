@@ -47,7 +47,8 @@ hr {
   background-color: blanchedalmond;
 }
 
-h1 {
+h1,
+h3{
   display: flex;
   justify-content: center;
   /* font-size: 2rem;  */
