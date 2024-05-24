@@ -5,7 +5,7 @@
     <style>
     html {
         <?php 
-            echo $backgroundStyle;
+            echo $backgroundInformation[1];
         ?>;
     }
     </style
@@ -14,14 +14,13 @@
     <link href="../view/css/TextEditor.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        var backgroundPattern = "<?php echo $patternName; ?>";
-        var memoryTitle = "<?php echo $memoryTitle; ?>";
-    </script>
+     <script>
+        var backgroundPattern = "<?php echo $backgroundInformation[0]; ?>";
+    </script> 
     <script src="../view/js/TextEditor.js" defer></script>
 </head>
 
-<body onload="isMemory();">
+<body>
     <!-- <div class="journal_container">
         <form action="../model/TextEditor_proccess.php" method="POST">
             <div class="journal_title">
