@@ -11,6 +11,7 @@
 
 <body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
     <div class="pages" id="second_screen">
+        <button class="fixed-button" onclick="alert('Data exported!');">Export Data</button>
         <div class="container padding">
             <h1>Your family's timeline</h1>
             <section class="timeline">

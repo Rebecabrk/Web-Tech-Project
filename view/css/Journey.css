@@ -238,6 +238,27 @@ blockquote {
   background-color: blanchedalmond;
 }
 
+.fixed-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.fixed-button:hover {
+  background-color: #45a049;
+}
+
 .padding {
   display: flex;
   flex-direction: column;
