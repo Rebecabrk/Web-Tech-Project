@@ -190,9 +190,10 @@ function insertMemory()
     $data = date('Y-m-d H:i:s');
     $user_id = 2; //need to figure out how to get the user_id
     $pattern = $_POST['pattern'];
-    $sql = "INSERT INTO memories (user_id, creation_date, title, text, pattern) VALUES (?,?,?,?,?)"; //we insert the photos as well
+    $isCoreMemory = $_POST['isCoreMemory'];
+    $sql = "INSERT INTO memories (user_id, creation_date, title, text, pattern, isCoreMemory) VALUES (?,?,?,?,?,?)"; //we insert the photos as well
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param("sssss", $user_id, $data, $title, $text, $pattern);
+    $stmt->bind_param("ssssss", $user_id, $data, $title, $text, $pattern, $isCoreMemory);
     try {
         $stmt->execute();
         // header("Location: ../controller/Journal.php");
@@ -225,19 +226,37 @@ function insertMemory()
     header("Location: ../controller/Journal.php");
 }
 
+function alterMemory($id){
+  global $mysqli;
+  $text = $_POST['text'];
+  $sql = "UPDATE memories SET text = '" . $text . "' WHERE id =". $id;
+  $mysqli->query($sql);
+
+  header("Location: ../controller/Journal.php");
+}
+
 function deleteMemory($id){
     global $mysqli;
     $sql = "DELETE FROM memories WHERE id = " . $id;
     $mysqli->query($sql);
+}
+function isMemory($id){
 
-    header("Location: ../controller/Journal.php");
+  $mysqli = require ("../model/database/database.php");
+  $sql = "SELECT * FROM memories  WHERE id =" . $id;
+  $result = $mysqli->query($sql);
+
+  $data = $result->fetch_assoc();
+
+  header('Content-Type: application/json; charset=utf-8');
+  return json_encode($data);
 }
 
 if (isset($_GET['function'])) {
     $functionToCall = $_GET['function'];
     if (function_exists($functionToCall)) {
-        if(isset($_POST['memoryId'])){
-            $param = $_POST['memoryId'];
+        if(isset($_GET['memoryId'])){
+            $param = $_GET['memoryId'];
             echo $functionToCall($param);
         }else{
             echo $functionToCall();

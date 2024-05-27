@@ -68,33 +68,65 @@ function fileHandle(value) {
 }
 
 /* function responsible with saving the text (in database) */
+const isCoreMemory = document.getElementById('coreMemoryCheckbox');
+var urlParams = new URLSearchParams(window.location.search);
+var id_memory = urlParams.get('memoryId');
+
 document.getElementById('doneButton').addEventListener('click', function () {
     if (filename.value) {
-        var form = document.createElement('form');
-        form.method = 'POST';
-        form.action = '../model/TextEditor_model.php?function=insertMemory';
+        if (id_memory == null) {
+            var form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '../model/TextEditor_model.php?function=insertMemory';
 
-        var input_text = document.createElement('input');
-        input_text.type = 'hidden';
-        input_text.name = 'text';
-        input_text.value = content.innerHTML;
+            var input_text = document.createElement('input');
+            input_text.type = 'hidden';
+            input_text.name = 'text';
+            input_text.value = content.innerHTML;
 
-        var input_title = document.createElement('input');
-        input_title.type = 'hidden';
-        input_title.name = 'title';
-        input_title.value = filename.value;
+            var input_title = document.createElement('input');
+            input_title.type = 'hidden';
+            input_title.name = 'title';
+            input_title.value = filename.value;
 
-        var input_pattern = document.createElement('input');
-        input_pattern.type = 'hidden';
-        input_pattern.name = 'pattern';
-        input_pattern.value = backgroundPattern;
+            var input_pattern = document.createElement('input');
+            input_pattern.type = 'hidden';
+            input_pattern.name = 'pattern';
+            input_pattern.value = backgroundPattern;
 
-        form.appendChild(input_title);
-        form.appendChild(input_text);
-        form.appendChild(input_pattern);
-        document.body.appendChild(form);
+            var input_core_memory = document.createElement('input');
+            input_core_memory.type = 'hidden';
+            input_core_memory.name = 'isCoreMemory';
+            input_core_memory.value = Number(isCoreMemory.checked);
 
-        form.submit();
+            form.appendChild(input_title);
+            form.appendChild(input_text);
+            form.appendChild(input_pattern);
+            form.appendChild(input_core_memory);
+            document.body.appendChild(form);
+
+            form.submit();
+        }else{
+            var form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '../model/TextEditor_model.php?function=alterMemory&memoryId=' + id_memory;
+
+            var input_text = document.createElement('input');
+            input_text.type = 'hidden';
+            input_text.name = 'text';
+            input_text.value = content.innerHTML;
+
+            var input_core_memory = document.createElement('input');
+            input_core_memory.type = 'hidden';
+            input_core_memory.name = 'isCoreMemory';
+            input_core_memory.value = Number(isCoreMemory.checked);
+
+            form.appendChild(input_text);
+            form.appendChild(input_core_memory);
+            document.body.appendChild(form);
+
+            form.submit();
+        }
     } else {
         alert("Please give a title to your thoughts.");
     }
@@ -104,36 +136,38 @@ document.getElementById('deleteButton').addEventListener('click', function () {
     var answer = confirm("Are you sure you want to delete this memory? This action cannot be undone.");
     if (answer == true) {
 
-        var urlParams = new URLSearchParams(window.location.search);
-        var id_memory = urlParams.get('memoryId');
-
-        var form = document.createElement('form');
-        form.method = 'POST';
-        form.action = '../model/TextEditor_model.php?function=deleteMemory';
-
-        var input_memoryId = document.createElement('input');
-        input_memoryId.type = 'hidden';
-        input_memoryId.name = 'memoryId';
-        input_memoryId.value = id_memory;
-
-        form.appendChild(input_memoryId);
-        document.body.appendChild(form);
-        form.submit();
-        // window.location.href = 'Journal.php';
+        fetch('../model/TextEditor_model.php?function=deleteMemory&memoryId=' + id_memory)
+            .then(response => {
+                if (response.status === 200) {
+                    return response.text();
+                } else {
+                    throw new Error("Empty response or non-200 status");
+                }
+            })
+            .then(data => {
+                console.log('Received data:', data);
+                window.location.href = 'Journal.php';
+            })
+            .catch(error => console.error('Error:', error));
     }
 });
 
-// need to rewrite this code for database version
-// function isMemory() {
-//     if (memoryTitle !== 'none') {
-//         const title = memoryTitle.replace(/pattern\d{1,2}/, '');
-//         const text = localStorage.getItem(memoryTitle);
+function isMemory() {
 
-//         content.innerHTML = text;
-//         filename.value = title;
-//         filename.disabled = true;
-//     }
-// }
+    if (id_memory != null)
+        fetch('../model/TextEditor_model.php?function=isMemory&memoryId=' + id_memory)
+            .then(response => response.json())
+            .then(data => {
+                console.log('Received data:', data);
+                content.innerHTML = data.text;
+                filename.value = data.title;
+                filename.disabled = true;
+                if (data.isCoreMemory == 1) {
+                    isCoreMemory.checked = true;
+                }
+            })
+            .catch(error => console.error('Error:', error));
+}
 
 const inputMultimedia = document.getElementById("input-file");
 inputMultimedia.onchange = function () {

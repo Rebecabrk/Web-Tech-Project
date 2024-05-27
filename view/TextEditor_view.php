@@ -20,7 +20,7 @@
     <script src="../view/js/TextEditor.js" defer></script>
 </head>
 
-<body>
+<body onload="isMemory();">
     <!-- <div class="journal_container">
         <form action="../model/TextEditor_proccess.php" method="POST">
             <div class="journal_title">
@@ -75,7 +75,7 @@
                 </div>
                 <label class="checkbox-container">
                     Is this a core memory?
-                    <input type="checkbox">
+                    <input type="checkbox" id="coreMemoryCheckbox">
                     <span class="checkmark"></span>
                 </label>
             </div>
