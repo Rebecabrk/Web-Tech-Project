@@ -1,0 +1,162 @@
+@import url("https://www.fontspace.com/soul-note-display-trial-font-f110131");
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/SoulNoteDisplayTrial-ALnnx.otf);
+}
+
+* {
+  font-family: myFirstFont;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: large;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  display: flex;
+}
+
+.pages {
+  flex: 1;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.full_screen {
+  height: 100vh;
+  width: 100vw;
+}
+
+#first_screen {
+  background-image: url("../../public/images/background_images/pexels-jess-bailey-designs-796656.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  background: none;
+  backdrop-filter: blur(20px);
+  border: 2px solid blanchedalmond;
+  color: white;
+}
+
+img {
+  width: 50%;
+  height: auto;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2,
+h3 {
+  font-size: 1.4em;
+}
+
+h3{
+  margin-left: 20px;
+}
+
+p,
+img{
+  margin-left: 40px;
+}
+
+#resources a{
+  margin-left: 60px;
+}
+
+h3 {
+  margin-top: 15px;
+}
+
+a {
+  color: white;
+}
+
+#overall-description ul {
+  list-style-type: disc;
+  margin-left: 60px;
+  color: white;
+}
+
+.padding {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0.5% 2% 5%;
+}
+
+@media screen and (max-width: 1991px) {
+  .padding {
+    padding: 2% 0.5% 2% 4.5%;
+  }
+} // Rebeca's screen size: 1990px
+
+@media screen and (max-width: 1600px) {
+  .padding {
+    padding: 2% 0.5% 2% 5.4%;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .padding {
+    padding: 2% 0.5% 2% 7%;
+  }
+} // Marius's screen size: 1286px
+
+@media screen and (max-width: 1150px) {
+  .padding {
+    padding: 2% 0.5% 2% 8%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .padding {
+    padding: 2% 1% 2% 8%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .padding {
+    padding: 2% 1% 2% 13%;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .padding {
+    padding: 2% 1% 2% 15.3%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar li .tooltip {
+    display: none;
+  }
+
+  .padding {
+    padding: 2% 1% 2% 16.4%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .padding {
+    padding: 2% 0.7% 2% 19%; /* Padding: top right bottom left */
+  }
+}
