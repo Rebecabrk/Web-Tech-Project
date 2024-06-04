@@ -35,7 +35,8 @@
             <div>
                 <?php if($is_invalid): ?>
                 <em class="invalid_msg">Invalid login</em>
-                <?php endif; ?>
+                <?php else: ?>
+        <?php endif; ?>
             </div>
             <h3>
                 Don't have an account?
