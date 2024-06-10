@@ -7,11 +7,12 @@
     <link href="../../public/css/Journey.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../public/js/Journey.js" defer></script>
 </head>
 
 <body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
     <div class="pages" id="second_screen">
-        <button class="fixed-button" onclick="alert('Data exported!');">Export Data</button>
+        <button class="fixed-button" onclick="postXMLRequestForExport();">Export Data</button>
         <div class="container padding">
             <h1>Your family's timeline</h1>
             <section class="timeline">

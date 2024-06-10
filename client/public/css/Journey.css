@@ -256,7 +256,7 @@ blockquote {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .fixed-button:hover {
-  background-color: #45a049;
+  background-color: rgb(180, 178, 178);
 }
 
 .padding {
