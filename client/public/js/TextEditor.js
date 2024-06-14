@@ -72,41 +72,88 @@ const isCoreMemory = document.getElementById('coreMemoryCheckbox');
 var urlParams = new URLSearchParams(window.location.search);
 var id_memory = urlParams.get('memoryId');
 
+function getCookie(name) {
+    let cookieArr = document.cookie.split(";");
+
+    for (let i = 0; i < cookieArr.length; i++) {
+        let cookiePair = cookieArr[i].split("=");
+
+        if (name == cookiePair[0].trim()) {
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+    return null;
+}
+
+
 document.getElementById('doneButton').addEventListener('click', function () {
     if (filename.value) {
         if (id_memory == null) {
-            var form = document.createElement('form');
-            form.method = 'POST';
-            form.action = '../model/TextEditor_model.php?function=insertMemory';
+            // we insert a memory
 
-            var input_text = document.createElement('input');
-            input_text.type = 'hidden';
-            input_text.name = 'text';
-            input_text.value = content.innerHTML;
+            let cookie_user_id = getCookie('In_God_We_Trust');
+            if (cookie_user_id == null) { alert('Error at getting user_id from cookie...') }
 
-            var input_title = document.createElement('input');
-            input_title.type = 'hidden';
-            input_title.name = 'title';
-            input_title.value = filename.value;
+            let data = {
+                user_id: cookie_user_id,
+                title: filename.value,
+                text: content.innerHTML,
+                pattern: backgroundPattern,
+                is_core_memory: Number(isCoreMemory.checked)
+            };
 
-            var input_pattern = document.createElement('input');
-            input_pattern.type = 'hidden';
-            input_pattern.name = 'pattern';
-            input_pattern.value = backgroundPattern;
+            fetch('http://localhost/Web-Tech-Project/services/TextEditor/memories', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message == "Success") {
+                        console.log('TextEditor insert API returned Success');
+                        window.location.href = '../../app/controller/Journal.php';
+                    } else {
+                        console.log('API did not return Success');
+                        alert('Something went wrong');
+                    }
+                })
+                .catch(err => console.error('An error occurred:', err));
 
-            var input_core_memory = document.createElement('input');
-            input_core_memory.type = 'hidden';
-            input_core_memory.name = 'isCoreMemory';
-            input_core_memory.value = Number(isCoreMemory.checked);
 
-            form.appendChild(input_title);
-            form.appendChild(input_text);
-            form.appendChild(input_pattern);
-            form.appendChild(input_core_memory);
-            document.body.appendChild(form);
+            // var form = document.createElement('form');
+            // form.method = 'POST';
+            // form.action = '../model/TextEditor_model.php?function=insertMemory';
 
-            form.submit();
-        }else{
+            // var input_text = document.createElement('input');
+            // input_text.type = 'hidden';
+            // input_text.name = 'text';
+            // input_text.value = content.innerHTML;
+
+            // var input_title = document.createElement('input');
+            // input_title.type = 'hidden';
+            // input_title.name = 'title';
+            // input_title.value = filename.value;
+
+            // var input_pattern = document.createElement('input');
+            // input_pattern.type = 'hidden';
+            // input_pattern.name = 'pattern';
+            // input_pattern.value = backgroundPattern;
+
+            // var input_core_memory = document.createElement('input');
+            // input_core_memory.type = 'hidden';
+            // input_core_memory.name = 'isCoreMemory';
+            // input_core_memory.value = Number(isCoreMemory.checked);
+
+            // form.appendChild(input_title);
+            // form.appendChild(input_text);
+            // form.appendChild(input_pattern);
+            // form.appendChild(input_core_memory);
+            // document.body.appendChild(form);
+
+            // form.submit();
+        } else {
             var form = document.createElement('form');
             form.method = 'POST';
             form.action = '../model/TextEditor_model.php?function=alterMemory&memoryId=' + id_memory;

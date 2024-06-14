@@ -1,29 +1,32 @@
 <?php
 
-function insertMemory()
+function databaseConnection()
 {
     $host = "localhost";
     $dbname = "chim";
     $username = "root";
     $password = "";
 
-    $mysqli = new mysqli($host, $username, $password, $dbname);
+    $mysqpli = new mysqli($host, $username, $password, $dbname);
 
-    if ($mysqli->connect_error) {
-        die("Connection failed: " . $mysqli->connect_error);
+    if ($mysqpli->connect_error) {
+        die("Connection failed: " . $mysqpli->connect_error);
     }
 
-    $title = $_POST['title'];
-    $text = $_POST['text'];
+    return $mysqpli;
+}
+
+function insertMemory($user_id, $title, $text, $pattern)
+{
+    $mysqli = databaseConnection();
+
     $data = date('Y-m-d H:i:s');
-    $user_id = 2; //need to figure out how to get the user_id
-    $pattern = $_POST['pattern'];
+
     $sql = "INSERT INTO memories (user_id, creation_date, title, text, pattern) VALUES (?,?,?,?,?)"; //we insert the photos as well
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("sssss", $user_id, $data, $title, $text, $pattern);
     try {
         $stmt->execute();
-        // header("Location: ../controller/Journal.php");
     } catch (Exception $e) {
         die($e->getMessage() . " " . $e->getCode());
     }
@@ -52,8 +55,8 @@ function insertMemory()
 
     $output = "Success";
 
-    header('Content-Type: application/json; charset=utf-8');
-    return json_encode($output);
-}
+    // header('Content-Type: application/json; charset=utf-8');
+    // return json_encode($output);
 
-echo insertMemory();
+    return $output;
+}
