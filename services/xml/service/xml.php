@@ -18,18 +18,16 @@ function databaseConnection()
 
 function xml($user_id)
 {
-    $mysqli = databaseConnection();  // Assuming databaseConnection() is a function that returns a mysqli object
+    $mysqli = databaseConnection();  
 
     $stmt = $mysqli->prepare("SELECT * FROM memories WHERE user_id = ? AND isCoreMemory = true");
     $stmt->bind_param("s", $user_id);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Create a new XML document with version and encoding
     $dom = new DOMDocument('1.0', 'UTF-8');
     $dom->formatOutput = true;
 
-    // Create the root element
     $root = $dom->createElement('root');
     $dom->appendChild($root);
 

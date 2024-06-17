@@ -154,6 +154,35 @@ document.getElementById('doneButton').addEventListener('click', function () {
 
             // form.submit();
         } else {
+            //we update/alter a memory
+
+            // fetch('http://localhost/Web-Tech-Project/services/TextEditor/memories' + id_memory, {
+            //     method: 'PATCH',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify({
+            //         updated_text: content.innerHTML,
+            //         updated_is_core_memory: Number(isCoreMemory.checked)
+            //     })
+            // })
+            // .then(response => {
+            //     if (!response.ok) {
+            //         throw new Error('Network response was not ok');
+            //     }
+            //     return response.json();
+            // })
+            // .then(data => {
+            //     if(data.message == "Success"){
+            //         console.log('Patch successful', data);
+            //         window.location.href = '../../app/controller/Journal.php';
+            //     }
+            // })
+            // .catch(error => {
+            //     console.error('There has been a problem with your fetch operation:', error);
+            // });
+            
+
             var form = document.createElement('form');
             form.method = 'POST';
             form.action = '../model/TextEditor_model.php?function=alterMemory&memoryId=' + id_memory;
@@ -183,19 +212,42 @@ document.getElementById('deleteButton').addEventListener('click', function () {
     var answer = confirm("Are you sure you want to delete this memory? This action cannot be undone.");
     if (answer == true) {
 
-        fetch('../model/TextEditor_model.php?function=deleteMemory&memoryId=' + id_memory)
+        // fetch('../model/TextEditor_model.php?function=deleteMemory&memoryId=' + id_memory)
+        //     .then(response => {
+        //         if (response.status === 200) {
+        //             return response.text();
+        //         } else {
+        //             throw new Error("Empty response or non-200 status");
+        //         }
+        //     })
+        //     .then(data => {
+        //         console.log('Received data:', data);
+        //         window.location.href = 'Journal.php';
+        //     })
+        //     .catch(error => console.error('Error:', error));
+
+        fetch('http://localhost/Web-Tech-Project/services/TextEditor/memories/' + id_memory, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
             .then(response => {
-                if (response.status === 200) {
-                    return response.text();
-                } else {
-                    throw new Error("Empty response or non-200 status");
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
                 }
+                return response.json();
             })
             .then(data => {
-                console.log('Received data:', data);
-                window.location.href = 'Journal.php';
+                if (data.message == "Success") {
+                    console.log('Delete successful', data);
+                    window.location.href = '../../app/controller/Journal.php';
+                }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
+
     }
 });
 

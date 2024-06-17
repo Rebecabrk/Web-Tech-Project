@@ -16,15 +16,15 @@ function databaseConnection()
     return $mysqpli;
 }
 
-function insertMemory($user_id, $title, $text, $pattern)
+function insertMemory($user_id, $title, $text, $pattern, $isCoreMemory)
 {
     $mysqli = databaseConnection();
 
     $data = date('Y-m-d H:i:s');
 
-    $sql = "INSERT INTO memories (user_id, creation_date, title, text, pattern) VALUES (?,?,?,?,?)"; //we insert the photos as well
+    $sql = "INSERT INTO memories (user_id, creation_date, title, text, pattern, isCoreMemory) VALUES (?,?,?,?,?, ?)"; //we insert the photos as well
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param("sssss", $user_id, $data, $title, $text, $pattern);
+    $stmt->bind_param("ssssss", $user_id, $data, $title, $text, $pattern, $isCoreMemory);
     try {
         $stmt->execute();
     } catch (Exception $e) {

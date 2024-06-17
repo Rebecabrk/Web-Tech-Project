@@ -1,21 +1,18 @@
 <?php
 
-// function databaseConnection()
-// {
-//     $host = "localhost";
-//     $dbname = "chim";
-//     $username = "root";
-//     $password = "";
-
-//     $mysqpli = new mysqli($host, $username, $password, $dbname);
-
-//     if ($mysqpli->connect_error) {
-//         die("Connection failed: " . $mysqpli->connect_error);
-//     }
-
-//     return $mysqpli;
-// }
-
 function getMemory($memory_id){
+    $mysqli = databaseConnection();
+    
+    $sql = "SELECT * FROM memories  WHERE id =" . $memory_id;
+    $result = $mysqli->query($sql);
 
+    $data = array();
+    while ($row = $result->fetch_assoc()) {
+        $data[] = $row;
+    }
+
+    // header('Content-Type: application/json; charset=utf-8');
+    // return json_encode($data);
+
+    return $data;
 }
