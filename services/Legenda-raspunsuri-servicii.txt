@@ -1,9 +1,9 @@
 pt serviciile care trimit MIME type-ul application/json:
 
-in caz de esec si de succes: array("message" => <raspunsul serviciului>);
+    in caz de esec si de succes: array("message" => <raspunsul serviciului>);
 
 pt serviciile care trimit MIME type-ul application/xml
 
-in caz de esec: <message>Bad request</message>
-in caz de succes: raspunsul serviciului este deja in format xml
-                    (functia returneaza un $xmlContent = $dom->saveXML();)
+    in caz de esec: <message>Bad request</message>
+    in caz de succes: raspunsul serviciului este deja in format xml
+                        (functia returneaza un $xmlContent = $dom->saveXML();)

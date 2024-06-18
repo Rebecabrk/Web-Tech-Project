@@ -67,16 +67,10 @@
                     <div id="recentEntries">
                         <?php foreach ($allMemories as $item): ?>
                             <div class="entry">
-                                <!-- <a
-                                    href="TextEditor.php?pattern=<?= htmlspecialchars($item['pattern']) ?>&memoryId=<?= htmlspecialchars($item['id']) ?>">
+                                <button onclick="callTextEditorService(<?= $item['id'] ?>, '<?= $item['pattern'] ?>');">
                                     <div class="entry_title"><?= htmlspecialchars($item['title']) ?></div>
-                                    <div class="entry_content"><?= htmlspecialchars(substr($item['text'], 0, 70)) ?>...
-                                    </div>
-                                </a> -->
-
-                                <button onclick="callTextEditorService(<?= $item['id']?>, '<?=$item['pattern'] ?>');">
-                                    <div class="entry_title"><?= htmlspecialchars($item['title']) ?></div>
-                                    <div class="entry_content"><?= htmlspecialchars(substr($item['text'], 0, 70)) ?>...
+                                    <div class="entry_content">
+                                        <?= mb_strimwidth(strip_tags(htmlspecialchars_decode($item['text'])), 0, 70) . '...' ?>
                                     </div>
                                 </button>
                             </div>

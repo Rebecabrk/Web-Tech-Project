@@ -120,88 +120,36 @@ document.getElementById('doneButton').addEventListener('click', function () {
                     }
                 })
                 .catch(err => console.error('An error occurred:', err));
-
-
-            // var form = document.createElement('form');
-            // form.method = 'POST';
-            // form.action = '../model/TextEditor_model.php?function=insertMemory';
-
-            // var input_text = document.createElement('input');
-            // input_text.type = 'hidden';
-            // input_text.name = 'text';
-            // input_text.value = content.innerHTML;
-
-            // var input_title = document.createElement('input');
-            // input_title.type = 'hidden';
-            // input_title.name = 'title';
-            // input_title.value = filename.value;
-
-            // var input_pattern = document.createElement('input');
-            // input_pattern.type = 'hidden';
-            // input_pattern.name = 'pattern';
-            // input_pattern.value = backgroundPattern;
-
-            // var input_core_memory = document.createElement('input');
-            // input_core_memory.type = 'hidden';
-            // input_core_memory.name = 'isCoreMemory';
-            // input_core_memory.value = Number(isCoreMemory.checked);
-
-            // form.appendChild(input_title);
-            // form.appendChild(input_text);
-            // form.appendChild(input_pattern);
-            // form.appendChild(input_core_memory);
-            // document.body.appendChild(form);
-
-            // form.submit();
         } else {
             //we update/alter a memory
 
-            // fetch('http://localhost/Web-Tech-Project/services/TextEditor/memories' + id_memory, {
-            //     method: 'PATCH',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify({
-            //         updated_text: content.innerHTML,
-            //         updated_is_core_memory: Number(isCoreMemory.checked)
-            //     })
-            // })
-            // .then(response => {
-            //     if (!response.ok) {
-            //         throw new Error('Network response was not ok');
-            //     }
-            //     return response.json();
-            // })
-            // .then(data => {
-            //     if(data.message == "Success"){
-            //         console.log('Patch successful', data);
-            //         window.location.href = '../../app/controller/Journal.php';
-            //     }
-            // })
-            // .catch(error => {
-            //     console.error('There has been a problem with your fetch operation:', error);
-            // });
-            
+            let data = {
+                updated_text: content.innerHTML,
+                updated_is_core_memory: Number(isCoreMemory.checked)
+            };
 
-            var form = document.createElement('form');
-            form.method = 'POST';
-            form.action = '../model/TextEditor_model.php?function=alterMemory&memoryId=' + id_memory;
-
-            var input_text = document.createElement('input');
-            input_text.type = 'hidden';
-            input_text.name = 'text';
-            input_text.value = content.innerHTML;
-
-            var input_core_memory = document.createElement('input');
-            input_core_memory.type = 'hidden';
-            input_core_memory.name = 'isCoreMemory';
-            input_core_memory.value = Number(isCoreMemory.checked);
-
-            form.appendChild(input_text);
-            form.appendChild(input_core_memory);
-            document.body.appendChild(form);
-
-            form.submit();
+            fetch('http://localhost/Web-Tech-Project/services/TextEditor/memories/' + id_memory, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.message == "Success") {
+                        console.log('Patch successful', data);
+                        window.location.href = '../../app/controller/Journal.php';
+                    }
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
         }
     } else {
         alert("Please give a title to your thoughts.");
@@ -211,21 +159,6 @@ document.getElementById('doneButton').addEventListener('click', function () {
 document.getElementById('deleteButton').addEventListener('click', function () {
     var answer = confirm("Are you sure you want to delete this memory? This action cannot be undone.");
     if (answer == true) {
-
-        // fetch('../model/TextEditor_model.php?function=deleteMemory&memoryId=' + id_memory)
-        //     .then(response => {
-        //         if (response.status === 200) {
-        //             return response.text();
-        //         } else {
-        //             throw new Error("Empty response or non-200 status");
-        //         }
-        //     })
-        //     .then(data => {
-        //         console.log('Received data:', data);
-        //         window.location.href = 'Journal.php';
-        //     })
-        //     .catch(error => console.error('Error:', error));
-
         fetch('http://localhost/Web-Tech-Project/services/TextEditor/memories/' + id_memory, {
             method: 'DELETE',
             headers: {
@@ -253,19 +186,34 @@ document.getElementById('deleteButton').addEventListener('click', function () {
 
 function isMemory() {
 
-    if (id_memory != null)
-        fetch('../model/TextEditor_model.php?function=isMemory&memoryId=' + id_memory)
-            .then(response => response.json())
+    if (id_memory != null) {
+        let url = 'http://localhost/Web-Tech-Project/services/TextEditor/memories/' + id_memory;
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
             .then(data => {
+                console.log(data);
                 console.log('Received data:', data);
-                content.innerHTML = data.text;
-                filename.value = data.title;
+                content.innerHTML = data.message[0].text;
+                filename.value = data.message[0].title;
                 filename.disabled = true;
-                if (data.isCoreMemory == 1) {
+                if (data.message[0].isCoreMemory == 1) {
                     isCoreMemory.checked = true;
                 }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
+    }
 }
 
 const inputMultimedia = document.getElementById("input-file");
