@@ -1,0 +1,50 @@
+FOR TIMELINE GENERATION
+
+!!!!! trebuie adaugat un element photo(s) la generarea xml care are ca valoare acel url unic al pozei.....
+
+//cod care ia in considerare imaginile
+<?php
+// Assuming $xml is a SimpleXMLElement object that you've already loaded with your API response
+foreach ($xml->children() as $element) {
+    echo '<section class="timeline">';
+    echo '    <div class="timeline-item">';
+    echo '        <div class="timeline-img"></div>';
+
+    // Check if the 'photos' attribute is not null
+    if (!empty($element->attributes()->photos)) {
+        echo '        <div class="timeline-content timeline-card">';
+        echo '            <div class="timeline-img-header img1">';
+        echo '                <h2>' . htmlspecialchars($element->title) . '</h2>';
+        echo '            </div>';
+    } else {
+        echo '        <div class="timeline-content">';
+        echo '            <h2>' . htmlspecialchars($element->title) . '</h2>';
+    }
+
+    echo '            <div class="date">' . htmlspecialchars($element->date) . '</div>';
+    echo '            <p>' . htmlspecialchars($element->description) . '</p>';
+    echo '            <a href="' . htmlspecialchars($element->link) . '">More</a>';
+    echo '        </div>';
+    echo '    </div>';
+    echo '</section>';
+}
+?>
+
+
+//cod care nu ia in considerare imaginile 
+<?php
+// Assuming $xml is a SimpleXMLElement object that you've already loaded with your API response
+foreach ($xml->children() as $element) {
+    echo '<section class="timeline">';
+    echo '    <div class="timeline-item">';
+    echo '        <div class="timeline-img"></div>';
+    echo '        <div class="timeline-content">';
+    echo '            <h2>' . htmlspecialchars($element->title) . '</h2>';
+    echo '            <div class="date">' . htmlspecialchars($element->date) . '</div>';
+    echo '            <p>' . htmlspecialchars($element->description) . '</p>';
+    echo '            <a href="' . htmlspecialchars($element->link) . '">More</a>';
+    echo '        </div>';
+    echo '    </div>';
+    echo '</section>';
+}
+?>
