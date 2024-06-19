@@ -23,7 +23,6 @@ function getXML($user_id){
     }
 
     curl_close($ch);
-    $xml = json_decode($response, true);
 
-    return $xml;
+    return $response;
 }

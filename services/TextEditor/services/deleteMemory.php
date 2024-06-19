@@ -1,9 +1,22 @@
 <?php
 
-function deleteMemory($memory_id){
+function deleteMemory($memory_id) {
+    // Assuming you have a valid database connection established
     $mysqli = databaseConnection();
-    $sql = "DELETE FROM memories WHERE id = " . $memory_id;
-    $mysqli->query($sql);
+
+    // Prepare the DELETE query for memories table
+    $sqlMemories = "DELETE FROM memories WHERE id = ?";
+    $stmtMemories = $mysqli->prepare($sqlMemories);
+    $stmtMemories->bind_param("i", $memory_id);
+    $stmtMemories->execute();
+    $stmtMemories->close();
+
+    // Prepare the DELETE query for images_paths table
+    $sqlImages = "DELETE FROM images_paths WHERE memory_id = ?";
+    $stmtImages = $mysqli->prepare($sqlImages);
+    $stmtImages->bind_param("i", $memory_id);
+    $stmtImages->execute();
+    $stmtImages->close();
 
     return "Success";
 }

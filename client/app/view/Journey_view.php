@@ -15,8 +15,37 @@
         <button class="fixed-button" onclick="postXMLRequestForExport();">Export Data</button>
         <div class="container padding">
             <h1>Your family's timeline</h1>
+            <?php if ($xml !== false) { ?>
             <section class="timeline">
-                <div class="timeline-item">
+               
+                    <?php foreach ($xml->children() as $element): ?>
+                        <section class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-img"></div>
+                                <?php if (!empty($element->attributes()->photos)): ?>
+                                    <div class="timeline-content timeline-card">
+                                        <div class="timeline-img-header">
+                                            <h2><?= htmlspecialchars($element->title) ?></h2>
+                                            <img src="<?= htmlspecialchars($element->photo) ?>" class="image"
+                                                alt="Image description" />
+                                        </div>
+                                    <?php else: ?>
+                                        <div class="timeline-content">
+                                            <h2><?= htmlspecialchars($element->title) ?></h2>
+                                        <?php endif; ?>
+                                        <div class="date"><?= htmlspecialchars($element->date) ?></div>
+                                        <p><?= htmlspecialchars($element->description) ?></p>
+                                        <a href="<?= htmlspecialchars($element->link) ?>">More</a>
+                                    </div>
+                                </div>
+                        </section>
+                    <?php endforeach; ?>
+                <?php } else {?>
+                    <div class="banner-no-memories">No core memories yet. Go to <a href="Journal.php">Journal</a> to add new memories now!<br> Don't forget to check the core memory checkbox.</div>
+                    <?php }?>
+
+
+                <!-- <div class="timeline-item">
                     <div class="timeline-img"></div>
                     <div class="timeline-content">
                         <h2>The First Word</h2>
@@ -30,6 +59,7 @@
                     <div class="timeline-img"></div>
                     <div class="timeline-content timeline-card">
                         <div class="timeline-img-header img1">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/640px-Smiley.svg.png"/>
                             <h2>The First Steps</h2>
                         </div>
                         <div class="date">13 APRIL 2024</div>
@@ -121,7 +151,7 @@
                         <p>We had a great time!</p>
                         <a>More</a>
                     </div>
-                </div>
+                </div> -->
             </section>
         </div>
     </div>

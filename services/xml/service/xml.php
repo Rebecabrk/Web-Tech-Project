@@ -18,12 +18,13 @@ function databaseConnection()
 
 function xml($user_id)
 {
-    $mysqli = databaseConnection();  
+    $mysqli = databaseConnection();
 
-    $stmt = $mysqli->prepare("SELECT * FROM memories WHERE user_id = ? AND isCoreMemory = true");
-    $stmt->bind_param("s", $user_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $stmt1 = $mysqli->prepare("SELECT * FROM memories WHERE user_id = ? AND isCoreMemory = true");
+    $stmt1->bind_param("s", $user_id);
+    $stmt1->execute();
+    $result1 = $stmt1->get_result();
+    $stmt1->close();
 
     $dom = new DOMDocument('1.0', 'UTF-8');
     $dom->formatOutput = true;
@@ -33,7 +34,7 @@ function xml($user_id)
 
     $ok = false;
 
-    while ($row = $result->fetch_assoc()) {
+    while ($row = $result1->fetch_assoc()) {
         $ok = true;
         $memory = $dom->createElement('memory');
         $memory->appendChild($dom->createElement('id', $row['id']));
@@ -43,6 +44,17 @@ function xml($user_id)
         $memory->appendChild($dom->createElement('title', $row['title']));
         $memory->appendChild($dom->createElement('text', $row['text']));
         $memory->appendChild($dom->createElement('pattern', $row['pattern']));
+
+        $stmt2 = $mysqli->prepare("SELECT * FROM images_paths WHERE memory_id = ? LIMIT 1");
+        $stmt2->bind_param("s", $row['id']);
+        $stmt2->execute();
+        $result2 = $stmt2->get_result();
+
+        if ($photo = $result2->fetch_assoc()) {
+            $memory->appendChild($dom->createElement('photo', $photo['path']));
+        } else {
+            $memory->appendChild($dom->createElement('photo', "empty"));
+        }
         $root->appendChild($memory);
     }
 
@@ -50,12 +62,11 @@ function xml($user_id)
         $error = $dom->createElement('error', 'no memories');
         $root->appendChild($error);
     }
-    $stmt->close();
 
     // Get the XML content as a string
     $xmlContent = $dom->saveXML();
 
-    $filePath = 'file.xml'; 
+    $filePath = 'file.xml';
     file_put_contents($filePath, $xmlContent);
 
     return $xmlContent;

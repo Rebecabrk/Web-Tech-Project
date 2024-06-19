@@ -9,17 +9,17 @@ foreach ($xml->children() as $element) {
     echo '<section class="timeline">';
     echo '    <div class="timeline-item">';
     echo '        <div class="timeline-img"></div>';
+if (!empty($element->attributes()->photos)) {
+    echo '<div class="timeline-content timeline-card">';
+    echo '    <div class="timeline-img-header">';
+    echo '        <h2>' . htmlspecialchars($element->title) . '</h2>';
+    echo '            <img src="' . htmlspecialchars($element->photo) . '" class="image" alt="Image description" />';
+    echo '    </div>';
+} else {
+    echo '<div class="timeline-content">';
+    echo '    <h2>' . htmlspecialchars($element->title) . '</h2>';
+}
 
-    // Check if the 'photos' attribute is not null
-    if (!empty($element->attributes()->photos)) {
-        echo '        <div class="timeline-content timeline-card">';
-        echo '            <div class="timeline-img-header img1">';
-        echo '                <h2>' . htmlspecialchars($element->title) . '</h2>';
-        echo '            </div>';
-    } else {
-        echo '        <div class="timeline-content">';
-        echo '            <h2>' . htmlspecialchars($element->title) . '</h2>';
-    }
 
     echo '            <div class="date">' . htmlspecialchars($element->date) . '</div>';
     echo '            <p>' . htmlspecialchars($element->description) . '</p>';
@@ -40,8 +40,8 @@ foreach ($xml->children() as $element) {
     echo '        <div class="timeline-img"></div>';
     echo '        <div class="timeline-content">';
     echo '            <h2>' . htmlspecialchars($element->title) . '</h2>';
-    echo '            <div class="date">' . htmlspecialchars($element->date) . '</div>';
-    echo '            <p>' . htmlspecialchars($element->description) . '</p>';
+    echo '            <div class="date">' . htmlspecialchars($element->creation_date) . '</div>';
+    echo '            <p>' . mb_strimwidth(htmlspecialchars($element->text), 0, 70) . '...' . '</p>';
     echo '            <a href="' . htmlspecialchars($element->link) . '">More</a>';
     echo '        </div>';
     echo '    </div>';
