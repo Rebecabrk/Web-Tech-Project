@@ -14,38 +14,45 @@
     <div class="pages" id="second_screen">
         <button class="fixed-button" onclick="postXMLRequestForExport();">Export Data</button>
         <div class="container padding">
-            <h1>Your family's timeline</h1>
             <?php if ($xml !== false) { ?>
-            <section class="timeline">
-               
+                <h1>Your family's timeline</h1>
+                <section class="timeline">
                     <?php foreach ($xml->children() as $element): ?>
-                        <section class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-img"></div>
-                                <?php if (!empty($element->attributes()->photos)): ?>
-                                    <div class="timeline-content timeline-card">
-                                        <div class="timeline-img-header">
-                                            <h2><?= htmlspecialchars($element->title) ?></h2>
-                                            <img src="<?= htmlspecialchars($element->photo) ?>" class="image"
-                                                alt="Image description" />
-                                        </div>
-                                    <?php else: ?>
-                                        <div class="timeline-content">
-                                            <h2><?= htmlspecialchars($element->title) ?></h2>
-                                        <?php endif; ?>
-                                        <div class="date"><?= htmlspecialchars($element->date) ?></div>
-                                        <p><?= htmlspecialchars($element->description) ?></p>
-                                        <a href="<?= htmlspecialchars($element->link) ?>">More</a>
+                        <div class="timeline-item">
+                            <div class="timeline-img"></div>
+                            <?php if (!empty($element->attributes()->photos)): ?>
+                                <div class="timeline-content timeline-card">
+                                    <div class="timeline-img-header">
+                                        <h2><?= htmlspecialchars($element->title) ?></h2>
+                                        <img src="<?= htmlspecialchars($element->photo) ?>" class="image" alt="Image description" />
                                     </div>
-                                </div>
-                        </section>
-                    <?php endforeach; ?>
-                <?php } else {?>
-                    <div class="banner-no-memories">No core memories yet. Go to <a href="Journal.php">Journal</a> to add new memories now!<br> Don't forget to check the core memory checkbox.</div>
-                    <?php }?>
+                                    <div class="date"><?= htmlspecialchars($element->creation_date) ?></div>
+                                    <p><?= htmlspecialchars($element->description) ?></p>
+                                    <a href="<?= htmlspecialchars($element->link) ?>">More</a>
+                                <?php else: ?>
+                                    <div class="timeline-content">
+                                        <h2><?= htmlspecialchars($element->title) ?></h2>
+                                        <div class="date"><?= htmlspecialchars($element->creation_date) ?></div>
+                                        <p><?= htmlspecialchars( mb_strimwidth($element->text, 0, 70) ) . '...'?></p>
+                                        <a>More</a>
+                                        <!-- onclick="callTextEditorService(<?= $element->id ?>, '<?= $element->pattern ?>');" -->
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php } else { ?>
+                        <div class="no-memories">
+                            <h1>Your family's timeline</h1>
+                            <div class="banner-no-memories">
+                                No core memories yet. Go to <a href="Journal.php">Journal</a> to add
+                                new memories now!<br> Don't forget to check the core memory checkbox.
+                            </div>
+                        </div>
+                        
+                    <?php } ?>
 
 
-                <!-- <div class="timeline-item">
+                    <!-- <div class="timeline-item">
                     <div class="timeline-img"></div>
                     <div class="timeline-content">
                         <h2>The First Word</h2>
@@ -152,7 +159,9 @@
                         <a>More</a>
                     </div>
                 </div> -->
-            </section>
+                    <?php if ($xml !== false) { ?>
+                </section>
+            <?php } ?>
         </div>
     </div>
 </body>

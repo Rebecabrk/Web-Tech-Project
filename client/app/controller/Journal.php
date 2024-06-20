@@ -8,7 +8,7 @@ require ('../model/Journal_model.php');
 // $data = getMemories();
 // $allMemories = json_decode($students, true);
 
-$allMemories = getMemories();
+$allMemories = getMemories($_COOKIE['In_God_We_Trust']);
 
 include ("../view/Journal_view.php");
 

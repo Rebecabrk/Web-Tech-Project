@@ -20,7 +20,7 @@ function insertMemory($user_id, $title, $text, $pattern, $isCoreMemory)
 {
     $mysqli = databaseConnection();
 
-    $data = date('Y-m-d H:i:s');
+    $data = date('Y-m-d');
 
     $sql = "INSERT INTO memories (user_id, creation_date, title, text, pattern, isCoreMemory) VALUES (?,?,?,?,?, ?)"; //we insert the photos as well
     $stmt = $mysqli->prepare($sql);
