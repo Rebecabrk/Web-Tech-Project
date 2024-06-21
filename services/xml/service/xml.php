@@ -20,7 +20,7 @@ function xml($user_id)
 {
     $mysqli = databaseConnection();
 
-    $stmt1 = $mysqli->prepare("SELECT * FROM memories WHERE user_id = ? AND isCoreMemory = true");
+    $stmt1 = $mysqli->prepare("SELECT * FROM memories WHERE user_id = ? AND isCoreMemory = true ORDER BY creation_date DESC");
     $stmt1->bind_param("s", $user_id);
     $stmt1->execute();
     $result1 = $stmt1->get_result();

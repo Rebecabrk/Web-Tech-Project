@@ -8,7 +8,7 @@
             echo $backgroundInformation[1];
         ?>;
     }
-    </style
+    </style>
     <meta charset="utf-8">
     <title>Journal Page</title>
     <link href="../../public/css/TextEditor.css" rel="stylesheet">
@@ -21,17 +21,7 @@
 </head>
 
 <body onload="isMemory();">
-    <!-- <div class="journal_container">
-        <form action="../model/TextEditor_model.php" method="POST">
-            <div class="journal_title">
-                <input type="text" id="title" name="title" placeholder="Your Title" />
-            </div>
-            <div class="journal_text">
-                <textarea type="text" id="text" name="text" rows="5" cols="40" placeholder="Your Thoughts"></textarea>
-            </div>
-        </form>
-    </div> -->
-    <div clasjournal_container_2">
+    <div class="journal_container_2">
         <div class="toolbar">
             <div class="entries_buttons">
                 <button id="doneButton"><i class='bx bx-check'></i></button>

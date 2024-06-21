@@ -220,39 +220,39 @@ function isMemory() {
 
 const inputMultimedia = document.getElementById("input-file");
 inputMultimedia.onchange = function () {
-    // var picture = document.createElement('img');
-    // picture.src = URL.createObjectURL(inputMultimedia.files[0]);
-    // content.appendChild(picture);
     let file = inputMultimedia.files[0];
-    let img = new Image();
-    img.onload = function () {
-        let canvas = document.createElement('canvas');
-        let ctx = canvas.getContext('2d');
+    let fileType = file.type.split('/')[0];
 
-        // Set the desired width and calculate the height to maintain aspect ratio
-        let width = 500;
-        let scaleFactor = width / img.width;
-        let height = img.height * scaleFactor;
+    if (fileType === 'image') {
+        let img = new Image();
+        img.onload = function () {
+            let canvas = document.createElement('canvas');
+            let ctx = canvas.getContext('2d');
 
-        // Set canvas dimensions
-        canvas.width = width;
-        canvas.height = height;
+            let width = 500;
+            let scaleFactor = width / img.width;
+            let height = img.height * scaleFactor;
 
-        // Draw the scaled image on the canvas
-        ctx.drawImage(img, 0, 0, width, height);
+            canvas.width = width;
+            canvas.height = height;
+            ctx.drawImage(img, 0, 0, width, height);
 
-        // Create a new image element
-        let picture = document.createElement('img');
+            let picture = document.createElement('img');
+            picture.src = canvas.toDataURL();
 
-        // Set the source of the image element to the data URL of the canvas
-        picture.src = canvas.toDataURL();
-
-        // Append the new image element to the content
-        content.appendChild(picture);
+            content.appendChild(picture);
+            console.log(content);
+        };
+        img.src = URL.createObjectURL(file);
+    } else if (fileType === 'video') {
+        let video = document.createElement('video');
+        video.controls = true;
+        video.width = 500;
+        video.src = URL.createObjectURL(file);
+        content.appendChild(video);
         console.log(content);
-    };
-
-    // Start loading the image
-    img.src = URL.createObjectURL(file);
-}
+    } else {
+        console.log("Unsupported file type");
+    }
+};
 
