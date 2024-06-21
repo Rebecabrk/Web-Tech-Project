@@ -20,25 +20,27 @@
                     <?php foreach ($xml->children() as $element): ?>
                         <div class="timeline-item">
                             <div class="timeline-img"></div>
-                            <?php if (!empty($element->attributes()->photos)): ?>
+                            <?php if ($element->photo != "empty"): ?>
                                 <div class="timeline-content timeline-card">
                                     <div class="timeline-img-header">
                                         <h2><?= htmlspecialchars($element->title) ?></h2>
-                                        <img src="<?= htmlspecialchars($element->photo) ?>" class="image" alt="Image description" />
+                                        <img class="image" src="<?= htmlspecialchars($element->photo) ?>"  alt="Image description" />
                                     </div>
                                     <div class="date"><?= htmlspecialchars($element->creation_date) ?></div>
                                     <p><?= htmlspecialchars($element->description) ?></p>
                                     <a href="<?= htmlspecialchars($element->link) ?>">More</a>
+                                </div>
                                 <?php else: ?>
                                     <div class="timeline-content">
                                         <h2><?= htmlspecialchars($element->title) ?></h2>
                                         <div class="date"><?= htmlspecialchars($element->creation_date) ?></div>
-                                        <p><?= htmlspecialchars( mb_strimwidth($element->text, 0, 70) ) . '...'?></p>
+                                        <p><?= htmlspecialchars( mb_strimwidth(strip_tags($element->text), 0, 70) ) . '...'?></p>
                                         <a>More</a>
                                         <!-- onclick="callTextEditorService(<?= $element->id ?>, '<?= $element->pattern ?>');" -->
                                     </div>
+                                    
                                 <?php endif; ?>
-                            </div>
+                                </div>
                         <?php endforeach; ?>
                     <?php } else { ?>
                         <div class="no-memories">

@@ -94,7 +94,6 @@
                 <button onclick="formatDoc('insertUnorderedList')"><i class='bx bx-list-ul' ></i></button>
                 <button onclick="addLink()"><i class='bx bx-link' ></i></button>
                 <button onclick="formatDoc('unlink')"><i class='bx bx-unlink' ></i></button>
-                <button id="show-code" data-active="false">&lt;/&gt;</button>
                 <label for="input-file">
                  <i class='bx bx-upload'></i>
                 </label>   

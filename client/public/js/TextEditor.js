@@ -29,21 +29,21 @@ content.addEventListener('mouseenter', function () {
 })
 
 /* function responsible with the last button from toolbar (showCode) */
-const showCode = document.getElementById('show-code');
-let active = false;
-showCode.addEventListener('click', function () {
-    showCode.dataset.active = !active;
-    active = !active;
+// const showCode = document.getElementById('show-code');
+// let active = false;
+// showCode.addEventListener('click', function () {
+//     showCode.dataset.active = !active;
+//     active = !active;
 
-    if (active) {
-        content.textContent = content.innerHTML;
-        content.setAttribute('contenteditable', false);
-        console.log(content.textContent);
-    } else {
-        content.innerHTML = content.textContent;
-        content.setAttribute('contenteditable', true);
-    }
-})
+//     if (active) {
+//         // content.textContent = content.innerHTML;
+//         // content.setAttribute('contenteditable', false);
+//         console.log(content.innerHTML);
+//     } else {
+//         content.innerHTML = content.textContent;
+//         content.setAttribute('contenteditable', true);
+//     }
+// })
 
 /* function responsible with downloading the text (txt/pdf) */
 const filename = document.getElementById('filename');
@@ -93,6 +93,8 @@ document.getElementById('doneButton').addEventListener('click', function () {
 
             let cookie_user_id = getCookie('In_God_We_Trust');
             if (cookie_user_id == null) { alert('Error at getting user_id from cookie...') }
+
+            console.log(content.innerHTML);
 
             let data = {
                 user_id: cookie_user_id,
@@ -247,6 +249,7 @@ inputMultimedia.onchange = function () {
 
         // Append the new image element to the content
         content.appendChild(picture);
+        console.log(content);
     };
 
     // Start loading the image

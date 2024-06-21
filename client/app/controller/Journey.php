@@ -6,10 +6,11 @@ if(!isset($_COOKIE['In_God_We_Trust']))
 require('../model/Journey_model.php');
 
 $xmlString = getXML($_COOKIE['In_God_We_Trust']);
-$xml = simplexml_load_string($xmlString);
+$cleanedContent = str_replace('&nbsp;', ' ', $xmlString);
+$xml = simplexml_load_string($cleanedContent);
 
 if ($xml === false) {
-    die('Failed to parse XML');
+    die('Failed to parse XML' . " " . $xmlString);
 }
 
 if(strpos($xmlString, "error") !== false){

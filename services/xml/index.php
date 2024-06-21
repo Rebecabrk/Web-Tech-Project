@@ -5,11 +5,13 @@ require_once 'service/xml.php';
 
 $url = isset($_GET['url']) ? $_GET['url'] : null;
 
-if ($url == 'xml-request') {
+if ($url != null) {
     $method = strtolower($_SERVER['REQUEST_METHOD']);
     switch ($method) {
-        case 'post':
-            echo xml($_POST['user_id']);
+        case 'get':
+            $segments = explode('/', $url);
+            $id = end($segments);
+            echo xml($id);
             break;
         default:
             http_response_code(405);

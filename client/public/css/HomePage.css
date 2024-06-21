@@ -51,6 +51,12 @@ h1 + p {
   justify-content: center;
 }
 
+#third_screen{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hello_msg{
   font-size: 50px;
   color: black;

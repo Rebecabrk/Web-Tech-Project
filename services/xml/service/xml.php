@@ -40,12 +40,12 @@ function xml($user_id)
         $memory->appendChild($dom->createElement('id', $row['id']));
         $memory->appendChild($dom->createElement('user_id', $row['user_id']));
         $memory->appendChild($dom->createElement('creation_date', $row['creation_date']));
-        $memory->appendChild($dom->createElement('last_modification', $row['last_modification']));
+        // $memory->appendChild($dom->createElement('last_modification', $row['last_modification']));
         $memory->appendChild($dom->createElement('title', $row['title']));
         $memory->appendChild($dom->createElement('text', $row['text']));
         $memory->appendChild($dom->createElement('pattern', $row['pattern']));
 
-        $stmt2 = $mysqli->prepare("SELECT * FROM images_paths WHERE memory_id = ? LIMIT 1");
+        $stmt2 = $mysqli->prepare("SELECT * FROM images_paths WHERE memory_id = ?");
         $stmt2->bind_param("s", $row['id']);
         $stmt2->execute();
         $result2 = $stmt2->get_result();
