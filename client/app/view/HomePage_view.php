@@ -15,7 +15,7 @@
             <div class="wrapper">
                 <div class="hello_msg">
                     <?php if ($connected_user) {?>
-                    <h3 class="tracking-in-expand">Hello <?= htmlspecialchars($user["last_name"]) ?></h3>
+                    <h3 class="tracking-in-expand">Hello <?= htmlspecialchars($user["first_name"]) ?></h3>
                     <?php if ($_COOKIE["Child_Picker"]==="nothing") {?>
                     <p class="tracking-in-expand"> Add Your Children
                         <button class="add-btn transparent" onClick="openPopup();">here</button>
@@ -25,9 +25,16 @@
                     <?php }?>
                     <?php }?>
                 </div>
+                <?php if ($_COOKIE["Child_Picker"]==="nothing") {?>
                 <h1 class="tracking-in-expand">
                     Your child's growth
                 </h1>
+                <?php } else {?>
+                    <h1 class="tracking-in-expand"> 
+                        <?= htmlspecialchars($child["first_name"]) ?>'s growth
+                    </h1>
+                    <?php }?>
+
                 <div class="buttons-container">
                     <?php if ($connected_user): ?>
                     <nav>
