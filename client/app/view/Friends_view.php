@@ -10,8 +10,10 @@
 
 <body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
     <div class="pages">
-
-        <div class="full_screen padding">
+        <button class="fixed-button" onclick="">Add profile card</button>
+        <h1>Track your child's friends and relationships!</h1>
+        
+        <!-- <div class="full_screen padding">
             <div class="todo-container">
                 <div class="header">
                     <h1>Here are your child's friends!</h1>
@@ -35,7 +37,7 @@
                     <p>Don't need any descrptions</p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </body>
 

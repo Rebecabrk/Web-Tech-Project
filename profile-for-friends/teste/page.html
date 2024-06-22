@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Card with Image Upload</title>
+<link rel="stylesheet" href="page.css">
+</head>
+<body>
+
+<div class="profile-card">
+    <div class="profile-picture">
+        <img id="profile-image" src="default.jpg" alt="Profile Picture">
+        <input type="file" id="upload-image" accept="image/*">
+    </div>
+    <div class="profile-info">
+        <h2>Edit Your Profile</h2>
+        <textarea id="profile-description" placeholder="Enter your description..."></textarea>
+        <button id="save-description">Save Description</button>
+    </div>
+</div>
+
+<script src="page.js"></script>
+</body>
+</html>

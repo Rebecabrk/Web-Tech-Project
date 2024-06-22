@@ -70,6 +70,7 @@ h1 {
   background-position: center;
   position: relative;
   transition: width 0.5s;
+  border: 2px solid #153448;
 }
 
 .img-box:nth-child(2) {
