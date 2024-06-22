@@ -87,13 +87,6 @@
             <p>Feel free to populate the calendar with precise data/tasks like medication/food/sleep/school schedules!</p>
             <?php include("../view/components/Dynamic_Event_Calendar/Dynamic_Event_Calendar.php"); ?>
 
-            <hr>
-
-            <h3>Psychosomatic Development</h3>
-            <div class="card-container">
-                <div class="big-card">
-                </div>
-            </div>
         </div>
     </div>
 </body>

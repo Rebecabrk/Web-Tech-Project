@@ -57,6 +57,19 @@
             <li>
                 <?php
                     if (isset($_COOKIE['In_God_We_Trust']))
+                        $URL = "Gallery.php";
+                    else
+                        $URL = "Login.php";
+                ?>
+                <a href="<?php echo $URL; ?>">
+                    <i class='bx bx-photo-album' ></i>
+                    <span class="links_name">The Gallery</span>
+                </a>
+                <span class="tooltip">The Gallery</span>
+            </li>
+            <li>
+                <?php
+                    if (isset($_COOKIE['In_God_We_Trust']))
                         $URL = "Journey.php";
                     else
                         $URL = "Login.php";
