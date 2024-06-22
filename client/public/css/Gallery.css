@@ -117,7 +117,7 @@ h3{
   height: 45px;
   border-radius: 20px;
   background-color: blanchedalmond;
-  color: gray;
+  color: #3C5B6F;
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
@@ -142,7 +142,7 @@ h3{
   padding: 20px;
   margin: 10px 15px;
   flex: 1;
-  background-color: grey;
+  background-color: #3C5B6F;
   justify-content: center;
   object-fit: contain;
 }

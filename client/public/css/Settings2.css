@@ -16,9 +16,8 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: blanchedalmond;
+  height: 100vh;
 }
 
 form{
@@ -52,7 +51,7 @@ h1 {
 }
 
 .submit-btn-email {
-  background-color: gray;
+  background-color: #3C5B6F;
   color: white;
   padding: 10px 20px;
   border: none;

@@ -12,6 +12,7 @@
 <body class="light-mode">
     <div class="pages">
         <div id="first_screen" class="full_screen">
+            <a href="./Login.php" class="fixed-button">Log In</a>
             <div class="wrapper">
                 <div class="hello_msg">
                     <?php if ($connected_user) {?>
@@ -132,9 +133,6 @@
             </div>
         </div>
     </div>
-
-    <a class="theme_btn_container" id="theme_btn"> LightMode </a>
-    <script src="../view/components/ThemeButton/ThemeButton.js"></script>
 </body>
 
 </html>

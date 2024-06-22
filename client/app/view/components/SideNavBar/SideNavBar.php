@@ -82,45 +82,6 @@
             </li>
             <li>
                 <?php
-                    if (isset($_COOKIE['In_God_We_Trust']))
-                        $URL = "Settings.php";
-                    else
-                        $URL = "Login.php";
-                ?>
-                <a href="<?php echo $URL; ?>">
-                    <i class="bx bx-cog"></i>
-                    <span class="links_name">Settings</span>
-                </a>
-                <span class="tooltip">Settings</span>
-            </li>
-            <li>
-                <?php
-                    if (isset($_COOKIE['In_God_We_Trust']))
-                        $URL = "About.php";
-                    else
-                        $URL = "Login.php";
-                ?>
-                <a href="<?php echo $URL; ?>">
-                    <i class='bx bx-smile'></i>
-                    <span class="links_name">About Us</span>
-                </a>
-                <span class="tooltip">About Us</span>
-            </li>
-            <li>
-                <?php
-                    if (isset($_COOKIE['In_God_We_Trust']))
-                        $URL = "Documentation.php";
-                    else
-                        $URL = "Login.php";
-                ?>
-                <a href="<?php echo $URL; ?>">
-                    <i class='bx bxs-file-doc'></i>
-                    <span class="links_name">Documentation</span>
-                </a>
-                <span class="tooltip">Documentation</span>
-            </li>
-            <li>
-                <?php
                     if (isset($_COOKIE['In_God_We_Trust'])) {
                         $URL = "HomePage.php";
 
@@ -152,6 +113,58 @@
                         <option value="add">Add a new one</option>
                     </select>
                 </span>
+            </li>
+            <li>
+                <?php
+                    if (isset($_COOKIE['In_God_We_Trust']))
+                        $URL = "Friends.php";
+                    else
+                        $URL = "Login.php";
+                ?>
+                <a href="<?php echo $URL; ?>">
+                    <i class='bx bx-group'></i>
+                    <span class="links_name">Friends</span>
+                </a>
+                <span class="tooltip">Friends</span>
+            </li>
+            <li>
+                <?php
+                    if (isset($_COOKIE['In_God_We_Trust']))
+                        $URL = "Settings.php";
+                    else
+                        $URL = "Login.php";
+                ?>
+                <a href="<?php echo $URL; ?>">
+                    <i class="bx bx-cog"></i>
+                    <span class="links_name">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+            <li>
+                <?php
+                    if (isset($_COOKIE['In_God_We_Trust']))
+                        $URL = "Documentation.php";
+                    else
+                        $URL = "Login.php";
+                ?>
+                <a href="<?php echo $URL; ?>">
+                    <i class='bx bxs-file-doc'></i>
+                    <span class="links_name">Documentation</span>
+                </a>
+                <span class="tooltip">Documentation</span>
+            </li>
+            <li>
+                <?php
+                    if (isset($_COOKIE['In_God_We_Trust']))
+                        $URL = "About.php";
+                    else
+                        $URL = "Login.php";
+                ?>
+                <a href="<?php echo $URL; ?>">
+                    <i class='bx bx-smile'></i>
+                    <span class="links_name">About Us</span>
+                </a>
+                <span class="tooltip">About Us</span>
             </li>
         </ul>
     </div>

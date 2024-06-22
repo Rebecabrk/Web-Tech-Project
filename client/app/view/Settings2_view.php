@@ -25,8 +25,8 @@
             $formBox = $info[2];
             echo $formBox; 
             ?>
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
+                        <button type="submit" class="submit-btn-email">Submit</button>
+                        </form>
     </div>
 </body>
 

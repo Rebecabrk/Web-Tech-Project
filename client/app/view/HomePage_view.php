@@ -183,9 +183,5 @@
             </div>
         </div>
     </div>
-
-    <a class="theme_btn_container" id="theme_btn"> LightMode </a>
-    <script src="../view/components/ThemeButton/ThemeButton.js"></script>
 </body>
-
 </html>

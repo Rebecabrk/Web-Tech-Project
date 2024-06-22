@@ -29,7 +29,7 @@ body {
   transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
-  background-color: grey;
+  background-color: #3C5B6F;
   border-radius: 10px;
   border: 2px solid blanchedalmond;
   z-index: 1;
@@ -51,7 +51,7 @@ body {
   height: 45px;
   border-radius: 20px;
   background-color: blanchedalmond;
-  color: gray;
+  color: #3C5B6F;
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
@@ -70,7 +70,7 @@ body {
   padding: 20px;
   margin: 10px 15px;
   flex: 1;
-  background-color: grey;
+  background-color: #3C5B6F;
   color: blanchedalmond;
 }
 

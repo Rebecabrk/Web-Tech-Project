@@ -63,7 +63,7 @@ body {
   flex-grow: 1;
   background: none;
   backdrop-filter: blur(20px);
-  border: 2px solid grey;
+  border: 2px solid #3C5B6F;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -100,7 +100,7 @@ body {
 i {
   font-size: 5rem;
   cursor: pointer;
-  color: grey;
+  color: #3C5B6F;
 }
 
 h1 {
@@ -171,7 +171,7 @@ input:checked + .slider:before {
 }
 
 .submit-btn-email {
-  background-color: gray;
+  background-color: #3C5B6F;
   color: white;
   padding: 10px 20px;
   border: none;

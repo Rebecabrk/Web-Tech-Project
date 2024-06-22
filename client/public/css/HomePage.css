@@ -395,25 +395,6 @@ li a span {
   filter: blur(20px); /* Adjust the blur level as needed */
 }
 
-.go_up_btn_container {
-  position: fixed;
-  bottom: 5%;
-  right: 1%;
-  border-radius: 50%;
-  padding: 10px;
-  background-color: #11101d;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  z-index: 99;
-  transition: all 0.5s ease;
-  transform: translateX(150%);
-}
-
-#go_up_btn.hidden_btn {
-  transform: translateX(-50%);
-}
 
 .theme_btn_container {
   position: fixed;
@@ -435,14 +416,8 @@ li a span {
   transform: translateX(-50%);
 }
 
-.padding {
-  display: flex;
-  flex-direction: column;
-  padding: 2% 0.5% 2% 5%;
-}
-
 .dark-mode {
-  background-color: gray;
+  background-color: #3C5B6F;
   color: blanchedalmond;
 }
 
@@ -455,7 +430,7 @@ li a span {
   display: flex;
   height: 45px;
   border-radius: 20px;
-  color: gray;
+  color: #3C5B6F;
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
@@ -493,7 +468,7 @@ a {
   padding: 10px 15px;
   margin: 10px 15px;
   transition: transform 0.5s;
-  background-color: gray;
+  background-color: #3C5B6F;
   color: blanchedalmond;
   overflow: auto;
 }
@@ -537,7 +512,7 @@ a {
   color: #333;
 }
 .todo-card {
-  background: grey;
+  background: #3C5B6F;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin: 20px 0;
@@ -559,9 +534,16 @@ a {
   line-height: 1.6;
 }
 
+
+.padding {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 2.5% 2% 7%;
+}
+
 @media screen and (max-width: 1600px) {
   .padding {
-    padding: 2% 0.5% 2% 5.4%;
+    padding: 2% 2.5% 2% 7.4%;
   }
 
   .row .card-container {
@@ -571,7 +553,7 @@ a {
 
 @media screen and (max-width: 1350px) {
   .padding {
-    padding: 2% 0.5% 2% 6%;
+    padding: 2% 2.5% 2% 8%;
   }
 
   .row {
@@ -583,7 +565,7 @@ a {
 
 @media screen and (max-width: 1150px) {
   .padding {
-    padding: 2% 0.5% 2% 8.4%;
+    padding: 2% 2.5% 2% 10.4%;
   }
 
   .row .card-container {
@@ -606,7 +588,7 @@ a {
 
 @media screen and (max-width: 1024px) {
   .padding {
-    padding: 2% 0.4% 2% 8.5%;
+    padding: 2% 1.4% 2% 9.5%;
   }
 
   .left-side {
@@ -638,7 +620,7 @@ a {
 
 @media screen and (max-width: 770px) {
   .padding {
-    padding: 2% 0.7% 2% 13%;
+    padding: 2% 1.7% 2% 14%;
   }
 
   h1 {

@@ -1,0 +1,26 @@
+.go_up_btn_container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #153448;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    transform: translateX(150%);
+  }
+  #go_up_btn:hover{
+    background-color: rgb(180, 178, 178);
+  }
+  #go_up_btn.hidden_btn {
+    transform: translateX(-50%);
+  }
+  

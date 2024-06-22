@@ -11,5 +11,4 @@ require ("../model/login/login.php");
 $is_invalid = login();
 
 include ("../view/Login_view.php");
-
 include ("../view\components\GoBackButton\GoBackButton.php");

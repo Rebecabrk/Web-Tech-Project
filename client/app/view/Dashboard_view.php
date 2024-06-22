@@ -66,7 +66,7 @@
                 ?>
                 <div class="big-card">
                     <div class="card-content">
-                        <h3> Diseares </h3>
+                        <h3> Diseases </h3>
                         <?php for($k=1; $k<=3; $k++) {?>
                         <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
                             echo $name;
