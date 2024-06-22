@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2024 at 04:30 PM
+-- Generation Time: Jun 22, 2024 at 11:28 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -35,15 +35,6 @@ CREATE TABLE `calendar_event_master` (
   `cid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Dumping data for table `calendar_event_master`
---
-
-INSERT INTO `calendar_event_master` (`event_id`, `event_name`, `event_start_date`, `event_end_date`, `cid`) VALUES
-(4, 'test1', '2024-05-24', '2024-05-26', 3),
-(5, 'test2', '2024-05-28', '2024-06-01', 6),
-(0, 'my birthday', '2024-06-12', '2024-06-13', 11);
-
 -- --------------------------------------------------------
 
 --
@@ -55,18 +46,9 @@ CREATE TABLE `children` (
   `first_name` varchar(225) NOT NULL,
   `email` varchar(255) NOT NULL,
   `uid` int(11) NOT NULL,
-  `birth_date` date NOT NULL
+  `birth_date` date NOT NULL,
+  `email_notification` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `children`
---
-
-INSERT INTO `children` (`cid`, `first_name`, `email`, `uid`, `birth_date`) VALUES
-(3, 'Gigel', 'Gigel@gmail.com', 1, '2004-04-01'),
-(6, 'Andro', 'Andro@gmail.com', 1, '2005-04-15'),
-(11, 'Dorel', 'dorel@gmail.com', 3, '2004-04-01'),
-(12, 'Bob', 'bob@arena.com', 1, '2025-01-01');
 
 -- --------------------------------------------------------
 
@@ -76,6 +58,7 @@ INSERT INTO `children` (`cid`, `first_name`, `email`, `uid`, `birth_date`) VALUE
 
 CREATE TABLE `images_paths` (
   `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `memory_id` int(11) DEFAULT NULL,
   `path` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -96,14 +79,6 @@ CREATE TABLE `medical_records` (
   `cid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `medical_records`
---
-
-INSERT INTO `medical_records` (`id`, `type`, `name`, `date`, `location`, `insertion_date`, `cid`) VALUES
-(27, 'Alergy', 'peanuts', '2012-12-01', '', '2024-05-07 13:13:10', 11),
-(28, 'Accident', 'car accident', '2003-02-25', 'there', '2024-05-07 19:03:29', 3);
-
 -- --------------------------------------------------------
 
 --
@@ -112,11 +87,11 @@ INSERT INTO `medical_records` (`id`, `type`, `name`, `date`, `location`, `insert
 
 CREATE TABLE `memories` (
   `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `creation_date` date NOT NULL,
   `last_modification` datetime DEFAULT NULL,
   `title` varchar(256) NOT NULL,
   `text` mediumtext DEFAULT NULL,
-  `user_id` int(11) NOT NULL,
   `pattern` varchar(255) NOT NULL,
   `isCoreMemory` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -132,20 +107,9 @@ CREATE TABLE `users` (
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(225) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password_hash` varchar(255) NOT NULL
+  `password_hash` varchar(255) NOT NULL,
+  `email_notification` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`uid`, `first_name`, `last_name`, `email`, `password_hash`) VALUES
-(1, 'Marius', 'Olaru', 'MJ@arena.com', '$2y$10$ol99TnrSi359yKq/FXcHhe/H6kQ7MmhBkyx/X/BSN7cnDnPHwSHUm'),
-(2, 'Bors', 'Zeama', 'bors.cu.zeama@acasa.com', '$2y$10$Vt/HoLB7VfDuZW8P601EnOvns.20wFY6NvbzCtFQXlF4kVrAOlcbC'),
-(3, 'Mamaia', 'Tataia', 'tataia@gmail.com', '$2y$10$AmTBAEg/u1fRTqKLFnUc6u0o3GuppGBDdylNDAvy5FEO0kd1fPip6'),
-(4, 'test', 'test', 'test@gmail.com', '$2y$10$NJJf89W/GIju/CVJ0ZlBgeiK2FsVHrNrEaEQdtSn1yZt1QBom.9F.'),
-(5, 'Rebeca', 'Rebeca', 'rebeca@gmail.com', '$2y$10$oslX1KAU0J4m8mCjfk5Ex.Nn/4fVR.MKwTVoeW.dkbjHzKUvdVVFK'),
-(6, 'Viorica ', 'C', 'viorica@gmail.com', '$2y$10$o6Mu2N6D/hKSRyzhY8SCI.eOUkkYgfY4EA7iaDFcC6ohWepSkkb/W');
 
 -- --------------------------------------------------------
 
@@ -155,6 +119,7 @@ INSERT INTO `users` (`uid`, `first_name`, `last_name`, `email`, `password_hash`)
 
 CREATE TABLE `videos_paths` (
   `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `memory_id` int(11) DEFAULT NULL,
   `path` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -162,6 +127,13 @@ CREATE TABLE `videos_paths` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `calendar_event_master`
+--
+ALTER TABLE `calendar_event_master`
+  ADD PRIMARY KEY (`event_id`),
+  ADD KEY `cid` (`cid`);
 
 --
 -- Indexes for table `children`
@@ -175,7 +147,8 @@ ALTER TABLE `children`
 --
 ALTER TABLE `images_paths`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `foreign key` (`memory_id`);
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `memory_id` (`memory_id`);
 
 --
 -- Indexes for table `medical_records`
@@ -203,51 +176,58 @@ ALTER TABLE `users`
 --
 ALTER TABLE `videos_paths`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `FK` (`memory_id`);
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `memory_id` (`memory_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+-- AUTO_INCREMENT for table `calendar_event_master`
+--
+ALTER TABLE `calendar_event_master`
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT for table `children`
 --
 ALTER TABLE `children`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `images_paths`
 --
 ALTER TABLE `images_paths`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `medical_records`
 --
 ALTER TABLE `medical_records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `memories`
 --
 ALTER TABLE `memories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `videos_paths`
---
-ALTER TABLE `videos_paths`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `calendar_event_master`
+--
+ALTER TABLE `calendar_event_master`
+  ADD CONSTRAINT `calendar_event_master_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `children` (`cid`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `children`
@@ -259,7 +239,9 @@ ALTER TABLE `children`
 -- Constraints for table `images_paths`
 --
 ALTER TABLE `images_paths`
-  ADD CONSTRAINT `foreign key` FOREIGN KEY (`memory_id`) REFERENCES `memories` (`id`) ON DELETE SET NULL ON UPDATE NO ACTION;
+  ADD CONSTRAINT `foreign key` FOREIGN KEY (`user_id`) REFERENCES `users` (`uid`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `images_paths_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`uid`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `images_paths_ibfk_2` FOREIGN KEY (`memory_id`) REFERENCES `memories` (`id`) ON DELETE SET NULL ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `medical_records`
@@ -277,7 +259,8 @@ ALTER TABLE `memories`
 -- Constraints for table `videos_paths`
 --
 ALTER TABLE `videos_paths`
-  ADD CONSTRAINT `FK` FOREIGN KEY (`memory_id`) REFERENCES `memories` (`id`) ON DELETE SET NULL ON UPDATE NO ACTION;
+  ADD CONSTRAINT `videos_paths_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`uid`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `videos_paths_ibfk_2` FOREIGN KEY (`memory_id`) REFERENCES `memories` (`id`) ON DELETE SET NULL ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

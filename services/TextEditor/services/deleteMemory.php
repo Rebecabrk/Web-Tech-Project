@@ -12,11 +12,13 @@ function deleteMemory($memory_id) {
     $stmtMemories->close();
 
     // Prepare the DELETE query for images_paths table
-    $sqlImages = "DELETE FROM images_paths WHERE memory_id = ?";
-    $stmtImages = $mysqli->prepare($sqlImages);
-    $stmtImages->bind_param("i", $memory_id);
-    $stmtImages->execute();
-    $stmtImages->close();
+    // $sqlImages = "DELETE FROM images_paths WHERE memory_id = ?";
+    // $stmtImages = $mysqli->prepare($sqlImages);
+    // $stmtImages->bind_param("i", $memory_id);
+    // $stmtImages->execute();
+    // $stmtImages->close();
+
+    //pastram pozele pentru gallery
 
     return "Success";
 }

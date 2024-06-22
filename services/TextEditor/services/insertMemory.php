@@ -44,9 +44,9 @@ function insertMemory($user_id, $title, $text, $pattern, $isCoreMemory)
 
     foreach ($srcs as $src) {
         $last_id = mysqli_insert_id($mysqli);
-        $sql = "INSERT INTO images_paths (memory_id, path) VALUES (?,?)";
+        $sql = "INSERT INTO images_paths (user_id, memory_id, path) VALUES (?,?,?)";
         $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param("ss", $last_id, $src);
+        $stmt->bind_param("sss", $user_id, $last_id, $src);
         try {
             $stmt->execute();
         } catch (Exception $e) {
