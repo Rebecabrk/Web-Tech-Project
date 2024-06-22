@@ -169,6 +169,12 @@ a{
     border-bottom-right-radius: 10px;
 }
 
+#content img{
+    object-fit: contain;
+    max-height: 500px;
+    max-width: 700px;
+}
+
 #show-code[data-active="true"]{
     background: #eee;
 }

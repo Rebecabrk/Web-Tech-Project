@@ -233,9 +233,9 @@ inputMultimedia.onchange = function () {
             let scaleFactor = width / img.width;
             let height = img.height * scaleFactor;
 
-            canvas.width = width;
-            canvas.height = height;
-            ctx.drawImage(img, 0, 0, width, height);
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0);
 
             let picture = document.createElement('img');
             picture.src = canvas.toDataURL();
