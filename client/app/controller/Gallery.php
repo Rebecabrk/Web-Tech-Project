@@ -11,4 +11,3 @@ include ("../view/Gallery_view.php");
 
 include ("../view/components/SideNavBar/SideNavBar.php");
 include ("../view\components\Dashborad_Popup\Dashborad_Popup.php");
-?>

@@ -12,41 +12,29 @@
 </head>
 
 <body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
-    <div class="pages" id="second_screen">
-        <div id="first_screen" class="padding">
-            <!-- <h3>All of your memories</h3>
-            <div class="card-container">
-                <div class="big-card">
-                </div>
-
-                <div class="big-card">
-                </div>
-
-                <div class="big-card">
-                </div>
-            </div> -->
-
-            <div class="card-container">
+    <div class="pages">
+        <div class="padding">
                 <?php
                 if (strpos($multimediaXML, "error") !== false) {
                     echo '<div class="no-memories">';
-                        echo '<h1>Your family\'s timeline</h1>';
+                        echo '<h1>Your family\'s gallery</h1>';
                         echo '<div class="banner-no-memories">';
-                        echo 'No photos yet. Go to <a href="Journal.php">Journal</a> to add';
+                        echo 'No photos yet. Go to <a href="Journal.php">Journal</a> to add ';
                         echo 'new memories with photos now!';
                         echo '</div>';
                     echo '</div>';
                 }
                 else {
+                echo '<div class="card-container">';
                 $xml = simplexml_load_string($multimediaXML);
                 foreach ($xml->children() as $element) {
                     echo '<div class="big-card">';
                     echo '<img src="' . $element->path . '" alt="Image description" />';
                     echo '</div>';
                 }
+                echo '</div>';
             }
                 ?>
-            </div>
         </div>
 </body>
 

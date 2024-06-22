@@ -10,25 +10,21 @@
   font-family: myFirstFont;
   margin: 0;
   padding: 0;
-  font-size: xx-large;
 }
 
 html,
 body {
   scroll-behavior: smooth;
   display: flex;
-  height: 100vh;
-  width: 100vw;
   position: relative;
+  background-color: blanchedalmond;
 }
 
 .pages {
-  height: 100vh;
-  width: 100vw;
   flex: 1;
   flex-direction: column;
+  display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 hr {
@@ -43,24 +39,24 @@ hr {
   margin: 20px 0;
 }
 
-#first_screen {
-  background-color: blanchedalmond;
-}
-
 h1,
 h3{
   display: flex;
   justify-content: center;
-  /* font-size: 2rem;  */
+  font-size: 3rem; 
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .card-container {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   margin: auto 0;
   transition: all 0.4s ease;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
 }
 
 .card-content {
@@ -136,15 +132,31 @@ h3{
 
 .big-card {
   display: flex;
-  height: 430px;
-  width: 100%;
+  height: 370px;
   border-radius: 20px;
   padding: 20px;
   margin: 10px 15px;
   flex: 1;
   background-color: #3C5B6F;
   justify-content: center;
-  object-fit: contain;
+  align-items: center;
+  
+  overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.big-card img{
+  width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+    height: 500px;
+}
+
+.big-card img:hover{
+  transform: scale(1.1);
 }
 
 .banner-no-memories {
