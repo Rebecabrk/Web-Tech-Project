@@ -14,7 +14,7 @@
     <div class="background">
         <div class="overlay">
             <div class="wrapper_form" id="max_height_signup">
-                <form action="../model/process/process-signup.php" method="POST">
+                <form method="POST">
                     <h2>Create Account</h2>
                     <hr>
                     <div class="column-container input-box">

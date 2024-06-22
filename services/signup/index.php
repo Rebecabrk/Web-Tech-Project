@@ -10,7 +10,7 @@ if ($url == 'accounts') {
     switch ($method) {
         case 'post':
                 echo json_encode(signup($_POST['first_name'], $_POST['last_name'],
-                                            $_POST['email']), $_POST['password']);
+                                            $_POST['email'], $_POST['password']));
             break;
         default:
             http_response_code(405);
