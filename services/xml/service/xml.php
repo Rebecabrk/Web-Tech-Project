@@ -66,8 +66,8 @@ function xml($user_id)
     // Get the XML content as a string
     $xmlContent = $dom->saveXML();
 
-    $filePath = 'file.xml';
-    file_put_contents($filePath, $xmlContent);
+    // $filePath = 'file.xml';
+    // file_put_contents($filePath, $xmlContent);
 
     return $xmlContent;
 }
