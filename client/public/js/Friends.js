@@ -15,10 +15,22 @@ function getCookie(name) {
 document.addEventListener('DOMContentLoaded', function () {
     const uploadInput = document.getElementById('upload-image');
     const profileImage = document.getElementById('profile-image');
-    const descriptionTextarea = document.getElementById('profile-description');
+    const descriptionTextarea = document.getElementById('content');
     const saveButton = document.getElementById('save-description');
+    const addCardButton = document.getElementById("addCard");
+    const profileCardsDiv = document.getElementById("profile-cards");
+    const profileCardTemplate = document.getElementById("profileCardTemplate").content;
+    const name = document.getElementById("content-name");
 
-    // Load profile picture from file input
+    function scrollToBottom() {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth' // This makes the scroll smooth
+        });
+    }
+    
+
+
     uploadInput.addEventListener('change', function () {
         const file = this.files[0];
         if (file) {
@@ -31,14 +43,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     let cookie_user_id = getCookie('In_God_We_Trust');
-
+    
     saveButton.addEventListener('click', function () {
         let data = {
             user_id: cookie_user_id,
-            // name: name,                //!!!!!!!de adaugat nume
+            name: name.innerHTML,                //!!!!!!!de adaugat nume
             photo_path: profileImage.src, //!!!!!!!de verificat acest src
-            description: descriptionTextarea
+            description: descriptionTextarea.innerHTML
         };
+
+        console.log(data);
 
         fetch('http://localhost/Web-Tech-Project/services/ProfileFriends/friends', {
             method: 'POST',
@@ -51,12 +65,19 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(data => {
                 if (data.message == "Success") {
                     console.log('TextEditor insert API returned Success');
-                    window.location.href = '../../app/controller/Journal.php';
+                    alert('Friend Profile successfully created!');
                 } else {
                     console.log('API did not return Success');
                     alert('Something went wrong');
                 }
             })
             .catch(err => console.error('An error occurred:', err));
+    });
+
+
+    addCardButton.addEventListener('click', function() {
+        const newProfileCard = profileCardTemplate.cloneNode(true);
+        profileCardsDiv.appendChild(newProfileCard);
+        scrollToBottom();
     });
 });
