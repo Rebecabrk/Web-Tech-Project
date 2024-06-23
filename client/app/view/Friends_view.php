@@ -12,33 +12,28 @@
     <div class="pages">
         <button class="fixed-button" onclick="">Add profile card</button>
         <h1>Track your child's friends and relationships!</h1>
-        
-        <!-- <div class="full_screen padding">
-            <div class="todo-container">
-                <div class="header">
-                    <h1>Here are your child's friends!</h1>
+        <div class="grid-centering">
+            <div class="profile-card">
+                <h2>Name</h2>
+                <div class="profile-content">
+                <div class="profile-picture">
+                    <img id="profile-image" src="../../public/images/avatars/profile.png" alt="Profile Picture">
+                    <label for="upload-image">Upload image</label>
+                    <input type="file" id="upload-image" accept="image/*">
                 </div>
-                <div class="todo-card">
-                    <h2>Dashboard</h2>
-                    <p>Go insert all the data of your child selected from the navbar to help us make your job much
-                        easier!</p>
+                <div class="profile-info">
+                    <!-- <textarea id="profile-description" placeholder="Enter your description..."></textarea> -->
+                    <!-- <button id="save-description">Save Description</button> -->
+                    <div id="content" contenteditable="true" spellcheck="false">
+                        Add short description...
+                    </div>
+                    <label for="save-description">Save description</label>
                 </div>
-                <div class="todo-card">
-                    <h2>Journal</h2>
-                    <p>Write your latest thoughts about your family.</p>
-                </div>
-                <div class="todo-card">
-                    <h2>The Journey</h2>
-                    <p>After you insert some data of each child, we're going to make you a really nice timeline of your
-                        family.</p>
-                </div>
-                <div class="todo-card">
-                    <h2>Settings</h2>
-                    <p>Don't need any descrptions</p>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
+    <script src="../../public/js/Friends.js"></script>
 </body>
 
 </html>
