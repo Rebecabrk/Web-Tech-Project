@@ -14,7 +14,7 @@
 <body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
     <div class="pages" id="second_screen">
         <div id="first_screen" class="padding">
-            <h3>Medical records</h3>
+            <h1>Medical records</h1>
             <div class="card-container">
                 <?php 
                 error_reporting(0); // ATENTIE!
@@ -24,7 +24,7 @@
                 ?>
                 <div class="big-card">
                     <div class="card-content">
-                        <h3> Accidents </h3>
+                        <h1> Accidents </h1>
                         <?php for($k=1; $k<=3; $k++) {?>
                         <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
                             echo $name;
@@ -45,7 +45,7 @@
                 ?>
                 <div class="big-card">
                     <div class="card-content">
-                        <h3> Alergies </h3>
+                        <h1> Alergies </h1>
                         <?php for($k=1; $k<=3; $k++) {?>
                         <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
                             echo $name;
@@ -66,7 +66,7 @@
                 ?>
                 <div class="big-card">
                     <div class="card-content">
-                        <h3> Diseases </h3>
+                        <h1> Diseases </h1>
                         <?php for($k=1; $k<=3; $k++) {?>
                         <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
                             echo $name;
@@ -83,9 +83,9 @@
 
             <hr>
 
-            <h3>Schedules/Calendar</h3>
-            <h5>Feel free to populate the calendar with precise data/tasks like medication/food/sleep/school
-                schedules!</h5>
+            <h1>Schedules/Calendar</h1>
+            <h3>Feel free to populate the calendar with precise data/tasks like medication/food/sleep/school
+                schedules!</h3>
             <div class="center">
                 <?php include("../view/components/Dynamic_Event_Calendar/Dynamic_Event_Calendar.php"); ?>
             </div>

@@ -10,6 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* font-size: smaller; */
 }
 
 html,
@@ -19,6 +20,14 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
+}
+
+
+h1{
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .popup {
@@ -37,6 +46,16 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: all 0.4s ease;
+}
+
+.input-container .input-card {
+  display: flex;
+  height: 25%;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 10px 15px;
+  flex: 1;
+  border: 2px solid blanchedalmond;
 }
 
 #popup.open {
@@ -62,7 +81,7 @@ body {
 
 @media screen and (max-width: 1350px) {
   .popup {
-    left: 39%;
+    left: 42%;
     transition: all 0.4s ease;
   }
 } /* Marius's screen size: 1286px */

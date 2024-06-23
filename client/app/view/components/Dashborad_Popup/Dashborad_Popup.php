@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <section class="card popup" id="popup">
+    <section class="popup" id="popup">
         <div>
             <h1 id="popup_title"></h1>
             <form method="POST" class="input-container" action="../model/process/process-med-rec.php">
@@ -23,7 +23,7 @@
                 <input class="input-card" type="hidden" name="type_input" type="text" id="popup_type" />
                 <div class="buttons-container">
                     <input type="submit" class="submit-btn" value="Add">
-                    <a class="close-btn" onClick="closePopup();"> Close </a>
+                    <button class="close-btn" onClick="closePopup();"> Close </button>
                 </div>
             </form>
         </div>
