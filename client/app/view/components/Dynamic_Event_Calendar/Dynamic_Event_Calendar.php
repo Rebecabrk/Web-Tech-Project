@@ -40,6 +40,7 @@
                                  </div>
                              </div>
                          </div>
+
                          <div class="row">
                              <div class="col-sm-6">
                                  <div class="form-group">
@@ -56,6 +57,17 @@
                                  </div>
                              </div>
                          </div>
+
+                         <div class="row">
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                     <label for="event_start_time">Time Schedule</label>
+                                     <input type="time" name="event_start_time" id="event_start_time"
+                                         class="form-control">
+                                 </div>
+                             </div>
+                         </div>
+
                      </div>
                  </div>
                  <div class="modal-footer">
