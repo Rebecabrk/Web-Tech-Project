@@ -43,11 +43,7 @@ h1 {
   display: flex;
 }
 
-.grid-centering{
-  display: grid;
-  grid-template-columns: repeat(auto, 1fr);
-  grid-gap: 10px;
-}
+
 
 .fixed-button {
   position: fixed;
@@ -75,7 +71,7 @@ h1 {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 800px;
+  width: 1100px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -160,9 +156,9 @@ label{
   outline-style: solid; */
   background-color: #fff;
   border: 3px solid #153448;
-  font-size: 15px;
-  font-weight: 500;
-  width:540px;
+  font-size: 20px;
+  font-weight: 1000;
+  width:800px;
   margin-left: 3%;
 }
 
@@ -170,8 +166,8 @@ label:hover{
   background-color: rgb(180, 178, 178);
 }
 
-@media screen and (max-width: 1350px) {
-  .padding {
-    padding: 2% 0.5% 2% 6%;
+@media screen and (max-width: 1250px) {
+  h1{
+    margin-top: 5%;
   }
 }
