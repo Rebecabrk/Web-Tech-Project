@@ -80,13 +80,15 @@
                     </div>
                 </div>
             </div>
-            
-            <hr>
-            
-            <h3>Schedules/Calendar</h3>
-            <p>Feel free to populate the calendar with precise data/tasks like medication/food/sleep/school schedules!</p>
-            <?php include("../view/components/Dynamic_Event_Calendar/Dynamic_Event_Calendar.php"); ?>
 
+            <hr>
+
+            <h3>Schedules/Calendar</h3>
+            <h5>Feel free to populate the calendar with precise data/tasks like medication/food/sleep/school
+                schedules!</h5>
+            <div class="center">
+                <?php include("../view/components/Dynamic_Event_Calendar/Dynamic_Event_Calendar.php"); ?>
+            </div>
         </div>
     </div>
 </body>

@@ -4,7 +4,7 @@
  <head>
      <!-- *Note: You must have internet connection on your laptop or pc other wise below code is not working -->
      <!-- CSS for full calender -->
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css" rel="stylesheet" />
+     <link href="..\view\components\Dynamic_Event_Calendar\Dynamic_Event_Calendar.css" rel="stylesheet" />
      <!-- JS for jQuery -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <!-- JS for full calender -->
@@ -17,7 +17,7 @@
  </head>
 
  <body>
-     <div class="col-lg-12">
+     <div class="col-lg-9">
          <div id="calendar"></div>
      </div>
 
