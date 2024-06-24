@@ -113,7 +113,9 @@ document.getElementById('doneButton').addEventListener('click', function () {
             })
                 .then(response => response.json())
                 .then(data => {
-                    if (data.message == "Success") {
+                    console.log(data);
+                    console.log(data.message);
+                    if (data.message === "Success") {
                         console.log('TextEditor insert API returned Success');
                         window.location.href = '../../app/controller/Journal.php';
                     } else {
@@ -121,7 +123,8 @@ document.getElementById('doneButton').addEventListener('click', function () {
                         alert('Something went wrong');
                     }
                 })
-                .catch(err => console.error('An error occurred:', err));
+                .catch(err => {
+                    console.error('An error occurred:', err)});
         } else {
             //we update/alter a memory
 
@@ -245,12 +248,19 @@ inputMultimedia.onchange = function () {
         };
         img.src = URL.createObjectURL(file);
     } else if (fileType === 'video') {
-        let video = document.createElement('video');
-        video.controls = true;
-        video.width = 500;
-        video.src = URL.createObjectURL(file);
-        content.appendChild(video);
-        console.log(content);
+        const reader = new FileReader();
+                reader.onload = function (e) {
+                    const base64String = e.target.result;
+
+                    // Display the video
+                    let canvas = document.createElement('video');
+                    canvas.setAttribute('controls', '');
+                    canvas.src = base64String;
+                    canvas.style.display = 'block';
+
+                    content.appendChild(canvas);
+                };
+                reader.readAsDataURL(file);
     } else {
         console.log("Unsupported file type");
     }

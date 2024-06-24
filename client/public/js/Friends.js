@@ -33,14 +33,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     uploadInput.addEventListener('change', function () {
         const file = this.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                profileImage.src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-        }
-    });
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const base64String = e.target.result;
+                    
+                    // Display the image
+                    const profileImage = document.getElementById('profile-image');
+                    profileImage.src = base64String;
+                    profileImage.style.display = 'block';
+
+                    // Display the base64 string
+                    const base64Output = document.getElementById('base64Output');
+                    base64Output.textContent = base64String;
+                };
+                reader.readAsDataURL(file);
+    }
+});
 
     let cookie_user_id = getCookie('In_God_We_Trust');
     

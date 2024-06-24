@@ -167,6 +167,11 @@ label{
   margin-bottom: 3%;
   outline: none;
   margin-left: 2%;
+  width: 10%;
+}
+#content-name:hover{
+  background-color: #ddd;
+  text-align: center;
 }
 .name-and-delete-button{
   display: flex;
