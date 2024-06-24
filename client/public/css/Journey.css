@@ -160,6 +160,11 @@ img {
 .image{
   background-size: cover;
 }
+.video{
+  object-fit:contain ;
+  max-height: 200px;
+  max-width: 400px;
+}
 .img1 {
   /* background-image: url("../../public/images/background_images/pexels-karolina-grabowska-4964358.jpg"); */
   background-size: cover;
@@ -181,6 +186,12 @@ img {
   height: 200px;
   position: relative;
   margin-bottom: 20px;
+}
+
+.timeline-img-header video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .timeline-img-header h2 {

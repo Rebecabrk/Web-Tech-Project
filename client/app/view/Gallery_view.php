@@ -29,7 +29,10 @@
                 $xml = simplexml_load_string($multimediaXML);
                 foreach ($xml->children() as $element) {
                     echo '<div class="big-card">';
+                    if($element->type == 'photo')
                     echo '<img src="' . $element->path . '" alt="Image description" />';
+                    else 
+                    echo '<video controls src="' . $element->path . '" alt=Video description';
                     echo '</div>';
                 }
                 echo '</div>';

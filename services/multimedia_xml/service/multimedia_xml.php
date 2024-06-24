@@ -36,7 +36,25 @@ function multimedia_xml($user_id)
 
     while ($row = $result1->fetch_assoc()) {
         $ok = true;
-        $photo = $dom->createElement('photo');
+        $photo = $dom->createElement('item');
+        $photo->appendChild($dom->createElement('type', 'photo'));
+        $photo->appendChild($dom->createElement('id', $row['id']));
+        $photo->appendChild($dom->createElement('user_id', $row['user_id']));
+        $photo->appendChild($dom->createElement('memory_id', $row['memory_id']));
+        $photo->appendChild($dom->createElement('path', $row['path']));
+        $root->appendChild($photo);
+    }
+
+    $stmt2 = $mysqli->prepare("SELECT * FROM videos_paths WHERE user_id = ?");
+    $stmt2->bind_param("s", $user_id);
+    $stmt2->execute();
+    $result2 = $stmt2->get_result();
+    $stmt2->close();
+
+    while ($row = $result2->fetch_assoc()) {
+        $ok = true;
+        $photo = $dom->createElement('item');
+        $photo->appendChild($dom->createElement('type', 'video'));
         $photo->appendChild($dom->createElement('id', $row['id']));
         $photo->appendChild($dom->createElement('user_id', $row['user_id']));
         $photo->appendChild($dom->createElement('memory_id', $row['memory_id']));

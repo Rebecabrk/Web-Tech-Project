@@ -158,6 +158,18 @@ h3{
 .big-card img:hover{
   transform: scale(1.1);
 }
+.big-card video{
+    display: block;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+    height: 500px;
+    max-height: 300px;
+    max-width: 400px;
+}
+
+.big-card video:hover{
+  transform: scale(1.1);
+}
 
 .banner-no-memories {
   width: 80vw;
