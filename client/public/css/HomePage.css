@@ -61,7 +61,7 @@ h1 + p {
   font-size: 50px;
   color: black;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .wrapper {
@@ -498,8 +498,8 @@ a {
   display: block;
   width: 30px;
   height: 30px;
-  border-bottom: 5px solid black;
-  border-right: 5px solid black;
+  border-bottom: 5px solid rgb(35, 34, 34);
+  border-right: 5px solid rgb(35, 34, 34);
   transform: rotate(45deg);
   margin: -10px;
   animation: arrow 2s infinite;
