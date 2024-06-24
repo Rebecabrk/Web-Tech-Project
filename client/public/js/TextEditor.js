@@ -64,6 +64,8 @@ function fileHandle(value) {
 
     } else if (value === 'pdf') {
         html2pdf(content).save(filename.value);
+        link.download = `${filename.value}.pdf`;
+            link.click();
     }
 }
 

@@ -41,6 +41,11 @@ h1 + p {
   display: flex;
 }
 
+p{
+  font-weight: 900;
+  text-align: center;
+}
+
 .pages {
   flex: 1;
   flex-direction: column;
@@ -126,7 +131,7 @@ h1 + p {
 }
 
 .card-container .card, .center_element .card {
-  width: 200px;
+  width: 250px;
   height: 250px;
   border-radius: 20px;
   padding: 10px 15px;
@@ -135,9 +140,13 @@ h1 + p {
   background-size: cover;
   transition: transform 0.5s;
   flex-grow: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .card1 {
   background-image: url("../../public/images/background_images/pexels-elina-sazonova-1914982.jpg");
+  
 }
 .card2 {
   background-image: url("../../public/images/background_images/pexels-willsantt-2026960.jpg");

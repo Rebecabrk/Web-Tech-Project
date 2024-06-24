@@ -33,7 +33,7 @@
                     <option value="" selected="" hidden="" disabled="">File</option>
                     <option value="new">New File</option>
                     <option value="txt">Save as txt</option>
-                    <option value="pdf">Save as pdf</option>                    
+                    <!-- <option value="pdf">Save as pdf</option>                     -->
                 </select>
                 <select onchange="formatDoc('formatBlock', this.value); this.selectedIndex=0;">
                     <option value="" selected="" hidden="" disabled="">Format</option>

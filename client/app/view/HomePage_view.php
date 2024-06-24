@@ -79,25 +79,23 @@
         <div id="second_screen" class="full_screen padding">
             <div class="todo-container">
                 <div class="header">
-                    <h1>What can you do here?</h1>
+                    <h1>Here's what you can do on ChiM</h1>
                 </div>
                 <div class="todo-card">
                     <h2>Dashboard</h2>
-                    <p>Go insert all the data of your child selected from the navbar to help us make your job much
-                        easier!</p>
+                    <p>This is where you can edit and view the medical records of your child and the monthly calendar for your amazing adventures!</p>
                 </div>
                 <div class="todo-card">
                     <h2>Journal</h2>
-                    <p>Write your latest thoughts about your family.</p>
+                    <p>Let yourself be creative while writing memories in this journal. You can mark the memories as core, meaning that they will be included in the timeline of your journey.</p>
                 </div>
                 <div class="todo-card">
                     <h2>The Journey</h2>
-                    <p>After you insert some data of each child, we're going to make you a really nice timeline of your
-                        family.</p>
+                    <p>Pretty summary of all your most amazing memories from your family!</p>
                 </div>
                 <div class="todo-card">
                     <h2>Settings</h2>
-                    <p>Don't need any descrptions ;)</p>
+                    <p>Go here when you want to update information anout you or your child.</p>
                 </div>
             </div>
         </div>

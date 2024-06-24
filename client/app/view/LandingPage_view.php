@@ -70,7 +70,7 @@
         <div id="second_screen" class="full_screen padding">
             <div class="row">
                 <div class="title-container">
-                    <h1>The manager</h1>
+                    <h1>ChiM</h1>
                     <p>
                         Empowering Parents. Nurturing Children. <br> Collecting Memories. Building Futures.
                     </p>
@@ -78,24 +78,25 @@
                 <div class="card-container">
                     <div class="card card1">
                         <h3>Empowering Parents</h3>
-                        <p>Helping parents keep track of food and sleep schedules of their children through just a
+                        <br>
+                        <p>Helping parents keep track of most important things about their children through just a
                             click.</p>
                     </div>
                     <div class="card card2">
                         <h3>Nurturing Children</h3>
-                        <p>The children will benefit from the parents' better organization, because this way parents
-                            will have
-                            more
-                            time for family time.</p>
+                        <br>
+                        <p>The best gift we can give our children is our time. ChiM is here to help families save time by digitalizing child care managment.</p>
                     </div>
                     <div class="card card3">
                         <h3>Collecting Memories</h3>
+                        <br>
                         <p>A great way to store and visualize all beautiful memories made throughout the children's
                             development
                             process.</p>
                     </div>
                     <div class="card card4">
                         <h3>Building Futures</h3>
+                        <br>
                         <p>Creating an organized way of keeping track of all the information about the children,
                             such that ...</p>
                     </div>
@@ -111,12 +112,12 @@
             <div class="third_screen_container">
                 <div class="center_element">
                     <div class="wrapper2">
-                        <p class="content_paragraph">Early childhood, from birth to age 5, is a critical period for
+                        <p class="content_paragraph">Early childhood is a critical period for
                             brain
                             development.
                             Stimulating environments and nurturing interactions during this time can have a
                             significant impact on a
-                            child's cognitive, social, and emotional development.</p>
+                            child's cognitive, social, and emotional development. The best thing a parent can do through this challenging period of their life is to enjoy and keep every moment.</p>
                         <div class="card card5"></div>
                     </div>
 
@@ -127,7 +128,7 @@
                             develop
                             important skills such as problem-solving, creativity, communication, and socialization.
                             Through play,
-                            children explore the world around them and make sense of their experiences.</p>
+                            children explore the world around them and make sense of their experiences. Here, you can keep track of all the playful activities you plan to have with your children.</p>
                     </div>
                 </div>
             </div>
