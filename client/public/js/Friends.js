@@ -72,6 +72,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             })
             .catch(err => console.error('An error occurred:', err));
+
+            const newProfileCard = profileCardTemplate.cloneNode(true);
+            profileCardsDiv.appendChild(newProfileCard);
+            scrollToBottom();
     });
 
 
@@ -81,3 +85,38 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollToBottom();
     });
 });
+
+function deleteButton(friend_id){
+    var answer = confirm("Are you sure you want to delete this firend? This action cannot be undone.");
+    if (answer == true) {
+        fetch('http://localhost/Web-Tech-Project/services/ProfileFriends/friends/' + friend_id, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.message == "Success") {
+                    alert('Delete successful');
+                    location.reload();
+                }
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
+
+    }
+}
+
+function deleteProfileCard(button) {
+    const card = button.closest('.profile-card');
+    if (card) {
+        card.remove();
+    }
+}

@@ -4,6 +4,7 @@ header("Content-Type: application/json");
 require_once 'services/addFriend.php';
 require_once 'services/deleteFriend.php';
 require_once 'services/getFriend.php';
+require_once 'services/getFriends.php';
 require_once 'services/alterFriend.php';
 
 $url = isset($_GET['url']) ? $_GET['url'] : null;
@@ -34,9 +35,12 @@ if (strpos($url, 'friends') !== false) {
         case 'get':
             $segments = explode('/', $url);
             $id = end($segments);
-            echo json_encode(array("message" => getFriend($id)));
+            if(ctype_digit($id)){
+                echo json_encode(array("message" => getFriend($id)));
+            }else{
+                echo json_encode(getFriends($segments[0]));
+            }
             break;
-
         case 'delete':
             $segments = explode('/', $url);
             $id = end($segments);
