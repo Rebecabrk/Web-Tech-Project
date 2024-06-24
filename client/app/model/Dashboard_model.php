@@ -1,8 +1,8 @@
 <?php
 
-function getMRecordXML($user_id)
+function getMRecordXML($user_id, $type)
 {
-    $url = 'http://localhost/Web-Tech-Project/services/medical_record/' . $user_id;
+    $url = 'http://localhost/Web-Tech-Project/services/medical_records/' . $type . '/' . $user_id;
 
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -18,3 +18,4 @@ function getMRecordXML($user_id)
 
     return $response;
 }
+

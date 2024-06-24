@@ -1,17 +1,17 @@
 <?php
 header("Content-Type: application/xml");
 
-require_once 'service/mrecord_xml.php';
+require_once 'service/medical_record.php';
 
 $url = isset($_GET['url']) ? $_GET['url'] : null;
 
-if ($url != null) {
+if ( strpos($url, 'Alergy') !== false || strpos($url, 'Accident') !== false || strpos($url, 'Desire') !== false){
     $method = strtolower($_SERVER['REQUEST_METHOD']);
     switch ($method) {
         case 'get':
             $segments = explode('/', $url);
             $id = end($segments);
-            echo mrecord_xml($id);
+            echo alergies_record_xml($id,$segments[0]);
             break;
         default:
             http_response_code(405);

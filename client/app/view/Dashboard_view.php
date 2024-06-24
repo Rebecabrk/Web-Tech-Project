@@ -16,21 +16,18 @@
         <div id="first_screen" class="padding">
             <h1>Medical records</h1>
             <div class="card-container">
-                <?php 
-                error_reporting(0); // ATENTIE!
-                $mysqli = require ("..\model\database\database.php");
-                $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Accident' AND cid = '" . $_COOKIE['Child_Picker'] . "' ORDER BY insertion_date DESC";
-                $result = $mysqli->query($sql);
-                ?>
+
                 <div class="big-card">
                     <div class="card-content">
                         <h1> Accidents </h1>
-                        <?php for($k=1; $k<=3; $k++) {?>
-                        <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
-                            echo $name;
-                        else
-                            echo 'nothing here...'; ?></div>
-                        <?php } ?>
+                        <?php $xml = simplexml_load_string($MRecordXMLAccident);
+                        $children = $xml->children();
+                        for ($i = 0; $i < 3; $i++) {
+                            $element = $children[$i];  
+                            echo '<div class="input-card">';
+                            echo $element->name . '</div>';
+                        }
+                        ?>
                         <button class="add-btn" id="accident-btn"
                             onClick="document.getElementById('popup_title').innerHTML='Add Accident'; document.getElementById('popup_type').value='Accident'; openPopup();">
                             <i class='bx bx-add-to-queue'></i>
@@ -38,23 +35,17 @@
                     </div>
                 </div>
 
-                <?php
-                $mysqli = require ("..\model\database\database.php");
-                $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Alergy' AND cid = '" . $_COOKIE['Child_Picker'] . "' ORDER BY insertion_date DESC";
-                $result = $mysqli->query($sql);
-                ?>
                 <div class="big-card">
                     <div class="card-content">
                         <h1> Alergies </h1>
-                        <?php for($k=1; $k<=3; $k++) {?>
-                        <div class="input-card"><?php if (strpos($MRecordXML, "error") !== false)
-                            echo 'nothing here...';
-                        else {
-                            echo $name = mysqli_fetch_array($result)['name']; //TODO: fix this to accept the right xml data
+                        <?php $xml = simplexml_load_string($MRecordXMLAllergy);
+                        $children = $xml->children();
+                        for ($i = 0; $i < 3; $i++) {
+                            $element = $children[$i];  
+                            echo '<div class="input-card">';
+                            echo $element->name . '</div>';
                         }
                         ?>
-                        </div>
-                        <?php } ?>
                         <button class="add-btn" id="alergy-btn"
                             onClick="document.getElementById('popup_title').innerHTML='Add Alergy'; document.getElementById('popup_type').value='Alergy'; openPopup();">
                             <i class='bx bx-add-to-queue'></i>
@@ -62,22 +53,19 @@
                     </div>
                 </div>
 
-                <?php
-                $mysqli = require ("..\model\database\database.php");
-                $sql = "SELECT name, date, NVL(location,NULL) FROM medical_records WHERE type='Desire' AND cid = '" . $_COOKIE['Child_Picker'] . "' ORDER BY insertion_date DESC";
-                $result = $mysqli->query($sql);
-                ?>
                 <div class="big-card">
                     <div class="card-content">
                         <h1> Diseases </h1>
-                        <?php for($k=1; $k<=3; $k++) {?>
-                        <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
-                            echo $name;
-                        else
-                            echo 'nothing here...'; ?></div>
-                        <?php } ?>
+                        <?php $xml = simplexml_load_string($MRecordXMLDesire);
+                        $children = $xml->children();
+                        for ($i = 0; $i < 3; $i++) {
+                            $element = $children[$i];  
+                            echo '<div class="input-card">';
+                            echo $element->name . '</div>';
+                        }
+                        ?>
                         <button class="add-btn" id="disare-btn"
-                            onClick="document.getElementById('popup_title').innerHTML='Add Disare'; document.getElementById('popup_type').value='Desire'; openPopup();">
+                            onClick="document.getElementById('popup_title').innerHTML='Add Disease'; document.getElementById('popup_type').value='Desire'; openPopup();">
                             <i class='bx bx-add-to-queue'></i>
                         </button>
                     </div>

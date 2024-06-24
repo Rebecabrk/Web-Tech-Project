@@ -5,7 +5,10 @@ if(!isset($_COOKIE['In_God_We_Trust']) || $_COOKIE['Child_Picker'] === "nothing"
 
 require ("../model/Dashboard_model.php");
 
-$MRecordXML = getMRecordXML($_COOKIE['Child_Picker']);
+$MRecordXMLAllergy = getMRecordXML($_COOKIE['Child_Picker'], "Alergy");
+$MRecordXMLAccident = getMRecordXML($_COOKIE['Child_Picker'], "Accident");
+$MRecordXMLDesire = getMRecordXML($_COOKIE['Child_Picker'], "Desire");
+
 
 include ("../view/Dashboard_view.php");
 

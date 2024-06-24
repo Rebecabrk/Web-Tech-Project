@@ -16,12 +16,12 @@ function databaseConnection()
     return $mysqpli;
 }
 
-function mrecord_xml($user_id)
+function alergies_record_xml($user_id, $type)
 {
     $mysqli = databaseConnection();
 
-    $stmt1 = $mysqli->prepare("SELECT * FROM children WHERE cid = ?");
-    $stmt1->bind_param("s", $user_id);
+    $stmt1 = $mysqli->prepare("SELECT * FROM medical_records WHERE cid = ? AND type = ? ORDER BY insertion_date DESC");
+    $stmt1->bind_param("ss", $user_id, $type);
     $stmt1->execute();
     $result1 = $stmt1->get_result();
     $stmt1->close();
@@ -31,6 +31,7 @@ function mrecord_xml($user_id)
 
     $root = $dom->createElement('root');
     $dom->appendChild($root);
+
 
     $ok = false;
 
@@ -44,10 +45,18 @@ function mrecord_xml($user_id)
         $record->appendChild($dom->createElement('location', $row['location']));
         $root->appendChild($record);
     }
+    $record = $dom->createElement('record');
+        $record->appendChild($dom->createElement('name', 'nothing here...'));
+        $root->appendChild($record);
+        $record = $dom->createElement('record');
+        $record->appendChild($dom->createElement('name', 'nothing here...'));
+        $root->appendChild($record);
+  
 
     if ($ok == false) {
-        $error = $dom->createElement('error', 'no data found');
-        $root->appendChild($error);
+        $record = $dom->createElement('record');
+        $record->appendChild($dom->createElement('name', 'nothing here...'));
+        $root->appendChild($record);
     }
 
     // Get the XML content as a string
