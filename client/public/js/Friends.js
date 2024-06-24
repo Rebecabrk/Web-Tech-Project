@@ -85,8 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const newProfileCard = profileCardTemplate.cloneNode(true);
             profileCardsDiv.appendChild(newProfileCard);
-            scrollToBottom();
-
 
     });
 
