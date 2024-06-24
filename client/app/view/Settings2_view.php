@@ -20,13 +20,13 @@
         echo $title;
         ?>
         </h1>
-        <form action="SettingsConfirmation.php" method="get">
+        <form action="../model/process/process-settings-confirmation.php" method="POST">
             <?php 
             $formBox = $info[2];
             echo $formBox; 
             ?>
-                        <button type="submit" class="submit-btn-email">Submit</button>
-                        </form>
+            <button type="submit" class="submit-btn-email">Submit</button>
+        </form>
     </div>
 </body>
 

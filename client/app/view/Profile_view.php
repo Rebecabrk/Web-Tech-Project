@@ -13,6 +13,9 @@
 <body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
     <div class="pages" id="second_screen">
         <div id="first_screen" class="full_screen padding">
+            <a href="Logout.php" class="fixed-button">Log Out</a>
+            <a href="DeleteAccount.php" class="fixed-button another">Delete Account</a>
+
             <div class="wrapper">
                 <div class="image image1"></div>
                 <form method="POST" action="../model/process/process-profile-edit.php">
@@ -60,16 +63,6 @@
                         <button type="submit">Update</button>
                     </div>
                 </form>
-            </div>
-        </div>
-
-        <div id="third_screen" class="full_screen padding">
-            <div> You wanna logout? </div>
-            <div class="card-msg">
-                <p>Click </p>
-                <a href="Logout.php" class="card content">
-                    <h1> here</h1>
-                </a>
             </div>
         </div>
     </div>
