@@ -576,6 +576,11 @@ a {
     padding: 2% 2.5% 2% 8%;
   }
 
+  .rss-card {
+    width: 350px;
+    height: 450px;
+  }
+
   .row {
     display: flex;
     flex-direction: column;
