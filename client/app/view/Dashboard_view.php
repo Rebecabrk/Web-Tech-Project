@@ -47,10 +47,13 @@
                     <div class="card-content">
                         <h1> Alergies </h1>
                         <?php for($k=1; $k<=3; $k++) {?>
-                        <div class="input-card"><?php if ($name = mysqli_fetch_array($result)['name'])
-                            echo $name;
-                        else
-                            echo 'nothing here...'; ?></div>
+                        <div class="input-card"><?php if (strpos($MRecordXML, "error") !== false)
+                            echo 'nothing here...';
+                        else {
+                            echo $name = mysqli_fetch_array($result)['name']; //TODO: fix this to accept the right xml data
+                        }
+                        ?>
+                        </div>
                         <?php } ?>
                         <button class="add-btn" id="alergy-btn"
                             onClick="document.getElementById('popup_title').innerHTML='Add Alergy'; document.getElementById('popup_type').value='Alergy'; openPopup();">
