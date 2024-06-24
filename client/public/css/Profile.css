@@ -61,9 +61,9 @@ body {
   width: 100%;
   color: black;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   background: transparent;
-  border: 2px solid black;
+  border: 2px solid #153448;
   backdrop-filter: blur(20px);
   z-index: 2;
   margin-top: 3%;
@@ -114,8 +114,17 @@ body {
   display: flex;
   justify-content: center;
   padding: 10px;
-  color: rgb(193, 141, 59);
+  color: #153448;
 }
+
+#second_screen h1 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: blanchedalmond;
+}
+
+
 
 .wrapper hr {
   border: 1px solid black;
@@ -131,9 +140,9 @@ body {
 .input-box input {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: #3C5B6F;
   outline: none;
-  border: 2px solid black;
+  border: 2px solid #3C5B6F;
   border-radius: 20px;
   color: blanchedalmond;
   padding: 20px 20px 20px 20px;
@@ -161,6 +170,20 @@ body {
   outline: none;
   color: black;
   font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+#second_screen button {
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid black;
+  outline: none;
+  color: blanchedalmond;
+  font-size: 20px;
+  font-weight: 600;
   cursor: pointer;
   border-radius: 20px;
 }

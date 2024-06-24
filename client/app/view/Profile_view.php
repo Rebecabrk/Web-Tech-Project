@@ -11,7 +11,7 @@
 </head>
 
 <body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
-    <div class="pages" id="second_screen">
+    <div class="pages" >
         <div id="first_screen" class="full_screen padding">
             <a href="Logout.php" class="fixed-button">Log Out</a>
             <a href="DeleteAccount.php" class="fixed-button another">Delete Account</a>
