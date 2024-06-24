@@ -119,7 +119,7 @@ document.getElementById('doneButton').addEventListener('click', function () {
                         console.log('TextEditor insert API returned Success');
                         window.location.href = '../../app/controller/Journal.php';
                     } else {
-                        console.log('API did not return Success');
+                        console.log(data.message);
                         alert('Something went wrong');
                     }
                 })

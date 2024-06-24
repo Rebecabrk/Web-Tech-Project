@@ -20,17 +20,21 @@
                     <?php foreach ($xml->children() as $element): ?>
                         <div class="timeline-item">
                             <div class="timeline-img"></div>
-                            <?php if ($element->photo != "empty"): ?>
+                            <?php if ($element->multimedia_element->type != "none"): {?>
                                 <div class="timeline-content timeline-card">
                                     <div class="timeline-img-header">
                                         <h2><?= htmlspecialchars($element->title) ?></h2>
-                                        <img class="image" src="<?= htmlspecialchars($element->photo) ?>" alt="Image description" />
+                                        <?php if($element->multimedia_element->type == 'photo'):?>
+                                        <img class="image" src="<?= htmlspecialchars($element->multimedia_element->path) ?>" alt="Image description" />
+                                            <?php else: ?>
+                                        <video controls class="video" src="<?= htmlspecialchars($element->multimedia_element->path) ?>" alt="Video description" > </video>
+                                            <?php endif ?>
                                     </div>
                                     <div class="date"><?= htmlspecialchars($element->creation_date) ?></div>
                                     <p><?= htmlspecialchars($element->description) ?></p>
                                     <a href="<?= htmlspecialchars($element->link) ?>">More</a>
                                 </div>
-                            <?php else: ?>
+                            <?php }else: {?>
                                 <div class="timeline-content">
                                     <h2><?= htmlspecialchars($element->title) ?></h2>
                                     <div class="date"><?= htmlspecialchars($element->creation_date) ?></div>
@@ -39,7 +43,7 @@
                                     <!-- onclick="callTextEditorService(<?= $element->id ?>, '<?= $element->pattern ?>');" -->
                                 </div>
 
-                            <?php endif; ?>
+                            <?php }endif; ?>
                         </div>
                     <?php endforeach; ?>
                 <?php } else { ?>
@@ -53,7 +57,7 @@
                 <?php } ?>
                 <?php if ($xml !== false) { ?>
                 </section>
-            <?php } ?>
+            <?php }?>
         </div>
     </div>
 </body>
