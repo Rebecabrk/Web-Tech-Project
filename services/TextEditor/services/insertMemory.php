@@ -29,7 +29,7 @@ function insertMemory($user_id, $title, $text, $pattern, $isCoreMemory)
     try {
         $stmt->execute();
     } catch (Exception $e) {
-        die($e->getMessage() . " " . $e->getCode());
+        return $e->getMessage() . " " . $e->getCode();
     }
 
     $dom = new DOMDocument;
@@ -41,16 +41,17 @@ function insertMemory($user_id, $title, $text, $pattern, $isCoreMemory)
     foreach ($imgs as $img) {
         $srcs[] = $img->getAttribute('src');
     }
+    $memory_id = mysqli_insert_id($mysqli);
 
     foreach ($srcs as $src) {
-        $last_id = mysqli_insert_id($mysqli);
+        
         $sql = "INSERT INTO images_paths (user_id, memory_id, path) VALUES (?,?,?)";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param("sss", $user_id, $last_id, $src);
+        $stmt2 = $mysqli->prepare($sql);
+        $stmt2->bind_param("sss", $user_id, $memory_id, $src);
         try {
-            $stmt->execute();
+            $stmt2->execute();
         } catch (Exception $e) {
-            die($e->getMessage() . " " . $e->getCode());
+            return $e->getMessage() . " " . $e->getCode();
         }
     }
 // videos
@@ -63,13 +64,13 @@ function insertMemory($user_id, $title, $text, $pattern, $isCoreMemory)
 
     foreach ($video_srcs as $vid_src) {
         $last_id = mysqli_insert_id($mysqli);
-        $sql = "INSERT INTO videos_paths (memory_id, path) VALUES (?,?)";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param("ss", $last_id, $vid_src);
+        $sql = "INSERT INTO videos_paths (user_id, memory_id, path) VALUES (?,?,?)";
+        $stmt5 = $mysqli->prepare($sql);
+        $stmt5->bind_param("sss",$user_id, $memory_id, $vid_src);
         try {
-            $stmt->execute();
+            $stmt5->execute();
         } catch (Exception $e) {
-            die($e->getMessage() . " " . $e->getCode());
+            return $e->getMessage() . " " . $e->getCode();
         }
     }
 
