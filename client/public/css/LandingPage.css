@@ -195,11 +195,11 @@ h1 + p {
 }
 
 .buttons-container nav ul li {
-  --c: blanchedalmond;
+  --c: rgb(24, 23, 23);
   color: var(--c);
   width: 12em;
   height: 3em;
-  border: 0.3em solid var(--c);
+  border: 0.2em solid var(--c);
   text-align: center;
   line-height: 3em;
   text-transform: uppercase;
@@ -210,10 +210,11 @@ h1 + p {
   overflow: hidden;
   z-index: 1;
   transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .buttons-container nav ul li:hover {
-  color: black;
+  color: blanchedalmond;
 }
 
 .buttons-container nav ul li span {

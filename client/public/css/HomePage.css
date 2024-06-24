@@ -61,7 +61,7 @@ h1 + p {
   font-size: 50px;
   color: black;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 .wrapper {
@@ -176,6 +176,9 @@ h1 + p {
   background-position: center;
   background-size: cover;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .full_screen {
@@ -190,11 +193,11 @@ h1 + p {
 }
 
 .buttons-container nav ul li {
-  --c: blanchedalmond;
+  --c: rgb(24, 23, 23);
   color: var(--c);
   width: 12em;
   height: 3em;
-  border: 0.3em solid var(--c);
+  border: 0.2em solid var(--c);
   text-align: center;
   line-height: 3em;
   text-transform: uppercase;
@@ -205,10 +208,11 @@ h1 + p {
   overflow: hidden;
   z-index: 1;
   transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .buttons-container nav ul li:hover {
-  color: black;
+  color: blanchedalmond;
 }
 
 .buttons-container nav ul li span {
@@ -308,6 +312,7 @@ li a span {
   display: flex;
   justify-content: center;
   animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  font-size: 95px;
 }
 
 @-webkit-keyframes tracking-in-expand {
