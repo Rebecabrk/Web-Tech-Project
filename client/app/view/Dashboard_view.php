@@ -24,8 +24,19 @@
                         $children = $xml->children();
                         for ($i = 0; $i < 3; $i++) {
                             $element = $children[$i];  
-                            echo '<div class="input-card">';
-                            echo $element->name . '</div>';
+                            if( $element->name != "nothing here..."){
+                                echo '<div class="record-input-align">';
+                                echo '<div class="input-card">' . $element->name . '</div>';
+                                echo '<form method="POST" action="../model/process/process-delete_mrecord.php" style="display:inline;">';
+                                echo '<input type="hidden" name="type" value="' . htmlspecialchars($element->type) . '">';
+                                echo '<input type="hidden" name="name" value="' . htmlspecialchars($element->name) . '">';
+                                echo '<button type="submit" class="delete-btn another-dbtn"> <i class=\'bx bx-trash\'></i></button>';
+                                echo '</form>';
+                                echo '</div>';
+                            } else {
+                                echo '<div class="input-card">';
+                                echo $element->name . '</div>';
+                            }
                         }
                         ?>
                         <button class="add-btn" id="accident-btn"
@@ -42,8 +53,19 @@
                         $children = $xml->children();
                         for ($i = 0; $i < 3; $i++) {
                             $element = $children[$i];  
-                            echo '<div class="input-card">';
-                            echo $element->name . '</div>';
+                            if( $element->name != "nothing here..."){
+                                echo '<div class="record-input-align">';
+                                echo '<div class="input-card">' . $element->name . '</div>';
+                                echo '<form method="POST" action="../model/process/process-delete_mrecord.php" style="display:inline;">';
+                                echo '<input type="hidden" name="type" value="' . htmlspecialchars($element->type) . '">';
+                                echo '<input type="hidden" name="name" value="' . htmlspecialchars($element->name) . '">';
+                                echo '<button type="submit" class="delete-btn another-dbtn"> <i class=\'bx bx-trash\'></i></button>';
+                                echo '</form>';
+                                echo '</div>';
+                            } else {
+                                echo '<div class="input-card">';
+                                echo $element->name . '</div>';
+                            }
                         }
                         ?>
                         <button class="add-btn" id="alergy-btn"
@@ -60,8 +82,19 @@
                         $children = $xml->children();
                         for ($i = 0; $i < 3; $i++) {
                             $element = $children[$i];  
-                            echo '<div class="input-card">';
-                            echo $element->name . '</div>';
+                            if( $element->name != "nothing here..."){
+                                echo '<div class="record-input-align">';
+                                echo '<div class="input-card">' . $element->name . '</div>';
+                                echo '<form method="POST" action="../model/process/process-delete_mrecord.php" style="display:inline;">';
+                                echo '<input type="hidden" name="type" value="' . htmlspecialchars($element->type) . '">';
+                                echo '<input type="hidden" name="name" value="' . htmlspecialchars($element->name) . '">';
+                                echo '<button type="submit" class="delete-btn another-dbtn"> <i class=\'bx bx-trash\'></i></button>';
+                                echo '</form>';
+                                echo '</div>';
+                            } else {
+                                echo '<div class="input-card">';
+                                echo $element->name . '</div>';
+                            }
                         }
                         ?>
                         <button class="add-btn" id="disare-btn"
