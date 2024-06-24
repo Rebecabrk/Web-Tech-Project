@@ -456,9 +456,15 @@ a {
   text-decoration: none;
   color: blanchedalmond;
 }
+.rss-titles{
+  font-size: 40px;
+  color: black;
+  text-align: center;
+}
 
 .rss-container {
   display: flex;
+  margin-top: 3%;
 }
 
 .rss-card {
@@ -471,6 +477,15 @@ a {
   background-color: #3C5B6F;
   color: blanchedalmond;
   overflow: auto;
+}
+
+.rss-card p{
+  font-size: 20px;
+  border: 2px solid blanchedalmond;
+  border-radius: 1%;
+  padding: 3%;
+  text-align: center;
+  background-color: #4e7087;
 }
 
 .arrow {

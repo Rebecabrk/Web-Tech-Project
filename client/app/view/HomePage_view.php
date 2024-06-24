@@ -105,8 +105,10 @@
         <div id="third_screen" class="full_screen padding">
             <h1>Some relevant news</h1>
             <div class="rss-container">
+                <div class="rss-column" >
+            <h2 class="rss-titles">About mental health</h2>
                 <div class="rss-card">
-                    <h2>Mental Health Topic</h2>
+                    
                     <?php
                     define ('FEED1', 'https://pregnantchicken.com/mental-health/rss/'); 
                     define ('XPATH', '/rss/channel/item');  
@@ -129,10 +131,13 @@
                     }
                     ?>
                 </div>
+                </div>
                 <br>
                 <br>
+                <div class="rss-column">
+                <h2 class="rss-titles">About sleep</h2>
                 <div class="rss-card">
-                    <h2>Sleep Topic</h2>
+                    
                     <?php
                     define ('FEED2', 'https://pregnantchicken.com/sleep/rss/'); 
                     define ('XPAT2', '/rss/channel/item');  
@@ -155,10 +160,12 @@
                     }
                     ?>
                 </div>
+                </div>
                 <br>
                 <br>
+                <div class="rss-column">
+                <h2 class="rss-titles">About symptoms</h2>
                 <div class="rss-card">
-                    <h2>Symptoms And Aliments</h2>
                     <?php
                     define ('FEED3', 'https://pregnantchicken.com/symptoms-and-ailments/rss/'); 
                     define ('XPAT3', '/rss/channel/item');  
@@ -179,6 +186,7 @@
                     echo $e->getMessage (); 
                     }
                     ?>
+                </div>
                 </div>
             </div>
         </div>
