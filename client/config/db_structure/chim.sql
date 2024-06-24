@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2024 at 11:28 AM
+-- Generation Time: Jun 24, 2024 at 12:45 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -35,6 +35,14 @@ CREATE TABLE `calendar_event_master` (
   `cid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data for table `calendar_event_master`
+--
+
+INSERT INTO `calendar_event_master` (`event_id`, `event_name`, `event_start_date`, `event_end_date`, `cid`) VALUES
+(12, 'my birthday', '2024-06-23', '2024-06-13', 15),
+(13, 'my birthday', '2024-07-24', '2024-06-24', 15);
+
 -- --------------------------------------------------------
 
 --
@@ -48,6 +56,27 @@ CREATE TABLE `children` (
   `uid` int(11) NOT NULL,
   `birth_date` date NOT NULL,
   `email_notification` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `children`
+--
+
+INSERT INTO `children` (`cid`, `first_name`, `email`, `uid`, `birth_date`, `email_notification`) VALUES
+(15, 'viorica', '', 6, '0000-00-00', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `friends`
+--
+
+CREATE TABLE `friends` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `name` varchar(256) NOT NULL,
+  `photo_path` longtext DEFAULT NULL,
+  `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -96,6 +125,13 @@ CREATE TABLE `memories` (
   `isCoreMemory` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `memories`
+--
+
+INSERT INTO `memories` (`id`, `user_id`, `creation_date`, `last_modification`, `title`, `text`, `pattern`, `isCoreMemory`) VALUES
+(23, 6, '2024-06-22', '2024-06-23 22:47:14', '1', '\n            Your thoughts...\n        ', 'pattern5', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -110,6 +146,13 @@ CREATE TABLE `users` (
   `password_hash` varchar(255) NOT NULL,
   `email_notification` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`uid`, `first_name`, `last_name`, `email`, `password_hash`, `email_notification`) VALUES
+(6, 'Rebeca', 'Rebeca', 'rebeca@gmail.com', '$2y$10$NjuVbPqm9x54EpuokIcO0uaWouRufwTC9Vc8vWaE8B2Km8BWkyaqq', 0);
 
 -- --------------------------------------------------------
 
@@ -141,6 +184,13 @@ ALTER TABLE `calendar_event_master`
 ALTER TABLE `children`
   ADD PRIMARY KEY (`cid`),
   ADD KEY `uid` (`uid`);
+
+--
+-- Indexes for table `friends`
+--
+ALTER TABLE `friends`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FK` (`user_id`);
 
 --
 -- Indexes for table `images_paths`
@@ -187,19 +237,25 @@ ALTER TABLE `videos_paths`
 -- AUTO_INCREMENT for table `calendar_event_master`
 --
 ALTER TABLE `calendar_event_master`
-  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `children`
 --
 ALTER TABLE `children`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `friends`
+--
+ALTER TABLE `friends`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `images_paths`
 --
 ALTER TABLE `images_paths`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `medical_records`
@@ -211,13 +267,13 @@ ALTER TABLE `medical_records`
 -- AUTO_INCREMENT for table `memories`
 --
 ALTER TABLE `memories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
@@ -234,6 +290,12 @@ ALTER TABLE `calendar_event_master`
 --
 ALTER TABLE `children`
   ADD CONSTRAINT `children_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `friends`
+--
+ALTER TABLE `friends`
+  ADD CONSTRAINT `FK` FOREIGN KEY (`user_id`) REFERENCES `users` (`uid`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `images_paths`
