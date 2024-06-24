@@ -7,23 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings2</title>
     <style>
-    <?php $background=$info[0];
-    echo $background;
-    ?>;
+        <?php $background = $info[0];
+        echo $background;
+        ?>
+        ;
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1><?php 
-        $title = $info[1]; 
+        <h1><?php
+        $title = $info[1];
         echo $title;
         ?>
         </h1>
         <form action="../model/process/process-settings-confirmation.php" method="POST">
-            <?php 
+            <?php
             $formBox = $info[2];
-            echo $formBox; 
+            echo $formBox;
             ?>
             <button type="submit" class="submit-btn-email">Submit</button>
         </form>
