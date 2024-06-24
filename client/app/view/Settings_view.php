@@ -19,7 +19,7 @@
                         <i class="bx bx-user"></i>
                         <h1>Profile Settings</h1>
                     </a>
-                    <a href="Settings2.php?setting=feedback" class="smaller-card card content">
+                    <a href="Feedback.php?setting=feedback" class="smaller-card card content">
                         <i class='bx bx-message-add'></i>
                         <h1>Feedback</h1>
                     </a>

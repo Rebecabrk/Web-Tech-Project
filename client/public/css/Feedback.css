@@ -27,6 +27,11 @@ form{
   flex-direction: column;
 }
 
+a#go_back_btn{
+  width: 70px; 
+  height: 40px;
+}
+
 .container {
   display: flex;
   justify-content: center;

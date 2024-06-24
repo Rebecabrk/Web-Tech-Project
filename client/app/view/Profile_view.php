@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body onLoad="document.getElementById('sidebar').classList.add('hidden_sidenavbar');">
+<body onLoad="document.getElementById('go_back_btn').classList.add('hidden_btn');">
     <div class="pages" >
         <div id="first_screen" class="full_screen padding">
             <a href="Logout.php" class="fixed-button">Log Out</a>

@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="../../public/css/Settings2.css" rel="stylesheet">
+    <link href="../../public/css/Feedback.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings2</title>
+    <title>Feedback Page</title>
     <style>
         <?php $background = $info[0];
         echo $background;
@@ -14,7 +14,7 @@
     </style>
 </head>
 
-<body>
+<body onLoad="document.getElementById('go_back_btn').classList.add('hidden_btn');">
     <div class="container">
         <h1><?php
         $title = $info[1];
