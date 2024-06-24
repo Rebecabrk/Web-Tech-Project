@@ -5,16 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const saveButton = document.getElementById('save-description');
 
     // Load profile picture from file input
-    uploadInput.addEventListener('change', function() {
-        const file = this.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                profileImage.src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-        }
-    });
+    z
 
     // Save description to server (PHP)
     saveButton.addEventListener('click', function() {
