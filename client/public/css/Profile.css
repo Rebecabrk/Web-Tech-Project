@@ -86,19 +86,18 @@ body {
   border-radius: 50%;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   background-color: rgba(255, 255, 255, 0.8);
-  mask-image: linear-gradient(to bottom, black 70%, transparent 80%);
 }
 
 .wrapper .image1 {
   background: #8f6ed5
-    url("../../public/images/avatars/portrait-man-with-beard-mustache-white-shirt-black-glasses-3d-rendering.jpg")
+    url("../../public/images/avatars/people-connecting-through-hugging.jpg")
     center center no-repeat;
   background-size: cover;
 }
 
 .wrapper .image2 {
   background: #8f6ed5
-    url("../../public/images/avatars/3d-illustration-cute-cartoon-girl-blue-jacket-glasses.jpg")
+    url("../../public/images/avatars/cartoon-like-kid-playing-with-cubes-indoors.jpg")
     center center no-repeat;
   background-size: cover;
 }
