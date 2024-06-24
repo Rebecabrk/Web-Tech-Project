@@ -3,13 +3,12 @@
 $mysqli = require('../database/database.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $uid = $_COOKIE['Child_Picker'];
-    $type = $_POST['type'];
-    $name = $_POST['name'];
+    $cid = $_COOKIE['Child_Picker'];
+    $id = $_POST['id'];
 
-    $sql = "DELETE FROM medical_records WHERE cid = ? AND type = ? AND name = ?";
+    $sql = "DELETE FROM medical_records WHERE cid = ? AND id = ?";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param("sss", $uid, $type, $name);
+    $stmt->bind_param("ss", $cid, $id);
 
     try {
         $stmt->execute();

@@ -28,8 +28,7 @@
                                 echo '<div class="record-input-align">';
                                 echo '<div class="input-card">' . $element->name . '</div>';
                                 echo '<form method="POST" action="../model/process/process-delete_mrecord.php" style="display:inline;">';
-                                echo '<input type="hidden" name="type" value="' . htmlspecialchars($element->type) . '">';
-                                echo '<input type="hidden" name="name" value="' . htmlspecialchars($element->name) . '">';
+                                echo '<input type="hidden" name="id" value="' . htmlspecialchars($element->id) . '">';
                                 echo '<button type="submit" class="delete-btn another-dbtn"> <i class=\'bx bx-trash\'></i></button>';
                                 echo '</form>';
                                 echo '</div>';
@@ -57,8 +56,7 @@
                                 echo '<div class="record-input-align">';
                                 echo '<div class="input-card">' . $element->name . '</div>';
                                 echo '<form method="POST" action="../model/process/process-delete_mrecord.php" style="display:inline;">';
-                                echo '<input type="hidden" name="type" value="' . htmlspecialchars($element->type) . '">';
-                                echo '<input type="hidden" name="name" value="' . htmlspecialchars($element->name) . '">';
+                                echo '<input type="hidden" name="id" value="' . htmlspecialchars($element->id) . '">';
                                 echo '<button type="submit" class="delete-btn another-dbtn"> <i class=\'bx bx-trash\'></i></button>';
                                 echo '</form>';
                                 echo '</div>';
@@ -86,8 +84,7 @@
                                 echo '<div class="record-input-align">';
                                 echo '<div class="input-card">' . $element->name . '</div>';
                                 echo '<form method="POST" action="../model/process/process-delete_mrecord.php" style="display:inline;">';
-                                echo '<input type="hidden" name="type" value="' . htmlspecialchars($element->type) . '">';
-                                echo '<input type="hidden" name="name" value="' . htmlspecialchars($element->name) . '">';
+                                echo '<input type="hidden" name="id" value="' . htmlspecialchars($element->id) . '">';
                                 echo '<button type="submit" class="delete-btn another-dbtn"> <i class=\'bx bx-trash\'></i></button>';
                                 echo '</form>';
                                 echo '</div>';
