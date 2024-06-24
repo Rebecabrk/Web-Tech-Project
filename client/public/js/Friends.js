@@ -54,6 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         console.log(data);
 
+        let id;
+
         fetch('http://localhost/Web-Tech-Project/services/ProfileFriends/friends', {
             method: 'POST',
             headers: {
@@ -63,27 +65,22 @@ document.addEventListener('DOMContentLoaded', function () {
         })
             .then(response => response.json())
             .then(data => {
-                if (data.message == "Success") {
-                    console.log('TextEditor insert API returned Success');
-                    alert('Friend Profile successfully created!');
-                } else {
-                    console.log('API did not return Success');
-                    alert('Something went wrong');
-                }
+                id = data.message;
+                alert("Profile succesfully created!");
+                location.reload();
             })
             .catch(err => console.error('An error occurred:', err));
+
+            const profileCard = this.closest('.profile-card');
+            profileCard.setAttribute('title', id);
 
             const newProfileCard = profileCardTemplate.cloneNode(true);
             profileCardsDiv.appendChild(newProfileCard);
             scrollToBottom();
-    });
 
 
-    addCardButton.addEventListener('click', function() {
-        const newProfileCard = profileCardTemplate.cloneNode(true);
-        profileCardsDiv.appendChild(newProfileCard);
-        scrollToBottom();
     });
+
 });
 
 function deleteButton(friend_id){

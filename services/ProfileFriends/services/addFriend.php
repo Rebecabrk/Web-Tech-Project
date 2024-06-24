@@ -29,6 +29,6 @@ function addFriend($user_id, $name, $photo_path, $description)
         die($e->getMessage() . " " . $e->getCode());
     }
 
-    $output = "Success";
-    return $output;
+    $last_id = mysqli_insert_id($mysqli);
+    return $last_id;
 }
